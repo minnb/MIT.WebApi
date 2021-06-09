@@ -16,6 +16,8 @@ namespace MIT.WebApi.Controllers
         [HttpGet]
         public string Get()
         {
+            _logger.LogWarning("text");
+            _logger.LogInformation("LogInformation");
             return "OK";
         }
     }
