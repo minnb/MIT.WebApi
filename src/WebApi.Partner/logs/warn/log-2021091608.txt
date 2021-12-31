@@ -1,0 +1,145 @@
+2021-09-16 08:24:08.555 [ERR] Connection id "0HMBOM29B679L", Request id "0HMBOM29B679L:0000000F": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.HttpWebResponse'.
+   at System.Net.HttpWebResponse.CheckDisposed()
+   at System.Net.HttpWebResponse.get_StatusCode()
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.CreateToken(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 186
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.MBCTokenAsync(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass, Boolean isDelete) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 148
+   at VCM.Partner.API.Controllers.TransactionController.GetListOrderAsync(RequestListOrderPOS request) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Controllers\TransactionController.cs:line 142
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-09-16 08:24:18.552 [ERR] Connection id "0HMBOM29B679L", Request id "0HMBOM29B679L:00000011": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.HttpWebResponse'.
+   at System.Net.HttpWebResponse.CheckDisposed()
+   at System.Net.HttpWebResponse.get_StatusCode()
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.CreateToken(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 186
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.MBCTokenAsync(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass, Boolean isDelete) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 148
+   at VCM.Partner.API.Controllers.TransactionController.GetListOrderAsync(RequestListOrderPOS request) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Controllers\TransactionController.cs:line 142
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-09-16 08:24:39.299 [ERR] Connection id "0HMBOM29B679L", Request id "0HMBOM29B679L:00000013": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.HttpWebResponse'.
+   at System.Net.HttpWebResponse.CheckDisposed()
+   at System.Net.HttpWebResponse.get_StatusCode()
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.CreateToken(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 186
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.MBCTokenAsync(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass, Boolean isDelete) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 148
+   at VCM.Partner.API.Controllers.TransactionController.GetOrderAsync(String PartnerCode, String PosNo, String OrderNo) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Controllers\TransactionController.cs:line 87
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-09-16 08:25:06.818 [ERR] Connection id "0HMBOM29B679L", Request id "0HMBOM29B679L:00000015": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.HttpWebResponse'.
+   at System.Net.HttpWebResponse.CheckDisposed()
+   at System.Net.HttpWebResponse.get_StatusCode()
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.CreateToken(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 186
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.MBCTokenAsync(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass, Boolean isDelete) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 148
+   at VCM.Partner.API.Controllers.TransactionController.GetListOrderAsync(RequestListOrderPOS request) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Controllers\TransactionController.cs:line 142
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-09-16 08:25:13.308 [ERR] Connection id "0HMBOM29B679L", Request id "0HMBOM29B679L:00000017": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.HttpWebResponse'.
+   at System.Net.HttpWebResponse.CheckDisposed()
+   at System.Net.HttpWebResponse.get_StatusCode()
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.CreateToken(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 186
+   at VCM.Partner.API.Application.Implementation.MemoryCacheService.MBCTokenAsync(WebApiViewModel webApiInfo, String proxyHttp, String[] byPass, Boolean isDelete) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Application\Implementation\MemoryCacheService.cs:line 148
+   at VCM.Partner.API.Controllers.TransactionController.GetListOrderAsync(RequestListOrderPOS request) in D:\VCM_Project\VCM.Partner\src\VCM.Partner.API\Controllers\TransactionController.cs:line 142
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-09-16 08:26:08.591 [WRN] Get from redis: {"jwtToken":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRFUxT1RFNE16ZzBPQzB0TFdZMVlqTmpabVkxTFRKak1qVXROREJoT1MxaVptSTVMV1UwTVRSaE5XTmxZemszTVNZbUpuRndhM0I0VmxwVVlWb3hiR0YzUm5ocEwyaHNiMEU5UFNNakl6TTFNakE9IiwiZXhwIjoxNjMyNjE5NzYzfQ.1uikGrxLDEII5BwCFKGvLhnapOXB77qeO_JU6QU2EWhiUNAUDWk1f38xljIBVTA5GoEI6X24Xqr0QcCViHL0Mg","username":"0559183848","accountId":"3520"}
+2021-09-16 08:26:15.601 [WRN] mb_getListBill - request: {"function":"mb_getListBill","checksum":"5904a4528ef8d7388efed292d110b470","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9Y4Lnik7SqSISSLX0/cJmAVvaTqGt8PpijKFzB6WVjXfH7KkkPfLWkbxjalM16khRw="}
+2021-09-16 08:26:33.527 [WRN] Exception: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2021-09-16 08:27:31.015 [WRN] Get from redis: {"jwtToken":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRFUxT1RFNE16ZzBPQzB0TFdZMVlqTmpabVkxTFRKak1qVXROREJoT1MxaVptSTVMV1UwTVRSaE5XTmxZemszTVNZbUpuRndhM0I0VmxwVVlWb3hiR0YzUm5ocEwyaHNiMEU5UFNNakl6TTFNakE9IiwiZXhwIjoxNjMyNjE5NzYzfQ.1uikGrxLDEII5BwCFKGvLhnapOXB77qeO_JU6QU2EWhiUNAUDWk1f38xljIBVTA5GoEI6X24Xqr0QcCViHL0Mg","username":"0559183848","accountId":"3520"}
+2021-09-16 08:27:32.324 [WRN] mb_getListBill - request: {"function":"mb_getListBill","checksum":"5904a4528ef8d7388efed292d110b470","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9Y4Lnik7SqSISSLX0/cJmAVvaTqGt8PpijKFzB6WVjXfH7KkkPfLWkbxjalM16khRw="}
+2021-09-16 08:58:03.502 [WRN] Get from redis: {"jwtToken":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRFUxT1RFNE16ZzBPQzB0TFdZMVlqTmpabVkxTFRKak1qVXROREJoT1MxaVptSTVMV1UwTVRSaE5XTmxZemszTVNZbUpuRndhM0I0VmxwVVlWb3hiR0YzUm5ocEwyaHNiMEU5UFNNakl6TTFNakE9IiwiZXhwIjoxNjMyNjE5NzYzfQ.1uikGrxLDEII5BwCFKGvLhnapOXB77qeO_JU6QU2EWhiUNAUDWk1f38xljIBVTA5GoEI6X24Xqr0QcCViHL0Mg","username":"0559183848","accountId":"3520"}
+2021-09-16 08:58:09.975 [WRN] mb_getBillBySerial - request: {"function":"mb_getBillBySerial","checksum":"6e6a6b31eb3c12061ae244823a8160fe","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoDkpxuS+M5ouLCoKYkLgxCsoNV1RxHPBQE/VYIzglS/pICp7VNDWOVzgueKTtKpIhJItfT9wmYBW9pOoa3w+mKMoXMHpZWNd8fsqSQ98taRvGNqUzXqSFHA=="}
+2021-09-16 08:58:43.890 [WRN] Exception: The given key '15850' was not present in the dictionary.
+2021-09-16 08:59:03.051 [WRN] Get from redis: {"jwtToken":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRFUxT1RFNE16ZzBPQzB0TFdZMVlqTmpabVkxTFRKak1qVXROREJoT1MxaVptSTVMV1UwTVRSaE5XTmxZemszTVNZbUpuRndhM0I0VmxwVVlWb3hiR0YzUm5ocEwyaHNiMEU5UFNNakl6TTFNakE9IiwiZXhwIjoxNjMyNjE5NzYzfQ.1uikGrxLDEII5BwCFKGvLhnapOXB77qeO_JU6QU2EWhiUNAUDWk1f38xljIBVTA5GoEI6X24Xqr0QcCViHL0Mg","username":"0559183848","accountId":"3520"}
+2021-09-16 08:59:03.897 [WRN] mb_getBillBySerial - request: {"function":"mb_getBillBySerial","checksum":"6e6a6b31eb3c12061ae244823a8160fe","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoDkpxuS+M5ouLCoKYkLgxCsoNV1RxHPBQE/VYIzglS/pICp7VNDWOVzgueKTtKpIhJItfT9wmYBW9pOoa3w+mKMoXMHpZWNd8fsqSQ98taRvGNqUzXqSFHA=="}

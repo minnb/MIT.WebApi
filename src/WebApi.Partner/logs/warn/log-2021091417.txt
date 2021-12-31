@@ -1,0 +1,11 @@
+2021-09-14 17:11:30.238 [WRN] Timed Hosted Service is working. Count: 2
+2021-09-14 17:11:35.238 [WRN] Timed Hosted Service is working. Count: 3
+2021-09-14 17:11:40.240 [WRN] Timed Hosted Service is working. Count: 4
+2021-09-14 17:11:45.240 [WRN] Timed Hosted Service is working. Count: 5
+2021-09-14 17:11:50.236 [WRN] Timed Hosted Service is working. Count: 6
+2021-09-14 17:11:55.241 [WRN] Timed Hosted Service is working. Count: 7
+2021-09-14 17:12:00.242 [WRN] Timed Hosted Service is working. Count: 8
+2021-09-14 17:12:05.244 [WRN] Timed Hosted Service is working. Count: 9
+2021-09-14 17:12:10.243 [WRN] Timed Hosted Service is working. Count: 10
+2021-09-14 17:12:15.239 [WRN] Timed Hosted Service is working. Count: 11
+2021-09-14 17:12:18.141 [WRN] Timed Hosted Service is stopping.

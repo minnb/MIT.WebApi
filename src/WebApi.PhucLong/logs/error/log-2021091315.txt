@@ -1,0 +1,1 @@
+2021-09-13 15:31:54.702 [ERR] Exception 42883: operator does not exist: character varying = bigint

@@ -1,0 +1,2 @@
+2021-10-28 13:42:12.968 [WRN] Get token from redis
+2021-10-28 13:42:13.115 [WRN] mb_getListBill - request: {"function":"mb_getListBill","checksum":"5904a4528ef8d7388efed292d110b470","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9Y4Lnik7SqSISSLX0/cJmAVvaTqGt8PpijKFzB6WVjXfH7KkkPfLWkbxjalM16khRw="}

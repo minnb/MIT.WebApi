@@ -1,0 +1,30 @@
+2021-10-05 10:05:12.209 [ERR] GetOrderAsync Exception One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=5188KiB, 9688ms elapsed, timeout is 5000ms), inst: 0, qu: 0, qs: 1, aw: False, rs: ReadAsync, ws: Idle, in: 318, in-pipe: 0, out-pipe: 0, serverEndpoint: 10.235.49.11:6379, mgr: 10 of 10 available, clientName: 10-MINHNB-D, IOCP: (Busy=1,Free=999,Min=4,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.0.593.37019 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+2021-10-05 10:05:13.069 [ERR] Connection id "0HMC7LJDV0G3J", Request id "0HMC7LJDV0G3J:00000001": An unhandled exception was thrown by the application.
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=5188KiB, 9688ms elapsed, timeout is 5000ms), inst: 0, qu: 0, qs: 1, aw: False, rs: ReadAsync, ws: Idle, in: 318, in-pipe: 0, out-pipe: 0, serverEndpoint: 10.235.49.11:6379, mgr: 10 of 10 available, clientName: 10-MINHNB-D, IOCP: (Busy=1,Free=999,Min=4,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.0.593.37019 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=5188KiB, 9688ms elapsed, timeout is 5000ms), inst: 0, qu: 0, qs: 1, aw: False, rs: ReadAsync, ws: Idle, in: 318, in-pipe: 0, out-pipe: 0, serverEndpoint: 10.235.49.11:6379, mgr: 10 of 10 available, clientName: 10-MINHNB-D, IOCP: (Busy=1,Free=999,Min=4,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.0.593.37019 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisExtensions.HashMemberGetAsync(IDatabase cache, String key, String[] members)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAsync(String key, CancellationToken token)
+   at WebApi.PhucLong.Services.RedisService.GetMemberRedis(Boolean isDelete) in D:\VCM_Project\VCM.Partner\src\WebApi.PhucLong\Services\RedisService.cs:line 76
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at VCM.PhucLong.API.Services.TransactionService.GetMemberInfo(Pos_Order pos_Order) in D:\VCM_Project\VCM.Partner\src\WebApi.PhucLong\Services\TransactionService.cs:line 325
+   at VCM.PhucLong.API.Services.TransactionService.GetOrderAsync(String order_id) in D:\VCM_Project\VCM.Partner\src\WebApi.PhucLong\Services\TransactionService.cs:line 119
+   at VCM.PhucLong.API.Controllers.TransactionController.GetOrderDetail(String order_no) in D:\VCM_Project\VCM.Partner\src\WebApi.PhucLong\Controllers\TransactionController.cs:line 25
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)

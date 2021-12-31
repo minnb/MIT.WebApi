@@ -1,0 +1,92 @@
+﻿using System;
+
+namespace VCM.Shared.Entity.PhucLong
+{
+    public class Pos_Config
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public int picking_type_id { get; set; }
+        public int journal_id { get; set; }
+        public int invoice_journal_id { get; set; }
+        public bool? iface_cashdrawer { get; set; }
+        public bool? iface_electronic_scale { get; set; }
+        public bool? iface_vkeyboard { get; set; }
+        public bool? iface_customer_facing_display { get; set; }
+        public bool? iface_print_via_proxy { get; set; }
+        public bool? iface_scan_via_proxy { get; set; }
+        public bool? iface_big_scrollbars { get; set; }
+        public bool? iface_print_auto { get; set; }
+        public bool? iface_print_skip_screen { get; set; }
+        public bool? iface_precompute_cash { get; set; }
+        public string iface_tax_included { get; set; }
+        public int? iface_start_categ_id { get; set; }
+        public bool? iface_display_categ_images { get; set; }
+        public bool? restrict_price_control { get; set; }
+        public bool? cash_control { get; set; }
+        public string receipt_header { get; set; }
+        public string receipt_footer { get; set; }
+        public string proxy_ip { get; set; }
+        public bool? active { get; set; }
+        public string uuid { get; set; }
+        public int sequence_id { get; set; }
+        public int sequence_line_id { get; set; }
+        public int? pricelist_id { get; set; }
+        public int? company_id { get; set; }
+        public int? barcode_nomenclature_id { get; set; }
+        public int? group_pos_manager_id { get; set; }
+        public int? group_pos_user_id { get; set; }
+        public bool? iface_tipproduct { get; set; }
+        public int? tip_product_id { get; set; }
+        public int? default_fiscal_position_id { get; set; }
+        public int? default_cashbox_id { get; set; }
+        public bool? use_pricelist { get; set; }
+        public bool? tax_regime { get; set; }
+        public bool? tax_regime_selection { get; set; }
+        public bool? start_category { get; set; }
+        public bool? limit_categories { get; set; }
+        public bool? module_account { get; set; }
+        public bool? module_pos_restaurant { get; set; }
+        public bool? module_pos_discount { get; set; }
+        public bool? module_pos_loyalty { get; set; }
+        public bool? module_pos_mercury { get; set; }
+        public bool? module_pos_reprint { get; set; }
+        public bool? is_posbox { get; set; }
+        public bool? is_header_or_footer { get; set; }
+        public bool? module_pos_hr { get; set; }
+        public decimal? amount_authorized_diff { get; set; }
+        public bool? other_devices { get; set; }
+        public int? create_uid { get; set; }
+        public DateTime create_date { get; set; }
+        public int? write_uid { get; set; }
+        public DateTime write_date { get; set; }
+        public bool? module_pos_iot { get; set; }
+        public string epson_printer_ip { get; set; }
+        public int? crm_team_id { get; set; }
+        public int? stock_location_id { get; set; }
+        public bool? use_opening_balance { get; set; }
+        public bool? use_closing_balance { get; set; }
+        public int? warehouse_id { get; set; }
+        public bool? use_pos_saleman { get; set; }
+        public bool? permission_destroy_order { get; set; }
+        public bool? permission_destroy_line { get; set; }
+        public bool? use_manual_discount { get; set; }
+        public bool? permission_discount { get; set; }
+        public string printer_name { get; set; }
+        public bool? iface_pos_return_product { get; set; }
+        public int? maximum_date { get; set; }
+        public int? sale_type_default_id { get; set; }
+        public bool? is_dollar_pos { get; set; }
+        public bool? use_barcode_scanner_to_open_session { get; set; }
+        public bool? use_multi_printer { get; set; }
+        public bool? use_external_display { get; set; }
+        public decimal? order_break_timeout { get; set; }
+        public bool? is_sandbox_env { get; set; }
+        public int? max_order_to_create { get; set; }
+        public bool? update_cashier_to_session { get; set; }
+        public bool? use_for_mobile { get; set; }
+        public bool? use_replacement_printer { get; set; }
+        public string printer_ip { get; set; }
+        public string posid { get; set; }
+    }
+}

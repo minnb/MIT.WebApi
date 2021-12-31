@@ -1,0 +1,1 @@
+2021-09-13 17:14:12.766 [WRN] UPDATE public.pos_staging SET is_sending = true, crt_date = now() WHERE pos_reference = 'CH65-POS01-01-06578-001-0004';

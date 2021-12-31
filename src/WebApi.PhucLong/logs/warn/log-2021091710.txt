@@ -1,0 +1,1 @@
+2021-09-17 10:32:10.817 [ERR] Exception Error parsing column 2 (stock_location_id=Vị trí Quầy PL KV+0010HCM 109 Đường 39 -P.BTT- Q2 - String)

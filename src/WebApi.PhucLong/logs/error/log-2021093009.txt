@@ -1,0 +1,7 @@
+2021-09-30 09:05:21.989 [ERR] GetPosStaging Exception 22001: value too long for type character(10)
+2021-09-30 09:15:16.156 [ERR] GetPosStaging Exception 23505: duplicate key value violates unique constraint "pos_order_no"
+2021-09-30 09:15:59.916 [ERR] GetPosStaging Exception 23505: duplicate key value violates unique constraint "pos_order_no"
+2021-09-30 09:16:24.250 [ERR] GetPosStaging Exception 23505: duplicate key value violates unique constraint "pos_order_no"
+2021-09-30 09:42:39.342 [ERR] GetPosStaging Exception 23505: duplicate key value violates unique constraint "pos_order_no"
+2021-09-30 09:45:48.876 [ERR] GetPosStaging Exception 23505: duplicate key value violates unique constraint "pos_order_no"
+2021-09-30 09:52:56.688 [ERR] GetPosStaging Exception 23505: duplicate key value violates unique constraint "pos_reference"

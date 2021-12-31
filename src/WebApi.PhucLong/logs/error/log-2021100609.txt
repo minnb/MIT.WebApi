@@ -1,0 +1,58 @@
+2021-10-06 09:10:35.558 [ERR] GetPosStaging Exception Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2021-10-06 09:11:05.896 [ERR] GetOrderListAsync Exception A command is already in progress: 
+                    SELECT id, name, cast(date_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_order, user_id, amount_tax, amount_total, amount_paid, amount_return, pricelist_id, partner_id, state, account_move, picking_id, 
+                     location_id, note, pos_reference, sale_journal, to_invoice, create_uid, cast(create_date::timestamp AT TIME ZONE 'UTC' as timestamp) create_date,  employee_id, cashier, discount_amount, invoice_id, 
+                     warehouse_id, cashier_id, coupon_code, promotion_id, picking_return_id, return_origin, loyalty_points, point_won, year_discount_birth, sale_type_id, note_label, disable_loyalty_discount, 
+                     has_printed_label_first, linked_draft_order_be, use_emp_coupon, emp_coupon_code, current_coupon_limit, current_coupon_promotion, total_surcharge, number_of_printed_bill,  hanging_time, 
+                     reward_code, momo_payment_ref, partner_current_point, partner_total_point, partner_loyalty_level_id, cast(partner_expired_date::timestamp AT TIME ZONE 'UTC' as date) partner_expired_date, auto_paid_by_cron, message_main_attachment_id, 
+                     cast(date_last_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_last_order, cancel_from_be, moca_payment_ref, cancel_reason, cancel_duplicate, pay_draft_order, invoice_name, invoice_vat, invoice_address, invoice_email, invoice_contact, invoice_note, invoice_request, zalo_payment_ref
+                    FROM public.pos_order o
+                    WHERE NOT EXISTS (SELECT 1 FROM public.pos_staging s WHERE o.id = s.order_id and o.location_id = s.location_id) 
+                            AND state = 'paid' 
+                            AND location_id = 1626
+                            AND cast(date_order::timestamp AT TIME ZONE 'UTC' as date) >= '20211001';
+2021-10-06 09:11:09.843 [ERR] Connection id "0HMC8DPLCPUAJ", Request id "0HMC8DPLCPUAJ:00000001": An unhandled exception was thrown by the application.
+Npgsql.NpgsqlOperationInProgressException (0x80004005): A command is already in progress: 
+                    SELECT id, name, cast(date_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_order, user_id, amount_tax, amount_total, amount_paid, amount_return, pricelist_id, partner_id, state, account_move, picking_id, 
+                     location_id, note, pos_reference, sale_journal, to_invoice, create_uid, cast(create_date::timestamp AT TIME ZONE 'UTC' as timestamp) create_date,  employee_id, cashier, discount_amount, invoice_id, 
+                     warehouse_id, cashier_id, coupon_code, promotion_id, picking_return_id, return_origin, loyalty_points, point_won, year_discount_birth, sale_type_id, note_label, disable_loyalty_discount, 
+                     has_printed_label_first, linked_draft_order_be, use_emp_coupon, emp_coupon_code, current_coupon_limit, current_coupon_promotion, total_surcharge, number_of_printed_bill,  hanging_time, 
+                     reward_code, momo_payment_ref, partner_current_point, partner_total_point, partner_loyalty_level_id, cast(partner_expired_date::timestamp AT TIME ZONE 'UTC' as date) partner_expired_date, auto_paid_by_cron, message_main_attachment_id, 
+                     cast(date_last_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_last_order, cancel_from_be, moca_payment_ref, cancel_reason, cancel_duplicate, pay_draft_order, invoice_name, invoice_vat, invoice_address, invoice_email, invoice_contact, invoice_note, invoice_request, zalo_payment_ref
+                    FROM public.pos_order o
+                    WHERE NOT EXISTS (SELECT 1 FROM public.pos_staging s WHERE o.id = s.order_id and o.location_id = s.location_id) 
+                            AND state = 'paid' 
+                            AND location_id = 1626
+                            AND cast(date_order::timestamp AT TIME ZONE 'UTC' as date) >= '20211001';
+   at Npgsql.NpgsqlConnector.<StartUserAction>g__DoStartUserAction|234_0(<>c__DisplayClass234_0& )
+   at Npgsql.NpgsqlConnector.StartUserAction(ConnectorState newState, NpgsqlCommand command, CancellationToken cancellationToken, Boolean attemptPgCancellation)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1055
+   at Dapper.SqlMapper.QueryImpl[T](IDbConnection cnn, CommandDefinition command, Type effectiveType)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1083
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 725
+   at VCM.PhucLong.API.Services.TransactionService.GetOrderListAsync(RequestOrderList request) in D:\VCM_Project\VCM.Partner\src\WebApi.PhucLong\Services\TransactionService.cs:line 173
+   at VCM.PhucLong.API.Controllers.TransactionController.GetOrderList(RequestOrderList request) in D:\VCM_Project\VCM.Partner\src\WebApi.PhucLong\Controllers\TransactionController.cs:line 40
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)

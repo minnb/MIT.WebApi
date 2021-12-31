@@ -1,0 +1,3 @@
+2021-10-15 11:05:07.029 [ERR] Exception Error parsing column 5 (receipt_footer=<small>Quý khách cần hóa đơn tài chính<br>vui lòng cung cấp thông tin trong ngày.</small><br>
+PASSWORD WIFI: Luckytea<br>
+<a href='https://postimages.org/' target='_blank'><img style="width: 80%;margin:auto;" src='https://i.postimg.cc/66S094rW/footer.png' border='0' alt='QR-Phuc-Long'/></a></br><small>Cảm ơn Quý Khách & Hẹn gặp lại!</small> - String)

@@ -1,0 +1,2 @@
+2021-09-15 16:00:00.917 [WRN] Exception 22007: invalid input syntax for type date: "yyyyMMdd"
+2021-09-15 16:00:07.094 [WRN] Exception 22007: invalid input syntax for type date: "yyyyMMdd"

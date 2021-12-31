@@ -1,0 +1,1 @@
+2021-09-30 11:03:23.924 [WRN] UPDATE public.pos_staging SET is_display = false, is_payment = true, upd_date = now() WHERE pos_reference = 'KVLADPDP01-17558-001-0002';

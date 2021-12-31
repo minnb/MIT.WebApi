@@ -1,0 +1,16 @@
+2021-10-06 16:07:49.120 [WRN] Get token from redis
+2021-10-06 16:07:49.216 [WRN] mb_getListBill - request: {"function":"mb_getListBill","checksum":"5904a4528ef8d7388efed292d110b470","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9Y4Lnik7SqSISSLX0/cJmAVvaTqGt8PpijKFzB6WVjXfH7KkkPfLWkbxjalM16khRw="}
+2021-10-06 16:07:58.427 [WRN] Get token from redis
+2021-10-06 16:07:58.436 [WRN] mb_getBillDetail - request: {"function":"mb_getBillDetail","checksum":"e7f73e7223e260de96f23f2e5c0127dd","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9YBZdCyOmN0Fs4jIpIQ3s0lMDLT7mOAKZlx13Mw+VQfrA39e+mecfBfOXUk477TuzqOa2k+Rt59QwUy6dwSexSIqCrBJamenys="}
+2021-10-06 16:12:56.436 [WRN] Get token from redis
+2021-10-06 16:12:56.522 [WRN] mb_getListBill - request: {"function":"mb_getListBill","checksum":"5904a4528ef8d7388efed292d110b470","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9Y4Lnik7SqSISSLX0/cJmAVvaTqGt8PpijKFzB6WVjXfH7KkkPfLWkbxjalM16khRw="}
+2021-10-06 16:13:05.549 [WRN] Get token from redis
+2021-10-06 16:13:05.556 [WRN] mb_getBillDetail - request: {"function":"mb_getBillDetail","checksum":"e7f73e7223e260de96f23f2e5c0127dd","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9YBZdCyOmN0Fs4jIpIQ3s0lMDLT7mOAKZlx13Mw+VQfrA39e+mecfBfOXUk477TuzqOa2k+Rt59QwUy6dwSexSIqCrBJamenys="}
+2021-10-06 16:29:05.911 [WRN] Get token from redis
+2021-10-06 16:29:06.002 [WRN] mb_getListBill - request: {"function":"mb_getListBill","checksum":"5904a4528ef8d7388efed292d110b470","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9Y4Lnik7SqSISSLX0/cJmAVvaTqGt8PpijKFzB6WVjXfH7KkkPfLWkbxjalM16khRw="}
+2021-10-06 16:29:17.991 [WRN] Get token from redis
+2021-10-06 16:29:17.998 [WRN] mb_getBillDetail - request: {"function":"mb_getBillDetail","checksum":"e7f73e7223e260de96f23f2e5c0127dd","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9YBZdCyOmN0Fs4jIpIQ3s0lMDLT7mOAKZlx13Mw+VQfrA39e+mecfBfOXUk477TuzqOa2k+Rt59QwUy6dwSexSIqCrBJamenys="}
+2021-10-06 16:32:02.905 [WRN] Get token from redis
+2021-10-06 16:32:02.995 [WRN] mb_getListBill - request: {"function":"mb_getListBill","checksum":"5904a4528ef8d7388efed292d110b470","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9Y4Lnik7SqSISSLX0/cJmAVvaTqGt8PpijKFzB6WVjXfH7KkkPfLWkbxjalM16khRw="}
+2021-10-06 16:32:13.937 [WRN] Get token from redis
+2021-10-06 16:32:13.948 [WRN] mb_getBillDetail - request: {"function":"mb_getBillDetail","checksum":"5c25befea6f4c5f694a3a31962d9d5ee","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAP9UfWVciiURXBmoipgd9YoPzqvGEFlI9YBZdCyOmN0Fs4jIpIQ3s0lCmqtwjgYbDJx13Mw+VQfrA39e+mecfBfOXUk477TuzqOa2k+Rt59QwUy6dwSexSIqCrBJamenys="}

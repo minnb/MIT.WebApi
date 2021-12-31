@@ -1,0 +1,8 @@
+2021-09-30 10:23:42.387 [ERR] GetPosStaging Exception 42702: column reference "warehouse_id" is ambiguous
+2021-09-30 10:25:59.085 [ERR] GetPosStaging Exception 42702: column reference "warehouse_id" is ambiguous
+2021-09-30 10:54:39.645 [ERR] GetPosStaging Exception 42703: column r.is_sending does not exist
+2021-09-30 10:54:39.749 [ERR] GetOrderListAsync Exception 42703: column "is_sending" does not exist
+2021-09-30 10:55:30.071 [ERR] GetPosStaging Exception 42703: column r.is_sending does not exist
+2021-09-30 10:55:30.168 [ERR] GetOrderListAsync Exception 42883: operator does not exist: boolean == boolean
+2021-09-30 10:56:58.584 [ERR] GetPosStaging Exception 42703: column r.is_sending does not exist
+2021-09-30 10:58:46.263 [ERR] UpdateStatusOrderAsync Exception 42703: column "is_sending" does not exist

@@ -1,0 +1,4 @@
+2021-09-13 15:31:54.702 [ERR] Exception 42883: operator does not exist: character varying = bigint
+2021-09-13 15:50:10.219 [WRN] UPDATE FROM public.pos_staging SET is_sending = true, crt_date = now() WHERE pos_reference = 'CH45-POS04-06574-001-0010';
+2021-09-13 15:50:34.703 [WRN] UPDATE public.pos_staging SET is_sending = true, crt_date = now() WHERE pos_reference = 'CH45-POS04-06574-001-0010';
+2021-09-13 15:52:01.048 [WRN] UPDATE public.pos_staging SET is_sending = true, crt_date = now() WHERE pos_reference = 'CC1-06576-001-0001';

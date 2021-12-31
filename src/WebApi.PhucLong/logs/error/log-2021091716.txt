@@ -1,0 +1,2 @@
+2021-09-17 16:01:09.819 [ERR] GetOrderListAsync Exception Error converting value {null} to type 'System.Int32'. Path 'pos_payment[0].employee_id', line 1, position 2834.
+2021-09-17 16:04:27.641 [ERR] GetOrderListAsync Exception Object reference not set to an instance of an object.
