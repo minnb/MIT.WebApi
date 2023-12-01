@@ -9,6 +9,7 @@ namespace VCM.Shared.Enums
         One = 200,
         Two = 200,
         Three = 300,
-        Ten = 1000
+        Ten = 1000,
+        Wating = 60000
     }
 }

@@ -13,6 +13,9 @@ namespace VCM.Shared.Dtos.POS
         public string ReferenceNo { get; set; }
         public string TransactionId { get; set; }
         public string PayForOrderNo { get; set; }
+        public string TransactionNo { get; set; }
+        public string ApprovalCode { get; set; }
+        public string TraceCode { get; set; }
         public object AdditionalData { get; set; }
     }
 

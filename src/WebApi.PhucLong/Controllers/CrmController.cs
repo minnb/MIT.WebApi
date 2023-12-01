@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ using WebApi.PhucLong.Services;
 
 namespace WebApi.PhucLong.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
+    [DisplayName("Odoo")]
     [ApiController]
     public class CrmController : BaseController
     {
@@ -23,11 +26,26 @@ namespace WebApi.PhucLong.Controllers
             _crmService = crmService;
         }
 
-        [HttpGet]
-        [Route("api/v1/crm/voucher")]
-        public async Task<ActionResult> GetOrderDetail([Required] string serial_number = "9912310000008")
+        [HttpPost]
+        [Route("api/v1/odoo/coupon")]
+        public async Task<ActionResult> CheckVoucherOdoo(RequestVoucherCheckOdoo request)
         {
-            var result = await _crmService.CheckVoucher(serial_number);
+            var result = await _crmService.CheckVoucherOdoo(request);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Route("api/v1/odoo/coupon/redeem")]
+        public async Task<ActionResult> VoucherRedeemOdoo(RequestVoucherRedeemOdoo request)
+        {
+            var result = await _crmService.VoucherRedeemOdoo(request);
             if (result != null)
             {
                 return Ok(result);

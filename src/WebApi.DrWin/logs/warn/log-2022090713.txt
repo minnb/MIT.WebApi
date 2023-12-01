@@ -1,0 +1,1 @@
+2022-09-07 13:59:58.600 [WRN] Result: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1662533997"}

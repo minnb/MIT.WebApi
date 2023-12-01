@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -44,7 +45,7 @@ namespace VCM.Common.Helpers
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(ApiAddress);
                 request.ContentType = "application/json";
                 request.PreAuthenticate = true;
-                request.Timeout = 90000;
+                request.Timeout = 45000;
 
                 if (!string.IsNullOrEmpty(ProxyHttp))
                 {
@@ -64,7 +65,7 @@ namespace VCM.Common.Helpers
                     }
                     
                 }
-
+                Console.WriteLine(request.Headers);
                 request.Method = WebMethod;
 
                 if (WebMethod.ToUpper() == "POST" || WebMethod.ToUpper() == "PUT")
@@ -95,16 +96,16 @@ namespace VCM.Common.Helpers
             }
             catch (WebException ex)
             {
-                using (WebResponse response = ex.Response)
+                using WebResponse response = ex.Response;
+                if (response != null)
                 {
-                    if(response != null)
-                    {
-                        HttpWebResponse httpResponse = (HttpWebResponse)response;
-                        using Stream data = response.GetResponseStream();
-                        using var reader = new StreamReader(data);
-                        result = reader.ReadToEnd();
-                    }
+                    HttpWebResponse httpResponse = (HttpWebResponse)response;
+                    using Stream data = response.GetResponseStream();
+                    using var reader = new StreamReader(data);
+                    result = reader.ReadToEnd();
+                    FileHelper.WriteLogs("InteractWithApi.WebException: " + result);
                 }
+                FileHelper.WriteLogs("InteractWithApi.WebException: " + JsonConvert.SerializeObject(response));
             }
             return result;
         }
@@ -136,10 +137,10 @@ namespace VCM.Common.Helpers
                     }
 
                 }
-
+                Console.WriteLine(request.Headers);
                 request.Method = WebMethod;
 
-                if (WebMethod.ToUpper() == "POST")
+                if (WebMethod.ToUpper() == "POST" || WebMethod.ToUpper() == "PUT")
                 {
                     using var streamWriter = new StreamWriter(request.GetRequestStream());
                     streamWriter.Write(JsonData);
@@ -147,27 +148,13 @@ namespace VCM.Common.Helpers
                     streamWriter.Close();
                 }
 
-                return  (HttpWebResponse)request.GetResponse();
+                return (HttpWebResponse)request.GetResponse();
             }
-            catch
+            catch(Exception ex) 
             {
+                FileHelper.WriteLogs("InteractWithApiResponse Exception: " + ex.Message.ToString());
                 return null;
             }
         }
-
-        //private string ReadResponse(HttpWebResponse response)
-        //{
-        //    if (response.CharacterSet == null)
-        //    {
-        //        using (var reader = new StreamReader(response.GetResponseStream()))
-        //        {
-        //            return reader.ReadToEnd();
-        //        }
-        //    }
-        //    using (var reader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(response.CharacterSet)))
-        //    {
-        //        return reader.ReadToEnd();
-        //    }
-        //}
     }
 }

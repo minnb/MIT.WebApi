@@ -1,0 +1,6 @@
+2022-09-13 10:00:34.136 [WRN] ===> 1663038031===>: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663038031"}
+2022-09-13 10:00:34.158 [WRN] lien_thong_hoa_don: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663038031"}
+2022-09-13 10:01:00.220 [WRN] ===> 1663038058===>: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1663038058"}
+2022-09-13 10:01:00.222 [WRN] lien_thong_phieu_nhap: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1663038058"}
+2022-09-13 10:01:08.318 [WRN] ===> 1663038067===>: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663038067"}
+2022-09-13 10:01:08.320 [WRN] lien_thong_hoa_don: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663038067"}

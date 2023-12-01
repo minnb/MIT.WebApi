@@ -1,0 +1,7 @@
+2023-02-09 16:42:49.729 [WRN] ===> start requestId: 793da22a4d354a60b2fc2df306631b07 ===> param: WCM_201801_1675929619678
+2023-02-09 16:42:49.869 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675929619678"}
+2023-02-09 16:42:50.262 [WRN] ===> GetOrderAsync end requestId: 793da22a4d354a60b2fc2df306631b07
+2023-02-09 16:43:51.021 [WRN] ===> start requestId: 265ec1b5a01d45d693234c3e20185e6a ===> param: WCM_201801_1675929619678
+2023-02-09 16:43:51.212 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675929619678"}
+2023-02-09 16:43:52.155 [WRN] WCM-OrderDetail Status: 3
+2023-02-09 16:43:52.163 [WRN] ===> GetOrderAsync end requestId: 265ec1b5a01d45d693234c3e20185e6a

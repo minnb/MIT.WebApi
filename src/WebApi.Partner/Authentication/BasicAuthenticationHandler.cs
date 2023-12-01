@@ -9,7 +9,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using VCM.Partner.API.Database;
+using WCM.EntityFrameworkCore.EntityFrameworkCore.Partner;
 
 namespace VCM.Partner.API.Authentication
 {
@@ -78,7 +78,7 @@ namespace VCM.Partner.API.Authentication
             }
             catch (Exception ex)
             {
-                return Task.FromResult(AuthenticateResult.Fail("Exception " + ex.Message.ToString()));
+                return Task.FromResult(AuthenticateResult.Fail("HandleAuthenticateAsync Exception " + ex.Message.ToString()));
             }
 
         }

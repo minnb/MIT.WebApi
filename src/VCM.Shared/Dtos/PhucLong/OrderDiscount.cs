@@ -7,10 +7,10 @@ namespace VCM.Shared.Dtos.PhucLong
     public class OrderDiscount
     {
         public int LineId { get; set; }
-        public string PromotionNo { get; set; }
-        public string PromotionType { get; set; }
-        public decimal Qty { get; set; }
-        public decimal Amount { get; set; }
+        public string OfferNo { get; set; }
+        public string OfferType { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal DiscountAmount { get; set; }
         public string Note { get; set; }
     }
 }

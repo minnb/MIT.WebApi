@@ -1,0 +1,149 @@
+﻿using Confluent.Kafka;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using Serilog;
+using StackExchange.Redis;
+using System;
+using System.Linq;
+using System.Net.Mime;
+using System.Reflection;
+using System.Text.Json;
+using WCM.EntityFrameworkCore.EntityFrameworkCore.Invoice;
+using WebApi.Core.Common.Extentions;
+
+namespace WebApi.InvoiceNumbering
+{
+    public class Startup
+    {
+        [Obsolete]
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+            Log.Logger = new LoggerConfiguration()
+            //.Enrich.FromLogContext()
+            .WriteTo.File("logs/warn/log-.txt", Serilog.Events.LogEventLevel.Warning, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message:lj}{NewLine}{Exception}", null, 1073741824, null, false, false, null, RollingInterval.Hour, false, 200, null)
+            .WriteTo.File("logs/error/log-.txt", Serilog.Events.LogEventLevel.Error, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message:lj}{NewLine}{Exception}", null, 1073741824, null, false, false, null, RollingInterval.Hour, false, 200, null)
+            .CreateLogger();
+        }
+
+        public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            string migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+            string connectionString = Configuration.GetConnectionString("MSSQL");
+            services.AddMemoryCache();
+
+            services.AddDbContext<InvoiceNumberingDbContext>(options =>
+                options.UseSqlServer(connectionString,
+                sqlServerOptionsAction: sqlOptions =>
+                {
+                    sqlOptions.MigrationsAssembly(migrationsAssembly);
+                    sqlOptions.EnableRetryOnFailure(
+                        maxRetryCount: 3,
+                        maxRetryDelay: TimeSpan.FromSeconds(30),
+                        errorNumbersToAdd: null);
+                }));
+
+            // Cấu hình Redis
+            services.AddSingleton<IConnectionMultiplexer>(x =>
+                ConnectionMultiplexer.Connect(Configuration.GetConnectionString("Redis")));
+
+            //Kafka
+            services.AddSingleton(x => new ProducerConfig
+            {
+                BootstrapServers = Configuration["Kafka:Host"]
+            });
+
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
+
+            services.AddControllers();
+
+            services.AddHealthChecks();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WCM", Version = "v1" });
+                c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "basic",
+                    In = ParameterLocation.Header,
+                    Description = "Basic Authorization header using the Bearer scheme."
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                    {
+                        {
+                              new OpenApiSecurityScheme
+                                {
+                                    Reference = new OpenApiReference
+                                    {
+                                        Type = ReferenceType.SecurityScheme,
+                                        Id = "basic"
+                                    }
+                                },
+                                new string[] {}
+                        }
+                    });
+
+                c.SchemaFilter<SchemaFilter>();
+            });
+            services.RegisterCustomServices(connectionString);
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
+        {
+            loggerFactory.AddSerilog();
+            //app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHealthChecks("/hc");
+                endpoints.MapControllers();
+            });
+
+            if (Configuration["AppSetting:Environment"] == "DEV")
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "WCM InvoiceNumbering v1");
+                    c.DefaultModelsExpandDepth(-1);
+                });
+
+            }
+            else
+            {
+                app.Run(async (context) =>
+                {
+                    await context.Response.WriteAsync("<h1>Not Found</h1><p>The requested resource was not found on this server.</p>");
+                });
+            }
+
+        }
+    }
+
+}

@@ -12,5 +12,6 @@ namespace VCM.PhucLong.API.Services
         Task<ResponseOrderDetail> GetOrderAsync(int set, string order_no, int location_id);
         bool UpdateStatusOrderAsync(int set, string order_no, int status);
         Task<Pos_Staging> GetOrderByIdAsync(int set, string order_id, int location_id);
+        ResponseCheckOrder CheckOrderDetail(string order_no);
     }
 }

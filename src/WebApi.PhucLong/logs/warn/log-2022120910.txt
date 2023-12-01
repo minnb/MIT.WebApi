@@ -1,0 +1,2 @@
+2022-12-09 10:43:46.236 [WRN] ===> IDishShopeeService.CreateDishShopee.Exception: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2022-12-09 10:44:52.701 [WRN] ===> IDishShopeeService.CreateDishShopee.Exception: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.

@@ -1,0 +1,2 @@
+2023-04-24 11:07:09.111 [WRN] ===> Create token from MBC
+2023-04-24 11:07:09.216 [WRN] CreateToken MBC: {"username":"0559531960","password":"App12345","merchantId":"1628679763694"}

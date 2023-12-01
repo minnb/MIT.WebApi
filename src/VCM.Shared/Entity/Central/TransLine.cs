@@ -59,6 +59,8 @@ namespace VCM.Shared.Entity.Central
         public string ComboQty { get; set; }
         public string LotNo { get; set; }
         public string CupType { get; set; }
+        public string OfferNo { get; set; }
+        public string Barcode { get; set; }
         public DateTime ExpireDate { get; set; }
         public string UpdateFlg { get; set; }
         public DateTime ChgeDate { get; set; }

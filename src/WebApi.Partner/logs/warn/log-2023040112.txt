@@ -1,0 +1,9 @@
+2023-04-01 12:13:54.465 [WRN] ===> Get token from redis
+2023-04-01 12:13:54.491 [WRN] https://partner-api.winlife.vn/lead/qualify
+2023-04-01 12:13:54.831 [WRN] result: {"data":{"phone_number":"84945491196","tier":"standard","potential_vip":true,"products":{"evo":false,"tpay":false,"wintel":false}},"message":"qualify user successfully","time":"2023-04-01T05:13:54Z","verdict":"success"}
+2023-04-01 12:13:55.958 [WRN] ===> Get token from redis
+2023-04-01 12:13:55.960 [WRN] https://partner-api.winlife.vn/lead/qualify
+2023-04-01 12:13:56.154 [WRN] result: {"data":{"phone_number":"84945491196","tier":"standard","potential_vip":true,"products":{"evo":false,"tpay":false,"wintel":false}},"message":"qualify user successfully","time":"2023-04-01T05:13:56Z","verdict":"success"}
+2023-04-01 12:14:04.837 [WRN] ===> Get token from redis
+2023-04-01 12:14:04.838 [WRN] https://partner-api.winlife.vn/lead/qualify
+2023-04-01 12:14:05.036 [WRN] result: {"data":{"phone_number":"84945491191","tier":"standard","potential_vip":false,"products":{"evo":false,"tpay":false,"wintel":false}},"message":"qualify user successfully","time":"2023-04-01T05:14:05Z","verdict":"success"}

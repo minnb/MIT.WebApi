@@ -1,0 +1,68 @@
+2023-05-15 14:03:18.569 [ERR] Connection id "0HMQL29NIR0LG", Request id "0HMQL29NIR0LG:00000001": An unhandled exception was thrown by the application.
+System.AggregateException: An error occurred while writing to logger(s). (Input string was not in a correct format.) (Input string was not in a correct format.) (Input string was not in a correct format.) (Index was outside the bounds of the array.)
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.FormatError()
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at Microsoft.Extensions.Logging.FormattedLogValues.ToString()
+   at Microsoft.Extensions.Logging.LoggerExtensions.MessageFormatter(FormattedLogValues state, Exception error)
+   at Microsoft.Extensions.Logging.Console.ConsoleLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|12_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, EventId eventId, Exception exception, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.LogWarning(ILogger logger, String message, Object[] args)
+   at VCM.Partner.API.Application.Implementation.ShoppingCartService.CallApi_CRX_Async(WebApiViewModel webApiInfo, String function, Method method, Object bodyData, String param, String requestId) in D:\WCM\Projects\VCM.Partner\src\WebApi.Partner\Application\Implementation\ShoppingCartService.cs:line 75
+   at VCM.Partner.API.Application.Implementation.ShoppingCartService.GetBillDetail_WCM_Async(RequestTransaction request, WebApiViewModel webApiInfo, String proxyHttp, String[] byPass, String requestId) in D:\WCM\Projects\VCM.Partner\src\WebApi.Partner\Application\Implementation\ShoppingCartService.cs:line 332
+   at VCM.Partner.API.Controllers.TransactionController.GetOrderAsync(String PartnerCode, String PosNo, String OrderNo, String AppCode) in D:\WCM\Projects\VCM.Partner\src\WebApi.Partner\Controllers\TransactionController.cs:line 157
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+ ---> (Inner Exception #1) System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.FormatError()
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at Microsoft.Extensions.Logging.FormattedLogValues.ToString()
+   at Microsoft.Extensions.Logging.LoggerExtensions.MessageFormatter(FormattedLogValues state, Exception error)
+   at Microsoft.Extensions.Logging.Debug.DebugLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|12_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)<---
+
+ ---> (Inner Exception #2) System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.FormatError()
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at Microsoft.Extensions.Logging.FormattedLogValues.ToString()
+   at Microsoft.Extensions.Logging.LoggerExtensions.MessageFormatter(FormattedLogValues state, Exception error)
+   at Microsoft.Extensions.Logging.EventLog.EventLogLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|12_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)<---
+
+ ---> (Inner Exception #3) System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Microsoft.Extensions.Logging.LogValuesFormatter.GetValue(Object[] values, Int32 index)
+   at Microsoft.Extensions.Logging.FormattedLogValues.get_Item(Int32 index)
+   at Microsoft.Extensions.Logging.FormattedLogValues.GetEnumerator()+MoveNext()
+   at Serilog.Extensions.Logging.SerilogLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|12_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)<---
+

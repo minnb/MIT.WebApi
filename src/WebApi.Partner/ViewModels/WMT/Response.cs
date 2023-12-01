@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VCM.Shared.API.PhucLongV2;
 
 namespace VCM.Partner.API.ViewModels.WMT
 {
@@ -20,7 +21,6 @@ namespace VCM.Partner.API.ViewModels.WMT
         public string OrderCode { get; set; }
         public string Status { get; set; }
         public string OrderTime { get; set; }
-        public string VINIDNumber { get; set; }
         public decimal TotalPayment { get; set; }
         public string ReceiverName { get; set; }
         public string ReceiverPhone { get; set; }
@@ -30,6 +30,10 @@ namespace VCM.Partner.API.ViewModels.WMT
     public class RspOrderDetailWMT
     {
        public DetailOrderWMT Data { get; set; }
+    }
+    public class RspOrderDetail_WCM
+    {
+        public OrderResponseBody Data { get; set; }
     }
     public class DetailOrderWMT
     {
@@ -64,7 +68,7 @@ namespace VCM.Partner.API.ViewModels.WMT
         public string PromotionCode { get; set; }
         public string PromotionName { get; set; }
     }
-    public class RspUpdateStatusOrderlWMT 
+    public class RspUpdateStatusOrderCRX
     {
         public string Message { get; set; }
     }

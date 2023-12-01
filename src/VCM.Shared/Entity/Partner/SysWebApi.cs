@@ -14,5 +14,7 @@ namespace VCM.Shared.Entity.Partner
 		public string PublicKey { get; set; }
 		public string PrivateKey { get; set; }
 		public bool Blocked { get; set; }
+		public string HttpProxy { get; set; }
+		public string Bypasslist { get; set; }
 	}
 }

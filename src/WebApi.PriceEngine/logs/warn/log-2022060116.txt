@@ -1,0 +1,9 @@
+2022-06-01 16:42:26.250 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2050000544170","Quantity":5.898,"PluCode":"2050000544170"}
+2022-06-01 16:42:26.645 [WRN] ===> CheckBarcodeSalePriceAsync Exception: The connection was not closed. The connection's current state is open.
+2022-06-01 16:43:02.821 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2050000544170","Quantity":5.898,"PluCode":"2050000544170"}
+2022-06-01 16:43:04.821 [WRN] ===> CheckBarcodeSalePriceAsync Exception: The connection was not closed. The connection's current state is open.
+2022-06-01 16:43:59.118 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2050000544170","Quantity":5.898,"PluCode":"2050000544170"}
+2022-06-01 16:44:35.411 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2050000544170","Quantity":5.898,"PluCode":"2050000544170"}
+2022-06-01 16:44:40.157 [WRN] [{"ItemNo":"10123686","Barcode":"2050000544170","ItemName":"Bánh hương sô cô la dâu Test Art seg","Uom":"CAI","Quantity":5.898,"UnitPrice":12000.0,"DiscountAmount":14155.0,"LineAmountInVAT":-12710.0,"TaxGroupCode":"4","VATPercent":10,"VATAmount":0.0,"OfferNo":"2000975384","OfferType":"ZB10","DiscountType":"discount_percent"}]
+2022-06-01 16:46:34.376 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2050000544170","Quantity":5.898,"PluCode":"2050000544170"}
+2022-06-01 16:46:37.422 [WRN] [{"ItemNo":"10123686","Barcode":"2050000544170","ItemName":"Bánh hương sô cô la dâu Test Art seg","Uom":"CAI","Quantity":5.898,"UnitPrice":12000.0,"DiscountAmount":14155.0,"LineAmountInVAT":56621.0,"TaxGroupCode":"4","VATPercent":10,"VATAmount":5147.0,"OfferNo":"2000975384","OfferType":"ZB10","DiscountType":"discount_percent"}]

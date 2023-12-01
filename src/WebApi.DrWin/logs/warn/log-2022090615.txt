@@ -1,0 +1,24 @@
+2022-09-06 15:02:29.959 [WRN] Error response: null
+2022-09-06 15:04:21.896 [WRN] Error response: null
+2022-09-06 15:04:23.717 [WRN] Exception: Object reference not set to an instance of an object.
+2022-09-06 15:07:22.768 [WRN] Error response: null
+2022-09-06 15:07:34.800 [WRN] Exception: Object reference not set to an instance of an object.
+2022-09-06 15:08:56.226 [WRN] Error response: null
+2022-09-06 15:09:42.744 [WRN] Error response: null
+2022-09-06 15:10:32.290 [WRN] http://daotao.duocquocgia.com.vn/api/lien_thong/hoa_don
+2022-09-06 15:10:34.821 [WRN] Error response: null
+2022-09-06 15:12:20.329 [WRN] http://daotao.duocquocgia.com.vn/api/lien_thong/hoa_don
+2022-09-06 15:12:20.376 [WRN] {"Hoa_don_chi_tiet":[{"Ma_thuoc":"DQG00021915","Ten_thuoc":"Tăm bông kháng khuẩn jomi baby hộp 160 que Tăm bông kháng khuẩn jomi baby hộp 160 que","So_lo":"20220810","Ngay_san_xuat":"20220810","Han_dung":"20230810","Don_vi_tinh":"HOP","Ham_luong":"","So_luong":1.0,"Don_gia":28000.0,"Thanh_tien":28000.0,"Ti_le_quy_doi":1.0,"Lieu_dung":"string","Duong_dung":"string"}],"Ma_sap":"P100","Ma_hoa_don":"1662451940","Ma_co_so":"79-009177","Ma_don_thuoc_quoc_gia":"","Ngay_ban":"20220906","Ho_ten_nguoi_ban":"Nguyen Van A","Ho_ten_khach_hang":"Nguyen Van B"}
+2022-09-06 15:12:22.757 [WRN] Error response: null
+2022-09-06 15:13:32.422 [WRN] http://daotao.duocquocgia.com.vn/api/lien_thong/hoa_don
+2022-09-06 15:13:32.424 [WRN] {"Hoa_don_chi_tiet":[{"Ma_thuoc":"string","Ten_thuoc":"string","So_lo":"string","Ngay_san_xuat":"string","Han_dung":"string","Don_vi_tinh":"string","Ham_luong":"string","So_luong":0.0,"Don_gia":0.0,"Thanh_tien":0.0,"Ti_le_quy_doi":0.0,"Lieu_dung":"string","Duong_dung":"string"}],"Ma_sap":"P100","Ma_hoa_don":"string","Ma_co_so":"string","Ma_don_thuoc_quoc_gia":"string","Ngay_ban":"string","Ho_ten_nguoi_ban":"string","Ho_ten_khach_hang":"string"}
+2022-09-06 15:13:33.639 [WRN] Error response: null
+2022-09-06 15:13:57.677 [WRN] http://daotao.duocquocgia.com.vn/api/lien_thong/hoa_don
+2022-09-06 15:13:57.678 [WRN] {"Hoa_don_chi_tiet":[{"Ma_thuoc":"string","Ten_thuoc":"string","So_lo":"string","Ngay_san_xuat":"string","Han_dung":"string","Don_vi_tinh":"string","Ham_luong":"string","So_luong":0.0,"Don_gia":0.0,"Thanh_tien":0.0,"Ti_le_quy_doi":0.0,"Lieu_dung":"string","Duong_dung":"string"}],"Ma_sap":"P100","Ma_hoa_don":"string","Ma_co_so":"string","Ma_don_thuoc_quoc_gia":"string","Ngay_ban":"string","Ho_ten_nguoi_ban":"string","Ho_ten_khach_hang":"string"}
+2022-09-06 15:28:02.485 [WRN] Result: {"message":"Mã cơ sở không chính xác"}
+2022-09-06 15:28:13.285 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-06 15:48:44.130 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-06 15:50:58.594 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-06 15:54:19.738 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-06 15:59:28.793 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-06 15:59:45.318 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}

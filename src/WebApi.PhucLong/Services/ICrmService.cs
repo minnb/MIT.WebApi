@@ -9,7 +9,8 @@ namespace WebApi.PhucLong.Services
 {
     public interface ICrmService
     {
-        Task<VoucherInfoDto> CheckVoucher(string serial_number);
+        Task<ResponseVoucherCheckOdoo> CheckVoucherOdoo(RequestVoucherCheckOdoo request);
+        Task<ResponseVoucherRedeemOdoo> VoucherRedeemOdoo(RequestVoucherRedeemOdoo request);
         Task<VoucherInfoDto> UpdateStatusVoucher(RequestVoucherPLG request);
     }
 }

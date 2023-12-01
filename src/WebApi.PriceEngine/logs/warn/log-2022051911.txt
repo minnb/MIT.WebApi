@@ -1,0 +1,4 @@
+2022-05-19 11:10:44.331 [WRN] Exception: Invalid column name 'Counter'.
+2022-05-19 11:12:02.011 [WRN] Exception: Invalid column name 'Counter'.
+2022-05-19 11:12:24.024 [WRN] Exception: Invalid column name 'Counter'.
+2022-05-19 11:13:40.118 [WRN] Exception: Invalid column name 'Counter'.

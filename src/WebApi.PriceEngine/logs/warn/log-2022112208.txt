@@ -1,0 +1,8 @@
+2022-11-22 08:56:52.857 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","SKUs":[{"ItemNo":"10207953","Uom":"CHA","Quantity":1.0}]}
+2022-11-22 08:56:53.203 [WRN] ===> Items: 10207953CHA
+2022-11-22 08:56:53.297 [WRN] ===> CheckItemSalePriceAsync Exception: The member Items of type System.Text.StringBuilder cannot be used as a parameter value
+2022-11-22 08:57:13.925 [WRN] ===> PriceEngineController.GetItemSalesPriceAsync.Exception: Object reference not set to an instance of an object.
+2022-11-22 08:57:22.438 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","SKUs":[{"ItemNo":"10207953","Uom":"CHA","Quantity":1.0}]}
+2022-11-22 08:57:42.597 [WRN] ===> Items: 10207953CHA
+2022-11-22 08:58:07.006 [WRN] ===> CheckItemSalePriceAsync Exception: The member Items of type System.Text.StringBuilder cannot be used as a parameter value
+2022-11-22 08:58:08.763 [WRN] ===> PriceEngineController.GetItemSalesPriceAsync.Exception: Object reference not set to an instance of an object.

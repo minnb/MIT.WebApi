@@ -1,0 +1,1 @@
+2022-09-07 17:49:54.633 [WRN] lien_thong_phieu_nhap: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1662547793"}

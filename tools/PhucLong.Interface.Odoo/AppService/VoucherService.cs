@@ -31,7 +31,7 @@ namespace PhucLong.Interface.Odoo.AppService
         }
         public void GetVoucherInfoOdoo(string connectString, string date_order, int _limit, string pathLocal)
         {
-
+            FileHelper.WriteLogs(connectString);
             GetVoucherInfo(connectString, date_order, _limit, pathLocal, VoucherStateEnumPLG.Create.ToString(), (int)RawTypeOdooEnum.VoucherInfoCreate);
             Thread.Sleep(500);
             GetVoucherInfo(connectString, date_order, _limit, pathLocal, VoucherStateEnumPLG.Close.ToString(), (int)RawTypeOdooEnum.VoucherInfoClose);

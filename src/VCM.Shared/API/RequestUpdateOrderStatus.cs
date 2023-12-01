@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using VCM.Shared.Const;
 using VCM.Shared.Dtos.POS;
 
 namespace VCM.Shared.API
@@ -10,16 +11,18 @@ namespace VCM.Shared.API
     public class RequestUpdateOrderStatus
     {
         [Required]
-        [DefaultValue("PLG")]
-        public string PartnerCode { get; set; } = "PLG";
+        [DefaultValue("PLH")]
+        public string PartnerCode { get; set; } = "PLH";
+
+        public string AppCode { get; set; }
 
         [Required]
-        [DefaultValue("201801")]
-        public string PosNo { get; set; } = "201801";
+        [DefaultValue("200101")]
+        public string PosNo { get; set; } = "200101";
 
         [Required]
-        [DefaultValue("1629631110753")]
-        public string OrderNo { get; set; } = "1629631110753";
+        [DefaultValue("PLH1652759636107")]
+        public string OrderNo { get; set; } = "PLH1652759636107";
 
         [Required]
         [DefaultValue("0")]

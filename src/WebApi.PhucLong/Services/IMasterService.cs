@@ -5,7 +5,7 @@ namespace VCM.PhucLong.API.Services
 {
     public interface IMasterService
     {
-        List<GetPosConfig> GetPosConfig(string pos_name);
+        List<GetPosConfig> GetPosConfig(string pos_name, int set);
 
     }
 }

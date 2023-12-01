@@ -1,0 +1,4458 @@
+2023-07-18 09:19:39.145 [WRN] 6382526877890138279 responseBody GET /swagger/v1/swagger.json {
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WINMART",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/phuc-long/order/create": {
+      "post": {
+        "tags": [
+          "MakeOrder"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/phuc-long/order/check": {
+      "get": {
+        "tags": [
+          "MakeOrder"
+        ],
+        "parameters": [
+          {
+            "name": "AppCode",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "PLH"
+            }
+          },
+          {
+            "name": "OrderNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "200101-41498-001-0001"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/foody/partner_api_url_callback/update_order": {
+      "post": {
+        "tags": [
+          "NowFood"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback_update_order"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback_update_order"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback_update_order"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/foody/partner_api_url_callback": {
+      "post": {
+        "tags": [
+          "NowFood"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/foody/export_error_menu": {
+      "post": {
+        "tags": [
+          "NowFood"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/export_error_menu"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/export_error_menu"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/export_error_menu"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/foody/partner_api_url_callback/update_drivers_status": {
+      "post": {
+        "tags": [
+          "NowFood"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/partner_api_url_callback_update_drivers_status"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/partner_api_url_callback_update_drivers_status"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/partner_api_url_callback_update_drivers_status"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/partner/card": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSPurchaseCardRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSPurchaseCardRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSPurchaseCardRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/topup": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSTopupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSTopupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSTopupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/check/serial": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/esim": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEsimOrderPosWcmRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEsimOrderPosWcmRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEsimOrderPosWcmRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/physical-sim": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePhysicalSimOrderPosWcmRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePhysicalSimOrderPosWcmRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePhysicalSimOrderPosWcmRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/check/subscriber-info": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/o2/update": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTierMemberO2"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTierMemberO2"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTierMemberO2"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/create": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order": {
+      "get": {
+        "tags": [
+          "Transaction"
+        ],
+        "parameters": [
+          {
+            "name": "PartnerCode",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "PLH"
+            }
+          },
+          {
+            "name": "PosNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "373701"
+            }
+          },
+          {
+            "name": "OrderNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "1630307833376"
+            }
+          },
+          {
+            "name": "AppCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "NOWFOOD"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/list": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestListOrderPOS"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestListOrderPOS"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestListOrderPOS"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/count": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CountOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CountOrderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CountOrderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/update-status": {
+      "put": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestUpdateOrderStatus"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestUpdateOrderStatus"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestUpdateOrderStatus"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/refund": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BillingInfo": {
+        "type": "object",
+        "properties": {
+          "TaxID": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Address": {
+            "type": "string",
+            "nullable": true
+          },
+          "Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CountOrderRequest": {
+        "required": [
+          "AppCode",
+          "PartnerCode",
+          "StoreNo"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "PLH",
+            "example": "PLH"
+          },
+          "AppCode": {
+            "type": "string",
+            "default": "WEB",
+            "example": "WEB"
+          },
+          "StoreNo": {
+            "type": "string",
+            "default": "2018",
+            "example": "2018"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Coupons": {
+        "required": [
+          "CouponCode"
+        ],
+        "type": "object",
+        "properties": {
+          "CouponCode": {
+            "type": "string"
+          },
+          "DiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "DiscountPercent": {
+            "type": "number",
+            "format": "double"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateEsimOrderPosWcmRequest": {
+        "required": [
+          "PartnerCode",
+          "PosNo",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "KIT_WINTEL_WIN99",
+            "example": "KIT_WINTEL_WIN99"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "Serial": {
+            "type": "string",
+            "default": "89840905510000099835",
+            "nullable": true,
+            "example": "89840905510000099835"
+          },
+          "PackageId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OrderNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustPhone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePhysicalSimOrderPosWcmRequest": {
+        "required": [
+          "PartnerCode",
+          "PosNo",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "KIT_WINTEL_WIN99",
+            "example": "KIT_WINTEL_WIN99"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "Serial": {
+            "type": "string",
+            "default": "89840905510000099835",
+            "nullable": true,
+            "example": "89840905510000099835"
+          },
+          "SerialSimKIT": {
+            "type": "string",
+            "nullable": true
+          },
+          "PackageId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OrderNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustPhone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MembershipCard": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MemberCardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClubCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "LoyaltyPointsEarn": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoyaltyPointsRedeem": {
+            "type": "number",
+            "format": "double"
+          },
+          "CustName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CardClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "TotalPoints": {
+            "type": "number",
+            "format": "double"
+          },
+          "AvailabilityPoints": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Meta": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderDiscount": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OfferNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "DiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderLineDto": {
+        "required": [
+          "ItemNo",
+          "Quantity",
+          "TaxGroupCode",
+          "Uom",
+          "VatPercent"
+        ],
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "maximum": 99999,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "ParentLineId": {
+            "maximum": 99999,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "ItemNo": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string"
+          },
+          "ItemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Uom": {
+            "type": "string"
+          },
+          "OldPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "UnitPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "Quantity": {
+            "maximum": 999,
+            "minimum": 0,
+            "type": "number",
+            "format": "double",
+            "default": 1,
+            "example": 1
+          },
+          "DiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "LineAmount": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "LineAmountInVAT": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "LineAmountIncVAT": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "TaxGroupCode": {
+            "type": "string"
+          },
+          "VatPercent": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "CupType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Size": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsTopping": {
+            "type": "boolean"
+          },
+          "IsCombo": {
+            "type": "boolean"
+          },
+          "ComboNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ComboId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ArticleType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Barcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsLoyalty": {
+            "type": "boolean"
+          },
+          "Loyalty": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLoyalty"
+            },
+            "nullable": true
+          },
+          "OptionEntry": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLineOptionDto"
+            },
+            "nullable": true
+          },
+          "DiscountEntry": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderDiscount"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderLineOptionDto": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ItemNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "OptionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "OptionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Uom": {
+            "type": "string",
+            "nullable": true
+          },
+          "Qty": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderLoyalty": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MemberCardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClubCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "LoyaltyPointsEarn": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoyaltyPointsRedeem": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderPaymentDto": {
+        "required": [
+          "AmountTendered",
+          "CurrencyCode",
+          "ExchangeRate",
+          "LineId",
+          "PaymentMethod"
+        ],
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PaymentMethod": {
+            "type": "string"
+          },
+          "CurrencyCode": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "AmountTendered": {
+            "type": "number",
+            "format": "double"
+          },
+          "AmountInCurrency": {
+            "type": "number",
+            "format": "double"
+          },
+          "TransactionNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ApprovalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "TraceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReferenceId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderRequestBody": {
+        "required": [
+          "AppCode",
+          "OrderDate",
+          "OrderNo",
+          "StoreNo"
+        ],
+        "type": "object",
+        "properties": {
+          "AppCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "default": "PLH",
+            "example": "PLH"
+          },
+          "PartnerCode": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "OrderNo": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "OrderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "StoreNo": {
+            "type": "string",
+            "default": "2001",
+            "example": "2001"
+          },
+          "CustName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustPhone": {
+            "pattern": "^\\$?\\d+(\\.(\\d{2}))?$",
+            "type": "string",
+            "nullable": true
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "Status": {
+            "maximum": 999,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "example": 0
+          },
+          "SaleTypeId": {
+            "maximum": 99,
+            "minimum": 10,
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "example": 0
+          },
+          "TotalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "PaymentAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "ShippingFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "HasVatInvoice": {
+            "type": "boolean"
+          },
+          "IsLoyalty": {
+            "type": "boolean"
+          },
+          "WinCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "BillingInfo": {
+            "$ref": "#/components/schemas/BillingInfo"
+          },
+          "UseCoupon": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Coupons"
+            },
+            "nullable": true
+          },
+          "ShippingInfo": {
+            "$ref": "#/components/schemas/ShippingInfo"
+          },
+          "Serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLineDto"
+            },
+            "nullable": true
+          },
+          "Payments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderPaymentDto"
+            },
+            "nullable": true
+          },
+          "MembershipCard": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MembershipCard"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "POSPurchaseCardRequest": {
+        "required": [
+          "OrderNo",
+          "PartnerCode",
+          "PosNo",
+          "PurchaseValue",
+          "Quantity",
+          "ServiceCode",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "OrderNo": {
+            "type": "string",
+            "default": "153301210605119",
+            "example": "153301210605119"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "PURCHASE_CARD",
+            "example": "PURCHASE_CARD"
+          },
+          "ServiceCode": {
+            "type": "string",
+            "default": "GPPC.100",
+            "example": "GPPC.100"
+          },
+          "PurchaseValue": {
+            "maximum": 10000000,
+            "minimum": 9999,
+            "type": "integer",
+            "format": "int32",
+            "default": 10000,
+            "example": 10000
+          },
+          "Quantity": {
+            "maximum": 10000,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "example": 1
+          }
+        },
+        "additionalProperties": false
+      },
+      "POSTopupRequest": {
+        "required": [
+          "OrderNo",
+          "PartnerCode",
+          "PosNo",
+          "Receiver",
+          "TopupValue"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "OrderNo": {
+            "type": "string",
+            "default": "153301210605119",
+            "example": "153301210605119"
+          },
+          "Receiver": {
+            "type": "string",
+            "default": "0559384959",
+            "example": "0559384959"
+          },
+          "TopupValue": {
+            "maximum": 10000000,
+            "minimum": 10000,
+            "type": "integer",
+            "format": "int32",
+            "default": 10000,
+            "example": 10000
+          }
+        },
+        "additionalProperties": false
+      },
+      "Partner_api_url_callback": {
+        "type": "object",
+        "properties": {
+          "object_changes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/object_changes"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Partner_api_url_callback_update_order": {
+        "required": [
+          "order_code"
+        ],
+        "type": "object",
+        "properties": {
+          "order_code": {
+            "type": "string"
+          },
+          "update_type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "restaurant_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pick_time": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "merchant_note": {
+            "type": "string",
+            "nullable": true
+          },
+          "note_for_shipper": {
+            "type": "string",
+            "nullable": true
+          },
+          "partner_restaurant_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefundItems": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ParentLineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ItemNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ItemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Uom": {
+            "type": "string",
+            "nullable": true
+          },
+          "UnitPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "OldPrice": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "Quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "DiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "TaxGroupCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "VatPercent": {
+            "type": "number",
+            "format": "double"
+          },
+          "Barcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Remark": {
+        "type": "object",
+        "properties": {
+          "Remark1": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark2": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark3": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark4": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark5": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark6": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark7": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark8": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark9": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark10": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestListOrderPOS": {
+        "required": [
+          "PageNumber",
+          "PageSize",
+          "PartnerCode",
+          "PosNo"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "PLH",
+            "example": "PLH"
+          },
+          "AppCode": {
+            "type": "string",
+            "default": "SHOPEE",
+            "nullable": true,
+            "example": "SHOPEE"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "200101",
+            "example": "200101"
+          },
+          "FromDate": {
+            "type": "string",
+            "default": "yyyyMMdd",
+            "nullable": true,
+            "example": "yyyyMMdd"
+          },
+          "ToDate": {
+            "type": "string",
+            "default": "yyyyMMdd",
+            "nullable": true,
+            "example": "yyyyMMdd"
+          },
+          "CustomerKeyword": {
+            "type": "string",
+            "default": "Tên khách",
+            "nullable": true,
+            "example": "Tên khách"
+          },
+          "ItemKeyword": {
+            "type": "string",
+            "default": "Tên sản phẩm",
+            "nullable": true,
+            "example": "Tên sản phẩm"
+          },
+          "PageNumber": {
+            "type": "integer",
+            "format": "int32",
+            "default": "1",
+            "example": "1"
+          },
+          "PageSize": {
+            "type": "integer",
+            "format": "int32",
+            "default": "10",
+            "example": "10"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestUpdateOrderStatus": {
+        "required": [
+          "OrderNo",
+          "PartnerCode",
+          "PaymentAmount",
+          "PosNo",
+          "Status"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "PLH",
+            "example": "PLH"
+          },
+          "AppCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "200101",
+            "example": "200101"
+          },
+          "OrderNo": {
+            "type": "string",
+            "default": "PLH1652759636107",
+            "example": "PLH1652759636107"
+          },
+          "PaymentAmount": {
+            "type": "number",
+            "format": "double",
+            "default": "0",
+            "example": "0"
+          },
+          "Status": {
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "example": 1
+          },
+          "Remark": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Remark"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResponseClient": {
+        "type": "object",
+        "properties": {
+          "Meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "Data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesReturnRequest": {
+        "required": [
+          "OrderNo",
+          "OrgOrderNo",
+          "PartnerCode",
+          "PosNo",
+          "ReturnedOrderNo",
+          "TenderType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string"
+          },
+          "AppCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "PosNo": {
+            "type": "string"
+          },
+          "OrderNo": {
+            "type": "string"
+          },
+          "ReturnedOrderNo": {
+            "type": "string"
+          },
+          "OrgOrderNo": {
+            "type": "string"
+          },
+          "TransactionDatetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "TenderType": {
+            "type": "string"
+          },
+          "RefundAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "RefundItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RefundItems"
+            },
+            "nullable": true
+          },
+          "InvoiceNo": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "OrgInvoiceNo": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "MerchantId": {
+            "type": "string",
+            "nullable": true
+          },
+          "StoreNo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShippingInfo": {
+        "type": "object",
+        "properties": {
+          "ReceiverName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReceiverPhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReceiverEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReceiverAddress": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTierMemberO2": {
+        "required": [
+          "DataUpdate",
+          "MemberNumber",
+          "PartnerCode",
+          "PosNo",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "O2",
+            "example": "O2"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "O2_UPDATE_TIER",
+            "example": "O2_UPDATE_TIER"
+          },
+          "MemberNumber": {
+            "type": "string",
+            "default": "0559900185",
+            "example": "0559900185"
+          },
+          "DataUpdate": {
+            "type": "string",
+            "default": "VIP",
+            "example": "VIP"
+          },
+          "Remark": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Remark"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ValidateKitStatusRequest": {
+        "required": [
+          "PartnerCode",
+          "PosNo",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "KIT_WINTEL_WIN99",
+            "example": "KIT_WINTEL_WIN99"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "Serial": {
+            "type": "string",
+            "default": "89840905510000099835",
+            "nullable": true,
+            "example": "89840905510000099835"
+          }
+        },
+        "additionalProperties": false
+      },
+      "driver_arriving_times": {
+        "type": "object",
+        "properties": {
+          "order_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "restaurant_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partner_restaurant_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "driver_uid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "arriving_time": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "export_error_menu": {
+        "type": "object",
+        "properties": {
+          "object_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "object_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "restaurant_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partner_restaurant_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "partner_object_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "event_id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "update_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "error_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "error_time": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "object_changes": {
+        "type": "object",
+        "properties": {
+          "event_id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "object_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "object_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "update_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "restaurant_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partner_restaurant_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "partner_object_id": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "partner_api_url_callback_update_drivers_status": {
+        "type": "object",
+        "properties": {
+          "driver_arriving_times": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/driver_arriving_times"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "http",
+        "description": "Basic Authorization header using the Bearer scheme.",
+        "scheme": "basic"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
+2023-07-18 09:19:45.611 [WRN] 6382526878560719355 request POST /api/v1/partner/physical-sim	
+{
+  "PartnerCode": "MBC",
+  "ServiceType": "WINTEL_LIST_PACKAGE",
+  "PosNo": "373701",
+  "Serial": "0559509048",
+  "PackageId": 1099,
+  "SerialSimKIT":"89840905510000014925",
+  "OrderNo":"1689646786",
+  "CustEmail":"",
+  "CustPhone":""
+}
+2023-07-18 09:19:47.757 [WRN] ===> Get token from redis
+2023-07-18 09:19:47.786 [WRN] fb6c0723d153400180a6f92da8214661 Request https://merchant-test.reddi.vn/third-party/api/v1/CoreService/Routing	
+{"function":"mb_getListPackagePosWcm","checksum":"2ec2637d3ed222a767fd2d742337de71","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAO1j+0MHUJrPQ57v3y/Qfuyi8zrYK5rLEJrQMG4ICGoOWvvPaRI+5f0T34GNikqc+DT8g4+zk4Q9zfudp+TklPXxjalM16khRw="}
+2023-07-18 09:19:48.003 [WRN] fb6c0723d153400180a6f92da8214661 Request https://merchant-test.reddi.vn/third-party/api/v1/CoreService/Routing	
+{"code":"S902","message":"Authorization invalid","checksum":"42d8c52e037d19a05edbd4a90c99b666","encData":"RE1aNKSkHps="}
+2023-07-18 09:19:48.012 [WRN] ===> Create token from MBC
+2023-07-18 09:19:48.017 [WRN] CreateToken MBC: {"username":"0559372717","password":"App12345","merchantId":"1628679763694"}
+2023-07-18 09:19:48.429 [WRN] CreateToken MBC: {"code":"S200","message":"Login successfully","wsResponse":{"username":"0559372717","accountId":3826}}
+2023-07-18 09:19:48.462 [WRN] IMemoryCacheService USER_MBC: {"jwtToken":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRFUxT1RNM01qY3hOeTB0TFRNNE1USmxaakUyTFRZM04ySXRORFkyWmkxaFlUSmhMVEprTURNM09UWTJaVFU1WkNZbUpqbGFPRkJMV21sRlJXaHdkREJMUjFKVVlucFNZMmM5UFNNakl6TTRNalk9IiwiZXhwIjoxNjkwNTEwNzg4fQ.KsYw4hE6QJi-ogIhf-6mM5_1LEiHfWFjc9AkXmoIXEqUQR7ED_jsGdG_c982P2-GtU2BE_8rtR2wCvYfyLfrGA","username":"0559372717","accountId":"3826"}
+2023-07-18 09:19:48.468 [WRN] ea62f3f306ca48c7805d2165c0dc7688 Request https://merchant-test.reddi.vn/third-party/api/v1/CoreService/Routing	
+{"function":"mb_getListPackagePosWcm","checksum":"2ec2637d3ed222a767fd2d742337de71","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAO1j+0MHUJrPQ57v3y/Qfuyi8zrYK5rLEJrQMG4ICGoOWvvPaRI+5f0T34GNikqc+DT8g4+zk4Q9zfudp+TklPXxjalM16khRw="}
+2023-07-18 09:19:48.975 [WRN] ea62f3f306ca48c7805d2165c0dc7688 Request https://merchant-test.reddi.vn/third-party/api/v1/CoreService/Routing	
+{"code":"S200","message":"Thành công","checksum":"01db71570c40a395589b8dad0127d6a2","encData":"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"}
+2023-07-18 09:19:48.978 [WRN] ===>TripleUtils.Decrypt: {"listPackagePosWcm":[{"packageId":1366,"price":70000,"usageTime":30,"usageUnit":"ngày\r\n","packageType":1,"statusId":1,"shopId":"2407","packageName":"WIN89","shortDescription":"\u003cp\u003eQuyền lợi viễn th\u0026ocirc;ng:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eTruy cập data tốc độ cao kh\u0026ocirc;ng giới hạn dung lượng + 8GB ph\u0026aacute;t Hotspot d\u0026ugrave;ng tr\u0026ecirc;n Smartphone/ Tablet.\u003c/li\u003e\n\u003cli\u003eMiễn ph\u0026iacute; thoại nội mạng Wintel \u0026amp; Vinaphone (20 ph\u0026uacute;t đầu mỗi cuộc).\u003c/li\u003e\n\u003cli\u003eThoại ngoại mạng 50 ph\u0026uacute;t.\u003c/li\u003e\n\u003cli\u003eChu kỳ 30 ng\u0026agrave;y, gia hạn tự động.\u003c/li\u003e\n\u003cli\u003eTại thời điểm gia hạn thất bại, g\u0026oacute;i cước chờ gia hạn 60 ng\u0026agrave;y.\u003c/li\u003e\n\u003cli\u003eCam kết sử dụng mạng Wintel trong v\u0026ograve;ng 24 th\u0026aacute;ng, kể từ khi đăng k\u0026yacute;/ gia hạn g\u0026oacute;i cước th\u0026agrave;nh c\u0026ocirc;ng.\u003c/li\u003e\n\u003c/ul\u003e","ocsCode":"6661136","imgThumbnail":"https://cdn-public.reddi.asia/image/202303/09/1678345781710WIN89.png","imgBanner":"https://cdn-public.reddi.asia/image/202303/09/1678345798158WIN89.png","basicPackageId":1046,"physicalSimPrice":40000,"esimPrice":30000},{"packageId":1353,"price":56655,"usageTime":30,"usageUnit":"ngày","packageType":1,"statusId":1,"shopId":"2411","packageName":"WIN69","shortDescription":"\u003cp\u003eQuyền lợi viễn th\u0026ocirc;ng:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eTruy cập data tốc độ cao kh\u0026ocirc;ng giới hạn dung lượng + 5GB ph\u0026aacute;t Hotspot d\u0026ugrave;ng tr\u0026ecirc;n Smartphone/ Tablet.\u003c/li\u003e\n\u003cli\u003eMiễn ph\u0026iacute; thoại nội mạng Wintel \u0026amp; Vinaphone (20 ph\u0026uacute;t đầu mỗi cuộc)\u003c/li\u003e\n\u003cli\u003eChu kỳ 30 ng\u0026agrave;y, gia hạn tự động.\u003c/li\u003e\n\u003cli\u003eTại thời điểm gia hạn thất bại, g\u0026oacute;i cước chờ gia hạn 30 ng\u0026agrave;y.\u003c/li\u003e\n\u003cli\u003eKhi đăng k\u0026yacute;/ gia hạn g\u0026oacute;i cước th\u0026agrave;nh c\u0026ocirc;ng, thu\u0026ecirc; bao sẽ được cập nhật v\u0026agrave;o danh s\u0026aacute;ch cam kết sử dụng mạng Wintel trong v\u0026ograve;ng 24 th\u0026aacute;ng.\u003c/li\u003e\n\u003c/ul\u003e","ocsCode":"6661092","basicPackageId":65,"physicalSimPrice":10000,"esimPrice":23456}]}
+2023-07-18 09:19:49.009 [WRN] 6382526878560719355 responseBody POST /api/v1/partner/physical-sim {"Meta":{"Code":200,"Message":"OK"},"Data":[{"packageId":1366,"price":70000,"usageTime":30,"usageUnit":"ngày\r\n","packageType":1,"statusId":1,"shopId":"2407","packageName":"WIN89","ocsCode":"6661136","basicPackageId":1046,"itemNo":"12345688","barcode":"2050000807923","priceSim":0,"mainPackagePrice":0,"physicalSimPrice":40000}]}
+2023-07-18 09:21:01.734 [WRN] 6382526886151725525 responseBody GET /swagger/v1/swagger.json {
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WINMART",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/phuc-long/order/create": {
+      "post": {
+        "tags": [
+          "MakeOrder"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/phuc-long/order/check": {
+      "get": {
+        "tags": [
+          "MakeOrder"
+        ],
+        "parameters": [
+          {
+            "name": "AppCode",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "PLH"
+            }
+          },
+          {
+            "name": "OrderNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "200101-41498-001-0001"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/foody/partner_api_url_callback/update_order": {
+      "post": {
+        "tags": [
+          "NowFood"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback_update_order"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback_update_order"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback_update_order"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/foody/partner_api_url_callback": {
+      "post": {
+        "tags": [
+          "NowFood"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Partner_api_url_callback"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/foody/export_error_menu": {
+      "post": {
+        "tags": [
+          "NowFood"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/export_error_menu"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/export_error_menu"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/export_error_menu"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/foody/partner_api_url_callback/update_drivers_status": {
+      "post": {
+        "tags": [
+          "NowFood"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/partner_api_url_callback_update_drivers_status"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/partner_api_url_callback_update_drivers_status"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/partner_api_url_callback_update_drivers_status"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/partner/card": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSPurchaseCardRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSPurchaseCardRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSPurchaseCardRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/topup": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSTopupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSTopupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/POSTopupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/check/serial": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/esim": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEsimOrderPosWcmRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEsimOrderPosWcmRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEsimOrderPosWcmRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/physical-sim": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePhysicalSimOrderPosWcmRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePhysicalSimOrderPosWcmRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePhysicalSimOrderPosWcmRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/check/subscriber-info": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateKitStatusRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/partner/o2/update": {
+      "post": {
+        "tags": [
+          "Partner"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTierMemberO2"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTierMemberO2"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTierMemberO2"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/create": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequestBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order": {
+      "get": {
+        "tags": [
+          "Transaction"
+        ],
+        "parameters": [
+          {
+            "name": "PartnerCode",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "PLH"
+            }
+          },
+          {
+            "name": "PosNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "373701"
+            }
+          },
+          {
+            "name": "OrderNo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "1630307833376"
+            }
+          },
+          {
+            "name": "AppCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "NOWFOOD"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/list": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestListOrderPOS"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestListOrderPOS"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestListOrderPOS"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/count": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CountOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CountOrderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CountOrderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/update-status": {
+      "put": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestUpdateOrderStatus"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestUpdateOrderStatus"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestUpdateOrderStatus"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/order/refund": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseClient"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BillingInfo": {
+        "type": "object",
+        "properties": {
+          "TaxID": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Address": {
+            "type": "string",
+            "nullable": true
+          },
+          "Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CountOrderRequest": {
+        "required": [
+          "AppCode",
+          "PartnerCode",
+          "StoreNo"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "PLH",
+            "example": "PLH"
+          },
+          "AppCode": {
+            "type": "string",
+            "default": "WEB",
+            "example": "WEB"
+          },
+          "StoreNo": {
+            "type": "string",
+            "default": "2018",
+            "example": "2018"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Coupons": {
+        "required": [
+          "CouponCode"
+        ],
+        "type": "object",
+        "properties": {
+          "CouponCode": {
+            "type": "string"
+          },
+          "DiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "DiscountPercent": {
+            "type": "number",
+            "format": "double"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateEsimOrderPosWcmRequest": {
+        "required": [
+          "PartnerCode",
+          "PosNo",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "KIT_WINTEL_WIN99",
+            "example": "KIT_WINTEL_WIN99"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "Serial": {
+            "type": "string",
+            "default": "89840905510000099835",
+            "nullable": true,
+            "example": "89840905510000099835"
+          },
+          "PackageId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OrderNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustPhone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePhysicalSimOrderPosWcmRequest": {
+        "required": [
+          "PartnerCode",
+          "PosNo",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "KIT_WINTEL_WIN99",
+            "example": "KIT_WINTEL_WIN99"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "Serial": {
+            "type": "string",
+            "default": "89840905510000099835",
+            "nullable": true,
+            "example": "89840905510000099835"
+          },
+          "SerialSimKIT": {
+            "type": "string",
+            "nullable": true
+          },
+          "PackageId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OrderNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustPhone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MembershipCard": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MemberCardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClubCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "LoyaltyPointsEarn": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoyaltyPointsRedeem": {
+            "type": "number",
+            "format": "double"
+          },
+          "CustName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CardClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "TotalPoints": {
+            "type": "number",
+            "format": "double"
+          },
+          "AvailabilityPoints": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Meta": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderDiscount": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OfferNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "DiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderLineDto": {
+        "required": [
+          "ItemNo",
+          "Quantity",
+          "TaxGroupCode",
+          "Uom",
+          "VatPercent"
+        ],
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "maximum": 99999,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "ParentLineId": {
+            "maximum": 99999,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "ItemNo": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string"
+          },
+          "ItemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Uom": {
+            "type": "string"
+          },
+          "OldPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "UnitPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "Quantity": {
+            "maximum": 999,
+            "minimum": 0,
+            "type": "number",
+            "format": "double",
+            "default": 1,
+            "example": 1
+          },
+          "DiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "LineAmount": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "LineAmountInVAT": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "LineAmountIncVAT": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "TaxGroupCode": {
+            "type": "string"
+          },
+          "VatPercent": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "CupType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Size": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsTopping": {
+            "type": "boolean"
+          },
+          "IsCombo": {
+            "type": "boolean"
+          },
+          "ComboNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ComboId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ArticleType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Barcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsLoyalty": {
+            "type": "boolean"
+          },
+          "Loyalty": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLoyalty"
+            },
+            "nullable": true
+          },
+          "OptionEntry": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLineOptionDto"
+            },
+            "nullable": true
+          },
+          "DiscountEntry": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderDiscount"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderLineOptionDto": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ItemNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "OptionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "OptionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Uom": {
+            "type": "string",
+            "nullable": true
+          },
+          "Qty": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderLoyalty": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MemberCardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClubCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "LoyaltyPointsEarn": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoyaltyPointsRedeem": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderPaymentDto": {
+        "required": [
+          "AmountTendered",
+          "CurrencyCode",
+          "ExchangeRate",
+          "LineId",
+          "PaymentMethod"
+        ],
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PaymentMethod": {
+            "type": "string"
+          },
+          "CurrencyCode": {
+            "type": "string"
+          },
+          "ExchangeRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "AmountTendered": {
+            "type": "number",
+            "format": "double"
+          },
+          "AmountInCurrency": {
+            "type": "number",
+            "format": "double"
+          },
+          "TransactionNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ApprovalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "TraceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReferenceId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderRequestBody": {
+        "required": [
+          "AppCode",
+          "OrderDate",
+          "OrderNo",
+          "StoreNo"
+        ],
+        "type": "object",
+        "properties": {
+          "AppCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "default": "PLH",
+            "example": "PLH"
+          },
+          "PartnerCode": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "OrderNo": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "OrderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "StoreNo": {
+            "type": "string",
+            "default": "2001",
+            "example": "2001"
+          },
+          "CustName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "CustPhone": {
+            "pattern": "^\\$?\\d+(\\.(\\d{2}))?$",
+            "type": "string",
+            "nullable": true
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "Status": {
+            "maximum": 999,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "example": 0
+          },
+          "SaleTypeId": {
+            "maximum": 99,
+            "minimum": 10,
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "example": 0
+          },
+          "TotalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "PaymentAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "ShippingFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "HasVatInvoice": {
+            "type": "boolean"
+          },
+          "IsLoyalty": {
+            "type": "boolean"
+          },
+          "WinCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "BillingInfo": {
+            "$ref": "#/components/schemas/BillingInfo"
+          },
+          "UseCoupon": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Coupons"
+            },
+            "nullable": true
+          },
+          "ShippingInfo": {
+            "$ref": "#/components/schemas/ShippingInfo"
+          },
+          "Serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLineDto"
+            },
+            "nullable": true
+          },
+          "Payments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderPaymentDto"
+            },
+            "nullable": true
+          },
+          "MembershipCard": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MembershipCard"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "POSPurchaseCardRequest": {
+        "required": [
+          "OrderNo",
+          "PartnerCode",
+          "PosNo",
+          "PurchaseValue",
+          "Quantity",
+          "ServiceCode",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "OrderNo": {
+            "type": "string",
+            "default": "153301210605119",
+            "example": "153301210605119"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "PURCHASE_CARD",
+            "example": "PURCHASE_CARD"
+          },
+          "ServiceCode": {
+            "type": "string",
+            "default": "GPPC.100",
+            "example": "GPPC.100"
+          },
+          "PurchaseValue": {
+            "maximum": 10000000,
+            "minimum": 9999,
+            "type": "integer",
+            "format": "int32",
+            "default": 10000,
+            "example": 10000
+          },
+          "Quantity": {
+            "maximum": 10000,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "example": 1
+          }
+        },
+        "additionalProperties": false
+      },
+      "POSTopupRequest": {
+        "required": [
+          "OrderNo",
+          "PartnerCode",
+          "PosNo",
+          "Receiver",
+          "TopupValue"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "OrderNo": {
+            "type": "string",
+            "default": "153301210605119",
+            "example": "153301210605119"
+          },
+          "Receiver": {
+            "type": "string",
+            "default": "0559384959",
+            "example": "0559384959"
+          },
+          "TopupValue": {
+            "maximum": 10000000,
+            "minimum": 10000,
+            "type": "integer",
+            "format": "int32",
+            "default": 10000,
+            "example": 10000
+          }
+        },
+        "additionalProperties": false
+      },
+      "Partner_api_url_callback": {
+        "type": "object",
+        "properties": {
+          "object_changes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/object_changes"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Partner_api_url_callback_update_order": {
+        "required": [
+          "order_code"
+        ],
+        "type": "object",
+        "properties": {
+          "order_code": {
+            "type": "string"
+          },
+          "update_type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "restaurant_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pick_time": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "merchant_note": {
+            "type": "string",
+            "nullable": true
+          },
+          "note_for_shipper": {
+            "type": "string",
+            "nullable": true
+          },
+          "partner_restaurant_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefundItems": {
+        "type": "object",
+        "properties": {
+          "LineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ParentLineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ItemNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ItemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Uom": {
+            "type": "string",
+            "nullable": true
+          },
+          "UnitPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "OldPrice": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "Quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "DiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "TaxGroupCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "VatPercent": {
+            "type": "number",
+            "format": "double"
+          },
+          "Barcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Remark": {
+        "type": "object",
+        "properties": {
+          "Remark1": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark2": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark3": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark4": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark5": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark6": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark7": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark8": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark9": {
+            "type": "string",
+            "nullable": true
+          },
+          "Remark10": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestListOrderPOS": {
+        "required": [
+          "PageNumber",
+          "PageSize",
+          "PartnerCode",
+          "PosNo"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "PLH",
+            "example": "PLH"
+          },
+          "AppCode": {
+            "type": "string",
+            "default": "SHOPEE",
+            "nullable": true,
+            "example": "SHOPEE"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "200101",
+            "example": "200101"
+          },
+          "FromDate": {
+            "type": "string",
+            "default": "yyyyMMdd",
+            "nullable": true,
+            "example": "yyyyMMdd"
+          },
+          "ToDate": {
+            "type": "string",
+            "default": "yyyyMMdd",
+            "nullable": true,
+            "example": "yyyyMMdd"
+          },
+          "CustomerKeyword": {
+            "type": "string",
+            "default": "Tên khách",
+            "nullable": true,
+            "example": "Tên khách"
+          },
+          "ItemKeyword": {
+            "type": "string",
+            "default": "Tên sản phẩm",
+            "nullable": true,
+            "example": "Tên sản phẩm"
+          },
+          "PageNumber": {
+            "type": "integer",
+            "format": "int32",
+            "default": "1",
+            "example": "1"
+          },
+          "PageSize": {
+            "type": "integer",
+            "format": "int32",
+            "default": "10",
+            "example": "10"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestUpdateOrderStatus": {
+        "required": [
+          "OrderNo",
+          "PartnerCode",
+          "PaymentAmount",
+          "PosNo",
+          "Status"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "PLH",
+            "example": "PLH"
+          },
+          "AppCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "200101",
+            "example": "200101"
+          },
+          "OrderNo": {
+            "type": "string",
+            "default": "PLH1652759636107",
+            "example": "PLH1652759636107"
+          },
+          "PaymentAmount": {
+            "type": "number",
+            "format": "double",
+            "default": "0",
+            "example": "0"
+          },
+          "Status": {
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "example": 1
+          },
+          "Remark": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Remark"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResponseClient": {
+        "type": "object",
+        "properties": {
+          "Meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "Data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesReturnRequest": {
+        "required": [
+          "OrderNo",
+          "OrgOrderNo",
+          "PartnerCode",
+          "PosNo",
+          "ReturnedOrderNo",
+          "TenderType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string"
+          },
+          "AppCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "PosNo": {
+            "type": "string"
+          },
+          "OrderNo": {
+            "type": "string"
+          },
+          "ReturnedOrderNo": {
+            "type": "string"
+          },
+          "OrgOrderNo": {
+            "type": "string"
+          },
+          "TransactionDatetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "TenderType": {
+            "type": "string"
+          },
+          "RefundAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "RefundItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RefundItems"
+            },
+            "nullable": true
+          },
+          "InvoiceNo": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "OrgInvoiceNo": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "MerchantId": {
+            "type": "string",
+            "nullable": true
+          },
+          "StoreNo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShippingInfo": {
+        "type": "object",
+        "properties": {
+          "ReceiverName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReceiverPhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReceiverEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReceiverAddress": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTierMemberO2": {
+        "required": [
+          "DataUpdate",
+          "MemberNumber",
+          "PartnerCode",
+          "PosNo",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "O2",
+            "example": "O2"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "O2_UPDATE_TIER",
+            "example": "O2_UPDATE_TIER"
+          },
+          "MemberNumber": {
+            "type": "string",
+            "default": "0559900185",
+            "example": "0559900185"
+          },
+          "DataUpdate": {
+            "type": "string",
+            "default": "VIP",
+            "example": "VIP"
+          },
+          "Remark": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Remark"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ValidateKitStatusRequest": {
+        "required": [
+          "PartnerCode",
+          "PosNo",
+          "ServiceType"
+        ],
+        "type": "object",
+        "properties": {
+          "PartnerCode": {
+            "type": "string",
+            "default": "MBC",
+            "example": "MBC"
+          },
+          "ServiceType": {
+            "type": "string",
+            "default": "KIT_WINTEL_WIN99",
+            "example": "KIT_WINTEL_WIN99"
+          },
+          "PosNo": {
+            "type": "string",
+            "default": "373701",
+            "example": "373701"
+          },
+          "Serial": {
+            "type": "string",
+            "default": "89840905510000099835",
+            "nullable": true,
+            "example": "89840905510000099835"
+          }
+        },
+        "additionalProperties": false
+      },
+      "driver_arriving_times": {
+        "type": "object",
+        "properties": {
+          "order_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "restaurant_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partner_restaurant_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "driver_uid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "arriving_time": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "export_error_menu": {
+        "type": "object",
+        "properties": {
+          "object_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "object_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "restaurant_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partner_restaurant_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "partner_object_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "event_id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "update_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "error_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "error_time": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "object_changes": {
+        "type": "object",
+        "properties": {
+          "event_id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "object_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "object_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "update_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "restaurant_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partner_restaurant_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "partner_object_id": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "partner_api_url_callback_update_drivers_status": {
+        "type": "object",
+        "properties": {
+          "driver_arriving_times": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/driver_arriving_times"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "http",
+        "description": "Basic Authorization header using the Bearer scheme.",
+        "scheme": "basic"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
+2023-07-18 09:21:05.269 [WRN] 6382526886526567514 request POST /api/v1/partner/physical-sim	
+{
+  "PartnerCode": "MBC",
+  "ServiceType": "WINTEL_LIST_PACKAGE",
+  "PosNo": "373701",
+  "Serial": "0559509048",
+  "PackageId": 1099,
+  "SerialSimKIT":"89840905510000014925",
+  "OrderNo":"1689646865",
+  "CustEmail":"",
+  "CustPhone":""
+}
+2023-07-18 09:21:06.879 [WRN] ===> Get token from redis
+2023-07-18 09:21:06.926 [WRN] cb4c4c2d39b14bb797839aa9aa45a9a2 Request https://merchant-test.reddi.vn/third-party/api/v1/CoreService/Routing	
+{"function":"mb_getListPackagePosWcm","checksum":"2ec2637d3ed222a767fd2d742337de71","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAO1j+0MHUJrPQ57v3y/Qfuyi8zrYK5rLEJrQMG4ICGoOWvvPaRI+5f0T34GNikqc+DT8g4+zk4Q9zfudp+TklPXxjalM16khRw="}
+2023-07-18 09:21:07.388 [WRN] cb4c4c2d39b14bb797839aa9aa45a9a2 Request https://merchant-test.reddi.vn/third-party/api/v1/CoreService/Routing	
+{"code":"S200","message":"Thành công","checksum":"01db71570c40a395589b8dad0127d6a2","encData":"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"}
+2023-07-18 09:21:07.394 [WRN] ===>TripleUtils.Decrypt: {"listPackagePosWcm":[{"packageId":1366,"price":70000,"usageTime":30,"usageUnit":"ngày\r\n","packageType":1,"statusId":1,"shopId":"2407","packageName":"WIN89","shortDescription":"\u003cp\u003eQuyền lợi viễn th\u0026ocirc;ng:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eTruy cập data tốc độ cao kh\u0026ocirc;ng giới hạn dung lượng + 8GB ph\u0026aacute;t Hotspot d\u0026ugrave;ng tr\u0026ecirc;n Smartphone/ Tablet.\u003c/li\u003e\n\u003cli\u003eMiễn ph\u0026iacute; thoại nội mạng Wintel \u0026amp; Vinaphone (20 ph\u0026uacute;t đầu mỗi cuộc).\u003c/li\u003e\n\u003cli\u003eThoại ngoại mạng 50 ph\u0026uacute;t.\u003c/li\u003e\n\u003cli\u003eChu kỳ 30 ng\u0026agrave;y, gia hạn tự động.\u003c/li\u003e\n\u003cli\u003eTại thời điểm gia hạn thất bại, g\u0026oacute;i cước chờ gia hạn 60 ng\u0026agrave;y.\u003c/li\u003e\n\u003cli\u003eCam kết sử dụng mạng Wintel trong v\u0026ograve;ng 24 th\u0026aacute;ng, kể từ khi đăng k\u0026yacute;/ gia hạn g\u0026oacute;i cước th\u0026agrave;nh c\u0026ocirc;ng.\u003c/li\u003e\n\u003c/ul\u003e","ocsCode":"6661136","imgThumbnail":"https://cdn-public.reddi.asia/image/202303/09/1678345781710WIN89.png","imgBanner":"https://cdn-public.reddi.asia/image/202303/09/1678345798158WIN89.png","basicPackageId":1046,"physicalSimPrice":40000,"esimPrice":30000},{"packageId":1353,"price":56655,"usageTime":30,"usageUnit":"ngày","packageType":1,"statusId":1,"shopId":"2411","packageName":"WIN69","shortDescription":"\u003cp\u003eQuyền lợi viễn th\u0026ocirc;ng:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eTruy cập data tốc độ cao kh\u0026ocirc;ng giới hạn dung lượng + 5GB ph\u0026aacute;t Hotspot d\u0026ugrave;ng tr\u0026ecirc;n Smartphone/ Tablet.\u003c/li\u003e\n\u003cli\u003eMiễn ph\u0026iacute; thoại nội mạng Wintel \u0026amp; Vinaphone (20 ph\u0026uacute;t đầu mỗi cuộc)\u003c/li\u003e\n\u003cli\u003eChu kỳ 30 ng\u0026agrave;y, gia hạn tự động.\u003c/li\u003e\n\u003cli\u003eTại thời điểm gia hạn thất bại, g\u0026oacute;i cước chờ gia hạn 30 ng\u0026agrave;y.\u003c/li\u003e\n\u003cli\u003eKhi đăng k\u0026yacute;/ gia hạn g\u0026oacute;i cước th\u0026agrave;nh c\u0026ocirc;ng, thu\u0026ecirc; bao sẽ được cập nhật v\u0026agrave;o danh s\u0026aacute;ch cam kết sử dụng mạng Wintel trong v\u0026ograve;ng 24 th\u0026aacute;ng.\u003c/li\u003e\n\u003c/ul\u003e","ocsCode":"6661092","basicPackageId":65,"physicalSimPrice":10000,"esimPrice":23456}]}
+2023-07-18 09:21:07.425 [WRN] 6382526886526567514 responseBody POST /api/v1/partner/physical-sim {"Meta":{"Code":200,"Message":"OK"},"Data":[{"packageId":1366,"price":70000,"usageTime":30,"usageUnit":"ngày\r\n","packageType":1,"statusId":1,"shopId":"2407","packageName":"WIN89","ocsCode":"6661136","basicPackageId":1046,"itemNo":"12345688","barcode":"2050000807923","priceSim":0,"mainPackagePrice":0,"physicalSimPrice":40000,"esimPrice":30000}]}

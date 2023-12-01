@@ -1,9 +1,18 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Http;
+using System;
+using System.Net;
+using System.Net.Http;
 using VCM.Partner.API.Application.Implementation;
 using VCM.Partner.API.Application.Interfaces;
 using VCM.Partner.API.Authentication;
+using WebApi.Core.AppServices;
+using WebApi.Core.AppServices.ShopeeService;
+using WebApi.Partner.Application.Implementation;
+using WebApi.Partner.Application.Interfaces;
+using WebApi.Partner.Application.Repository;
 
 namespace VCM.Partner.API
 {
@@ -13,7 +22,9 @@ namespace VCM.Partner.API
         {
             services.AddAuthentication("BasicAuthentication")
                     .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+            services.AddAuthorization();
 
+            //services.AddScoped<IRedisCacheService, RedisCacheService>();
             services.AddScoped<IMemoryCacheService, MemoryCacheService>();
             services.AddScoped<IAirPayService, AirPayService>();
             services.AddScoped<ITransService, TransService>();
@@ -21,22 +32,18 @@ namespace VCM.Partner.API
             services.AddScoped<IMobiCastService, MobiCastService>();
             services.AddScoped<IShoppingCartService, ShoppingCartService>();
             services.AddTransient<IPhucLongService, PhucLongService>();
-            services.AddTransient<IMakeOrderService, MakeOrderService>();
+            services.AddTransient<IPhucLongV2Service, PhucLongV2Service>();
+            services.AddTransient<IOrderRedisService, OrderRedisService>();
+            services.AddTransient<IShopeeService, ShopeeService>();
+            services.AddTransient<IDishShopeeService, DishShopeeService>();
+            services.AddTransient<IToppingShopeeService, ToppingShopeeService>();
+            services.AddTransient<IRestaurantShopeeService, RestaurantShopeeService>();
+            services.AddTransient<IO2Service, O2Service>();
+            services.AddTransient<IVoucherService, VoucherService>();
+            services.AddTransient<IKibanaService, KibanaService>();
 
-            //HealthCheckResult
-            services.AddHealthChecks()
-                .AddCheck("self", () => HealthCheckResult.Healthy())
-                .AddSqlServer(
-                    connectionString,
-                    name: "PartnerDB-check",
-                    tags: new string[] { "PartnerDb" });
-                    services.AddHealthChecksUI(opt =>
-                    {
-                        opt.SetEvaluationTimeInSeconds(15); //time in seconds between check
-                        opt.MaximumHistoryEntriesPerEndpoint(60); //maximum history of checks
-                        //opt.SetApiMaxActiveRequests(1); //api requests concurrency
-                        //opt.AddHealthCheckEndpoint("Partner API", "/hc"); //map health check api
-                    }).AddInMemoryStorage();
-         }
+            services.AddTransient<IVoucherRepository, VoucherRepository>();
+
+        }
     }
 }

@@ -1,0 +1,55 @@
+2023-05-18 09:01:27.139 [ERR] Connection id "0HMQN8F4S5H3I", Request id "0HMQN8F4S5H3I:00000001": An unhandled exception was thrown by the application.
+System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.FormatError()
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object arg0, Object arg1, Object arg2)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 50
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 09:01:37.990 [ERR] Connection id "0HMQN8F4S5H3I", Request id "0HMQN8F4S5H3I:00000005": An unhandled exception was thrown by the application.
+System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.FormatError()
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object arg0, Object arg1, Object arg2)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 50
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 09:01:42.584 [ERR] Connection id "0HMQN8F4S5H3K", Request id "0HMQN8F4S5H3K:00000001": An unhandled exception was thrown by the application.
+System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.FormatError()
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object arg0, Object arg1, Object arg2)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 50
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 09:02:48.209 [ERR] Connection id "0HMQN8FT2CQ8A", Request id "0HMQN8FT2CQ8A:00000001": An unhandled exception was thrown by the application.
+System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.FormatError()
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object arg0, Object arg1, Object arg2)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 50
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 09:02:53.034 [ERR] Connection id "0HMQN8FT2CQ8C", Request id "0HMQN8FT2CQ8C:00000001": An unhandled exception was thrown by the application.
+System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.FormatError()
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object arg0, Object arg1, Object arg2)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 50
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)

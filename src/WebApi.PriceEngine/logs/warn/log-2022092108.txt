@@ -1,0 +1,717 @@
+2022-09-21 08:31:59.174 [WRN] ===> scan: 153599220900053
+2022-09-21 08:33:21.610 [WRN] ===> scan: 153599220900053
+2022-09-21 08:33:29.290 [WRN] MappingTransLineKIOS.Exception: Object reference not set to an instance of an object.
+2022-09-21 08:33:38.072 [WRN] ===> scan: 153599220900053
+2022-09-21 08:40:27.231 [WRN] ===> scan: 153599220900053
+2022-09-21 08:40:27.782 [WRN] 1000
+2022-09-21 08:40:27.786 [WRN] 1109
+2022-09-21 08:40:27.788 [WRN] 2000
+2022-09-21 08:40:27.789 [WRN] 3000
+2022-09-21 08:40:27.791 [WRN] 4000
+2022-09-21 08:40:27.792 [WRN] 5000
+2022-09-21 08:40:27.795 [WRN] 6000
+2022-09-21 08:40:27.798 [WRN] 7000
+2022-09-21 08:40:27.799 [WRN] 8000
+2022-09-21 08:40:27.801 [WRN] 9000
+2022-09-21 08:40:27.802 [WRN] 10000
+2022-09-21 08:40:27.803 [WRN] 11000
+2022-09-21 08:40:27.805 [WRN] 12000
+2022-09-21 08:40:27.806 [WRN] 13000
+2022-09-21 08:40:27.807 [WRN] 14000
+2022-09-21 08:40:27.809 [WRN] 15000
+2022-09-21 08:40:27.811 [WRN] 15109
+2022-09-21 08:40:27.814 [WRN] 16000
+2022-09-21 08:40:27.816 [WRN] 16109
+2022-09-21 08:40:27.817 [WRN] 17000
+2022-09-21 08:40:27.819 [WRN] 17109
+2022-09-21 08:40:27.820 [WRN] 18000
+2022-09-21 08:40:27.822 [WRN] 18109
+2022-09-21 08:40:27.823 [WRN] 19000
+2022-09-21 08:40:27.825 [WRN] 20000
+2022-09-21 08:40:27.826 [WRN] 21000
+2022-09-21 08:40:27.830 [WRN] 22000
+2022-09-21 08:40:27.832 [WRN] 23000
+2022-09-21 08:40:27.833 [WRN] 24000
+2022-09-21 08:40:27.835 [WRN] 25000
+2022-09-21 08:40:27.836 [WRN] 26000
+2022-09-21 08:40:27.837 [WRN] 27000
+2022-09-21 08:40:27.838 [WRN] 28000
+2022-09-21 08:40:27.840 [WRN] 29000
+2022-09-21 08:40:27.841 [WRN] 30000
+2022-09-21 08:40:27.842 [WRN] 31000
+2022-09-21 08:40:27.846 [WRN] 32000
+2022-09-21 08:40:27.849 [WRN] 33000
+2022-09-21 08:40:27.851 [WRN] 34000
+2022-09-21 08:40:27.852 [WRN] 35000
+2022-09-21 08:40:27.854 [WRN] 36000
+2022-09-21 08:40:27.855 [WRN] 37000
+2022-09-21 08:40:27.856 [WRN] 38000
+2022-09-21 08:40:27.858 [WRN] 39000
+2022-09-21 08:40:27.859 [WRN] 40000
+2022-09-21 08:40:27.862 [WRN] 41000
+2022-09-21 08:40:27.864 [WRN] 42000
+2022-09-21 08:40:27.866 [WRN] 43000
+2022-09-21 08:40:27.867 [WRN] 44000
+2022-09-21 08:40:27.869 [WRN] 45000
+2022-09-21 08:40:27.870 [WRN] 46000
+2022-09-21 08:40:27.871 [WRN] 47000
+2022-09-21 08:40:27.873 [WRN] 48000
+2022-09-21 08:40:27.874 [WRN] 49000
+2022-09-21 08:40:27.875 [WRN] 50000
+2022-09-21 08:40:27.878 [WRN] 51000
+2022-09-21 08:40:27.880 [WRN] 52000
+2022-09-21 08:40:27.882 [WRN] 53000
+2022-09-21 08:40:27.884 [WRN] 54000
+2022-09-21 08:40:27.885 [WRN] 55000
+2022-09-21 08:40:27.886 [WRN] 56000
+2022-09-21 08:40:27.888 [WRN] 57000
+2022-09-21 08:40:27.889 [WRN] 58000
+2022-09-21 08:40:27.890 [WRN] 59000
+2022-09-21 08:40:27.892 [WRN] 60000
+2022-09-21 08:40:27.893 [WRN] 61000
+2022-09-21 08:40:27.895 [WRN] 62000
+2022-09-21 08:40:27.898 [WRN] 63000
+2022-09-21 08:40:27.900 [WRN] 64000
+2022-09-21 08:40:27.901 [WRN] 65000
+2022-09-21 08:40:27.902 [WRN] 66000
+2022-09-21 08:40:27.904 [WRN] 67000
+2022-09-21 08:40:27.905 [WRN] 68000
+2022-09-21 08:40:27.906 [WRN] 69000
+2022-09-21 08:40:27.908 [WRN] 70000
+2022-09-21 08:40:27.909 [WRN] 71000
+2022-09-21 08:40:27.911 [WRN] 72000
+2022-09-21 08:40:27.915 [WRN] 73000
+2022-09-21 08:40:27.916 [WRN] 74000
+2022-09-21 08:40:27.918 [WRN] 75000
+2022-09-21 08:40:27.919 [WRN] 76000
+2022-09-21 08:40:27.921 [WRN] 77000
+2022-09-21 08:40:27.922 [WRN] 78000
+2022-09-21 08:40:27.923 [WRN] 79000
+2022-09-21 08:40:27.924 [WRN] 80000
+2022-09-21 08:40:27.926 [WRN] 81000
+2022-09-21 08:40:27.928 [WRN] 82000
+2022-09-21 08:40:27.931 [WRN] 83000
+2022-09-21 08:40:27.933 [WRN] 84000
+2022-09-21 08:40:27.934 [WRN] 85000
+2022-09-21 08:40:27.936 [WRN] 86000
+2022-09-21 08:40:27.938 [WRN] 87000
+2022-09-21 08:40:27.940 [WRN] 88000
+2022-09-21 08:40:47.298 [WRN] MappingTransLineKIOS.Exception: Object reference not set to an instance of an object.
+2022-09-21 08:43:23.553 [WRN] ===> scan: 153599220900053
+2022-09-21 08:43:23.986 [WRN] 1000
+2022-09-21 08:43:24.009 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":1000,"OfferNo":"1000003082","OfferType":"ZB10","Quantity":0.0,"DiscountAmount":83200.0,"Note":""}]
+2022-09-21 08:43:24.012 [WRN] []
+2022-09-21 08:43:24.014 [WRN] 1109
+2022-09-21 08:43:24.015 [WRN] []
+2022-09-21 08:43:24.016 [WRN] []
+2022-09-21 08:43:24.018 [WRN] 2000
+2022-09-21 08:43:24.019 [WRN] []
+2022-09-21 08:43:24.020 [WRN] []
+2022-09-21 08:43:24.021 [WRN] 3000
+2022-09-21 08:43:24.023 [WRN] []
+2022-09-21 08:43:24.025 [WRN] []
+2022-09-21 08:43:24.028 [WRN] 4000
+2022-09-21 08:43:24.029 [WRN] []
+2022-09-21 08:43:24.030 [WRN] []
+2022-09-21 08:43:24.031 [WRN] 5000
+2022-09-21 08:43:24.033 [WRN] []
+2022-09-21 08:43:24.034 [WRN] []
+2022-09-21 08:43:24.035 [WRN] 6000
+2022-09-21 08:43:24.036 [WRN] []
+2022-09-21 08:43:24.037 [WRN] []
+2022-09-21 08:43:24.039 [WRN] 7000
+2022-09-21 08:43:24.040 [WRN] []
+2022-09-21 08:43:24.041 [WRN] []
+2022-09-21 08:43:24.042 [WRN] 8000
+2022-09-21 08:43:24.044 [WRN] []
+2022-09-21 08:43:24.045 [WRN] []
+2022-09-21 08:43:24.046 [WRN] 9000
+2022-09-21 08:43:24.048 [WRN] []
+2022-09-21 08:43:24.049 [WRN] []
+2022-09-21 08:43:24.050 [WRN] 10000
+2022-09-21 08:43:24.051 [WRN] []
+2022-09-21 08:43:24.052 [WRN] []
+2022-09-21 08:43:24.053 [WRN] 11000
+2022-09-21 08:43:24.055 [WRN] []
+2022-09-21 08:43:24.056 [WRN] []
+2022-09-21 08:43:24.057 [WRN] 12000
+2022-09-21 08:43:24.058 [WRN] []
+2022-09-21 08:43:24.059 [WRN] []
+2022-09-21 08:43:24.061 [WRN] 13000
+2022-09-21 08:43:24.063 [WRN] []
+2022-09-21 08:43:24.064 [WRN] []
+2022-09-21 08:43:24.065 [WRN] 14000
+2022-09-21 08:43:24.067 [WRN] []
+2022-09-21 08:43:24.068 [WRN] []
+2022-09-21 08:43:24.069 [WRN] 15000
+2022-09-21 08:43:24.070 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":15000,"OfferNo":"1000003083","OfferType":"ZB10","Quantity":0.0,"DiscountAmount":4030.0,"Note":""}]
+2022-09-21 08:43:24.071 [WRN] []
+2022-09-21 08:43:24.073 [WRN] 15109
+2022-09-21 08:43:24.074 [WRN] []
+2022-09-21 08:43:24.075 [WRN] []
+2022-09-21 08:43:24.076 [WRN] 16000
+2022-09-21 08:43:24.078 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":16000,"OfferNo":"1000003084","OfferType":"ZB10","Quantity":0.0,"DiscountAmount":24000.0,"Note":""}]
+2022-09-21 08:43:24.080 [WRN] []
+2022-09-21 08:43:24.081 [WRN] 16109
+2022-09-21 08:43:24.082 [WRN] []
+2022-09-21 08:43:24.083 [WRN] []
+2022-09-21 08:43:24.084 [WRN] 17000
+2022-09-21 08:43:24.086 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":17000,"OfferNo":"1000003085","OfferType":"ZB10","Quantity":0.0,"DiscountAmount":5200.0,"Note":""}]
+2022-09-21 08:43:24.087 [WRN] []
+2022-09-21 08:43:24.088 [WRN] 17109
+2022-09-21 08:43:24.089 [WRN] []
+2022-09-21 08:43:24.090 [WRN] []
+2022-09-21 08:43:24.092 [WRN] 18000
+2022-09-21 08:43:24.093 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":18000,"OfferNo":"1000003086","OfferType":"ZB10","Quantity":0.0,"DiscountAmount":10800.0,"Note":""}]
+2022-09-21 08:43:24.095 [WRN] []
+2022-09-21 08:43:24.096 [WRN] 18109
+2022-09-21 08:43:24.097 [WRN] []
+2022-09-21 08:43:24.099 [WRN] []
+2022-09-21 08:43:24.100 [WRN] 19000
+2022-09-21 08:43:24.101 [WRN] []
+2022-09-21 08:43:24.102 [WRN] []
+2022-09-21 08:43:24.104 [WRN] 20000
+2022-09-21 08:43:24.105 [WRN] []
+2022-09-21 08:43:24.106 [WRN] []
+2022-09-21 08:43:24.108 [WRN] 21000
+2022-09-21 08:43:24.109 [WRN] []
+2022-09-21 08:43:24.112 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":21000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.114 [WRN] 22000
+2022-09-21 08:43:24.115 [WRN] []
+2022-09-21 08:43:24.117 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":22000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.118 [WRN] 23000
+2022-09-21 08:43:24.119 [WRN] []
+2022-09-21 08:43:24.121 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":23000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.122 [WRN] 24000
+2022-09-21 08:43:24.123 [WRN] []
+2022-09-21 08:43:24.124 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":24000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.125 [WRN] 25000
+2022-09-21 08:43:24.127 [WRN] []
+2022-09-21 08:43:24.129 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":25000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":25000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":25000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.130 [WRN] 26000
+2022-09-21 08:43:24.132 [WRN] []
+2022-09-21 08:43:24.133 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":26000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.134 [WRN] 27000
+2022-09-21 08:43:24.135 [WRN] []
+2022-09-21 08:43:24.137 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":27000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.138 [WRN] 28000
+2022-09-21 08:43:24.139 [WRN] []
+2022-09-21 08:43:24.140 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":28000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.142 [WRN] 29000
+2022-09-21 08:43:24.143 [WRN] []
+2022-09-21 08:43:24.145 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":29000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.147 [WRN] 30000
+2022-09-21 08:43:24.148 [WRN] []
+2022-09-21 08:43:24.149 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":30000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.151 [WRN] 31000
+2022-09-21 08:43:24.152 [WRN] []
+2022-09-21 08:43:24.154 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":31000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.155 [WRN] 32000
+2022-09-21 08:43:24.157 [WRN] []
+2022-09-21 08:43:24.158 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":32000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.160 [WRN] 33000
+2022-09-21 08:43:24.162 [WRN] []
+2022-09-21 08:43:24.164 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":33000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.166 [WRN] 34000
+2022-09-21 08:43:24.167 [WRN] []
+2022-09-21 08:43:24.168 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":34000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.169 [WRN] 35000
+2022-09-21 08:43:24.171 [WRN] []
+2022-09-21 08:43:24.172 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":35000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.173 [WRN] 36000
+2022-09-21 08:43:24.174 [WRN] []
+2022-09-21 08:43:24.175 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":36000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":36000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":36000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":4,"ParentLineId":36000,"Type":"Option","ItemNo":"DUMMY010","OptionType":"Bình thường","OptionName":"Sữa","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.177 [WRN] 37000
+2022-09-21 08:43:24.179 [WRN] []
+2022-09-21 08:43:24.181 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":37000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":37000,"Type":"Option","ItemNo":"DUMMY001","OptionType":"Bình thường","OptionName":"Sữa đặc","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":37000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":4,"ParentLineId":37000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.182 [WRN] 38000
+2022-09-21 08:43:24.183 [WRN] []
+2022-09-21 08:43:24.184 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":38000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.186 [WRN] 39000
+2022-09-21 08:43:24.187 [WRN] []
+2022-09-21 08:43:24.188 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":39000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.189 [WRN] 40000
+2022-09-21 08:43:24.190 [WRN] []
+2022-09-21 08:43:24.191 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":40000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.193 [WRN] 41000
+2022-09-21 08:43:24.194 [WRN] []
+2022-09-21 08:43:24.196 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":41000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.197 [WRN] 42000
+2022-09-21 08:43:24.198 [WRN] []
+2022-09-21 08:43:24.200 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":42000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.201 [WRN] 43000
+2022-09-21 08:43:24.202 [WRN] []
+2022-09-21 08:43:24.203 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":43000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.205 [WRN] 44000
+2022-09-21 08:43:24.206 [WRN] []
+2022-09-21 08:43:24.207 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":44000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.208 [WRN] 45000
+2022-09-21 08:43:24.209 [WRN] []
+2022-09-21 08:43:24.211 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":45000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":45000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":45000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.213 [WRN] 46000
+2022-09-21 08:43:24.214 [WRN] []
+2022-09-21 08:43:24.215 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":46000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.216 [WRN] 47000
+2022-09-21 08:43:24.218 [WRN] []
+2022-09-21 08:43:24.219 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":47000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.220 [WRN] 48000
+2022-09-21 08:43:24.221 [WRN] []
+2022-09-21 08:43:24.223 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":48000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":48000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":48000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":4,"ParentLineId":48000,"Type":"Option","ItemNo":"DUMMY010","OptionType":"Bình thường","OptionName":"Sữa","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.224 [WRN] 49000
+2022-09-21 08:43:24.225 [WRN] []
+2022-09-21 08:43:24.226 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":49000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.228 [WRN] 50000
+2022-09-21 08:43:24.230 [WRN] []
+2022-09-21 08:43:24.231 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":50000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.232 [WRN] 51000
+2022-09-21 08:43:24.233 [WRN] []
+2022-09-21 08:43:24.235 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":51000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.236 [WRN] 52000
+2022-09-21 08:43:24.237 [WRN] []
+2022-09-21 08:43:24.238 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":52000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.239 [WRN] 53000
+2022-09-21 08:43:24.241 [WRN] []
+2022-09-21 08:43:24.242 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":53000,"Type":"Cup","ItemNo":"65000144","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"L"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":53000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":53000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":4,"ParentLineId":53000,"Type":"Option","ItemNo":"DUMMY006","OptionType":"Bình thường","OptionName":"Trà","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":5,"ParentLineId":53000,"Type":"Option","ItemNo":"DUMMY010","OptionType":"Bình thường","OptionName":"Sữa","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.243 [WRN] 54000
+2022-09-21 08:43:24.245 [WRN] []
+2022-09-21 08:43:24.246 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":54000,"Type":"Cup","ItemNo":"DUMMY101","OptionType":"PLASTIC","OptionName":"Ly nhựa","Uom":"CAI","Qty":1.0,"Size":"L"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":54000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":54000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":4,"ParentLineId":54000,"Type":"Option","ItemNo":"DUMMY010","OptionType":"Bình thường","OptionName":"Sữa","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.248 [WRN] 55000
+2022-09-21 08:43:24.249 [WRN] []
+2022-09-21 08:43:24.250 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":55000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"L"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":55000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":55000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.251 [WRN] 56000
+2022-09-21 08:43:24.253 [WRN] []
+2022-09-21 08:43:24.254 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":56000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.255 [WRN] 57000
+2022-09-21 08:43:24.257 [WRN] []
+2022-09-21 08:43:24.258 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":57000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":57000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":57000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.259 [WRN] 58000
+2022-09-21 08:43:24.260 [WRN] []
+2022-09-21 08:43:24.262 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":58000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.263 [WRN] 59000
+2022-09-21 08:43:24.265 [WRN] []
+2022-09-21 08:43:24.266 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":59000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.267 [WRN] 60000
+2022-09-21 08:43:24.268 [WRN] []
+2022-09-21 08:43:24.269 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":60000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.271 [WRN] 61000
+2022-09-21 08:43:24.272 [WRN] []
+2022-09-21 08:43:24.274 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":61000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.276 [WRN] 62000
+2022-09-21 08:43:24.278 [WRN] []
+2022-09-21 08:43:24.280 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":62000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.281 [WRN] 63000
+2022-09-21 08:43:24.283 [WRN] []
+2022-09-21 08:43:24.284 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":63000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.285 [WRN] 64000
+2022-09-21 08:43:24.287 [WRN] []
+2022-09-21 08:43:24.288 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":64000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":64000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":64000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.289 [WRN] 65000
+2022-09-21 08:43:24.290 [WRN] []
+2022-09-21 08:43:24.291 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":65000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.293 [WRN] 66000
+2022-09-21 08:43:24.294 [WRN] []
+2022-09-21 08:43:24.296 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":66000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.297 [WRN] 67000
+2022-09-21 08:43:24.298 [WRN] []
+2022-09-21 08:43:24.299 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":67000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.301 [WRN] 68000
+2022-09-21 08:43:24.302 [WRN] []
+2022-09-21 08:43:24.303 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":68000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.304 [WRN] 69000
+2022-09-21 08:43:24.306 [WRN] []
+2022-09-21 08:43:24.307 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":69000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.308 [WRN] 70000
+2022-09-21 08:43:24.309 [WRN] []
+2022-09-21 08:43:24.311 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":70000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.312 [WRN] 71000
+2022-09-21 08:43:24.314 [WRN] []
+2022-09-21 08:43:24.315 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":71000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.316 [WRN] 72000
+2022-09-21 08:43:24.318 [WRN] []
+2022-09-21 08:43:24.319 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":72000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":72000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":72000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.320 [WRN] 73000
+2022-09-21 08:43:24.322 [WRN] []
+2022-09-21 08:43:24.323 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":73000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.324 [WRN] 74000
+2022-09-21 08:43:24.325 [WRN] []
+2022-09-21 08:43:24.327 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":74000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.329 [WRN] 75000
+2022-09-21 08:43:24.330 [WRN] []
+2022-09-21 08:43:24.332 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":75000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.333 [WRN] 76000
+2022-09-21 08:43:24.334 [WRN] []
+2022-09-21 08:43:24.335 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":76000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.337 [WRN] 77000
+2022-09-21 08:43:24.338 [WRN] []
+2022-09-21 08:43:24.339 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":77000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.340 [WRN] 78000
+2022-09-21 08:43:24.342 [WRN] []
+2022-09-21 08:43:24.343 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":78000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.345 [WRN] 79000
+2022-09-21 08:43:24.346 [WRN] []
+2022-09-21 08:43:24.348 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":79000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.350 [WRN] 80000
+2022-09-21 08:43:24.351 [WRN] []
+2022-09-21 08:43:24.352 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":80000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.354 [WRN] 81000
+2022-09-21 08:43:24.355 [WRN] []
+2022-09-21 08:43:24.356 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":81000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.357 [WRN] 82000
+2022-09-21 08:43:24.358 [WRN] []
+2022-09-21 08:43:24.360 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":82000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.362 [WRN] 83000
+2022-09-21 08:43:24.363 [WRN] []
+2022-09-21 08:43:24.365 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":83000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.366 [WRN] 84000
+2022-09-21 08:43:24.367 [WRN] []
+2022-09-21 08:43:24.368 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":84000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.370 [WRN] 85000
+2022-09-21 08:43:24.371 [WRN] []
+2022-09-21 08:43:24.373 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":85000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":85000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":85000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":4,"ParentLineId":85000,"Type":"Option","ItemNo":"DUMMY006","OptionType":"Bình","OptionName":"Trà","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.374 [WRN] 86000
+2022-09-21 08:43:24.376 [WRN] []
+2022-09-21 08:43:24.378 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":86000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"}]
+2022-09-21 08:43:24.380 [WRN] 87000
+2022-09-21 08:43:24.382 [WRN] []
+2022-09-21 08:43:24.383 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":87000,"Type":"Cup","ItemNo":"DUMMY102","OptionType":"PAPER","OptionName":"Ly giấy","Uom":"CAI","Qty":1.0,"Size":"M"},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":87000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình thường","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":87000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình thường","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":4,"ParentLineId":87000,"Type":"Option","ItemNo":"DUMMY010","OptionType":"Bình thường","OptionName":"Sữa","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:24.385 [WRN] 88000
+2022-09-21 08:43:24.386 [WRN] []
+2022-09-21 08:43:24.387 [WRN] [{"OrderNo":"153599220900053","LineId":1,"ParentLineId":88000,"Type":"Option","ItemNo":"DUMMY003","OptionType":"Bình","OptionName":"Đá","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":2,"ParentLineId":88000,"Type":"Option","ItemNo":"DUMMY005","OptionType":"Bình","OptionName":"Đường","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":3,"ParentLineId":88000,"Type":"Option","ItemNo":"DUMMY006","OptionType":"Bình","OptionName":"Trà","Uom":"DV","Qty":1.0,"Size":""},{"OrderNo":"153599220900053","LineId":4,"ParentLineId":88000,"Type":"Option","ItemNo":"DUMMY010","OptionType":"Bình","OptionName":"Sữa","Uom":"DV","Qty":1.0,"Size":""}]
+2022-09-21 08:43:26.379 [WRN] MappingTransLineKIOS.Exception: Object reference not set to an instance of an object.
+2022-09-21 08:47:05.989 [WRN] ===> scan: 153599220900053
+2022-09-21 08:47:06.506 [WRN] 1000== === 
+2022-09-21 08:47:06.512 [WRN] 1109== === 
+2022-09-21 08:47:06.514 [WRN] 2000== === 
+2022-09-21 08:47:06.516 [WRN] 3000== === 
+2022-09-21 08:47:06.518 [WRN] 4000== === 
+2022-09-21 08:47:06.520 [WRN] 5000== === 
+2022-09-21 08:47:06.522 [WRN] 6000== === 
+2022-09-21 08:47:06.523 [WRN] 7000== === 
+2022-09-21 08:47:06.528 [WRN] 8000== === 
+2022-09-21 08:47:06.530 [WRN] 9000== === 
+2022-09-21 08:47:06.532 [WRN] 10000== === 
+2022-09-21 08:47:06.534 [WRN] 11000== === 
+2022-09-21 08:47:06.535 [WRN] 12000== === 
+2022-09-21 08:47:06.537 [WRN] 13000== === 
+2022-09-21 08:47:06.538 [WRN] 14000== === 
+2022-09-21 08:47:06.539 [WRN] 15000== === 
+2022-09-21 08:47:06.540 [WRN] 15109== === 
+2022-09-21 08:47:06.541 [WRN] 16000== === 
+2022-09-21 08:47:06.542 [WRN] 16109== === 
+2022-09-21 08:47:06.545 [WRN] 17000== === 
+2022-09-21 08:47:06.547 [WRN] 17109== === 
+2022-09-21 08:47:06.548 [WRN] 18000== === 
+2022-09-21 08:47:06.549 [WRN] 18109== === 
+2022-09-21 08:47:06.551 [WRN] 19000== === 
+2022-09-21 08:47:06.552 [WRN] 20000== === 
+2022-09-21 08:47:06.553 [WRN] 21000==M === PAPER
+2022-09-21 08:47:06.554 [WRN] 22000==M === PAPER
+2022-09-21 08:47:06.556 [WRN] 23000==M === PAPER
+2022-09-21 08:47:06.557 [WRN] 24000==M === PAPER
+2022-09-21 08:47:06.558 [WRN] 25000==M === PAPER
+2022-09-21 08:47:06.559 [WRN] 26000==M === PAPER
+2022-09-21 08:47:06.562 [WRN] 27000==M === PAPER
+2022-09-21 08:47:06.563 [WRN] 28000==M === PAPER
+2022-09-21 08:47:06.565 [WRN] 29000==M === PAPER
+2022-09-21 08:47:06.566 [WRN] 30000==M === PAPER
+2022-09-21 08:47:06.567 [WRN] 31000==M === PAPER
+2022-09-21 08:47:06.568 [WRN] 32000==M === PAPER
+2022-09-21 08:47:06.569 [WRN] 33000==M === PAPER
+2022-09-21 08:47:06.570 [WRN] 34000==M === PAPER
+2022-09-21 08:47:06.571 [WRN] 35000==M === PAPER
+2022-09-21 08:47:06.573 [WRN] 36000==M === PAPER
+2022-09-21 08:47:06.574 [WRN] 37000==M === PAPER
+2022-09-21 08:47:06.575 [WRN] 38000==M === PAPER
+2022-09-21 08:47:06.576 [WRN] 39000==M === PAPER
+2022-09-21 08:47:06.579 [WRN] 40000==M === PAPER
+2022-09-21 08:47:06.580 [WRN] 41000==M === PAPER
+2022-09-21 08:47:06.581 [WRN] 42000==M === PAPER
+2022-09-21 08:47:06.583 [WRN] 43000==M === PAPER
+2022-09-21 08:47:06.584 [WRN] 44000==M === PAPER
+2022-09-21 08:47:06.585 [WRN] 45000==M === PAPER
+2022-09-21 08:47:06.586 [WRN] 46000==M === PAPER
+2022-09-21 08:47:06.587 [WRN] 47000==M === PAPER
+2022-09-21 08:47:06.588 [WRN] 48000== === PAPER
+2022-09-21 08:47:06.590 [WRN] 49000==M === PAPER
+2022-09-21 08:47:06.591 [WRN] 50000==M === PAPER
+2022-09-21 08:47:06.592 [WRN] 51000==M === PAPER
+2022-09-21 08:47:06.595 [WRN] 52000==M === PAPER
+2022-09-21 08:47:06.596 [WRN] 53000==L === PAPER
+2022-09-21 08:47:06.597 [WRN] 54000==L === PLASTIC
+2022-09-21 08:47:06.599 [WRN] 55000==L === PAPER
+2022-09-21 08:47:06.600 [WRN] 56000== === PAPER
+2022-09-21 08:47:06.601 [WRN] 57000==M === PAPER
+2022-09-21 08:47:06.602 [WRN] 58000==M === PAPER
+2022-09-21 08:47:06.603 [WRN] 59000==M === PAPER
+2022-09-21 08:47:06.604 [WRN] 60000==M === PAPER
+2022-09-21 08:47:06.605 [WRN] 61000==M === PAPER
+2022-09-21 08:47:06.607 [WRN] 62000==M === PAPER
+2022-09-21 08:47:06.608 [WRN] 63000==M === PAPER
+2022-09-21 08:47:06.609 [WRN] 64000==M === PAPER
+2022-09-21 08:47:06.612 [WRN] 65000==M === PAPER
+2022-09-21 08:47:06.613 [WRN] 66000==M === PAPER
+2022-09-21 08:47:06.614 [WRN] 67000==M === PAPER
+2022-09-21 08:47:06.615 [WRN] 68000==M === PAPER
+2022-09-21 08:47:06.616 [WRN] 69000==M === PAPER
+2022-09-21 08:47:06.618 [WRN] 70000==M === PAPER
+2022-09-21 08:47:06.619 [WRN] 71000==M === PAPER
+2022-09-21 08:47:06.620 [WRN] 72000==M === PAPER
+2022-09-21 08:47:06.621 [WRN] 73000==M === PAPER
+2022-09-21 08:47:06.622 [WRN] 74000==M === PAPER
+2022-09-21 08:47:06.624 [WRN] 75000==M === PAPER
+2022-09-21 08:47:06.625 [WRN] 76000==M === PAPER
+2022-09-21 08:47:06.626 [WRN] 77000==M === PAPER
+2022-09-21 08:47:06.629 [WRN] 78000==M === PAPER
+2022-09-21 08:47:06.631 [WRN] 79000==M === PAPER
+2022-09-21 08:47:06.633 [WRN] 80000==M === PAPER
+2022-09-21 08:47:06.634 [WRN] 81000==M === PAPER
+2022-09-21 08:47:06.636 [WRN] 82000==M === PAPER
+2022-09-21 08:47:06.637 [WRN] 83000== === PAPER
+2022-09-21 08:47:06.639 [WRN] 84000==M === PAPER
+2022-09-21 08:47:06.640 [WRN] 85000==M === PAPER
+2022-09-21 08:47:06.641 [WRN] 86000==M === PAPER
+2022-09-21 08:47:06.643 [WRN] 87000==M === PAPER
+2022-09-21 08:50:26.497 [WRN] ===> scan: 153599220900053
+2022-09-21 08:50:26.994 [WRN] 1000== === 
+2022-09-21 08:50:26.997 [WRN] 1109== === 
+2022-09-21 08:50:26.998 [WRN] 2000== === 
+2022-09-21 08:50:26.999 [WRN] 3000== === 
+2022-09-21 08:50:27.001 [WRN] 4000== === 
+2022-09-21 08:50:27.002 [WRN] 5000== === 
+2022-09-21 08:50:27.003 [WRN] 6000== === 
+2022-09-21 08:50:27.004 [WRN] 7000== === 
+2022-09-21 08:50:27.005 [WRN] 8000== === 
+2022-09-21 08:50:27.006 [WRN] 9000== === 
+2022-09-21 08:50:27.008 [WRN] 10000== === 
+2022-09-21 08:50:27.009 [WRN] 11000== === 
+2022-09-21 08:50:27.011 [WRN] 12000== === 
+2022-09-21 08:50:27.012 [WRN] 13000== === 
+2022-09-21 08:50:27.013 [WRN] 14000== === 
+2022-09-21 08:50:27.015 [WRN] 15000== === 
+2022-09-21 08:50:27.016 [WRN] 15109== === 
+2022-09-21 08:50:27.017 [WRN] 16000== === 
+2022-09-21 08:50:27.018 [WRN] 16109== === 
+2022-09-21 08:50:27.019 [WRN] 17000== === 
+2022-09-21 08:50:27.020 [WRN] 17109== === 
+2022-09-21 08:50:27.022 [WRN] 18000== === 
+2022-09-21 08:50:27.023 [WRN] 18109== === 
+2022-09-21 08:50:27.024 [WRN] 19000== === 
+2022-09-21 08:50:27.025 [WRN] 20000== === 
+2022-09-21 08:50:27.028 [WRN] 21000==M === PAPER
+2022-09-21 08:50:27.030 [WRN] 22000==M === PAPER
+2022-09-21 08:50:27.031 [WRN] 23000==M === PAPER
+2022-09-21 08:50:27.032 [WRN] 24000==M === PAPER
+2022-09-21 08:50:27.033 [WRN] 25000==M === PAPER
+2022-09-21 08:50:27.034 [WRN] 26000==M === PAPER
+2022-09-21 08:50:27.036 [WRN] 27000==M === PAPER
+2022-09-21 08:50:27.037 [WRN] 28000==M === PAPER
+2022-09-21 08:50:27.038 [WRN] 29000==M === PAPER
+2022-09-21 08:50:27.039 [WRN] 30000==M === PAPER
+2022-09-21 08:50:27.040 [WRN] 31000==M === PAPER
+2022-09-21 08:50:27.042 [WRN] 32000==M === PAPER
+2022-09-21 08:50:27.043 [WRN] 33000==M === PAPER
+2022-09-21 08:50:27.045 [WRN] 34000==M === PAPER
+2022-09-21 08:50:27.046 [WRN] 35000==M === PAPER
+2022-09-21 08:50:27.047 [WRN] 36000==M === PAPER
+2022-09-21 08:50:27.048 [WRN] 37000==M === PAPER
+2022-09-21 08:50:27.050 [WRN] 38000==M === PAPER
+2022-09-21 08:50:27.051 [WRN] 39000==M === PAPER
+2022-09-21 08:50:27.052 [WRN] 40000==M === PAPER
+2022-09-21 08:50:27.053 [WRN] 41000==M === PAPER
+2022-09-21 08:50:27.054 [WRN] 42000==M === PAPER
+2022-09-21 08:50:27.056 [WRN] 43000==M === PAPER
+2022-09-21 08:50:27.057 [WRN] 44000==M === PAPER
+2022-09-21 08:50:27.058 [WRN] 45000==M === PAPER
+2022-09-21 08:50:27.060 [WRN] 46000==M === PAPER
+2022-09-21 08:50:27.062 [WRN] 47000==M === PAPER
+2022-09-21 08:50:27.063 [WRN] 48000== === PAPER
+2022-09-21 08:50:27.064 [WRN] 49000==M === PAPER
+2022-09-21 08:50:27.065 [WRN] 50000==M === PAPER
+2022-09-21 08:50:27.067 [WRN] 51000==M === PAPER
+2022-09-21 08:50:27.068 [WRN] 52000==M === PAPER
+2022-09-21 08:50:27.069 [WRN] 53000==L === PAPER
+2022-09-21 08:50:27.070 [WRN] 54000==L === PLASTIC
+2022-09-21 08:50:27.071 [WRN] 55000==L === PAPER
+2022-09-21 08:50:27.072 [WRN] 56000== === PAPER
+2022-09-21 08:50:27.074 [WRN] 57000==M === PAPER
+2022-09-21 08:50:27.075 [WRN] 58000==M === PAPER
+2022-09-21 08:50:27.076 [WRN] 59000==M === PAPER
+2022-09-21 08:50:27.078 [WRN] 60000==M === PAPER
+2022-09-21 08:50:27.079 [WRN] 61000==M === PAPER
+2022-09-21 08:50:27.080 [WRN] 62000==M === PAPER
+2022-09-21 08:50:27.082 [WRN] 63000==M === PAPER
+2022-09-21 08:50:27.083 [WRN] 64000==M === PAPER
+2022-09-21 08:50:27.084 [WRN] 65000==M === PAPER
+2022-09-21 08:50:27.086 [WRN] 66000==M === PAPER
+2022-09-21 08:50:27.087 [WRN] 67000==M === PAPER
+2022-09-21 08:50:27.089 [WRN] 68000==M === PAPER
+2022-09-21 08:50:27.090 [WRN] 69000==M === PAPER
+2022-09-21 08:50:27.092 [WRN] 70000==M === PAPER
+2022-09-21 08:50:27.095 [WRN] 71000==M === PAPER
+2022-09-21 08:50:27.096 [WRN] 72000==M === PAPER
+2022-09-21 08:50:27.097 [WRN] 73000==M === PAPER
+2022-09-21 08:50:27.099 [WRN] 74000==M === PAPER
+2022-09-21 08:50:27.100 [WRN] 75000==M === PAPER
+2022-09-21 08:50:27.101 [WRN] 76000==M === PAPER
+2022-09-21 08:50:27.102 [WRN] 77000==M === PAPER
+2022-09-21 08:50:27.103 [WRN] 78000==M === PAPER
+2022-09-21 08:50:27.105 [WRN] 79000==M === PAPER
+2022-09-21 08:50:27.106 [WRN] 80000==M === PAPER
+2022-09-21 08:50:27.107 [WRN] 81000==M === PAPER
+2022-09-21 08:50:27.108 [WRN] 82000==M === PAPER
+2022-09-21 08:50:27.110 [WRN] 83000== === PAPER
+2022-09-21 08:50:27.112 [WRN] 84000==M === PAPER
+2022-09-21 08:50:27.113 [WRN] 85000==M === PAPER
+2022-09-21 08:50:27.114 [WRN] 86000==M === PAPER
+2022-09-21 08:50:27.116 [WRN] 87000==M === PAPER
+2022-09-21 08:50:27.117 [WRN] 88000== === 
+2022-09-21 08:50:27.118 [WRN] 89000==M === PAPER
+2022-09-21 08:50:27.119 [WRN] 90000==M === PAPER
+2022-09-21 08:50:27.120 [WRN] 91000==M === PAPER
+2022-09-21 08:50:27.122 [WRN] 92000==M === PAPER
+2022-09-21 08:50:27.123 [WRN] 93000==M === PAPER
+2022-09-21 08:50:27.124 [WRN] 94000==M === PAPER
+2022-09-21 08:50:27.125 [WRN] 95000==M === PAPER
+2022-09-21 08:50:27.127 [WRN] 96000==M === PAPER
+2022-09-21 08:50:27.129 [WRN] 97000==M === PAPER
+2022-09-21 08:50:27.131 [WRN] 98000==M === PAPER
+2022-09-21 08:50:27.132 [WRN] 99000==M === PAPER
+2022-09-21 08:50:27.133 [WRN] 100000==M === PAPER
+2022-09-21 08:50:27.135 [WRN] 101000==M === PAPER
+2022-09-21 08:50:27.136 [WRN] 102000==M === PAPER
+2022-09-21 08:50:27.137 [WRN] 103000==M === PAPER
+2022-09-21 08:50:27.138 [WRN] 104000==L === PAPER
+2022-09-21 08:50:27.139 [WRN] 105000==L === PAPER
+2022-09-21 08:50:27.141 [WRN] 106000==L === PAPER
+2022-09-21 08:50:27.142 [WRN] 107000== === 
+2022-09-21 08:50:27.144 [WRN] 108000== === 
+2022-09-21 08:50:27.145 [WRN] 109000== === 
+2022-09-21 08:50:27.146 [WRN] 110000== === 
+2022-09-21 08:52:16.970 [WRN] ===> scan: 153599220900053
+2022-09-21 08:52:17.438 [WRN] 1000== === 
+2022-09-21 08:52:17.440 [WRN] 1109== === 
+2022-09-21 08:52:17.442 [WRN] 2000== === 
+2022-09-21 08:52:17.445 [WRN] 3000== === 
+2022-09-21 08:52:17.449 [WRN] 4000== === 
+2022-09-21 08:52:17.451 [WRN] 5000== === 
+2022-09-21 08:52:17.452 [WRN] 6000== === 
+2022-09-21 08:52:17.453 [WRN] 7000== === 
+2022-09-21 08:52:17.454 [WRN] 8000== === 
+2022-09-21 08:52:17.455 [WRN] 9000== === 
+2022-09-21 08:52:17.457 [WRN] 10000== === 
+2022-09-21 08:52:17.458 [WRN] 11000== === 
+2022-09-21 08:52:17.462 [WRN] 12000== === 
+2022-09-21 08:52:17.465 [WRN] 13000== === 
+2022-09-21 08:52:17.467 [WRN] 14000== === 
+2022-09-21 08:52:17.469 [WRN] 15000== === 
+2022-09-21 08:52:17.470 [WRN] 15109== === 
+2022-09-21 08:52:17.471 [WRN] 16000== === 
+2022-09-21 08:52:17.472 [WRN] 16109== === 
+2022-09-21 08:52:17.474 [WRN] 17000== === 
+2022-09-21 08:52:17.475 [WRN] 17109== === 
+2022-09-21 08:52:17.478 [WRN] 18000== === 
+2022-09-21 08:52:17.481 [WRN] 18109== === 
+2022-09-21 08:52:17.483 [WRN] 19000== === 
+2022-09-21 08:52:17.485 [WRN] 20000== === 
+2022-09-21 08:52:17.486 [WRN] 21000==M === PAPER
+2022-09-21 08:52:17.488 [WRN] 22000==M === PAPER
+2022-09-21 08:52:17.489 [WRN] 23000==M === PAPER
+2022-09-21 08:52:17.490 [WRN] 24000==M === PAPER
+2022-09-21 08:52:17.492 [WRN] 25000==M === PAPER
+2022-09-21 08:52:17.494 [WRN] 26000==M === PAPER
+2022-09-21 08:52:17.498 [WRN] 27000==M === PAPER
+2022-09-21 08:52:17.500 [WRN] 28000==M === PAPER
+2022-09-21 08:52:17.501 [WRN] 29000==M === PAPER
+2022-09-21 08:52:17.503 [WRN] 30000==M === PAPER
+2022-09-21 08:52:17.504 [WRN] 31000==M === PAPER
+2022-09-21 08:52:17.505 [WRN] 32000==M === PAPER
+2022-09-21 08:52:17.506 [WRN] 33000==M === PAPER
+2022-09-21 08:52:17.508 [WRN] 34000==M === PAPER
+2022-09-21 08:52:17.509 [WRN] 35000==M === PAPER
+2022-09-21 08:52:17.513 [WRN] 36000==M === PAPER
+2022-09-21 08:52:17.516 [WRN] 37000==M === PAPER
+2022-09-21 08:52:17.517 [WRN] 38000==M === PAPER
+2022-09-21 08:52:17.519 [WRN] 39000==M === PAPER
+2022-09-21 08:52:17.520 [WRN] 40000==M === PAPER
+2022-09-21 08:52:17.521 [WRN] 41000==M === PAPER
+2022-09-21 08:52:17.523 [WRN] 42000==M === PAPER
+2022-09-21 08:52:17.524 [WRN] 43000==M === PAPER
+2022-09-21 08:52:17.525 [WRN] 44000==M === PAPER
+2022-09-21 08:52:17.528 [WRN] 45000==M === PAPER
+2022-09-21 08:52:17.530 [WRN] 46000==M === PAPER
+2022-09-21 08:52:17.533 [WRN] 47000==M === PAPER
+2022-09-21 08:52:17.534 [WRN] 48000== === PAPER
+2022-09-21 08:52:17.536 [WRN] 49000==M === PAPER
+2022-09-21 08:52:17.537 [WRN] 50000==M === PAPER
+2022-09-21 08:52:17.538 [WRN] 51000==M === PAPER
+2022-09-21 08:52:17.539 [WRN] 52000==M === PAPER
+2022-09-21 08:52:17.540 [WRN] 53000==L === PAPER
+2022-09-21 08:52:17.542 [WRN] 54000==L === PLASTIC
+2022-09-21 08:52:17.544 [WRN] 55000==L === PAPER
+2022-09-21 08:52:17.546 [WRN] 56000== === PAPER
+2022-09-21 08:52:17.548 [WRN] 57000==M === PAPER
+2022-09-21 08:52:17.550 [WRN] 58000==M === PAPER
+2022-09-21 08:52:17.551 [WRN] 59000==M === PAPER
+2022-09-21 08:52:17.552 [WRN] 60000==M === PAPER
+2022-09-21 08:52:17.554 [WRN] 61000==M === PAPER
+2022-09-21 08:52:17.555 [WRN] 62000==M === PAPER
+2022-09-21 08:52:17.556 [WRN] 63000==M === PAPER
+2022-09-21 08:52:17.557 [WRN] 64000==M === PAPER
+2022-09-21 08:52:17.559 [WRN] 65000==M === PAPER
+2022-09-21 08:52:17.561 [WRN] 66000==M === PAPER
+2022-09-21 08:52:17.563 [WRN] 67000==M === PAPER
+2022-09-21 08:52:17.565 [WRN] 68000==M === PAPER
+2022-09-21 08:52:17.567 [WRN] 69000==M === PAPER
+2022-09-21 08:52:17.569 [WRN] 70000==M === PAPER
+2022-09-21 08:52:17.570 [WRN] 71000==M === PAPER
+2022-09-21 08:52:17.572 [WRN] 72000==M === PAPER
+2022-09-21 08:52:17.573 [WRN] 73000==M === PAPER
+2022-09-21 08:52:17.574 [WRN] 74000==M === PAPER
+2022-09-21 08:52:17.575 [WRN] 75000==M === PAPER
+2022-09-21 08:52:17.578 [WRN] 76000==M === PAPER
+2022-09-21 08:52:17.581 [WRN] 77000==M === PAPER
+2022-09-21 08:52:17.583 [WRN] 78000==M === PAPER
+2022-09-21 08:52:17.585 [WRN] 79000==M === PAPER
+2022-09-21 08:52:17.586 [WRN] 80000==M === PAPER
+2022-09-21 08:52:17.588 [WRN] 81000==M === PAPER
+2022-09-21 08:52:17.589 [WRN] 82000==M === PAPER
+2022-09-21 08:52:17.591 [WRN] 83000== === PAPER
+2022-09-21 08:52:17.592 [WRN] 84000==M === PAPER
+2022-09-21 08:52:17.596 [WRN] 85000==M === PAPER
+2022-09-21 08:52:17.599 [WRN] 86000==M === PAPER
+2022-09-21 08:52:17.601 [WRN] 87000==M === PAPER
+2022-09-21 08:52:17.602 [WRN] 88000== === 
+2022-09-21 08:52:17.604 [WRN] 89000==M === PAPER
+2022-09-21 08:52:17.605 [WRN] 90000==M === PAPER
+2022-09-21 08:52:17.607 [WRN] 91000==M === PAPER
+2022-09-21 08:52:17.608 [WRN] 92000==M === PAPER
+2022-09-21 08:52:17.613 [WRN] 93000==M === PAPER
+2022-09-21 08:52:17.616 [WRN] 94000==M === PAPER
+2022-09-21 08:52:17.619 [WRN] 95000==M === PAPER
+2022-09-21 08:52:17.622 [WRN] 96000==M === PAPER
+2022-09-21 08:52:17.624 [WRN] 97000==M === PAPER
+2022-09-21 08:52:17.630 [WRN] 98000==M === PAPER
+2022-09-21 08:52:17.634 [WRN] 99000==M === PAPER
+2022-09-21 08:52:17.636 [WRN] 100000==M === PAPER
+2022-09-21 08:52:17.638 [WRN] 101000==M === PAPER
+2022-09-21 08:52:17.641 [WRN] 102000==M === PAPER
+2022-09-21 08:52:17.642 [WRN] 103000==M === PAPER
+2022-09-21 08:52:17.648 [WRN] 104000==L === PAPER
+2022-09-21 08:52:17.651 [WRN] 105000==L === PAPER
+2022-09-21 08:52:17.653 [WRN] 106000==L === PAPER
+2022-09-21 08:52:17.654 [WRN] 107000== === 
+2022-09-21 08:52:17.656 [WRN] 108000== === 
+2022-09-21 08:52:17.657 [WRN] 109000== === 
+2022-09-21 08:52:17.658 [WRN] 110000== === 
+2022-09-21 08:57:17.355 [WRN] ===> scan: P10001220900060
+2022-09-21 08:57:17.774 [WRN] 2000== === 
+2022-09-21 08:57:17.776 [WRN] 3000== === 
+2022-09-21 08:57:17.778 [WRN] 4000== === 
+2022-09-21 08:57:38.501 [WRN] ===> scan: P10001220900061
+2022-09-21 08:57:38.624 [WRN] 1000== === 
+2022-09-21 08:57:38.625 [WRN] 2000== === 
+2022-09-21 08:57:38.628 [WRN] 3000== === 
+2022-09-21 08:57:38.629 [WRN] 4000== === 
+2022-09-21 08:58:54.507 [WRN] ===> scan: P10001220900062
+2022-09-21 08:58:54.640 [WRN] 1000== === 
+2022-09-21 08:58:54.642 [WRN] 2000== === 

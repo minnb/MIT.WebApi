@@ -1,0 +1,65 @@
+2022-09-07 08:11:16.853 [ERR] Connection id "0HMKGDNEEE8P0", Request id "0HMKGDNEEE8P0:00000007": An unhandled exception was thrown by the application.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/lien-thong/phieu-nhap-thuoc" for actions - WebApi.DrWin.Controllers.PharmacyController.NhapThuocGPP (WebApi.DrWin),WebApi.DrWin.Controllers.PharmacyController.TaoMoiMaThuocGPP (WebApi.DrWin). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-09-07 08:11:48.498 [ERR] Connection id "0HMKGDNNSPKLI", Request id "0HMKGDNNSPKLI:00000007": An unhandled exception was thrown by the application.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/lien-thong/phieu-nhap-thuoc" for actions - WebApi.DrWin.Controllers.PharmacyController.NhapThuocGPP (WebApi.DrWin),WebApi.DrWin.Controllers.PharmacyController.TaoMoiMaThuocGPP (WebApi.DrWin). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-09-07 08:20:40.324 [ERR] Connection id "0HMKGDSMCN2RD", Request id "0HMKGDSMCN2RD:00000007": An unhandled exception was thrown by the application.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/lien-thong/phieu-nhap-thuoc" for actions - WebApi.DrWin.Controllers.PharmacyController.NhapThuocGPP (WebApi.DrWin),WebApi.DrWin.Controllers.PharmacyController.TaoMoiMaThuocGPP (WebApi.DrWin). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-09-07 08:20:55.810 [ERR] Connection id "0HMKGDSR16SON", Request id "0HMKGDSR16SON:00000007": An unhandled exception was thrown by the application.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/lien-thong/phieu-nhap-thuoc" for actions - WebApi.DrWin.Controllers.PharmacyController.NhapThuocGPP (WebApi.DrWin),WebApi.DrWin.Controllers.PharmacyController.TaoMoiMaThuocGPP (WebApi.DrWin). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-09-07 08:22:20.397 [WRN] Result: {"message":"Tên thuốc không để trống"}
+2022-09-07 08:23:55.094 [WRN] Result: {"message":"Tên thuốc không để trống"}
+2022-09-07 08:25:18.543 [WRN] Result: "DCS000004528054"
+2022-09-07 08:25:18.600 [WRN] Exception: Error converting value "DCS000004528054" to type 'WebApi.DrWin.Models.PhieuNhapRsp'. Path '', line 1, position 17.
+2022-09-07 08:26:30.583 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:26:44.610 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:29:33.566 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:29:35.891 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:30:11.083 [WRN] Result: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1662514211"}
+2022-09-07 08:30:15.714 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:30:31.060 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:30:32.287 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:30:33.219 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:31:19.995 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:31:36.942 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:31:52.433 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:32:01.727 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:32:07.968 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}
+2022-09-07 08:33:56.544 [WRN] Result: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1662514436"}
+2022-09-07 08:34:58.132 [WRN] Result: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1662514496"}
+2022-09-07 08:36:59.079 [WRN] Result: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1662514619"}

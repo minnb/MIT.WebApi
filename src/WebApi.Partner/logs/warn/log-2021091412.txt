@@ -1,2 +1,0 @@
-2021-09-14 12:17:05.064 [WRN] WMT-ListOrder: https://api-crownx.winmart.vn/rp/api/pos/order/list
-2021-09-14 12:17:05.834 [WRN] WMT-ListOrder: {"Data":[]}

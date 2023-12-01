@@ -1,0 +1,1 @@
+2022-09-22 09:59:55.003 [WRN] ===> request: {"OrderNo":"373707220900073","PaymentDate":"20220921","Payments":[{"LineId":1,"PaymentMethod":"ZCRE","CurrencyCode":"VND","ExchangeRate":1.0,"AmountTendered":1470000.0,"AmountInCurrency":1470000.0,"TransactionNo":"1663815594","ApprovalCode":"1663815594","TraceCode":""}]}

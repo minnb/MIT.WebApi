@@ -9,12 +9,14 @@ namespace VCM.Shared.API
     public class RequestListOrderPOS
     {
         [Required]
-        [DefaultValue("WMT")]
-        public string PartnerCode { get; set; } = "WMT";
+        [DefaultValue("PLH")]
+        public string PartnerCode { get; set; } = "PLH";
+        [DefaultValue("SHOPEE")]
+        public string AppCode { get; set; } = "SHOPEE";
 
         [Required]
-        [DefaultValue("373701")]
-        public string PosNo { get; set; } = "373701";
+        [DefaultValue("200101")]
+        public string PosNo { get; set; } = "200101";
 
         [DefaultValue("yyyyMMdd")]
         public string FromDate { get; set; }

@@ -1,0 +1,79 @@
+2023-05-18 10:37:20.171 [WRN] 63820003039733248015 - Request: {"Path":"/swagger/index.html","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:37:20.210 [WRN] 63820003039733248015 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:37:20.2004659+07:00"}
+2023-05-18 10:37:37.750 [WRN] 6382000305328811105 - Request: {"Path":"/api/v1/transaction/order/list","Method":"POST","QueryString":"","Payload":""}
+2023-05-18 10:37:37.752 [WRN] 6382000305328811105 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:37:37.7506349+07:00"}
+2023-05-18 10:38:47.362 [WRN] 6382000312708159094 - Request: {"Path":"/swagger/index.html","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:38:47.391 [WRN] 6382000312708159094 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:38:47.382088+07:00"}
+2023-05-18 10:38:47.517 [ERR] Connection id "0HMQNA5HE55NK", Request id "0HMQNA5HE55NK:00000001": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Seek(Int64 offset, SeekOrigin loc)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 69
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 10:39:49.352 [WRN] 6382000318903300954 - Request: {"Path":"/swagger/index.html","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:39:49.380 [WRN] 6382000318903300954 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:39:49.3742707+07:00"}
+2023-05-18 10:39:49.443 [WRN] 63820003189427321312 - Request: {"Path":"/swagger/favicon-32x32.png","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:39:49.445 [WRN] 63820003189427321312 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:39:49.4437605+07:00"}
+2023-05-18 10:39:49.498 [WRN] 63820003189408868714 - Request: {"Path":"/swagger/v1/swagger.json","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:39:49.500 [WRN] 63820003189408868714 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:39:49.4984744+07:00"}
+2023-05-18 10:39:53.486 [WRN] 63820003192063281011 - Request: {"Path":"/api/v1/transaction/order/list","Method":"POST","QueryString":"","Payload":""}
+2023-05-18 10:39:53.488 [WRN] 63820003192063281011 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:39:53.486588+07:00"}
+2023-05-18 10:44:18.407 [WRN] 6382000345806662064 - Request: {"Path":"/swagger/index.html","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:44:18.432 [WRN] 6382000345806662064 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:44:18.4266791+07:00"}
+2023-05-18 10:44:18.548 [WRN] 63820003458467318110 - Request: {"Path":"/swagger/v1/swagger.json","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:44:18.552 [WRN] 63820003458467318110 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:44:18.5489913+07:00"}
+2023-05-18 10:44:53.061 [WRN] 6382000349168702924 - Request: {"Path":"/api/v1/transaction/order/list","Method":"POST","QueryString":"","Payload":""}
+2023-05-18 10:44:53.063 [WRN] 6382000349168702924 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:44:53.0615418+07:00"}
+2023-05-18 10:48:07.780 [WRN] 63820003687482694711 - Request: {"Path":"/swagger/index.html","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:48:07.804 [WRN] 63820003687482694711 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:48:07.7996132+07:00"}
+2023-05-18 10:48:07.917 [WRN] 63820003687839547416 - Request: {"Path":"/swagger/v1/swagger.json","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:48:07.919 [WRN] 63820003687839547416 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:48:07.9178073+07:00"}
+2023-05-18 10:48:14.718 [WRN] 63820003690376727810 - Request: {"Path":"/api/v1/transaction/order/list","Method":"POST","QueryString":"","Payload":""}
+2023-05-18 10:48:14.719 [WRN] 63820003690376727810 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:48:14.7183854+07:00"}
+2023-05-18 10:50:31.379 [WRN] 6382000383106889215 - Request: {"Path":"/swagger/index.html","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:50:31.516 [ERR] Connection id "0HMQNAC37PIUT", Request id "0HMQNAC37PIUT:00000001": An unhandled exception was thrown by the application.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at System.IO.StreamReader..ctor(Stream stream)
+   at WebApi.Core.Middleware.LoggingMiddleware.GetResponseAsync(HttpContext context, String corrId) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 122
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 65
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 10:50:38.352 [WRN] 6382000383702317164 - Request: {"Path":"/api/v1/transaction/order/list","Method":"POST","QueryString":"","Payload":""}
+2023-05-18 10:50:38.480 [ERR] Connection id "0HMQNAC37PIUV", Request id "0HMQNAC37PIUV:00000001": An unhandled exception was thrown by the application.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at System.IO.StreamReader..ctor(Stream stream)
+   at WebApi.Core.Middleware.LoggingMiddleware.GetResponseAsync(HttpContext context, String corrId) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 122
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 65
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 10:51:04.576 [WRN] 6382000386426287074 - Request: {"Path":"/swagger/index.html","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:51:04.684 [ERR] Connection id "0HMQNACD4LHL3", Request id "0HMQNACD4LHL3:00000001": An unhandled exception was thrown by the application.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at System.IO.StreamReader..ctor(Stream stream)
+   at WebApi.Core.Middleware.LoggingMiddleware.GetResponseAsync(HttpContext context, String corrId) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 122
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 65
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 10:51:09.045 [WRN] 63820003867624667015 - Request: {"Path":"/api/v1/transaction/order/list","Method":"POST","QueryString":"","Payload":""}
+2023-05-18 10:51:09.130 [ERR] Connection id "0HMQNACD4LHL6", Request id "0HMQNACD4LHL6:00000001": An unhandled exception was thrown by the application.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at System.IO.StreamReader..ctor(Stream stream)
+   at WebApi.Core.Middleware.LoggingMiddleware.GetResponseAsync(HttpContext context, String corrId) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 122
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 65
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-18 10:52:23.588 [WRN] 6382000394328653254 - Request: {"Path":"/swagger/index.html","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:52:23.613 [WRN] 6382000394328653254 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:52:23.6073118+07:00"}
+2023-05-18 10:52:23.726 [WRN] 6382000394364465768 - Request: {"Path":"/swagger/v1/swagger.json","Method":"GET","QueryString":"","Payload":""}
+2023-05-18 10:52:23.728 [WRN] 6382000394364465768 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:52:23.7269979+07:00"}
+2023-05-18 10:52:27.594 [WRN] 63820003946121811610 - Request: {"Path":"/api/v1/transaction/order/list","Method":"POST","QueryString":"","Payload":""}
+2023-05-18 10:52:27.597 [WRN] 63820003946121811610 - Response: {"Response":"","ResponseCode":"200","IsSuccessStatusCode":true,"RespondedOn":"2023-05-18T10:52:27.5952419+07:00"}

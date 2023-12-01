@@ -1,0 +1,321 @@
+2023-05-15 11:07:14.998 [WRN] ===> start requestId: b40434e232ef4154b6ebeff903d961b7 ===> param: WCM_201801_1681271759076
+2023-05-15 11:07:15.151 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"VMP","StoreNo":"2018","PosNo":"201801","OrderNo":"1681271759076"}
+2023-05-15 11:07:15.406 [WRN] WCM-OrderDetail OrderNo: 1681271759076 response: {
+  "data": {
+    "appCode": "VMP",
+    "orderNo": "1681271759076",
+    "orderDate": "2023-04-12T03:55:59.076845",
+    "storeNo": "2018",
+    "custName": "0901233313",
+    "custAddress": "nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội",
+    "custPhone": "0901233313",
+    "note": "",
+    "status": 9,
+    "totalAmount": 282560.00000,
+    "paymentAmount": 282560.00000,
+    "saleTypeId": 60,
+    "shippingFee": 0.00000,
+    "hasVatInvoice": false,
+    "shippingInfo": {
+      "receiverName": "Linh",
+      "receiverPhone": "0901233313",
+      "receiverEmail": "",
+      "receiverAddress": "nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội"
+    },
+    "payments": [
+      {
+        "lineId": 6,
+        "paymentMethod": "ZVPA",
+        "currencyCode": "VND",
+        "exchangeRate": 1.0,
+        "amountTendered": 282560.00000,
+        "amountInCurrency": 282560.00000
+      }
+    ],
+    "items": [
+      {
+        "lineId": 1,
+        "parentLineId": 1,
+        "itemNo": "10617959",
+        "itemName": "Ba rọi heo (S) Meat Deli  (0.368 KG)",
+        "uom": "KG",
+        "oldPrice": 170000.0,
+        "unitPrice": 170000.0,
+        "quantity": 0.3680000000,
+        "discountAmount": 0.0,
+        "taxGroupCode": 4,
+        "vatPercent": 10.0,
+        "barcode": "2650537000000",
+        "lineAmount": 62560.00000,
+        "discountEntry": []
+      },
+      {
+        "lineId": 3,
+        "parentLineId": 3,
+        "itemNo": "10054921",
+        "itemName": "Táo Jazz Mỹ size 56-88",
+        "uom": "KG",
+        "oldPrice": 130000.0,
+        "unitPrice": 130000.0,
+        "quantity": 1.0000000000,
+        "discountAmount": 10000.00000,
+        "taxGroupCode": 3,
+        "vatPercent": 5.0,
+        "barcode": "2602475000000",
+        "lineAmount": 120000.00000,
+        "discountEntry": [
+          {
+            "lineId": 2,
+            "offerNo": "",
+            "offerType": "",
+            "quantity": 1.0000000000,
+            "discountAmount": 10000.00000,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "lineId": 5,
+        "parentLineId": 5,
+        "itemNo": "10054849",
+        "itemName": "Táo Xanh Pháp",
+        "uom": "KG",
+        "oldPrice": 110000.0,
+        "unitPrice": 110000.0,
+        "quantity": 1.0000000000,
+        "discountAmount": 10000.00000,
+        "taxGroupCode": 3,
+        "vatPercent": 5.0,
+        "barcode": "2600413000000",
+        "lineAmount": 100000.00000,
+        "discountEntry": [
+          {
+            "lineId": 4,
+            "offerNo": "",
+            "offerType": "",
+            "quantity": 1.0000000000,
+            "discountAmount": 10000.00000,
+            "note": ""
+          }
+        ]
+      }
+    ]
+  }
+}
+2023-05-15 11:07:15.500 [WRN] WCM-OrderDetail: {"Data":{"Items":[{"LineId":1,"ParentLineId":1,"ItemNo":"10617959","ItemName":"Ba rọi heo (S) Meat Deli  (0.368 KG)","Uom":"KG","OldPrice":170000.0,"UnitPrice":170000.0,"Quantity":0.3680000000,"DiscountAmount":0.0,"LineAmount":62560.00000,"TaxGroupCode":"4","VatPercent":10.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2650537000000","OptionEntry":null,"DiscountEntry":[],"Loyalty":null},{"LineId":3,"ParentLineId":3,"ItemNo":"10054921","ItemName":"Táo Jazz Mỹ size 56-88","Uom":"KG","OldPrice":130000.0,"UnitPrice":130000.0,"Quantity":1.0000000000,"DiscountAmount":10000.00000,"LineAmount":120000.00000,"TaxGroupCode":"3","VatPercent":5.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2602475000000","OptionEntry":null,"DiscountEntry":[{"LineId":2,"OfferNo":"","OfferType":"","Quantity":1.0000000000,"DiscountAmount":10000.00000,"Note":""}],"Loyalty":null},{"LineId":5,"ParentLineId":5,"ItemNo":"10054849","ItemName":"Táo Xanh Pháp","Uom":"KG","OldPrice":110000.0,"UnitPrice":110000.0,"Quantity":1.0000000000,"DiscountAmount":10000.00000,"LineAmount":100000.00000,"TaxGroupCode":"3","VatPercent":5.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2600413000000","OptionEntry":null,"DiscountEntry":[{"LineId":4,"OfferNo":"","OfferType":"","Quantity":1.0000000000,"DiscountAmount":10000.00000,"Note":""}],"Loyalty":null}],"Payments":[{"LineId":6,"PaymentMethod":"ZVPA","CurrencyCode":"VND","ExchangeRate":1.0,"AmountTendered":282560.00000,"AmountInCurrency":282560.00000,"TransactionNo":null,"ApprovalCode":null,"TraceCode":null}],"MembershipCard":null,"AppCode":"VMP","PartnerCode":"WCM","OrderNo":"1681271759076","OrderDate":"2023-04-12T03:55:59.076845","StoreNo":"2018","CustName":"0901233313","CustAddress":"nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội","CustPhone":"0901233313","Note":"","Status":9,"SaleTypeId":60,"TotalAmount":282560.00000,"PaymentAmount":282560.00000,"ShippingFee":0.00000,"HasVatInvoice":false,"IsLoyalty":false,"WinCode":null,"BillingInfo":null,"UseCoupon":null,"ShippingInfo":{"ReceiverName":"Linh","ReceiverPhone":"0901233313","ReceiverEmail":"","ReceiverAddress":"nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội"},"Serial":null}
+2023-05-15 11:07:15.503 [WRN] WCM-OrderDetail Status: 9
+2023-05-15 11:07:15.510 [WRN] ===> GetOrderAsync end requestId: b40434e232ef4154b6ebeff903d961b7
+2023-05-15 11:08:08.213 [WRN] ===> start requestId: 0c7a7131a51d49cbad02880177f2365c ===> param: WCM_201801_1681271759076
+2023-05-15 11:08:08.279 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"VMP","StoreNo":"2018","PosNo":"201801","OrderNo":"1681271759076"}
+2023-05-15 11:08:08.394 [WRN] WCM-OrderDetail OrderNo: 1681271759076 response: {
+  "data": {
+    "appCode": "VMP",
+    "orderNo": "1681271759076",
+    "orderDate": "2023-04-12T03:55:59.076845",
+    "storeNo": "2018",
+    "custName": "0901233313",
+    "custAddress": "nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội",
+    "custPhone": "0901233313",
+    "note": "",
+    "status": 9,
+    "totalAmount": 282560.00000,
+    "paymentAmount": 282560.00000,
+    "saleTypeId": 60,
+    "shippingFee": 0.00000,
+    "hasVatInvoice": false,
+    "shippingInfo": {
+      "receiverName": "Linh",
+      "receiverPhone": "0901233313",
+      "receiverEmail": "",
+      "receiverAddress": "nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội"
+    },
+    "payments": [
+      {
+        "lineId": 6,
+        "paymentMethod": "ZVPA",
+        "currencyCode": "VND",
+        "exchangeRate": 1.0,
+        "amountTendered": 282560.00000,
+        "amountInCurrency": 282560.00000
+      }
+    ],
+    "items": [
+      {
+        "lineId": 1,
+        "parentLineId": 1,
+        "itemNo": "10617959",
+        "itemName": "Ba rọi heo (S) Meat Deli  (0.368 KG)",
+        "uom": "KG",
+        "oldPrice": 170000.0,
+        "unitPrice": 170000.0,
+        "quantity": 0.3680000000,
+        "discountAmount": 0.0,
+        "taxGroupCode": 4,
+        "vatPercent": 10.0,
+        "barcode": "2650537000000",
+        "lineAmount": 62560.00000,
+        "discountEntry": []
+      },
+      {
+        "lineId": 3,
+        "parentLineId": 3,
+        "itemNo": "10054921",
+        "itemName": "Táo Jazz Mỹ size 56-88",
+        "uom": "KG",
+        "oldPrice": 130000.0,
+        "unitPrice": 130000.0,
+        "quantity": 1.0000000000,
+        "discountAmount": 10000.00000,
+        "taxGroupCode": 3,
+        "vatPercent": 5.0,
+        "barcode": "2602475000000",
+        "lineAmount": 120000.00000,
+        "discountEntry": [
+          {
+            "lineId": 2,
+            "offerNo": "",
+            "offerType": "",
+            "quantity": 1.0000000000,
+            "discountAmount": 10000.00000,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "lineId": 5,
+        "parentLineId": 5,
+        "itemNo": "10054849",
+        "itemName": "Táo Xanh Pháp",
+        "uom": "KG",
+        "oldPrice": 110000.0,
+        "unitPrice": 110000.0,
+        "quantity": 1.0000000000,
+        "discountAmount": 10000.00000,
+        "taxGroupCode": 3,
+        "vatPercent": 5.0,
+        "barcode": "2600413000000",
+        "lineAmount": 100000.00000,
+        "discountEntry": [
+          {
+            "lineId": 4,
+            "offerNo": "",
+            "offerType": "",
+            "quantity": 1.0000000000,
+            "discountAmount": 10000.00000,
+            "note": ""
+          }
+        ]
+      }
+    ]
+  }
+}
+2023-05-15 11:08:08.396 [WRN] WCM-OrderDetail: {"Data":{"Items":[{"LineId":1,"ParentLineId":1,"ItemNo":"10617959","ItemName":"Ba rọi heo (S) Meat Deli  (0.368 KG)","Uom":"KG","OldPrice":170000.0,"UnitPrice":170000.0,"Quantity":0.3680000000,"DiscountAmount":0.0,"LineAmount":62560.00000,"TaxGroupCode":"4","VatPercent":10.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2650537000000","OptionEntry":null,"DiscountEntry":[],"Loyalty":null},{"LineId":3,"ParentLineId":3,"ItemNo":"10054921","ItemName":"Táo Jazz Mỹ size 56-88","Uom":"KG","OldPrice":130000.0,"UnitPrice":130000.0,"Quantity":1.0000000000,"DiscountAmount":10000.00000,"LineAmount":120000.00000,"TaxGroupCode":"3","VatPercent":5.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2602475000000","OptionEntry":null,"DiscountEntry":[{"LineId":2,"OfferNo":"","OfferType":"","Quantity":1.0000000000,"DiscountAmount":10000.00000,"Note":""}],"Loyalty":null},{"LineId":5,"ParentLineId":5,"ItemNo":"10054849","ItemName":"Táo Xanh Pháp","Uom":"KG","OldPrice":110000.0,"UnitPrice":110000.0,"Quantity":1.0000000000,"DiscountAmount":10000.00000,"LineAmount":100000.00000,"TaxGroupCode":"3","VatPercent":5.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2600413000000","OptionEntry":null,"DiscountEntry":[{"LineId":4,"OfferNo":"","OfferType":"","Quantity":1.0000000000,"DiscountAmount":10000.00000,"Note":""}],"Loyalty":null}],"Payments":[{"LineId":6,"PaymentMethod":"ZVPA","CurrencyCode":"VND","ExchangeRate":1.0,"AmountTendered":282560.00000,"AmountInCurrency":282560.00000,"TransactionNo":null,"ApprovalCode":null,"TraceCode":null}],"MembershipCard":null,"AppCode":"VMP","PartnerCode":"WCM","OrderNo":"1681271759076","OrderDate":"2023-04-12T03:55:59.076845","StoreNo":"2018","CustName":"0901233313","CustAddress":"nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội","CustPhone":"0901233313","Note":"","Status":9,"SaleTypeId":60,"TotalAmount":282560.00000,"PaymentAmount":282560.00000,"ShippingFee":0.00000,"HasVatInvoice":false,"IsLoyalty":false,"WinCode":null,"BillingInfo":null,"UseCoupon":null,"ShippingInfo":{"ReceiverName":"Linh","ReceiverPhone":"0901233313","ReceiverEmail":"","ReceiverAddress":"nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội"},"Serial":null}
+2023-05-15 11:08:08.397 [WRN] WCM-OrderDetail Status: 9
+2023-05-15 11:08:08.399 [WRN] ===> GetOrderAsync end requestId: 0c7a7131a51d49cbad02880177f2365c
+2023-05-15 11:11:11.313 [WRN] ===> start requestId: 8e982a947d7046b1a84e5e301a1006ab ===> param: WCM_201801_1681271759076
+2023-05-15 11:11:11.435 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"VMP","StoreNo":"2018","PosNo":"201801","OrderNo":"1681271759076"}
+2023-05-15 11:11:11.677 [WRN] WCM-OrderDetail OrderNo: 1681271759076 response: {
+  "data": {
+    "appCode": "VMP",
+    "orderNo": "1681271759076",
+    "orderDate": "2023-04-12T03:55:59.076845",
+    "storeNo": "2018",
+    "custName": "0901233313",
+    "custAddress": "nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội",
+    "custPhone": "0901233313",
+    "note": "",
+    "status": 9,
+    "totalAmount": 282560.00000,
+    "paymentAmount": 282560.00000,
+    "saleTypeId": 60,
+    "shippingFee": 0.00000,
+    "hasVatInvoice": false,
+    "shippingInfo": {
+      "receiverName": "Linh",
+      "receiverPhone": "0901233313",
+      "receiverEmail": "",
+      "receiverAddress": "nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội"
+    },
+    "payments": [
+      {
+        "lineId": 6,
+        "paymentMethod": "ZVPA",
+        "currencyCode": "VND",
+        "exchangeRate": 1.0,
+        "amountTendered": 282560.00000,
+        "amountInCurrency": 282560.00000
+      }
+    ],
+    "items": [
+      {
+        "lineId": 1,
+        "parentLineId": 1,
+        "itemNo": "10617959",
+        "itemName": "Ba rọi heo (S) Meat Deli  (0.368 KG)",
+        "uom": "KG",
+        "oldPrice": 170000.0,
+        "unitPrice": 170000.0,
+        "quantity": 0.3680000000,
+        "discountAmount": 0.0,
+        "taxGroupCode": 4,
+        "vatPercent": 10.0,
+        "barcode": "2650537000000",
+        "lineAmount": 62560.00000,
+        "discountEntry": []
+      },
+      {
+        "lineId": 3,
+        "parentLineId": 3,
+        "itemNo": "10054921",
+        "itemName": "Táo Jazz Mỹ size 56-88",
+        "uom": "KG",
+        "oldPrice": 130000.0,
+        "unitPrice": 130000.0,
+        "quantity": 1.0000000000,
+        "discountAmount": 10000.00000,
+        "taxGroupCode": 3,
+        "vatPercent": 5.0,
+        "barcode": "2602475000000",
+        "lineAmount": 120000.00000,
+        "discountEntry": [
+          {
+            "lineId": 2,
+            "offerNo": "",
+            "offerType": "",
+            "quantity": 1.0000000000,
+            "discountAmount": 10000.00000,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "lineId": 5,
+        "parentLineId": 5,
+        "itemNo": "10054849",
+        "itemName": "Táo Xanh Pháp",
+        "uom": "KG",
+        "oldPrice": 110000.0,
+        "unitPrice": 110000.0,
+        "quantity": 1.0000000000,
+        "discountAmount": 10000.00000,
+        "taxGroupCode": 3,
+        "vatPercent": 5.0,
+        "barcode": "2600413000000",
+        "lineAmount": 100000.00000,
+        "discountEntry": [
+          {
+            "lineId": 4,
+            "offerNo": "",
+            "offerType": "",
+            "quantity": 1.0000000000,
+            "discountAmount": 10000.00000,
+            "note": ""
+          }
+        ]
+      }
+    ]
+  }
+}
+2023-05-15 11:11:11.721 [WRN] WCM-OrderDetail: {"Data":{"Items":[{"LineId":1,"ParentLineId":1,"ItemNo":"10617959","ItemName":"Ba rọi heo (S) Meat Deli  (0.368 KG)","Uom":"KG","OldPrice":170000.0,"UnitPrice":170000.0,"Quantity":0.3680000000,"DiscountAmount":0.0,"LineAmount":62560.00000,"TaxGroupCode":"4","VatPercent":10.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2650537000000","OptionEntry":null,"DiscountEntry":[],"Loyalty":null},{"LineId":3,"ParentLineId":3,"ItemNo":"10054921","ItemName":"Táo Jazz Mỹ size 56-88","Uom":"KG","OldPrice":130000.0,"UnitPrice":130000.0,"Quantity":1.0000000000,"DiscountAmount":10000.00000,"LineAmount":120000.00000,"TaxGroupCode":"3","VatPercent":5.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2602475000000","OptionEntry":null,"DiscountEntry":[{"LineId":2,"OfferNo":"","OfferType":"","Quantity":1.0000000000,"DiscountAmount":10000.00000,"Note":""}],"Loyalty":null},{"LineId":5,"ParentLineId":5,"ItemNo":"10054849","ItemName":"Táo Xanh Pháp","Uom":"KG","OldPrice":110000.0,"UnitPrice":110000.0,"Quantity":1.0000000000,"DiscountAmount":10000.00000,"LineAmount":100000.00000,"TaxGroupCode":"3","VatPercent":5.0,"Note":"","IsLoyalty":false,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":null,"ArticleType":"","Barcode":"2600413000000","OptionEntry":null,"DiscountEntry":[{"LineId":4,"OfferNo":"","OfferType":"","Quantity":1.0000000000,"DiscountAmount":10000.00000,"Note":""}],"Loyalty":null}],"Payments":[{"LineId":6,"PaymentMethod":"ZVPA","CurrencyCode":"VND","ExchangeRate":1.0,"AmountTendered":282560.00000,"AmountInCurrency":282560.00000,"TransactionNo":null,"ApprovalCode":null,"TraceCode":null}],"MembershipCard":null,"AppCode":"VMP","PartnerCode":"WCM","OrderNo":"1681271759076","OrderDate":"2023-04-12T03:55:59.076845","StoreNo":"2018","CustName":"0901233313","CustAddress":"nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội","CustPhone":"0901233313","Note":"","Status":9,"SaleTypeId":60,"TotalAmount":282560.00000,"PaymentAmount":282560.00000,"ShippingFee":0.00000,"HasVatInvoice":false,"IsLoyalty":false,"WinCode":null,"BillingInfo":null,"UseCoupon":null,"ShippingInfo":{"ReceiverName":"Linh","ReceiverPhone":"0901233313","ReceiverEmail":"","ReceiverAddress":"nhà Mạnh, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội"},"Serial":null}
+2023-05-15 11:11:11.722 [WRN] WCM-OrderDetail Status: 9
+2023-05-15 11:11:11.727 [WRN] ===> GetOrderAsync end requestId: 8e982a947d7046b1a84e5e301a1006ab

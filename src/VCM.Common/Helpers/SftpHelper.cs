@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using VCM.Common.Extensions;
 
 namespace VCM.Common.Helpers
 {
@@ -23,7 +26,7 @@ namespace VCM.Common.Helpers
             Username = _username;
             Password = _password;
         }
-        public void DownloadDirectory(string source, string destination)
+        public void DownloadAuthen(string source, string destination)
         {
             var count = 0;
             try
@@ -54,14 +57,54 @@ namespace VCM.Common.Helpers
                     }
                     client.Disconnect();
                 }
-                FileHelper.WriteLogs("Download " + count.ToString() + " file");
+                FileHelper.WriteLogs("Download from sftp: " + count.ToString() + " file");
             }
             catch (Exception ex)
             {
                 FileHelper.WriteLogs(ex.ToString());
             }
         }
-        public void UploadSftpLinux(string source, string destination, string archive, string extention)
+        public void DownloadNoAuthen(string source, string destination, bool isMove)
+        {
+            var count = 0;
+            try
+            {
+                PrepareDownloadFolder(destination);
+                //KeyboardInteractiveAuthenticationMethod keybAuth = new KeyboardInteractiveAuthenticationMethod(Username);
+                //keybAuth.AuthenticationPrompt += new EventHandler<AuthenticationPromptEventArgs>(HandleKeyEvent);
+
+                using (SftpClient client = new SftpClient(Host, Port, Username, Password))
+                {
+                    client.Connect();
+                    client.ChangeDirectory(source);
+                    // List the files and folders of the directory
+                    var files = client.ListDirectory(source);
+                    files = files.OrderBy(e => e.Name);
+                    // Iterate over them
+                    foreach (SftpFile file in files)
+                    {
+                        // If is a file, download it
+                        if (!file.IsDirectory && !file.IsSymbolicLink)
+                        {
+                            DownloadFile(client, file, destination);
+                            count++;
+                            if (isMove)
+                            {
+                                file.Delete();
+                            }
+                            
+                        }
+                    }
+                    client.Disconnect();
+                }
+                FileHelper.WriteLogs("Download from sftp: " + count.ToString() + " file");
+            }
+            catch (Exception ex)
+            {
+                FileHelper.WriteLogs(ex.ToString());
+            }
+        }
+        public void UploadSftpLinux(string source, string destination, string archive, string extention, short setPermissions = 744, bool isMove = true)
         {
             var count = 0;
             try
@@ -74,20 +117,31 @@ namespace VCM.Common.Helpers
                 {
                     client.Connect();
                     client.ChangeDirectory(destination);
-
                     System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(source);
                     IEnumerable<System.IO.FileInfo> fileList = dir.GetFiles(extention, System.IO.SearchOption.AllDirectories);
-
                     foreach (System.IO.FileInfo file in fileList)
                     {
                         using (var fileStream = new FileStream(source + file.Name, FileMode.Open))
                         {
                             //client.BufferSize = 4 * 1024; // bypass Payload error large files
                             client.UploadFile(fileStream, Path.GetFileName(file.Name));
+                            if (setPermissions > 0)
+                            {
+                                //client.BufferSize = 4 * 1024; // bypass Payload error large files
+                                SftpFileAttributes myFileAttributes = client.GetAttributes(Path.GetFileName(file.Name));
+                                // Then you can see any attributes here..
+                                Console.WriteLine(myFileAttributes.OwnerCanRead);
+                                // Set to read only for others rwxr--r--
+                                myFileAttributes.SetPermissions(setPermissions);
+                                client.SetAttributes(Path.GetFileName(file.Name), myFileAttributes);
+                            }
                             count++;
                         }
-                        FileHelper.MoveFileToDestination(source + file.Name, archive);
-                        FileHelper.WriteLogs("Uploaded file: " + file.Name);
+                        if (isMove)
+                        {
+                            FileHelper.MoveFileToDestination(source + file.Name, archive);
+                        }
+                        //FileHelper.WriteLogs("Uploaded file: " + file.Name);
                     }
                     client.Disconnect();
                 }
@@ -98,7 +152,7 @@ namespace VCM.Common.Helpers
                 FileHelper.WriteLogs(ex.ToString());
             }
         }
-        public void UploadSftpWindow(string source, string destination, string archive, string extention)
+        public void UploadSftpWindow(string source, string destination, string archive, string extention, short setPermissions = 744, bool isMoveFile = true, int pageSize = 100)
         {
             var count = 0;
             try
@@ -106,35 +160,70 @@ namespace VCM.Common.Helpers
                 //KeyboardInteractiveAuthenticationMethod keybAuth = new KeyboardInteractiveAuthenticationMethod(username);
                 //keybAuth.AuthenticationPrompt += new EventHandler<AuthenticationPromptEventArgs>(HandleKeyEvent);
                 //ConnectionInfo conInfo = new ConnectionInfo(host, SftpPort, username, keybAuth);
-                using (SftpClient client = new SftpClient(Host, Port, Username, Password))
+                System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(source);
+                IEnumerable<System.IO.FileInfo> fileList = dir.GetFiles(extention, System.IO.SearchOption.AllDirectories);
+                if (fileList.Count() > 0)
                 {
-                    client.Connect();
-                    client.ChangeDirectory(destination);
-
-                    System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(source);
-                    IEnumerable<System.IO.FileInfo> fileList = dir.GetFiles(extention, System.IO.SearchOption.AllDirectories);
-
-                    foreach (System.IO.FileInfo file in fileList)
+                    FileHelper.WriteLogs("===> upload to: " + destination);
+                    pageSize = pageSize <= 0 ? 100 : pageSize;
+                    decimal totalRows = fileList.Count();
+                    if(totalRows > 10000)
                     {
-                        using (var fileStream = new FileStream(source + file.Name, FileMode.Open))
-                        {
-                            //client.BufferSize = 4 * 1024; // bypass Payload error large files
-                            client.UploadFile(fileStream, Path.GetFileName(file.Name));
-                            count++;
-                        }
-                        FileHelper.MoveFileToDestination(source + file.Name, archive);
-                        FileHelper.WriteLogs("Uploaded file: " + file.Name);
+                        totalRows = 5000;
                     }
-                    client.Disconnect();
+                    int pageNumber = (int)Math.Ceiling(totalRows / pageSize);
+                    pageNumber = pageNumber < 1 ? 1 : pageNumber;
+                    FileHelper.WriteLogs("===> Total file: " + totalRows.ToString() + " - PageSize: " + pageSize.ToString() + " - PageNumber: " + pageNumber.ToString());
+                    var queryable = fileList.AsQueryable();
+                    FileHelper.WriteLogs("===> AsQueryable: " + queryable.Count().ToString());
+
+                    for (var i = 0; i < pageNumber; i++)
+                    {
+                        var dataPage = queryable.Paging(i, pageSize);
+                        FileHelper.WriteLogs("===> Thread " + i.ToString() + " AsQueryable: " + dataPage.Count().ToString());
+                        Thread t = new Thread(() =>
+                        {
+                            using (SftpClient client = new SftpClient(Host, Port, Username, Password))
+                            {
+                                client.Connect();
+                                client.ChangeDirectory(destination);
+                                foreach (System.IO.FileInfo file in dataPage)
+                                {
+                                    using (var fileStream = new FileStream(source + file.Name, FileMode.Open))
+                                    {
+                                        client.UploadFile(fileStream, Path.GetFileName(file.Name), null);
+                                        if (setPermissions > 0)
+                                        {
+                                            //client.BufferSize = 4 * 1024; // bypass Payload error large files
+                                            SftpFileAttributes myFileAttributes = client.GetAttributes(Path.GetFileName(file.Name));
+                                            // Then you can see any attributes here..
+                                            Console.WriteLine(myFileAttributes.OwnerCanRead);
+                                            // Set to read only for others rwxr--r--
+                                            myFileAttributes.SetPermissions(setPermissions);
+                                            client.SetAttributes(Path.GetFileName(file.Name), myFileAttributes);
+                                        }
+                                        count++;
+                                    }
+                                    if (isMoveFile)
+                                    {
+                                        FileHelper.MoveFileToDestination(source + file.Name, archive);
+                                    }
+                                    Thread.Sleep(100);
+                                }
+                                client.Disconnect();
+                            }
+                        });
+                        t.Start();
+                    }
                 }
-                FileHelper.WriteLogs("Uploaded " + count.ToString() + " file");
+                FileHelper.WriteLogs("===> Uploaded " + fileList.Count().ToString() + " file");
             }
             catch (Exception ex)
             {
-                FileHelper.WriteLogs(ex.ToString());
+                FileHelper.WriteLogs("===> UploadSftpWindow Exception: " + ex.ToString());
             }
         }
-        public void UploadSftpLinux2(string source, string destination, string archive, string fileType)
+        public void UploadSftpLinux2(string source, string destination, string archive, string fileType, short setPermissions = 744, bool isMoveFile = true)
         {
             var count = 0;
             try
@@ -155,9 +244,27 @@ namespace VCM.Common.Helpers
                         using (var fileStream = new FileStream(source + file.Name, FileMode.Open))
                         {
                             client.UploadFile(fileStream, Path.GetFileName(file.Name));
+                            if (setPermissions > 0)
+                            {
+                                //client.BufferSize = 4 * 1024; // bypass Payload error large files
+                                SftpFileAttributes myFileAttributes = client.GetAttributes(Path.GetFileName(file.Name));
+
+                                // Then you can see any attributes here..
+                                Console.WriteLine(myFileAttributes.OwnerCanRead);
+
+                                // Set to read only for others rwxr--r--
+                                myFileAttributes.SetPermissions(setPermissions);
+
+                                client.SetAttributes(Path.GetFileName(file.Name), myFileAttributes);
+                            }
                             count++;
                         }
-                        FileHelper.MoveFileToDestination(source + file.Name, archive);
+
+                        if (isMoveFile)
+                        {
+                            FileHelper.MoveFileToDestination(source + file.Name, archive);
+                        }
+
                         FileHelper.WriteLogs("Uploaded file: " + file.Name);
                     }
                     client.Disconnect();
@@ -205,10 +312,10 @@ namespace VCM.Common.Helpers
             var count = 0;
             try
             {
-                //KeyboardInteractiveAuthenticationMethod keybAuth = new KeyboardInteractiveAuthenticationMethod(username);
-                //keybAuth.AuthenticationPrompt += new EventHandler<AuthenticationPromptEventArgs>(HandleKeyEvent);
-                //ConnectionInfo conInfo = new ConnectionInfo(host, SftpPort, username, keybAuth);
-                using (SftpClient client = new SftpClient(Host, Port, Username, Password))
+                KeyboardInteractiveAuthenticationMethod keybAuth = new KeyboardInteractiveAuthenticationMethod(Username);
+                keybAuth.AuthenticationPrompt += new EventHandler<AuthenticationPromptEventArgs>(HandleKeyEvent);
+                ConnectionInfo conInfo = new ConnectionInfo(Host, Port, Username, keybAuth);
+                using (SftpClient client = new SftpClient(conInfo))
                 {
                     client.Connect();
                     client.ChangeDirectory(destination);

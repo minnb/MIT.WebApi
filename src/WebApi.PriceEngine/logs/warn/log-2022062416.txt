@@ -1,0 +1,2 @@
+2022-06-24 16:41:46.744 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2050000311444","Quantity":1.0,"PluCode":"2050000311444"}
+2022-06-24 16:41:48.553 [WRN] ===> get from db: [{"ItemNo":"10207953","Barcode":"2050000311444","ItemName":"Gel Rửa Tay Green Cross Gel Cam 100_T","Uom":"CHA","Quantity":1.000,"UnitPrice":60215.0,"DiscountAmount":0.0,"LineAmountInVAT":60215.0,"TaxGroupCode":"4","VATPercent":10,"VATAmount":5474.0,"OfferNo":"","OfferType":"","DiscountType":""}]

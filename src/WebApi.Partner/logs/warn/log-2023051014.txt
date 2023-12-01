@@ -1,0 +1,2 @@
+2023-05-10 14:45:13.438 [WRN] {"Message":"Hệ thống có lỗi xảy ra. Vui lòng quay lại sau.","DeveloperMessage":null}
+2023-05-10 14:46:15.309 [WRN] {"Message":"Hệ thống có lỗi xảy ra. Vui lòng quay lại sau.","DeveloperMessage":null}

@@ -7,6 +7,7 @@ using VCM.PhucLong.API.Services;
 
 namespace VCM.PhucLong.API.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     [ApiController]
     public class MasterController : BaseController
     {
@@ -21,9 +22,9 @@ namespace VCM.PhucLong.API.Controllers
 
         [HttpGet]
         [Route("api/v1/master/pos-config")]
-        public ActionResult GetPosConfig([FromHeader] string pos_name = null)
+        public ActionResult GetPosConfig([FromHeader] string pos_name = null, [FromHeader] int set = 3)
         {
-            var result = _masterService.GetPosConfig(pos_name);
+            var result = _masterService.GetPosConfig(pos_name, set);
             if (result != null)
             {
                 return Ok(result);

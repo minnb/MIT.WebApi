@@ -17,6 +17,18 @@ namespace VCM.Shared.Enums
         Cancel = 0,
         Draft = 99
     }
+    public enum OrderStateEnumPLH
+    {
+        Processing = 1,
+        Delivery = 2,
+        Success = 3,
+        Cancel = 4,
+        Returned = 5
+        //Đang xử lý: 1
+        //Đang giao: 2
+        //Hoàn thành: 3
+        //Hủy: 4
+    }
     public enum LineTypeEnumPLG
     {
         SALES = 0,
@@ -25,7 +37,14 @@ namespace VCM.Shared.Enums
         COMBO = 3,
         PROMO = 4,
         TOPPING = 5,
+        FEE = 6,
         TICKET = 9
+    }
+    public enum ProductSize
+    {
+        M = 1,
+        L = 2,
+        Hot = 3
     }
     public enum VoucherStateEnumPLG
     {

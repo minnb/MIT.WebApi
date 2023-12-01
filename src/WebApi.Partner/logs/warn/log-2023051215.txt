@@ -1,0 +1,2 @@
+2023-05-12 15:00:08.511 [WRN] ===> GetListOrderAsync start requestId: ec6608a66361456fb50a3af7160e7129 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 15:00:08.804 [WRN] ===> GetListOrderAsync end requestId: ec6608a66361456fb50a3af7160e7129

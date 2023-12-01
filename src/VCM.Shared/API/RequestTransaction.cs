@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using VCM.Shared.Const;
 
 namespace VCM.Shared.API
 {
     public class RequestTransaction
     {
         [Required]
-        [DefaultValue("MBC")]
-        public string PartnerCode { get; set; } = "WMT";
+        [DefaultValue("PLH")]
+        public string PartnerCode { get; set; } = "PLH";
+
+        public string AppCode { get; set; }
 
         [Required]
         [DefaultValue("2018")]

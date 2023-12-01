@@ -9,17 +9,13 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using System;
 using System.Reflection;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using HealthChecks.UI.Client;
-using System.Text.Json;
-using System.Linq;
-using System.Net.Mime;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using VCM.Partner.API.Database;
 using VCM.Partner.API.Common.Extentions;
 using VCM.Partner.API;
+using WCM.EntityFrameworkCore.EntityFrameworkCore.Partner;
+using WebApi.Core.Middleware;
+using Serilog.Sinks.Elasticsearch;
 
 namespace MIT.WebApi
 {
@@ -29,10 +25,26 @@ namespace MIT.WebApi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
             Log.Logger = new LoggerConfiguration()
                 //.Enrich.FromLogContext()
-                .WriteTo.File("logs/warn/log-.txt", Serilog.Events.LogEventLevel.Warning, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message:lj}{NewLine}{Exception}", null, 1073741824, null, false, false, null, RollingInterval.Hour, false, 200, null)
-                .WriteTo.File("logs/error/log-.txt", Serilog.Events.LogEventLevel.Error, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message:lj}{NewLine}{Exception}", null, 1073741824, null, false, false, null, RollingInterval.Hour, false, 200, null)
+                .WriteTo.File("logs/warn/log-.txt", Serilog.Events.LogEventLevel.Warning, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message:lj}{NewLine}{Exception}", null, 1073741824, null, false, false, null, RollingInterval.Hour, false, 300, null)
+                .WriteTo.File("logs/error/log-.txt", Serilog.Events.LogEventLevel.Error, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message:lj}{NewLine}{Exception}", null, 1073741824, null, false, false, null, RollingInterval.Hour, false, 300, null)
+                .Enrich.WithMachineName()
+                .Enrich.WithProperty("ResponseTime", 0)
+                .Enrich.WithProperty("PosNo", "")
+                .Enrich.WithProperty("HttpContext", "")
+                .Enrich.WithProperty("Message", "")
+                .Enrich.WithProperty("WebApi", "")
+                .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(Configuration.GetConnectionString("ElasticConfiguration"))) // for the docker-compose implementation
+                {
+                    AutoRegisterTemplate = true,
+                    OverwriteTemplate = true,
+                    DetectElasticsearchVersion = true,
+                    AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv7,
+                    IndexFormat = Configuration["AppSetting:AppCode"] + $"_partner_api_{DateTime.UtcNow:yyyy-MM-dd}",
+                    ModifyConnectionSettings = x => x.BasicAuthentication("elastic", "elastic")
+                })
                 .CreateLogger();
         }
         public IConfiguration Configuration { get; }
@@ -56,75 +68,88 @@ namespace MIT.WebApi
                 }));
 
             services.AddStackExchangeRedisCache(option =>
-                option.Configuration = Configuration["RedisCache:Server"]
+                {
+                    option.Configuration = Configuration["RedisCache:Server"];
+                }
             );
-
+           
             services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.PropertyNamingPolicy = null;
             });
 
+            services.AddHealthChecks();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WINMART", Version = "v1" });
+                c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                    {
+                        Name = "Authorization",
+                        Type = SecuritySchemeType.Http,
+                        Scheme = "basic",
+                        In = ParameterLocation.Header,
+                        Description = "Basic Authorization header using the Bearer scheme."
+                    });
+                    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                    {
+                        {
+                              new OpenApiSecurityScheme
+                                {
+                                    Reference = new OpenApiReference
+                                    {
+                                        Type = ReferenceType.SecurityScheme,
+                                        Id = "basic"
+                                    }
+                                },
+                                new string[] {}
+                        }
+                    });
+
                 c.SchemaFilter<SchemaFilter>();
             });
 
             //setup DI
             services.RegisterCustomServices(connectionString);
-            //services.AddHostedService<TimedHostedService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WINMART v1"));
-
+            app.UseMyCustomMiddleware();
+            app.UseForwardedHeaders();
             loggerFactory.AddSerilog();
-
-            //app.UseHttpsRedirection();
-
+            app.UseDefaultFiles();
             app.UseRouting();
-
             app.UseAuthentication();
-
             app.UseAuthorization();
-
+   
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-                {
-                    Predicate = _ => true,
-                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-                });
-                endpoints.MapHealthChecksUI(options => options.UIPath = "/hc-ui");
-                endpoints.MapHealthChecks("/liveness", new HealthCheckOptions
-                {
-                    Predicate = r => r.Name.Contains("self")
-                });
-                endpoints.MapHealthChecks("/hc-details",
-                            new HealthCheckOptions
-                            {
-                                ResponseWriter = async (context, report) =>
-                                {
-                                    var result = JsonSerializer.Serialize(
-                                        new
-                                        {
-                                            status = report.Status.ToString(),
-                                            monitors = report.Entries.Select(e => new { key = e.Key, value = Enum.GetName(typeof(HealthStatus), e.Value.Status) })
-                                        });
-                                    context.Response.ContentType = MediaTypeNames.Application.Json;
-                                    await context.Response.WriteAsync(result);
-                                }
-                            }
-                        );
+                endpoints.MapHealthChecks("/hc");
                 endpoints.MapControllers();
             });
+
+            if(Configuration["AppSetting:Environment"] == "DEV")
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "WCM v1");
+                    c.DefaultModelsExpandDepth(-1);
+                });
+
+            }
+            else
+            {
+                app.Run(async (context) =>
+                {
+                    await context.Response.WriteAsync("<h1>Not Found</h1><p>The requested resource was not found on this server.</p>");
+                });
+            }
+
         }
     }
 }

@@ -14,21 +14,22 @@ namespace VCM.PhucLong.API.Services
     public class MasterService : IMasterService
     {
         private readonly ILogger<MasterService> _logger;
-        private readonly DapperContext _context;
+        private readonly DapperOdooContext _context;
         public MasterService
             (
                 ILogger<MasterService> logger,
-                DapperContext context
+                DapperOdooContext context
             )
         {
             _logger = logger;
             _context = context;
         }
-        public List<GetPosConfig> GetPosConfig(string pos_name)
+        public List<GetPosConfig> GetPosConfig(string pos_name, int set)
         {
             try
             {
-                using (IDbConnection conn = _context.CreateConnection(1))
+                List<GetPosConfig> lstData = new List<GetPosConfig>();
+                using (IDbConnection conn = _context.CreateConnection(set))
                 {
                     conn.Open();
                     return conn.Query<GetPosConfig>(PosConfigQuery.QueryPosConfig(pos_name)).ToList();

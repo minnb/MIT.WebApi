@@ -30,5 +30,7 @@ namespace VCM.Shared.Entity.Central
         public string Prefix { get; set; }
         public bool Blocked { get; set; }
         public DateTime CrtDate { get; set; }
+        public bool IsMultiThread { get; set; }
+        public int PageSize { get; set; }
     }
 }

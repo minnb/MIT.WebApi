@@ -28,18 +28,19 @@ namespace VCM.PhucLong.API.Queries.POS
         public static string get_pos_order_all(int location_id, string order_date)
         {
             return @"
-                    SELECT id, name, cast(date_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_order, user_id, amount_tax, amount_total, amount_paid, amount_return, pricelist_id, partner_id, state, account_move, picking_id, 
-                     location_id, note, pos_reference, sale_journal, to_invoice, create_uid, cast(create_date::timestamp AT TIME ZONE 'UTC' as timestamp) create_date,  employee_id, cashier, discount_amount, invoice_id, 
-                     warehouse_id, cashier_id, coupon_code, promotion_id, picking_return_id, return_origin, loyalty_points, point_won, year_discount_birth, sale_type_id, note_label, disable_loyalty_discount, 
-                     has_printed_label_first, linked_draft_order_be, use_emp_coupon, emp_coupon_code, current_coupon_limit, current_coupon_promotion, total_surcharge, number_of_printed_bill,  hanging_time, 
-                     reward_code, momo_payment_ref, partner_current_point, partner_total_point, partner_loyalty_level_id, cast(partner_expired_date::timestamp AT TIME ZONE 'UTC' as date) partner_expired_date, auto_paid_by_cron, message_main_attachment_id, 
-                     cast(date_last_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_last_order, cancel_from_be, moca_payment_ref, cancel_reason, cancel_duplicate, pay_draft_order, invoice_name, invoice_vat, invoice_address, invoice_email, invoice_contact, invoice_note, invoice_request, 
-                     zalo_payment_ref
-                    FROM public.pos_order o
-                    WHERE NOT EXISTS (SELECT 1 FROM public.pos_staging s WHERE o.id = s.order_id and o.location_id = s.location_id) 
-                            AND state = 'paid' 
-                            AND location_id = " + location_id + @"
-                            AND cast(date_order::timestamp AT TIME ZONE 'UTC' as date) >= '" + order_date + @"';";
+                       SELECT o.id, o.name, cast(o.date_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_order, o.user_id, o.amount_tax, o.amount_total, o.amount_paid, o.amount_return, o.pricelist_id, o.partner_id, o.state, o.account_move, o.picking_id, 
+                         o.location_id, o.note, o.pos_reference, o.sale_journal, o.to_invoice, o.create_uid, cast(o.create_date::timestamp AT TIME ZONE 'UTC' as timestamp) create_date,  o.employee_id, o.cashier, o.discount_amount, o.invoice_id, 
+                         o.warehouse_id, o.cashier_id, o.coupon_code, o.promotion_id, o.picking_return_id, o.return_origin, o.loyalty_points, o.point_won, o.year_discount_birth, o.sale_type_id, o.note_label, o.disable_loyalty_discount, 
+                         o.has_printed_label_first, o.linked_draft_order_be, o.use_emp_coupon, o.emp_coupon_code, o.current_coupon_limit, o.current_coupon_promotion, o.total_surcharge, o.number_of_printed_bill,  o.hanging_time, 
+                         o.reward_code, o.momo_payment_ref, o.partner_current_point, o.partner_total_point, o.partner_loyalty_level_id, cast(o.partner_expired_date::timestamp AT TIME ZONE 'UTC' as date) partner_expired_date, o.auto_paid_by_cron, o.message_main_attachment_id, 
+                         cast(o.date_last_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_last_order, o.cancel_from_be, o.moca_payment_ref, o.cancel_reason, o.cancel_duplicate, o.pay_draft_order, o.invoice_name, o.invoice_vat, o.invoice_address, o.invoice_email, o.invoice_contact, o.invoice_note, o.invoice_request, 
+                         o.zalo_payment_ref
+                        FROM public.pos_order o
+					    INNER JOIN public.pos_payment p on o.id = p.pos_order_id AND p.payment_method_id = ANY(@payment_method_id)
+                        WHERE NOT EXISTS (SELECT 1 FROM public.pos_staging s WHERE o.id = s.order_id and o.location_id = s.location_id) 
+                            AND o.state = 'paid' 
+                            AND o.location_id = " + location_id + @"
+                            AND cast(o.date_order::timestamp AT TIME ZONE 'UTC' as date) >= '" + order_date + @"';";
         }
         public static string get_pos_order_by_order(string orderNo)
         {

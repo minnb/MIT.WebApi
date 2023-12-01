@@ -1,0 +1,130 @@
+2022-09-14 15:06:45.643 [WRN] ===> P100===>: {"code":200,"message":"Thành công","data":{"token":"eVx_3FXp441qJ7VuQeiWT1JKLvmL1fsfcy7ytzTnR3OPuw6md6Thp8vODgQvcygMXNCjTdgZet4nD70ZpPhx6L5aoskah9NZLUNH4rYwEiZMKq8tRVe6ALrzNrp7T3z2HLfIOTGNkw4usr9QLrkWH6s63bCSf2Yklts6DnDrZ3DLLLiLQWtjLlbu9xaA0N0qpNdxAo8rpFj-l_MTaJoE-JyaGG4MFMdW1pfd3hxiokcSwo_5Dy5unjfrKHSc0mIFntIFL4ALArIUR39CgG1vABbivdkjzMmsHeKqov3DbnflLSaowx4OGwTmsTBQWgkrVGP4UULRgvVGSVJpwCACTfce3kyIELt_X67WmRf3VNaZZdbIpdNrRbpNirIqcQZyDhILW9fnNNyZQA6nFW8nc-4r210B88ARCffQlX3SCz2VZ0wpBB-1nDq8RdQS-pN0qqP8uNmuRzlTKBP9fu4-kiSfPW6pWzgsjQ6TOl8iCkC6vTefa0PDZpy0j1YD596I8WFaEvqF8BeVSr3zrQk1smSvzGdAjGWsRGB4WTeLrNxVhww29qKKYz6WpSpNf5gTTXcUjEKJW0Ctmq0t-7QUUQy5OnG-5-7FLy8dJpMRZk6Ex8DwEVRLgdHsFoO6nVGlGw_mSpB0Dq1kjJHGK0M9BJebvoqVbMEo62mAf56FNrQVRqJveKz6eAYjReDEFP7LDSM7Wq0ouvuMDLBaR3BJztwUIfCtipE9UMjDn0XFfISJc1Tap4tqtGm4bGHsbnx19DFjnsPdnZtXzuA0lv-GsA1tfIgo3tp6vg_17XfdesL8zvrYaP4JgT3vTtoMzLbExturkb3MrzFsDxspd5a05P0B5PTPP8DA3PklN3RbWG0VrV9ti3DsJWDxKGZ4ny-T6DShKMAhuheRm1I_6x7r4m_5ra1MYmAJ6IYq1EAu33U","token_type":"bearer"}}
+2022-09-14 15:06:46.552 [WRN] ===> 1663142802===>: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1663142802"}
+2022-09-14 15:06:46.556 [WRN] lien_thong_phieu_nhap: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1663142802"}
+2022-09-14 15:08:56.772 [WRN] ===> 1663142936===>: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1663142936"}
+2022-09-14 15:08:56.773 [WRN] lien_thong_phieu_nhap: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1663142936"}
+2022-09-14 15:09:27.056 [WRN] ===> 1663142965===>: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1663142965"}
+2022-09-14 15:09:27.058 [WRN] lien_thong_phieu_nhap: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1663142965"}
+2022-09-14 15:12:33.538 [WRN] ===> 1663143152===>: {"code":200,"mess":"Tạo phiếu xuất thành công","ma_phieu_xuat_quoc_gia":"79-009177.1663143152"}
+2022-09-14 15:21:00.393 [WRN] ===> 1663143658===>: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663143658"}
+2022-09-14 15:21:00.418 [WRN] lien_thong_hoa_don: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663143658"}
+2022-09-14 15:21:00.576 [ERR] Failed executing DbCommand (37ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [m_hoa_don_chi_tiet] ([Ma_hoa_don], [Ma_thuoc], [Don_gia], [Don_vi_tinh], [Duong_dung], [Ham_luong], [Han_dung], [Lieu_dung], [Ma_sap], [Ngay_san_xuat], [So_lo], [So_luong], [Ten_thuoc], [Thanh_tien], [Ty_le_quy_doi])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2022-09-14 15:21:00.761 [ERR] An exception occurred in the database while saving changes for context type 'WCM.EntityFrameworkCore.EntityFrameworkCore.DrWin.DrWinDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Duong_dung'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:899dbce5-51b0-4c74-90a2-200480725672
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Duong_dung'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:899dbce5-51b0-4c74-90a2-200480725672
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-09-14 15:21:00.824 [WRN] ===> SaveHoaDonThuoc.Exception: An error occurred while updating the entries. See the inner exception for details.
+2022-09-14 15:23:30.163 [WRN] ===> 1663143807===>: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663143807"}
+2022-09-14 15:23:30.184 [WRN] lien_thong_hoa_don: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663143807"}
+2022-09-14 15:23:30.335 [ERR] Failed executing DbCommand (32ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [m_hoa_don_chi_tiet] ([Ma_hoa_don], [Ma_thuoc], [Don_gia], [Don_vi_tinh], [Duong_dung], [Ham_luong], [Han_dung], [Lieu_dung], [Ma_sap], [Ngay_san_xuat], [So_lo], [So_luong], [Ten_thuoc], [Thanh_tien], [Ty_le_quy_doi])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2022-09-14 15:23:30.395 [ERR] An exception occurred in the database while saving changes for context type 'WCM.EntityFrameworkCore.EntityFrameworkCore.DrWin.DrWinDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'CHA' to data type int.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c1c34be9-2aa8-46de-9082-43c78901da9f
+Error Number:245,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'CHA' to data type int.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c1c34be9-2aa8-46de-9082-43c78901da9f
+Error Number:245,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-09-14 15:23:30.442 [WRN] ===> SaveHoaDonThuoc.Exception: An error occurred while updating the entries. See the inner exception for details.
+2022-09-14 15:24:30.197 [WRN] ===> 1663143868===>: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663143868"}
+2022-09-14 15:24:30.220 [WRN] lien_thong_hoa_don: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663143868"}
+2022-09-14 15:26:14.174 [WRN] ===> 1663143972===>: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663143972"}
+2022-09-14 15:26:14.175 [WRN] lien_thong_hoa_don: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663143972"}
+2022-09-14 15:26:48.364 [WRN] ===> 1663144007===>: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663144007"}
+2022-09-14 15:26:48.368 [WRN] lien_thong_hoa_don: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663144007"}
+2022-09-14 15:27:14.620 [WRN] ===> 1663144032===>: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663144032"}
+2022-09-14 15:27:14.626 [WRN] lien_thong_hoa_don: {"code":200,"mess":"Tạo hóa đơn thành công","ma_hoa_don_quoc_gia":"79-009177.1663144032"}

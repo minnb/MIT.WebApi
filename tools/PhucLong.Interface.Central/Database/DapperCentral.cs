@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using VCM.Shared.Entity.Central;
 
 namespace PhucLong.Interface.Central.Database
@@ -22,7 +23,6 @@ namespace PhucLong.Interface.Central.Database
                 return new SqlConnection(_configuration["ConnectionStrings:PhucLongStaging"]);
             }
         }
-
         public void InsTransDiscountEntry(IDbConnection conn, IDbTransaction transaction, List<TransDiscountEntry> transDiscountEntry)
         {
             string insDiscount = @"INSERT INTO [dbo].[TransDiscountEntry]
@@ -34,6 +34,10 @@ namespace PhucLong.Interface.Central.Database
         {
             string query = @"UPDATE TransHeader SET StepProcess = @StepProcess, MemberPointsEarn = @MemberPointsEarn WHERE OrderNo = @OrderNo";
             conn.Execute(query, transHeaderStep, transaction);
+        }
+        public List<Jobs> GetJobs(IDbConnection conn, string jobType)
+        {
+            return conn.Query<Jobs>(@"SELECT [Id],[Sort],[JobType],[JobName],[Procedure],[Blocked] FROM [dbo].[Jobs] (NOLOCK) WHERE JobType = '"+ jobType+ @"' AND [Blocked] = 0 ORDER BY Sort;").ToList();
         }
 
     }

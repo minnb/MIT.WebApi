@@ -1,0 +1,3 @@
+2023-04-25 16:13:17.276 [WRN] {"Message":"InvoiceNo không được để trống","DeveloperMessage":null}
+2023-04-25 16:16:10.529 [WRN] {"Message":"MerchantId không được để trống","DeveloperMessage":null}
+2023-04-25 16:18:09.911 [WRN] {"Message":"Giá trị đơn trả hàng không hợp lệ","DeveloperMessage":null}

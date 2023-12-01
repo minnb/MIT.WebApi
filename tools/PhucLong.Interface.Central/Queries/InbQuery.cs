@@ -6,12 +6,13 @@ namespace PhucLong.Interface.Central.Queries
 {
     public static class InbQuery
     {
-        public static string INB_HEADER_QUERY()
+        public static string INB_HEADER_QUERY(int top)
         {
-            return @"SELECT [RETAILSTOREID],[BUSINESSDAYDATE],[TRANSACTIONTYPECODE],[WORKSTATIONID],[TRANSACTIONSEQUENCENUMBER],[BEGINDATETIMESTAMP],[ENDDATETIMESTAMP]
+            return @"SELECT TOP "+ top + @" [RETAILSTOREID],[BUSINESSDAYDATE],[TRANSACTIONTYPECODE],[WORKSTATIONID],[TRANSACTIONSEQUENCENUMBER],[BEGINDATETIMESTAMP],[ENDDATETIMESTAMP]
                     ,[DEPARTMENT],[OPERATORQUALIFIER],[OPERATORID],[TRANSACTIONCURRENCY],[TRANSACTIONCURRENCY_ISO],[PARTNERQUALIFIER],[PARTNERID],[FIELDGROUP],[FIELDNAME]
                     ,[FIELDVALUE],[UPDATE_FLG],[CRT_DATE],[CHGE_DATE],[ID], LOYALTYSEQUENCENUMBER, CUSTOMERCARDNUMBER
-                   FROM [dbo].[INB_SALE_MASTER] (NOLOCK) WHERE [UPDATE_FLG] = 'N' ";
+                   FROM [dbo].[INB_SALE_MASTER] (NOLOCK) 
+                   WHERE [UPDATE_FLG] = 'N' ORDER BY TRANSACTIONSEQUENCENUMBER;";
         }
 
         public static string INB_DETAIL_QUERY()
@@ -42,7 +43,11 @@ namespace PhucLong.Interface.Central.Queries
 
         public static string INB_B02_RECONCILE_QUERY()
         {
-            return @"SELECT * FROM INB_B02_RECONCILE (NOLOCK) WHERE [UpdateFlg] = 'N'";
+            return @"EXEC SP_GET_RECONCILE;";
+        }
+        public static string INB_FRANCHISE_QUERY()
+        {
+            return @"SELECT * FROM INB_FRANCHISE (NOLOCK) WHERE [UpdateFlg] = 'N'";
         }
     }
 }

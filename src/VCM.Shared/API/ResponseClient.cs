@@ -7,7 +7,7 @@ namespace VCM.Shared.API
     {
         [JsonProperty("Meta")]
         public Meta Meta { get; set; }
-        [JsonProperty("Meta")]
+        [JsonProperty("Data")]
         public Object Data { get; set; }
     }
     public class Meta

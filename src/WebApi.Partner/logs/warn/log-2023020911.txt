@@ -1,0 +1,50 @@
+2023-02-09 11:34:27.250 [WRN] ===> start requestId: 007b35001c1d48a5af8e5cea87452e08 ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:27.390 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:27.601 [WRN] ERROR requestId: 007b35001c1d48a5af8e5cea87452e08 StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:27.604 [WRN] GetBillDetail_WCM_Async ERROR requestId: 007b35001c1d48a5af8e5cea87452e08 |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:27.607 [WRN] ===> GetOrderAsync end requestId: 007b35001c1d48a5af8e5cea87452e08
+2023-02-09 11:34:30.101 [WRN] ===> start requestId: 2e9b2285a65649efa998044c5644ab44 ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:30.167 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:30.183 [WRN] ERROR requestId: 2e9b2285a65649efa998044c5644ab44 StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:30.184 [WRN] GetBillDetail_WCM_Async ERROR requestId: 2e9b2285a65649efa998044c5644ab44 |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:30.186 [WRN] ===> GetOrderAsync end requestId: 2e9b2285a65649efa998044c5644ab44
+2023-02-09 11:34:30.991 [WRN] ===> start requestId: 44fb4f756eee4eb5b2668d3b74b065ed ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:31.045 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:31.059 [WRN] ERROR requestId: 44fb4f756eee4eb5b2668d3b74b065ed StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:31.062 [WRN] GetBillDetail_WCM_Async ERROR requestId: 44fb4f756eee4eb5b2668d3b74b065ed |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:31.064 [WRN] ===> GetOrderAsync end requestId: 44fb4f756eee4eb5b2668d3b74b065ed
+2023-02-09 11:34:31.835 [WRN] ===> start requestId: 06828d990b4240b691eaa592284ffd6f ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:31.894 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:31.909 [WRN] ERROR requestId: 06828d990b4240b691eaa592284ffd6f StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:31.911 [WRN] GetBillDetail_WCM_Async ERROR requestId: 06828d990b4240b691eaa592284ffd6f |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:31.912 [WRN] ===> GetOrderAsync end requestId: 06828d990b4240b691eaa592284ffd6f
+2023-02-09 11:34:32.628 [WRN] ===> start requestId: 3d0fd12b61f544cb81fe1c91f251ac7b ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:32.701 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:32.716 [WRN] ERROR requestId: 3d0fd12b61f544cb81fe1c91f251ac7b StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:32.717 [WRN] GetBillDetail_WCM_Async ERROR requestId: 3d0fd12b61f544cb81fe1c91f251ac7b |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:32.718 [WRN] ===> GetOrderAsync end requestId: 3d0fd12b61f544cb81fe1c91f251ac7b
+2023-02-09 11:34:33.434 [WRN] ===> start requestId: bf93895b3d504fd4a582f18c153aa529 ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:33.484 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:33.507 [WRN] ERROR requestId: bf93895b3d504fd4a582f18c153aa529 StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:33.509 [WRN] GetBillDetail_WCM_Async ERROR requestId: bf93895b3d504fd4a582f18c153aa529 |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:33.511 [WRN] ===> GetOrderAsync end requestId: bf93895b3d504fd4a582f18c153aa529
+2023-02-09 11:34:34.296 [WRN] ===> start requestId: a7111995d5634665b922e9850123b86b ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:34.356 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:34.381 [WRN] ERROR requestId: a7111995d5634665b922e9850123b86b StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:34.384 [WRN] GetBillDetail_WCM_Async ERROR requestId: a7111995d5634665b922e9850123b86b |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:34.387 [WRN] ===> GetOrderAsync end requestId: a7111995d5634665b922e9850123b86b
+2023-02-09 11:34:35.036 [WRN] ===> start requestId: c6255e9aff464c28b5c788fa139830b5 ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:35.075 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:35.092 [WRN] ERROR requestId: c6255e9aff464c28b5c788fa139830b5 StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:35.094 [WRN] GetBillDetail_WCM_Async ERROR requestId: c6255e9aff464c28b5c788fa139830b5 |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:35.095 [WRN] ===> GetOrderAsync end requestId: c6255e9aff464c28b5c788fa139830b5
+2023-02-09 11:34:35.748 [WRN] ===> start requestId: a4047a404b794b718cde83780957a16c ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:35.793 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:35.809 [WRN] ERROR requestId: a4047a404b794b718cde83780957a16c StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:35.812 [WRN] GetBillDetail_WCM_Async ERROR requestId: a4047a404b794b718cde83780957a16c |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:35.815 [WRN] ===> GetOrderAsync end requestId: a4047a404b794b718cde83780957a16c
+2023-02-09 11:34:40.132 [WRN] ===> start requestId: 56201441b1a84c8a8cab7976c706cace ===> param: WCM_201801_1675912188238
+2023-02-09 11:34:40.169 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675912188238"}
+2023-02-09 11:34:40.189 [WRN] ERROR requestId: 56201441b1a84c8a8cab7976c706cace StatusCode:0 | mess: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:40.190 [WRN] GetBillDetail_WCM_Async ERROR requestId: 56201441b1a84c8a8cab7976c706cace |ErrorMessage: An error occurred while sending the request. Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+2023-02-09 11:34:40.192 [WRN] ===> GetOrderAsync end requestId: 56201441b1a84c8a8cab7976c706cace

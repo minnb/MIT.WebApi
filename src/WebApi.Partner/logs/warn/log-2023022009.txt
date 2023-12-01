@@ -1,0 +1,37 @@
+2023-02-20 09:09:23.273 [WRN] api/v1/partner/check/serial: The Serial field is required.
+2023-02-20 09:09:41.904 [WRN] api/v1/partner/check/serial: The Serial field is required.
+2023-02-20 09:10:08.206 [WRN] api/v1/partner/check/serial: The Serial field is required.
+2023-02-20 09:10:32.237 [WRN] ===> Create token from MBC
+2023-02-20 09:10:32.292 [WRN] CreateToken MBC: {"username":"0559508190","password":"App12345","merchantId":"1628679763694"}
+2023-02-20 09:10:53.442 [WRN] Error response: null
+2023-02-20 09:10:53.447 [WRN] IMemoryCacheService USER_MBC: {"jwtToken":null,"username":null,"accountId":null}
+2023-02-20 09:11:36.229 [WRN] mb_getListPackagePosWcm - request: {"function":"mb_getListPackagePosWcm","checksum":"0be9d31ff5a2a6295180919ff05c59cb","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAO1j+0MHUJrPQ57v3y/QfuyU977IoFmwJ1r7z2kSPuX9BP/Old40cwMMnYjn5MZ3GQ="}
+2023-02-20 09:12:39.637 [WRN] Exception: Object reference not set to an instance of an object.
+2023-02-20 09:12:57.380 [WRN] ===> Create token from MBC
+2023-02-20 09:12:57.382 [WRN] CreateToken MBC: {"username":"0559508190","password":"App12345","merchantId":"1628679763694"}
+2023-02-20 09:13:18.442 [WRN] Error response: null
+2023-02-20 09:13:18.444 [WRN] IMemoryCacheService USER_MBC: {"jwtToken":null,"username":null,"accountId":null}
+2023-02-20 09:14:14.720 [WRN] mb_getListPackagePosWcm - request: {"function":"mb_getListPackagePosWcm","checksum":"0be9d31ff5a2a6295180919ff05c59cb","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAO1j+0MHUJrPQ57v3y/QfuyU977IoFmwJ1r7z2kSPuX9BP/Old40cwMMnYjn5MZ3GQ="}
+2023-02-20 09:14:41.970 [WRN] Exception: Object reference not set to an instance of an object.
+2023-02-20 09:14:51.884 [WRN] ===> Create token from MBC
+2023-02-20 09:14:51.887 [WRN] CreateToken MBC: {"username":"0559508190","password":"App12345","merchantId":"1628679763694"}
+2023-02-20 09:15:12.956 [WRN] Error response: null
+2023-02-20 09:15:12.960 [WRN] IMemoryCacheService USER_MBC: {"jwtToken":null,"username":null,"accountId":null}
+2023-02-20 09:15:20.707 [WRN] mb_getListPackagePosWcm - request: {"function":"mb_getListPackagePosWcm","checksum":"0be9d31ff5a2a6295180919ff05c59cb","version":"1.0","merchantId":"1628679763694","encData":"v5QJda8/LAO1j+0MHUJrPQ57v3y/QfuyU977IoFmwJ1r7z2kSPuX9BP/Old40cwMMnYjn5MZ3GQ="}
+2023-02-20 09:15:44.014 [WRN] Exception: Object reference not set to an instance of an object.
+2023-02-20 09:16:53.008 [WRN] ===> Create token from MBC
+2023-02-20 09:16:53.090 [WRN] CreateToken MBC: {"username":"0559508190","password":"App12345","merchantId":"1628679763694"}
+2023-02-20 09:17:14.242 [WRN] Error response: null
+2023-02-20 09:17:14.249 [WRN] IMemoryCacheService USER_MBC: {"jwtToken":null,"username":null,"accountId":null}
+2023-02-20 09:18:17.728 [WRN] ===> Create token from MBC
+2023-02-20 09:18:17.783 [WRN] CreateToken MBC: {"username":"0559508190","password":"App12345","merchantId":"1628679763694"}
+2023-02-20 09:18:18.137 [WRN] CreateToken MBC: {"code":"S401","message":"The username or password was incorrect","wsResponse":null}
+2023-02-20 09:18:18.143 [WRN] IMemoryCacheService USER_MBC: null
+2023-02-20 09:18:41.388 [WRN] ===> Create token from MBC
+2023-02-20 09:18:41.391 [WRN] CreateToken MBC: {"username":"0559508190","password":"App12345","merchantId":"1628679763694"}
+2023-02-20 09:18:41.515 [WRN] CreateToken MBC: {"code":"S401","message":"The username or password was incorrect","wsResponse":null}
+2023-02-20 09:18:41.517 [WRN] IMemoryCacheService USER_MBC: null
+2023-02-20 09:19:20.646 [WRN] ===> Create token from MBC
+2023-02-20 09:19:20.648 [WRN] CreateToken MBC: {"username":"0559508190","password":"App12345","merchantId":"1628679763694"}
+2023-02-20 09:19:20.771 [WRN] CreateToken MBC: {"code":"S401","message":"The username or password was incorrect","wsResponse":null}
+2023-02-20 09:19:20.773 [WRN] IMemoryCacheService USER_MBC: null

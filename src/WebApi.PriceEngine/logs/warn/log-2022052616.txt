@@ -1,0 +1,245 @@
+2022-05-26 16:02:41.283 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653555760","OrderDate":"20220526","RequestId":"20011653555760","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}
+2022-05-26 16:02:41.645 [ERR] Failed executing DbCommand (31ms) [Parameters=[p0='?' (Size = 4000), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+WCM_00_API_ORDER_PROCESSING @p0, @p1, @p2, @p3
+2022-05-26 16:02:41.846 [ERR] An exception occurred while iterating over the results of a query for context type 'WCM.EntityFrameworkCore.EntityFrameworkCore.PriceEngine.PriceEngineDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:75256631-af16-4f2c-af98-2e7933a2fd5b
+Error Number:241,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:75256631-af16-4f2c-af98-2e7933a2fd5b
+Error Number:241,State:1,Class:16
+2022-05-26 16:02:42.110 [WRN] 20011653555760 Exception CreateOrderAsync:One or more errors occurred. (Conversion failed when converting date and/or time from character string.)
+2022-05-26 16:11:07.140 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653556266","OrderDate":"20220526","RequestId":"20011653556266","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}
+2022-05-26 16:11:07.495 [ERR] Failed executing DbCommand (27ms) [Parameters=[p0='?' (Size = 4000), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+WCM_00_API_ORDER_PROCESSING @p0, @p1, @p2, @p3
+2022-05-26 16:11:07.579 [ERR] An exception occurred while iterating over the results of a query for context type 'WCM.EntityFrameworkCore.EntityFrameworkCore.PriceEngine.PriceEngineDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+2022-05-26 16:11:07.689 [WRN] 20011653556266 Exception CreateOrderAsync:One or more errors occurred. (Conversion failed when converting date and/or time from character string.)
+2022-05-26 16:11:11.221 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653556271","OrderDate":"20220526","RequestId":"20011653556271","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}
+2022-05-26 16:11:11.366 [ERR] Failed executing DbCommand (23ms) [Parameters=[p0='?' (Size = 4000), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+WCM_00_API_ORDER_PROCESSING @p0, @p1, @p2, @p3
+2022-05-26 16:11:11.395 [ERR] An exception occurred while iterating over the results of a query for context type 'WCM.EntityFrameworkCore.EntityFrameworkCore.PriceEngine.PriceEngineDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+2022-05-26 16:11:11.443 [WRN] 20011653556271 Exception CreateOrderAsync:One or more errors occurred. (Conversion failed when converting date and/or time from character string.)
+2022-05-26 16:11:12.876 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653556273","OrderDate":"20220526","RequestId":"20011653556273","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}
+2022-05-26 16:11:13.003 [ERR] Failed executing DbCommand (23ms) [Parameters=[p0='?' (Size = 4000), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+WCM_00_API_ORDER_PROCESSING @p0, @p1, @p2, @p3
+2022-05-26 16:11:13.016 [ERR] An exception occurred while iterating over the results of a query for context type 'WCM.EntityFrameworkCore.EntityFrameworkCore.PriceEngine.PriceEngineDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+2022-05-26 16:11:13.070 [WRN] 20011653556273 Exception CreateOrderAsync:One or more errors occurred. (Conversion failed when converting date and/or time from character string.)
+2022-05-26 16:11:20.856 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653556281","OrderDate":"20220526","RequestId":"1653556281","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}
+2022-05-26 16:11:20.976 [ERR] Failed executing DbCommand (24ms) [Parameters=[p0='?' (Size = 4000), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+WCM_00_API_ORDER_PROCESSING @p0, @p1, @p2, @p3
+2022-05-26 16:11:20.990 [ERR] An exception occurred while iterating over the results of a query for context type 'WCM.EntityFrameworkCore.EntityFrameworkCore.PriceEngine.PriceEngineDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+2022-05-26 16:11:21.041 [WRN] 1653556281 Exception CreateOrderAsync:One or more errors occurred. (Conversion failed when converting date and/or time from character string.)
+2022-05-26 16:11:45.371 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653556305","OrderDate":"20220526","RequestId":"1653556305","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}
+2022-05-26 16:12:42.454 [ERR] Failed executing DbCommand (31,490ms) [Parameters=[p0='?' (Size = 4000), p1='?' (Size = 4000), p2='?' (Size = 4000), p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+WCM_00_API_ORDER_PROCESSING @p0, @p1, @p2, @p3
+2022-05-26 16:12:42.470 [ERR] An exception occurred while iterating over the results of a query for context type 'WCM.EntityFrameworkCore.EntityFrameworkCore.PriceEngine.PriceEngineDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:711079a6-2344-4950-a61d-ac7aca41118f
+Error Number:241,State:1,Class:16
+2022-05-26 16:12:56.853 [WRN] 1653556305 Exception CreateOrderAsync:One or more errors occurred. (Conversion failed when converting date and/or time from character string.)
+2022-05-26 16:13:16.039 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653556396","OrderDate":"20220526","RequestId":"1653556396","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}
+2022-05-26 16:15:39.330 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653556539","OrderDate":"20220526","RequestId":"1653556539","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}
+2022-05-26 16:17:36.308 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1653556655","OrderDate":"20220526","RequestId":"1653556655","Items":[{"LineNo":1,"ParentLineNo":1,"Barcode":"2050000355240","ItemNo":"10204528","ItemName":"Bột nêm tôm và rau củ Dh Foods lọ 1_T","Uom":"HOP","Quantity":1.0,"UnitPrice":50000.0,"TaxGroupCode":"4","VATPercent":10,"CupType":"","Size":"","IsTopping":false,"IsCombo":false,"ComboNo":""}]}

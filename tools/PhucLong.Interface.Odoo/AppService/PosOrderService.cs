@@ -32,7 +32,7 @@ namespace PhucLong.Interface.Odoo.AppService
             posRawService = new PosRawService(_config);
         }
 
-        public void GetDataOdoo(string connectString, string date_order, int _limit, string pathLocal, bool isHistoric)
+        public void GetDataOdoo(string connectString, string date_order, int _limit, string pathLocal, bool isHistoric, int id = 0)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace PhucLong.Interface.Odoo.AppService
                 conn.Open();
                 Console.WriteLine("date_order {0} top {1} processing....", date_order.ToString(), _limit.ToString());
 
-                var dataTransHeader = conn.Query<Pos_Order>(PosOrderQuery.StrQueryTransHeader(date_order, _limit, isHistoric)).ToList();
+                var dataTransHeader = conn.Query<Pos_Order>(PosOrderQuery.StrQueryTransHeader(date_order, _limit, isHistoric, id)).ToList();
 
                 FileHelper.WriteLogs("===> Date: " + date_order.ToString() + " | Selected: " + dataTransHeader.Count.ToString());
                 if (dataTransHeader.Count > 0)
@@ -81,6 +81,14 @@ namespace PhucLong.Interface.Odoo.AppService
                     {
                         posRawService.SavePosRawOdoo(conn, trans, "PLG", pathLocal, isHistoric);
                     }
+                }
+
+
+                if (DateTime.Now.ToString("HH") == "09")
+                {
+                    FileHelper.WriteLogs("===> Archive data raw");
+                    PosRawService posRawService = new PosRawService(_config);
+                    posRawService.DeletePosRaw(conn);
                 }
             }
             catch(Exception ex)
@@ -122,7 +130,40 @@ namespace PhucLong.Interface.Odoo.AppService
 
                     if (trans.Count > 0)
                     {
-                        posRawService.SavePosRawOdoo(conn, trans, "POS_VAT", pathLocal, true);
+                        //posRawService.SavePosRawOdoo(conn, trans, "POS_VAT", pathLocal, true);
+                        int fileNumber = 0;
+                        int affecaffectedRows = 0;
+                        foreach (var tran in trans)
+                        {
+                            string fileName = tran.order_id.ToString();
+                            if (FileHelper.CreateFileMaster(fileName, "POS_VAT", pathLocal, tran.raw_data))
+                            {
+                                tran.is_sending = true;
+                                fileNumber++;
+                            }
+                            Thread.Sleep(50);
+                            Console.WriteLine("created: " + fileName);
+                        }
+                        FileHelper.WriteLogs("Created: " + fileNumber.ToString() + " file transaction");
+
+                        if (DateTime.Now.ToString("HH") == "23")
+                        {
+                            using var transaction = conn.BeginTransaction();
+                            try
+                            {
+                                var queryIns = @"INSERT INTO public.pos_raw (order_id, location_id, is_sending, raw_data, crt_date) VALUES (@order_id, @location_id, @is_sending, CAST(@raw_data AS json), now());";
+                                affecaffectedRows = conn.Execute(queryIns, trans, transaction);
+                                transaction.Commit();
+                            }
+                            catch(Exception ex)
+                            {
+                                transaction.Rollback();
+                                FileHelper.WriteLogs("Get_pos_order_request_vat Exception: " + ex.Message.ToString());
+                            }
+
+                            FileHelper.WriteLogs("AffecaffectedRows: " + affecaffectedRows.ToString());
+                            FileHelper.WriteLogs("Saved to public.pos_raw successfully: " + trans.Count.ToString() + " record");
+                        }                           
                     }
                 }
             }

@@ -1,0 +1,8 @@
+2023-03-30 16:53:07.549 [WRN] ===> Get token from redis
+2023-03-30 16:53:07.581 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/lead/qualify
+2023-03-30 16:53:08.165 [WRN] result: {"data":{"invalid_parameters":["phone_number"]},"message":"invalid parameters","time":"2023-03-30T09:53:08Z","verdict":"invalid_parameters"}
+2023-03-30 16:53:08.176 [WRN] O2 => Số điện thoại không tồn tại invalid parameters
+2023-03-30 16:53:53.165 [WRN] ===> Get token from redis
+2023-03-30 16:53:53.166 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/lead/qualify
+2023-03-30 16:53:53.360 [WRN] result: {"data":{"invalid_parameters":["phone_number"]},"message":"invalid parameters","time":"2023-03-30T09:53:53Z","verdict":"invalid_parameters"}
+2023-03-30 16:53:53.361 [WRN] O2 => Số điện thoại không tồn tại invalid parameters

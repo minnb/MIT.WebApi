@@ -1,0 +1,2 @@
+2022-09-08 21:51:58.694 [WRN] ===> CallApiHttpWeb.Exception: The remote server returned an error: (400) Bad Request.
+2022-09-08 21:57:41.584 [WRN] ===> CallApiHttpWeb.Exception: The remote server returned an error: (400) Bad Request.

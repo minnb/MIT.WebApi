@@ -1,0 +1,1 @@
+2022-07-07 10:59:06.808 [WRN] {"reply":{"restaurants":[{"city":"Hà Nội","foody_service":"FOOD","name":"Phúc Long Hà Đông 0622","restaurant_id":1000007107,"address":"8 Quang Trung","partner_restaurant_id":"2001"}]},"result":"success"}

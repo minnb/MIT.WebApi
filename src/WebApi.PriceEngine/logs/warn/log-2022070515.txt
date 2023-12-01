@@ -1,0 +1,2 @@
+2022-07-05 15:01:00.629 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2050000383946","Quantity":1.0,"PluCode":"2050000383946"}
+2022-07-05 15:01:00.850 [WRN] ===> get from db: [{"ItemNo":"10217170","Barcode":"2050000383946","ItemName":"L&L Hộp bảo quản TP TWIST LLS123-76_T","Uom":"HOP","Quantity":1.000,"UnitPrice":55618.0,"DiscountAmount":0.0,"LineAmountInVAT":55618.0,"TaxGroupCode":"4","VATPercent":10,"VATAmount":5056.0,"OfferNo":"","OfferType":"","DiscountType":""}]

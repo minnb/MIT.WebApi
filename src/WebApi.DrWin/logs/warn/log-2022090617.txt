@@ -1,0 +1,2 @@
+2022-09-06 17:39:15.014 [WRN] Result: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1662460752"}
+2022-09-06 17:39:20.156 [WRN] Result: {"message":"Thiếu tỷ lệ quy đổi từ đơn vị tính nhập ở trên so với đơn vị cơ bản"}

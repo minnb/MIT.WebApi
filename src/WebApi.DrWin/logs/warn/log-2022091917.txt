@@ -1,0 +1,30 @@
+2022-09-19 17:00:20.290 [WRN] ===> P100===>: The remote server returned an error: (401) authenticationrequired.
+2022-09-19 17:00:29.488 [WRN] GetTokenAsync.Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.
+2022-09-19 17:01:08.402 [WRN] ===> P100===>: The remote server returned an error: (401) authenticationrequired.
+2022-09-19 17:01:08.418 [WRN] GetTokenAsync.Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.
+2022-09-19 17:01:41.452 [WRN] ===> P100===>: The remote server returned an error: (401) authenticationrequired.
+2022-09-19 17:02:20.018 [WRN] GetTokenAsync.Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.
+2022-09-19 17:03:19.431 [WRN] ===> P100===>: The remote server returned an error: (401) authenticationrequired.
+2022-09-19 17:11:03.384 [WRN] ===> P100===>: The remote server returned an error: (401) authenticationrequired.
+2022-09-19 17:11:23.000 [WRN] GetTokenAsync.Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.
+2022-09-19 17:12:23.005 [WRN] ===> P100===>: {"code":200,"message":"Thành công","data":{"token":"Icne_z-4fRp3Pit5HDs9UluhPEVsHHSi-M5altYGCmRxpnvFEaFJzSGXlyHkK_FW0F-5Tn7ZUenGOwlERiq0PxtovLn2CBiVfB3NgxNdPvwof9nXflDevgYQqU1r5Sp9S-vUbexNR-bmDKz-ERiz8adqmBsFuPc52N8mnOq34d1raE7X_3RlIA4Bo_c1T2iLAgfftpM00EqFZu4zQt2DXO2mV-JG17KAc5eaELH4E1dtGwrD4hBsqpMNpjYvKui-0HMu-I7dW-beGNlaN1SKqDVxM0_Yj_qqJ72BD-KUTW4VNr1RYyLGwq2t_SG7AVB0UwokIzeP_UBBLoh8VLDkUOEugGFVPBY4I5Jal-RcECE4sjwqlqcv3CkSzHQKIfmk2H1PHv4uNgnzP-ivCN5fUvy9K0UY1kGNEbSUcImpdOzcmzCGROY5aOpRJ7LQCD3iBrgXmtglhdmjFyvbCIRytAOBdrHSRXN1iZ8Vq8j4U9-EY14lyBJCg9QL7MIK-Nrr-_O7lFzywWFfeTkmBxfASVsEsWN4rhhXkxxMqNROISRTvkez3yWDhYVJTym9PaiY9qVidZfgbegFoPxcWC115v9OLsvsGD7gs0W238k71nrBWdlVOxb4tAOZcM2S17jvQr0HG-Sg-phMF43tbAd3BW2A_cyqKUM1iK8KbNAp6IyZhFtfAVGsndLMJXdxxFuHiyF-EDD_UiLMk6ystevreGqrNrkwWViwdF4K-5HwE02xp0gNASV3bvmbOns5x3ZbI9IqWXW2Ov-qoNmXqSwFdE7LqDwFWcJ2Bo9mvdp9Aquf2xQxExEOpIhCH2UXksF6BL7WmjBHkWiasCXPLyTTHOjtOQ8H_Vv8wbcO0_XcNO6DAkZhDpeHX_OdrI4ctGhQthbHSwF9ao2t6nId0Kn98Rg3qzX6nOavlBhbYXUxN30","token_type":"bearer"}}
+2022-09-19 17:12:38.605 [WRN] ===> 1663038171===>: {"code":200,"mess":"Xóa phiếu nhập thành công"}
+2022-09-19 17:13:02.143 [WRN] ===> 1663038171===>: {"code":200,"mess":"Xóa phiếu nhập thành công"}
+2022-09-19 17:13:05.830 [WRN] ===> 1663038171===>: {"code":200,"mess":"Xóa phiếu nhập thành công"}
+2022-09-19 17:13:06.982 [WRN] ===> 1663038171===>: {"code":200,"mess":"Xóa phiếu nhập thành công"}
+2022-09-19 17:13:07.947 [WRN] ===> 1663038171===>: {"code":200,"mess":"Xóa phiếu nhập thành công"}
+2022-09-19 17:14:35.298 [WRN] ===> 1662629116===>: {"code":200,"mess":"Xóa phiếu xuất thành công"}
+2022-09-19 17:14:42.840 [WRN] ===> 1662629116===>: {"code":200,"mess":"Xóa phiếu xuất thành công"}
+2022-09-19 17:21:29.635 [WRN] ===> P100===>: {"code":200,"message":"Thành công","data":{"token":"Icne_z-4fRp3Pit5HDs9UluhPEVsHHSi-M5altYGCmRxpnvFEaFJzSGXlyHkK_FW0F-5Tn7ZUenGOwlERiq0PxtovLn2CBiVfB3NgxNdPvwof9nXflDevgYQqU1r5Sp9S-vUbexNR-bmDKz-ERiz8adqmBsFuPc52N8mnOq34d1raE7X_3RlIA4Bo_c1T2iLAgfftpM00EqFZu4zQt2DXO2mV-JG17KAc5eaELH4E1dtGwrD4hBsqpMNpjYvKui-0HMu-I7dW-beGNlaN1SKqDVxM0_Yj_qqJ72BD-KUTW4VNr1RYyLGwq2t_SG7AVB0UwokIzeP_UBBLoh8VLDkUOEugGFVPBY4I5Jal-RcECE4sjwqlqcv3CkSzHQKIfmk2H1PHv4uNgnzP-ivCN5fUvy9K0UY1kGNEbSUcImpdOzcmzCGROY5aOpRJ7LQCD3iBrgXmtglhdmjFyvbCIRytAOBdrHSRXN1iZ8Vq8j4U9-EY14lyBJCg9QL7MIK-Nrr-_O7lFzywWFfeTkmBxfASVsEsWN4rhhXkxxMqNROISRTvkez3yWDhYVJTym9PaiY9qVidZfgbegFoPxcWC115v9OLsvsGD7gs0W238k71nrBWdlVOxb4tAOZcM2S17jvQr0HG-Sg-phMF43tbAd3BW2A_cyqKUM1iK8KbNAp6IyZhFtfAVGsndLMJXdxxFuHiyF-EDD_UiLMk6ystevreGqrNrkwWViwdF4K-5HwE02xp0gNASV3bvmbOns5x3ZbI9IqWXW2Ov-qoNmXqSwFdE7LqDwFWcJ2Bo9mvdp9Aquf2xQxExEOpIhCH2UXksF6BL7WmjBHkWiasCXPLyTTHOjtOQ8H_Vv8wbcO0_XcNO6DAkZhDpeHX_OdrI4ctGhQthbHSwF9ao2t6nId0Kn98Rg3qzX6nOavlBhbYXUxN30","token_type":"bearer"}}
+2022-09-19 17:21:31.997 [WRN] ===> 166262911612===>: The remote server returned an error: (404) Not Found.
+2022-09-19 17:21:32.018 [WRN] Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.
+2022-09-19 17:21:41.120 [WRN] ===> 16626291161===>: The remote server returned an error: (404) Not Found.
+2022-09-19 17:21:41.137 [WRN] Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.
+2022-09-19 17:21:49.189 [WRN] ===> 16626291161===>: The remote server returned an error: (404) Not Found.
+2022-09-19 17:21:49.205 [WRN] Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.
+2022-09-19 17:22:13.017 [WRN] ===> 1662630919===>: {"code":200,"mess":"Xóa phiếu xuất thành công"}
+2022-09-19 17:22:16.971 [WRN] ===> 166263091900===>: The remote server returned an error: (404) Not Found.
+2022-09-19 17:22:16.986 [WRN] Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.
+2022-09-19 17:22:21.987 [WRN] ===> 1662630919===>: {"code":200,"mess":"Xóa phiếu xuất thành công"}
+2022-09-19 17:22:25.983 [WRN] ===> 166263091900===>: The remote server returned an error: (404) Not Found.
+2022-09-19 17:22:25.998 [WRN] Exception: Unexpected character encountered while parsing value: T. Path '', line 0, position 0.

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using PhucLong.Interface.Central.Database;
 using PhucLong.Interface.Central.Models.Inbound;
+using PhucLong.Interface.Central.Models.Inbound.FRANCHISE;
 using PhucLong.Interface.Central.Models.Staging;
 using PhucLong.Interface.Central.Queries;
 using System;
@@ -11,9 +12,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Xml.Linq;
+using VCM.Common.Extensions;
 using VCM.Common.Helpers;
-using VCM.Shared.Enums;
 
 namespace PhucLong.Interface.Central.AppService
 {
@@ -32,86 +34,104 @@ namespace PhucLong.Interface.Central.AppService
             _random = new Random();
         }
 
-        public void Exp_Reconciliation(string pathLocal, string prefix)
+        public void Exp_Reconciliation(string bussinessDate, string storeProcedure, string pathLocal, string prefix, bool isMultiThread, int pageSize)
         {
             using (IDbConnection conn = _dapperContext.ConnCentralPhucLong)
             {
                 try
                 {
+                    FileHelper.WriteLogs("===> " + storeProcedure + " " + bussinessDate);
+                    conn.Query(@"EXEC " + storeProcedure + " '" + bussinessDate + "';");
                     var inb_RECONCILE = conn.Query<B02_Reconciliation_Dto>(InbQuery.INB_B02_RECONCILE_QUERY()).ToList();
-                    FileHelper.WriteLogs("Selected: " + inb_RECONCILE.Count.ToString());
-
                     if(inb_RECONCILE.Count > 0)
                     {
-                        string fileName = GetFileName(prefix);
-                        inb_RECONCILE.ForEach(c => c.FileValue = fileName);
+                         var lstStore = inb_RECONCILE.Select(x => new
+                        {
+                            x.StoreCode, x.BusinessDate
+                        }).GroupBy(x => new { x.StoreCode, x.BusinessDate })
+                            .Select(x =>
+                            {
+                                var temp = x.OrderBy(o => o.StoreCode).FirstOrDefault();
+                                return new
+                                {
+                                    x.Key.StoreCode, x.Key.BusinessDate
+                                };
+                            }).OrderBy(x => x.StoreCode).ToList();
 
-                        Console.WriteLine("create xml: {0}", fileName);
-
-                        string bodyXml = B02_Reconciliation_xml(inb_RECONCILE);
-
-                        string result_xml = B02_ReconciliationStringXml(bodyXml);
-                        XElement.Parse(result_xml).Save(pathLocal + fileName);
-
-                        UpdateStatus_INB_B02_RECONCILE(conn, inb_RECONCILE);
-
-                    }
-                    else
-                    {
-                        FileHelper.WriteLogs("No data");
+                        if(isMultiThread && pageSize > 0)
+                        {
+                            decimal totalRows = lstStore.Count;
+                            int pageNumber = (int) Math.Ceiling(totalRows / pageSize);
+                            pageNumber = pageNumber < 1 ? 1 : pageNumber;
+                            FileHelper.WriteLogs("===> TotalRow: "+ totalRows .ToString() + " - PageSize: " + pageSize.ToString() + " - PageNumber: " + pageNumber .ToString());
+                            for(var i = 0; i < pageNumber; i++)
+                            {
+                                string threadNumber = (i + 1).ToString();
+                                var queryable = lstStore.AsQueryable();
+                                var dataPage = queryable.Paging(i, pageSize);
+                                var stores = dataPage.Select(s => new { s.StoreCode, s.BusinessDate }).ToList();
+                                Console.WriteLine("===> Start thread {0}", threadNumber);
+                                Thread t = new Thread(() =>
+                                    {
+                                        foreach (var s in stores)
+                                        {
+                                            var reconData = inb_RECONCILE.Where(x => x.StoreCode == s.StoreCode && x.BusinessDate == s.BusinessDate).ToList();
+                                            CreateXml_Reconciliation(conn, reconData, pathLocal, prefix, threadNumber);
+                                        }
+                                    });
+                                t.Start();
+                            }
+                        }
+                        else
+                        {
+                            foreach (var item in lstStore)
+                            {
+                                var reconData = inb_RECONCILE.Where(x => x.StoreCode == item.StoreCode && x.BusinessDate == item.BusinessDate).ToList();
+                                CreateXml_Reconciliation(conn, reconData, pathLocal, prefix, "0");
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
-                    FileHelper.WriteLogs("GetInboundData Exception: " + ex.Message.ToString());
+                    FileHelper.WriteLogs("Exp_Reconciliation Exception: " + ex.Message.ToString());
                 }
             }
         }
-        private void SP_INS_INBOUND(IDbConnection conn, string storeProcedure)
+        private void CreateXml_Reconciliation(IDbConnection conn , List<B02_Reconciliation_Dto> reconData, string pathLocal, string prefix, string threadNumber)
         {
-            int execute = 201;
-            if (!string.IsNullOrEmpty(storeProcedure))
+            if (reconData.Count > 0)
             {
-                execute = conn.Execute(storeProcedure, commandTimeout: 36000);
+                string fileName = GetFileName(reconData.FirstOrDefault().BusinessDate.ToString(), prefix + "_" + reconData.FirstOrDefault().StoreCode + "_" + threadNumber);
+                reconData.ForEach(c => c.FileValue = fileName);
+                Console.WriteLine("create xml: {0}", fileName);
+                string bodyXml = B02_Reconciliation_xml(reconData);
+                string result_xml = B02_ReconciliationStringXml(bodyXml);
+                XElement.Parse(result_xml).Save(pathLocal + fileName);
             }
-            FileHelper.WriteLogs("EXEC: " + storeProcedure + " ===> result: " + execute.ToString());
         }
-        public void Exp_Sales(string storeProcedure, string pathLocal, string prefix)
+        public void Exp_Sales(string storeProcedure, string pathLocal, string prefix, int top)
         {
             using IDbConnection conn = _dapperContext.ConnCentralPhucLong;
             conn.Open();
             try
             {
-                SP_INS_INBOUND(conn, storeProcedure);
-
-                var inb_Header = conn.Query<INB_SALE_MASTER>(InbQuery.INB_HEADER_QUERY()).ToList();
-                FileHelper.WriteLogs("Selected: " + inb_Header.Count.ToString());
+                FileHelper.WriteLogs("===> SP_INS_INBOUND");
+                //SP_INS_INBOUND(conn, storeProcedure);
+                FileHelper.WriteLogs("===> END SP_INS_INBOUND");
+                var inb_Header = conn.Query<INB_SALE_MASTER>(@"EXEC SP_GET_SALES_OUTBOUND").ToList();
+                FileHelper.WriteLogs("===> Selected: "  + inb_Header.Count.ToString() + " rows");
                 if (inb_Header.Count > 0)
                 {
                     string fileName = string.Empty;
                     List<string> TRANSACTIONSEQUENCENUMBER = new List<string>();
+                    FileHelper.WriteLogs("===> COUNT: " + inb_Header.Count.ToString());
+
                     foreach (var item in inb_Header)
                     {
                         TRANSACTIONSEQUENCENUMBER.Add(item.TRANSACTIONSEQUENCENUMBER);
 
-                        if (TRANSACTIONSEQUENCENUMBER.Count == 1000)
-                        {
-                            //Create xml
-                            fileName = GetFileName(prefix);
-                            inb_Header.ForEach(c => c.FIELDVALUE = fileName);
-                            Console.WriteLine("create xml: {0}", fileName);
-
-                            if (SalesCreateXml(conn, inb_Header, TRANSACTIONSEQUENCENUMBER, pathLocal, inb_Header.FirstOrDefault().FIELDVALUE.ToString()))
-                            {
-                                UpdateStatus_INB_MASTER(conn, inb_Header);
-                            }
-
-                            TRANSACTIONSEQUENCENUMBER.Clear();
-                            Thread.Sleep((int)ThreadEnum.Two);
-                        }
-
-                        //1-1
-                        fileName = GetFileName(prefix);
+                        fileName = GetFileName(item.TRANSACTIONSEQUENCENUMBER.ToString(), prefix);
                         inb_Header.ForEach(c => c.FIELDVALUE = fileName);
                         Console.WriteLine("create xml: {0}", fileName);
 
@@ -119,37 +139,103 @@ namespace PhucLong.Interface.Central.AppService
                         {
                             UpdateStatus_INB_MASTER(conn, inb_Header);
                         }
-
                         TRANSACTIONSEQUENCENUMBER.Clear();
-
-                        Thread.Sleep((int)ThreadEnum.Two);
                     }
-
-                    //Create xml
-                    //Thread.Sleep((int)ThreadEnum.Two);
-                    //fileName = GetFileName(prefix);
-                    //inb_Header.ForEach(c => c.FIELDVALUE = fileName);
-                    //Console.WriteLine("create xml: {0}", fileName);
-                    //if (CreateXml(conn, inb_Header, TRANSACTIONSEQUENCENUMBER, pathLocal, inb_Header.FirstOrDefault().FIELDVALUE.ToString()))
-                    //{
-                    //    //conn.Execute(@"UPDATE INB_SALE_MASTER SET CHGE_DATE = getdate(), FIELDVALUE = '" + inb_Header.FirstOrDefault().FIELDVALUE.ToString() + "' WHERE TRANSACTIONSEQUENCENUMBER = @TRANSACTIONSEQUENCENUMBER", inb_Header);
-                    //    UpdateStatus_INB_MASTER(conn, inb_Header);
-                    //}
                 }
-
             }
             catch (Exception ex)
             {
                 FileHelper.WriteLogs("ExpSales Exception: " + ex.Message.ToString());
             }
         }
+        public void Exp_Sales_V2(string storeProcedure, string pathLocal, string prefix, bool isMultiThread, int pageSize, string jobType = null)
+        {
+            using IDbConnection conn = _dapperContext.ConnCentralPhucLong;
+            conn.Open();
+            try
+            {
+                if (!string.IsNullOrEmpty(storeProcedure))
+                {
+                    var inb_Header = conn.Query<INB_SALE_MASTER>(@"EXEC " + storeProcedure).ToList();
+                    FileHelper.Write2Logs(jobType, "===> " + storeProcedure + " ===> result: " + inb_Header.Count.ToString() + " rows");
+                    if (inb_Header.Count > 0)
+                    {
+                        string fileName = string.Empty;
+                        var TRANSACTIONSEQUENCENUMBER = inb_Header.Select(x => x.TRANSACTIONSEQUENCENUMBER).ToArray();
+
+                        if (isMultiThread)
+                        {
+                            var totalTransNumberAsQueryable = TRANSACTIONSEQUENCENUMBER.AsQueryable();
+                            decimal totalRows = TRANSACTIONSEQUENCENUMBER.Count();
+                            int pageNumber = (int)Math.Ceiling(totalRows / pageSize);
+                            pageNumber = pageNumber < 1 ? 1 : pageNumber;
+
+                            FileHelper.Write2Logs(jobType, "===> TotalRow: " + totalRows.ToString() + " - PageSize: " + pageSize.ToString() + " - PageNumber: " + pageNumber.ToString());
+                            for (var i = 0; i < pageNumber; i++)
+                            {
+                                string threadNumber = (i + 1).ToString();
+                                Console.WriteLine(jobType, "===> Start Task {0}", threadNumber);
+                                var dataPage = totalTransNumberAsQueryable.Paging(i, pageSize);
+                                int count = 0;
+                                Task t = Task.Run(async () =>
+                                {
+                                    var lst_inbDetail = conn.Query<INB_SALE_DETAIL>(InbQuery.INB_DETAIL_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }).ToList();
+                                    var lst_inbTender = conn.Query<INB_SALE_TENDER>(InbQuery.INB_TENDER_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }).ToList();
+                                    var lst_inbDiscount = conn.Query<INB_SALE_DISCOUNT>(InbQuery.INB_DISCOUNT_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }).ToList();
+
+                                    foreach (var item in dataPage)
+                                    {
+                                        var inbHeader = inb_Header.Where(x => x.TRANSACTIONSEQUENCENUMBER == item).FirstOrDefault();
+                                        fileName = GetFileName_V2(inbHeader.RETAILSTOREID, inbHeader.TRANSACTIONSEQUENCENUMBER, prefix);
+                                        if (SalesCreateXml_V2(inbHeader, lst_inbDetail, lst_inbTender, lst_inbDiscount, pathLocal, fileName))
+                                        {
+                                            await UpdateStatus_INB_MASTER_V2Async(conn, inbHeader, fileName);
+                                            count++;
+                                        }
+                                        Console.WriteLine("create xml: {0}", fileName);
+                                    }
+                                });
+                                t.Wait();
+                                FileHelper.Write2Logs(jobType, "===> Task " + threadNumber.ToString() + ": " + count.ToString() + " file");
+                            }
+                        }
+                        else
+                        {
+                            //foreach (var item in TRANSACTIONSEQUENCENUMBER)
+                            //{
+                            //    var inbHeader = inb_Header.Where(x => x.TRANSACTIONSEQUENCENUMBER == item).FirstOrDefault();
+                            //    fileName = GetFileName_V2(inbHeader.RETAILSTOREID, inbHeader.TRANSACTIONSEQUENCENUMBER, prefix);
+                            //    Console.WriteLine("create xml: {0}", fileName);
+                            //    if (SalesCreateXml_V2(inbHeader, lst_inbDetail, lst_inbTender, lst_inbDiscount, pathLocal, fileName))
+                            //    {
+                            //        UpdateStatus_INB_MASTER_V2(conn, inbHeader, fileName);
+                            //    }
+                            //}
+                        }
+                        FileHelper.Write2Logs(jobType, "===> SalesCreateXml_V2: " + TRANSACTIONSEQUENCENUMBER.Count().ToString() + " file");
+                    }
+                }
+                else
+                {
+                    FileHelper.Write2Logs(jobType, "===> Not found store procedure"); ;
+                }
+            }
+            catch (Exception ex)
+            {
+                FileHelper.Write2Logs(jobType, "===> Exp_Sales_V2 Exception: " + ex.Message.ToString());
+            }
+        }
         private void UpdateStatus_INB_MASTER(IDbConnection conn, List<INB_SALE_MASTER> inb_Header)
         {
-            conn.Execute(@"UPDATE INB_SALE_MASTER SET UPDATE_FLG = 'Y', CHGE_DATE = getdate(), FIELDVALUE = '" + inb_Header.FirstOrDefault().FIELDVALUE.ToString() + "' WHERE TRANSACTIONSEQUENCENUMBER = @TRANSACTIONSEQUENCENUMBER", inb_Header);
+            conn.Execute(@"UPDATE INB_SALE_MASTER SET UPDATE_FLG = 'Y', CHGE_DATE = getdate(), FIELDVALUE = '" + inb_Header.FirstOrDefault().FIELDVALUE.ToString() + "' WHERE ID = @ID", inb_Header);
         }
-        private void UpdateStatus_INB_B02_RECONCILE(IDbConnection conn, List<B02_Reconciliation_Dto> inb_Recon)
+        private async Task UpdateStatus_INB_MASTER_V2Async(IDbConnection conn, INB_SALE_MASTER inb_Header, string fileName)
         {
-            conn.Execute(@"UPDATE INB_B02_RECONCILE SET UpdateFlg = 'Y', [ChgDate] = getdate(), FileValue = '" + inb_Recon.FirstOrDefault().FileValue.ToString() + "' WHERE StoreCode = @StoreCode AND BusinessDate = @BusinessDate", inb_Recon);
+           await conn.ExecuteAsync(@"UPDATE INB_SALE_MASTER SET UPDATE_FLG = 'Y', CHGE_DATE = getdate(), FIELDVALUE = '" + fileName + "' WHERE ID = @ID", inb_Header);
+        }
+        private async Task UpdateStatus_INB_MASTER_V3(IDbConnection conn, List<INB_SALE_MASTER> inb_Header)
+        {
+            await conn.ExecuteAsync(@"UPDATE INB_SALE_MASTER SET UPDATE_FLG = 'Y', CHGE_DATE = getdate(), FIELDVALUE = @FIELDVALUE WHERE TRANSACTIONSEQUENCENUMBER = @TRANSACTIONSEQUENCENUMBER", inb_Header);
         }
         private bool SalesCreateXml(IDbConnection conn,List<INB_SALE_MASTER> inb_Header, List<string> TRANSACTIONSEQUENCENUMBER, string pathLocal, string fileName)
         {
@@ -202,7 +288,55 @@ namespace PhucLong.Interface.Central.AppService
                 return false;
             }
         }
-        
+        private bool SalesCreateXml_V2(INB_SALE_MASTER inb_Header,List<INB_SALE_DETAIL> lst_inb_detail, List<INB_SALE_TENDER> lst_inb_tender, List<INB_SALE_DISCOUNT> lst_inb_discount, string pathLocal, string fileName)
+        {
+            try
+            {
+                var inb_detail = lst_inb_detail.Where(x=>x.TRANSACTIONSEQUENCENUMBER == inb_Header.TRANSACTIONSEQUENCENUMBER).ToList();
+                var inb_tender = lst_inb_tender.Where(x => x.TRANSACTIONSEQUENCENUMBER == inb_Header.TRANSACTIONSEQUENCENUMBER).ToList(); ;
+                var inb_discount = lst_inb_discount.Where(x => x.TRANSACTIONSEQUENCENUMBER == inb_Header.TRANSACTIONSEQUENCENUMBER).ToList(); ;
+
+                string bodyXml = string.Empty;
+                Console.WriteLine("processing {0}", inb_Header.TRANSACTIONSEQUENCENUMBER.ToString());
+
+                bodyXml += @"<_-POSDW_-E1POSTR_CREATEMULTIP SEGMENT=""1"">";
+
+                //Header
+                bodyXml += E1BPTRANSACTION_xml(inb_Header);
+
+                bodyXml += E1BPTRANSACTEXTENSIO_xml(inb_Header);
+
+                //Item
+                bodyXml += E1E1BPRETAILLINEITEM_xml(inb_detail);
+
+                bodyXml += E1BPLINEITEMTAX_xml(inb_detail);
+
+                bodyXml += E1BPLINEITEMEXTENSIO_xml(inb_detail);
+
+                bodyXml += E1BPLINEITEMDISCOUNT_xml(inb_discount);
+
+                //Tender
+                bodyXml += E1BPTENDER_xml(inb_tender);
+
+                bodyXml += E1BPCREDITCARD_xml(inb_tender);
+
+                //LOY
+                bodyXml += E1BPTRANSACTIONLOYAL_xml(inb_Header);
+
+                bodyXml += @"</_-POSDW_-E1POSTR_CREATEMULTIP>";
+
+
+                string result_xml = SalesStringXml(bodyXml);
+
+                XElement.Parse(result_xml).Save(pathLocal + fileName);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                FileHelper.WriteLogs("SalesCreateXml_V2 Exception: " + ex.Message.ToString());
+                return false;
+            }
+        }
         //*******************************************
         //Private function
         private string E1BPTRANSACTION_xml(INB_SALE_MASTER header)
@@ -302,7 +436,6 @@ namespace PhucLong.Interface.Central.AppService
 
             return result;
         }
-
         private string E1BPCREDITCARD_xml(List<INB_SALE_TENDER> lstTender)
         {
             var map = new MapperConfiguration(cfg => cfg.CreateMap<INB_SALE_TENDER, E1BPCREDITCARD>()).CreateMapper();
@@ -320,7 +453,6 @@ namespace PhucLong.Interface.Central.AppService
             }
             return result;
         }
-
         private string E1BPLINEITEMDISCOUNT_xml(List<INB_SALE_DISCOUNT> lstDiscount)
         {
             var map = new MapperConfiguration(cfg => cfg.CreateMap<INB_SALE_DISCOUNT, E1BPLINEITEMDISCOUNT>()).CreateMapper();
@@ -336,7 +468,6 @@ namespace PhucLong.Interface.Central.AppService
 
             return result;
         }
-
         private string B02_Reconciliation_xml(List<B02_Reconciliation_Dto> lstRecon)
         {
             var map = new MapperConfiguration(cfg => cfg.CreateMap<B02_Reconciliation_Dto, B02_Reconciliation>()).CreateMapper();
@@ -351,7 +482,6 @@ namespace PhucLong.Interface.Central.AppService
 
             return result;
         }
-
         private string SalesStringXml(string bodyData)
         {
             string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>";
@@ -364,7 +494,6 @@ namespace PhucLong.Interface.Central.AppService
             xml += @"</_-POSDW_-POSTR_CREATEMULTIPLE06>";
             return xml;
         }
-
         private string B02_ReconciliationStringXml(string bodyData)
         {
             string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>";
@@ -373,11 +502,87 @@ namespace PhucLong.Interface.Central.AppService
             xml += @"</ns0:mt_odoo_reconciliation_in>";
             return xml;
         }
-
-        private string GetFileName(string prefix)
+        private string GetFileName(string orderNo, string prefix)
         {
             int checkSum = _random.Next(1, 999);
-            return prefix + "_" + DateTime.Now.ToString("yyyyMMdd") + "_" + DateTime.Now.ToString("HHmmssfff")  + "_" +  checkSum.ToString().PadRight(3, '0') + ".xml";
+            return prefix + "_" + orderNo + "_" + DateTime.Now.ToString("MMdd_HHmmssfff")  + "_" +  checkSum.ToString().PadRight(3, '0') + ".xml";
+        }
+        private string GetFileName_V2(string storeNo, string orderNo, string prefix)
+        {
+            int checkSum = _random.Next(1, 999);
+            return prefix + "_" + storeNo  + "_" + orderNo + "_" + DateTime.Now.ToString("yMMdd_HHmmssff") + "_" + checkSum.ToString().PadRight(3, '0') + ".xml";
+        }
+
+        //Franchise
+        private string INB_FRANCHISE_xml(List<FRANCHISE_Dto> lstData)
+        {
+            var map = new MapperConfiguration(cfg => cfg.CreateMap<FRANCHISE_Dto, SalesFRE>()).CreateMapper();
+            string result = string.Empty;
+            string xml_open = @"<LINE>";
+            string xml_close = @"</LINE>";
+            foreach (var recon in lstData)
+            {
+                SalesFRE obj = map.Map<SalesFRE>(recon);
+                result += ConvertHelper.SerializeXmlNoHeader(obj).Replace("<SalesFRE>", xml_open).Replace("</SalesFRE>", xml_close);
+            }
+
+            return result;
+        }
+        private string FRANCHISE_Xml(string bodyData)
+        {
+            string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>";
+            xml += @"<MAPPING xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">";
+            xml += bodyData;
+            xml += @"</MAPPING>";
+            return xml;
+        }
+        public void Exp_FRANCHISE(string bussinessDate, string storeProcedure, string pathLocal, string prefix)
+        {
+            using (IDbConnection conn = _dapperContext.ConnCentralPhucLong)
+            {
+                try
+                {
+                    FileHelper.WriteLogs(@"===> " + storeProcedure);
+                    conn.Query(@"EXEC " + storeProcedure);
+                    var dataINB = conn.Query<FRANCHISE_Dto>(InbQuery.INB_FRANCHISE_QUERY()).ToList();
+                    if (dataINB.Count > 0)
+                    {
+                        var lstStore = dataINB.Select(x => new
+                        {
+                            x.PL_STORE
+                        }).GroupBy(x => new { x.PL_STORE })
+                            .Select(x =>
+                            {
+                                var temp = x.OrderBy(o => o.PL_STORE).FirstOrDefault();
+                                return new
+                                {
+                                    x.Key.PL_STORE
+                                };
+                            }).OrderBy(x => x.PL_STORE).ToList();
+
+                        foreach (var item in lstStore)
+                        {
+                            var reconData = dataINB.Where(x => x.PL_STORE == item.PL_STORE).ToList();
+                            if (reconData.Count > 0)
+                            {
+                                string fileName = GetFileName(reconData.FirstOrDefault().POSTING_DATE.ToString(), prefix + "_" + item.PL_STORE);
+                                reconData.ForEach(c => c.FileValue = fileName);
+                                Console.WriteLine("create xml: {0}", fileName);
+                                string bodyXml = INB_FRANCHISE_xml(reconData);
+                                string result_xml = FRANCHISE_Xml(bodyXml);
+                                XElement.Parse(result_xml).Save(pathLocal + fileName);
+                                //update status
+                                conn.Execute(@"UPDATE INB_FRANCHISE SET UpdateFlg = 'Y', [ChgDate] = getdate(), FileValue = '" + reconData.FirstOrDefault().FileValue.ToString() + "' WHERE TRANS_NO = @TRANS_NO AND PL_STORE = @PL_STORE AND POSTING_DATE = @POSTING_DATE", reconData);
+                            }
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    FileHelper.WriteLogs("Exp_FRANCHISE Exception: " + ex.Message.ToString());
+                }
+            }
         }
     }
 }

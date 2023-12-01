@@ -1,0 +1,3 @@
+2023-02-14 17:11:22.639 [WRN] ===> GetListOrderAsync start requestId: 1f857bc860aa497d94ab32da81e503d6 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-02-14 17:11:24.442 [WRN] ===> GetListOrderAsync end requestId: 1f857bc860aa497d94ab32da81e503d6
+2023-02-14 17:30:53.688 [WRN] ===> PLH request CRX: https://uat-api-crownx.winmart.vn/rp/api/pos/order/count===> response:"{\n  \"data\": {\n    \"countOrder\": 0,\n    \"status\": \"New\"\n  }\n}"

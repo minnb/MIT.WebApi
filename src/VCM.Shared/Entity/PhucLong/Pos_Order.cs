@@ -81,5 +81,6 @@ namespace VCM.Shared.Entity.PhucLong
         public int? session_callcenter_id { get; set; }
         public decimal cv_life_redeem { get; set; }
         public decimal cv_life_earn { get; set; }
+        public string cv_life_partner_card_code { get; set; }
     }
 }

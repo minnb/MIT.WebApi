@@ -6,7 +6,7 @@ namespace PhucLong.Interface.Odoo.Queries
 {
     public static class PosOrderQuery
     {
-        public static string StrQueryTransHeader(string date_order, int limit_top, bool isHistoric = true)
+        public static string StrQueryTransHeader(string date_order, int limit_top, bool isHistoric = true, int id = 0)
         {
             if (isHistoric)
             {
@@ -17,9 +17,10 @@ namespace PhucLong.Interface.Odoo.Queries
                      has_printed_label_first, linked_draft_order_be, use_emp_coupon, emp_coupon_code, current_coupon_limit, current_coupon_promotion, total_surcharge, number_of_printed_bill,  hanging_time, 
                      reward_code, momo_payment_ref, partner_current_point, partner_total_point, partner_loyalty_level_id, cast(partner_expired_date::timestamp AT TIME ZONE 'UTC' as date) partner_expired_date, auto_paid_by_cron, message_main_attachment_id, 
                      cast(date_last_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_last_order, cancel_from_be, moca_payment_ref, cancel_reason, cancel_duplicate, pay_draft_order, invoice_name, invoice_vat, invoice_address, invoice_email, invoice_contact, invoice_note, invoice_request, zalo_payment_ref,
-                     mobile_receiver_info, partner_insert_type, order_in_call_center, session_callcenter_id, cv_life_redeem, cv_life_earn
+                     mobile_receiver_info, partner_insert_type, order_in_call_center, session_callcenter_id, cv_life_redeem, cv_life_earn, cv_life_partner_card_code
                     FROM public.pos_order o
                     WHERE NOT EXISTS (SELECT 1 FROM public.pos_raw r WHERE o.id = r.order_id AND o.location_id = r.location_id) 
+                          AND (extract(epoch from (now() - cast(write_date::timestamp AT TIME ZONE 'UTC' as timestamp))) / 60) > 5
                           AND state = 'paid' and Cast(date_order::timestamp AT TIME ZONE 'UTC' as date) >= '" + date_order + @"' 
                     ORDER BY date_order LIMIT(" + limit_top + @");";
             }
@@ -32,10 +33,9 @@ namespace PhucLong.Interface.Odoo.Queries
                      has_printed_label_first, linked_draft_order_be, use_emp_coupon, emp_coupon_code, current_coupon_limit, current_coupon_promotion, total_surcharge, number_of_printed_bill,  hanging_time, 
                      reward_code, momo_payment_ref, partner_current_point, partner_total_point, partner_loyalty_level_id, cast(partner_expired_date::timestamp AT TIME ZONE 'UTC' as date) partner_expired_date, auto_paid_by_cron, message_main_attachment_id, 
                      cast(date_last_order::timestamp AT TIME ZONE 'UTC' as timestamp) date_last_order, cancel_from_be, moca_payment_ref, cancel_reason, cancel_duplicate, pay_draft_order, invoice_name, invoice_vat, invoice_address, invoice_email, invoice_contact, invoice_note, invoice_request, zalo_payment_ref,
-                     mobile_receiver_info, partner_insert_type, order_in_call_center, session_callcenter_id, cv_life_redeem, cv_life_earn
-                    FROM public.pos_order
-                    WHERE location_id = 532 AND state = 'paid' and Cast(date_order::timestamp AT TIME ZONE 'UTC' as date) >= '" + date_order + @"' 
-                    ORDER BY date_order LIMIT(" + limit_top + @");";
+                     mobile_receiver_info, partner_insert_type, order_in_call_center, session_callcenter_id, cv_life_redeem, cv_life_earn, cv_life_partner_card_code
+                    FROM public.pos_order 
+                    WHERE id = " + id + ";";
             }
         }
         public static string StrQueryTransLine()

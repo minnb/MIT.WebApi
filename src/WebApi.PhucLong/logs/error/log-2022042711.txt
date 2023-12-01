@@ -1,0 +1,4 @@
+2022-04-27 11:13:34.638 [ERR] Connection is not open
+2022-04-27 11:19:30.985 [ERR] Connection is not open
+2022-04-27 11:22:01.498 [ERR] Connection is not open
+2022-04-27 11:25:57.345 [ERR] Connection is not open

@@ -1,0 +1,8 @@
+2023-03-23 09:54:47.263 [WRN] ===> Create token from MBC
+2023-03-23 09:54:47.316 [WRN] Login O2: {"password":"&^0fCt5gi9rt","user_name":"win_test"}
+2023-03-23 09:57:38.121 [WRN] ===> Create token from MBC
+2023-03-23 09:57:38.123 [WRN] Login O2: {"password":"&^0fCt5gi9rt","user_name":"win_test"}
+2023-03-23 09:58:10.012 [WRN] ===> Create token from MBC
+2023-03-23 09:58:10.041 [WRN] Login O2: {"password":"&^0fCt5gi9rt","user_name":"win_test"}
+2023-03-23 09:59:10.269 [WRN] ===> Create token from MBC
+2023-03-23 09:59:10.339 [WRN] Login O2: {"password":"&^0fCt5gi9rt","user_name":"win_test"}

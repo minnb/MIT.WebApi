@@ -1,0 +1,11 @@
+2022-09-07 14:00:06.647 [WRN] Result: "DCS000004528054"
+2022-09-07 14:00:06.687 [WRN] Exception: Error converting value "DCS000004528054" to type 'WebApi.DrWin.Models.PhieuNhapRsp'. Path '', line 1, position 17.
+2022-09-07 14:19:02.716 [WRN] lien_thong_phieu_xuat: {"message":"Mã cơ sở không chính xác"}
+2022-09-07 14:19:56.616 [WRN] lien_thong_phieu_xuat: {"message":"Loại phiếu xuất không chính xác (2:Xuất trả nhà cung cấp ; 3:Xuất hủy; 4:  Xuất nội bộ )"}
+2022-09-07 14:20:39.979 [WRN] lien_thong_phieu_xuat: {"message":"Loại phiếu xuất không chính xác (2:Xuất trả nhà cung cấp ; 3:Xuất hủy; 4:  Xuất nội bộ )"}
+2022-09-07 14:21:01.923 [WRN] lien_thong_phieu_xuat: {"message":"Loại phiếu xuất không chính xác (2:Xuất trả nhà cung cấp ; 3:Xuất hủy; 4:  Xuất nội bộ )"}
+2022-09-07 14:21:16.748 [WRN] lien_thong_phieu_xuat: {"code":200,"mess":"Tạo phiếu xuất thành công","ma_phieu_xuat_quoc_gia":"79-009177.1662535276"}
+2022-09-07 14:23:31.093 [WRN] lien_thong_phieu_xuat: {"code":200,"mess":"Tạo phiếu xuất thành công","ma_phieu_xuat_quoc_gia":"79-009177.1662535409"}
+2022-09-07 14:42:48.584 [WRN] lien_thong_phieu_xuat: {"code":200,"mess":"Tạo phiếu xuất thành công","ma_phieu_xuat_quoc_gia":"79-009177.1662536564"}
+2022-09-07 14:42:52.702 [WRN] lien_thong_phieu_nhap: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1662536571"}
+2022-09-07 14:42:57.230 [WRN] lien_thong_phieu_nhap: {"code":200,"mess":"Tạo phiếu nhập thành công","ma_phieu_nhap_quoc_gia":"79-009177.1662536576"}

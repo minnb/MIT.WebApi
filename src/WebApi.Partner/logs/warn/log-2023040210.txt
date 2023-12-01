@@ -1,0 +1,6 @@
+2023-04-02 10:59:16.822 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 10:59:16.875 [WRN] Proxy: 
+2023-04-02 10:59:16.877 [WRN] byPass: 
+2023-04-02 10:59:20.201 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 10:59:20.254 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T10:59:20.2354825+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 10:59:20.259 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDc5NTksImV4cCI6MTY4MDQxMTU1OSwiaWF0IjoxNjgwNDA3OTU5fQ.nDdInqfFCrkFjeTtc2G-SQ1epTUidrSvlSvjgad0slCEegl8w2b_xaWD9WXy5Qzhi33UaM27QjGfHeLlkvWX2Q","TokenType":"Bearer"}}

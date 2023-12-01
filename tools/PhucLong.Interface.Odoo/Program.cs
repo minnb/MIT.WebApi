@@ -27,7 +27,9 @@ namespace PhucLong.Interface.Odoo
                 {
                     back_date = DateTime.Now.AddDays(-5).ToString("yyyy-MM-dd");
                 }
-                FileHelper.WriteLogs("RUN: " + app + " === date: " + back_date);
+
+                FileHelper.WriteLogs("=========================================");
+                FileHelper.WriteLogs("****** RUN: " + app + " === date: " + back_date);
 
                 switch (app)
                 {
@@ -43,6 +45,7 @@ namespace PhucLong.Interface.Odoo
                         break;
                 }
 
+                FileHelper.WriteLogs("****** FINISHED " + app + " ******");
             }
             catch (Exception ex)
             {

@@ -1,0 +1,8 @@
+2022-12-02 08:34:07.503 [WRN] ===> proxy: @[]
+2022-12-02 08:34:08.183 [WRN] {"reply":{"restaurants":[{"city":"Hà Nội","foody_service":"FOOD","name":"Phúc Long 17 Ngô Quyền Hoàn Kiếm HN","restaurant_id":1000007107,"address":"17 Ngô Quyền","partner_restaurant_id":"2001"}]},"result":"success"}
+2022-12-02 08:34:15.350 [WRN] ===> proxy: @[]
+2022-12-02 08:34:18.433 [WRN] {"reply":{"restaurants":[{"city":"TP. HCM","foody_service":"FOOD","name":" Phúc Long - Huỳnh Thúc Kháng","restaurant_id":29971,"address":"26 Huỳnh Thúc Kháng","partner_restaurant_id":"2002"}]},"result":"success"}
+2022-12-02 08:34:28.953 [WRN] ===> proxy: @[]
+2022-12-02 08:34:29.384 [WRN] {"reply":null,"result":"error_forbidden"}
+2022-12-02 08:35:22.070 [WRN] ===> proxy: @[]
+2022-12-02 08:35:22.190 [WRN] {"reply":{"restaurants":[{"city":"Hà Nội","foody_service":"FOOD","name":"Phúc Long 17 Ngô Quyền Hoàn Kiếm HN","restaurant_id":1000007107,"address":"17 Ngô Quyền","partner_restaurant_id":"2001"}]},"result":"success"}

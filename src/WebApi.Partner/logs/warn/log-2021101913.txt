@@ -1,2 +1,0 @@
-2021-10-19 13:12:55.380 [WRN] Exception: Index and length must refer to a location within the string. (Parameter 'length')
-2021-10-19 13:13:28.088 [WRN] Exception: Index and length must refer to a location within the string. (Parameter 'length')

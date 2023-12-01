@@ -2,12 +2,104 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace VCM.Common.Helpers
 {
-    public class StringHelper
+    public static class StringHelper
     {
+        private static Random random = new Random();
+
+        public static string GetTimeStampString(bool isRandom = false)
+        {
+            string ramdom = string.Empty;
+            if (isRandom)
+            {
+                ramdom = RandomString(2);
+            }
+            return ramdom + ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds).ToString();
+        }
+        private static string Format_Json(string json)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                WriteIndented = true
+            };
+
+            var jsonElement = System.Text.Json.JsonSerializer.Deserialize<JsonElement>(json);
+
+            return System.Text.Json.JsonSerializer.Serialize(jsonElement, options);
+        }
+
+        public static string NumberPadLeft(long number, char c, int numberChar)
+        {
+            return number.ToString().PadLeft(numberChar, c);
+        }
+        public static string GetFirstSplit(string str, char c)
+        {
+            try
+            {
+                var arr = str.Split(c);
+                return arr[0];
+            }
+            catch
+            {
+                return "";
+            }
+        }
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+        public static DateTime ConvertStringToDate(string date)
+        {
+            return DateTime.ParseExact(date, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture).Date;
+        }
+        public static DateTime ConvertStringToDate(string date, string format = "")
+        {
+            return DateTime.ParseExact(date, format, System.Globalization.CultureInfo.InvariantCulture).Date;
+        }
+        public static string InitRequestId()
+        {
+            return Guid.NewGuid().ToString().Replace("-", "");
+        }
+        public static string Left(this string value, int maxLength)
+        {
+            if (string.IsNullOrEmpty(value)) return value;
+            maxLength = Math.Abs(maxLength);
+
+            return (value.Length <= maxLength
+                   ? value
+                   : value.Substring(0, maxLength)
+                   );
+        }
+        //public static string Left(string input, int count)
+        //{
+        //    if (!string.IsNullOrEmpty(input))
+        //    {
+        //        return input[..Math.Min(input.Length, count)];
+        //    }
+        //    else
+        //    {
+        //        return "";
+        //    }
+            
+        //}
+        public static string Right(string input, int count)
+        {
+            if (!string.IsNullOrEmpty(input))
+            {
+                return input.Substring(input.Length - count, count);
+            }
+            else
+            {
+                return input;
+            }
+        }
+
         public static string DateToString(DateTime date)
         {
             if (date != null)

@@ -1,0 +1,24 @@
+2023-04-10 09:27:56.506 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:28:49.037 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:29:38.078 [WRN] ===> CallApi_CRX_Async WCM-RrefundDetails: 
+2023-04-10 09:29:38.091 [WRN] null
+2023-04-10 09:29:40.172 [WRN] RefundDetails_WebOnline Exception: Object reference not set to an instance of an object.
+2023-04-10 09:31:04.456 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:31:25.890 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:34:11.899 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:34:14.159 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:34:15.815 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:34:16.785 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:34:17.692 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:34:59.441 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:40:35.626 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:41:36.472 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:42:11.042 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:46:01.127 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:47:55.329 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:47:59.242 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:48:56.565 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:50:40.250 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:53:24.095 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 09:53:28.931 [WRN] {"Message":"AppCode không hợp lệ","DeveloperMessage":null}
+2023-04-10 09:53:39.510 [WRN] {"Message":"AppCode không hợp lệ","DeveloperMessage":null}

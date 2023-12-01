@@ -26,7 +26,7 @@ namespace VCM.Partner.API.Common.Const
             };
             return openWith;
         }
-        public static Dictionary<string, int> StatusDichoWMT()
+        public static Dictionary<string, int> StatusWebWCM()
         {
             Dictionary<string, int> openWith = new Dictionary<string, int>
             {

@@ -52,6 +52,14 @@ namespace VCM.Partner.API.Application.Implementation
                 }
                 else
                 {
+                    string payment_method_filter = webApiInfo.WebRoute.FirstOrDefault(x => x.Name == function).Notes.ToString();
+                    List<int> payment_method_detail = ConvertHelper.ListStringToInt(payment_method_filter, ";");
+
+                    if (payment_method_detail != null && payment_method_detail.Count > 0)
+                    {
+                        await _memoryCacheService.SetRedisKeyAsync(RedisConst.Redis_cache_odoo_payment_method_detail_vcm, JsonConvert.SerializeObject(payment_method_detail));
+                    }
+
                     string param = "?order_no=" + request.OrderNo + "&location_id=" + kios.LocationId + "&set=" + kios.Subset.ToString();
                     var response = await RestSharpHelper.InteractWithApi(webApiInfo, function, Method.GET, param);
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)

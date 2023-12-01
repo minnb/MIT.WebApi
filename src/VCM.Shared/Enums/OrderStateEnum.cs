@@ -13,10 +13,19 @@ namespace VCM.Shared.Enums
         OrderFinished = 4,
         OrderCanceled = 5,
         OrderRemove = 6,
+        SaleReturn_NOWFOOD = 8,
         SaleReturn = 10,
         SaleDelete = 11,
         SaleReturnFull = 70,
         SaleReturPart = 71,
-        SaleNew = 99
+        SaleNew = 99,
+        Failed = 999,
+        OK = 200
+    }
+    public enum OrderEnum
+    {
+        Success = 200,
+        PaymentRequired = 402,
+        Conflict = 409,
     }
 }

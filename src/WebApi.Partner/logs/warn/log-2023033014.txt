@@ -1,0 +1,40 @@
+2023-03-30 14:24:00.692 [WRN] ===> Create token from MBC
+2023-03-30 14:24:00.738 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/users/login
+2023-03-30 14:24:00.740 [WRN] Proxy: 
+2023-03-30 14:24:00.741 [WRN] byPass: 
+2023-03-30 14:24:00.999 [WRN] Login O2 response: 
+2023-03-30 14:24:21.516 [WRN] ===> Create token from MBC
+2023-03-30 14:24:21.518 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/users/login
+2023-03-30 14:24:21.520 [WRN] Proxy: 
+2023-03-30 14:24:21.521 [WRN] byPass: 
+2023-03-30 14:24:21.610 [WRN] Login O2 response: 
+2023-03-30 14:24:48.321 [WRN] ===> Create token from MBC
+2023-03-30 14:24:48.324 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/users/login
+2023-03-30 14:24:48.325 [WRN] Proxy: 
+2023-03-30 14:24:48.326 [WRN] byPass: 
+2023-03-30 14:24:49.126 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-03-30 14:24:49.147 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":669,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-03-30T14:24:49.1399929+07:00","Server":"cloudflare","ProtocolVersion":"1.1","Headers":["Via","Date","CF-RAY","Server","Connection","X-Request-ID","feature-policy","CF-Cache-Status","referrer-policy","X-Frame-Options","x-xss-protection","x-download-options","X-Content-Type-Options","x-dns-prefetch-control","Content-Security-Policy","Access-Control-Allow-Origin","Access-Control-Expose-Headers","x-envoy-upstream-service-time","Access-Control-Allow-Credentials","Content-Type","Content-Length"],"Method":"POST","ResponseUri":"https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/users/login","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-03-30 14:24:49.153 [WRN] CreateToken O2: {"data":{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ3aW5fdGVzdCIsImV4cCI6MTY4MDI0NzQ4OSwianRpIjoiNWRkODkzNTgtY2U4MC00ZGQ2LTg1MzQtNGI5OTk3ZWU2NTgzIiwiaXNzIjoidHJ1c3Rpbmdfc29jaWFsIiwidXNlcl9pZCI6NDQsInJvbGVzIjpbIm1hc2FuIl19.ijOXVRVtI3EFhO5bSGEaHn2WsIVpBE5k4_MNIM8BV-eGp7moyCQelkLnewEYAfsPF2qm4kyxKhuQ41LdhRpH61EKiVu_2g9-Q7oKBtNVLIaFUo7asiuQgZ2OL-vG4Oj8SzCJH4kSLIRPwxA0thXe7HiBTWTsSNu-2oDWwrD7kJLp9h6PwmhlwiLdmo3iRNVDVgQaVaRY_0HQNMhmHd6CzmZ69BpKaTSUAzxjgYmJZt68BSLSOOoybYfZ1aOcjWE_WD_JdeTCJxHAc1lxY78b1754MOaZvFbY66U0ayYf16RjCICPUmAhaW_8dLBCTnbFBNVBYMXIAv15Peg_JYRZIw"},"message":"login successfully","time":"2023-03-30T07:24:49Z","verdict":"success"}
+2023-03-30 14:24:50.909 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/lead/qualify
+2023-03-30 14:25:17.901 [WRN] result: {"data":{"invalid_parameters":["phone_number"]},"message":"invalid parameters","time":"2023-03-30T07:24:51Z","verdict":"invalid_parameters"}
+2023-03-30 14:25:27.906 [WRN] O2 => Số điện thoại không tồn tại invalid parameters
+2023-03-30 14:25:55.615 [WRN] ===> Get token from redis
+2023-03-30 14:25:59.535 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/lead/qualify
+2023-03-30 14:25:59.986 [WRN] result: {"data":{"invalid_parameters":["phone_number"]},"message":"invalid parameters","time":"2023-03-30T07:25:59Z","verdict":"invalid_parameters"}
+2023-03-30 14:26:19.692 [WRN] O2 => Số điện thoại không tồn tại invalid parameters
+2023-03-30 14:29:00.724 [WRN] ===> Get token from redis
+2023-03-30 14:29:00.751 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/lead/qualify
+2023-03-30 14:29:01.116 [WRN] result: {"data":{"invalid_parameters":["phone_number"]},"message":"invalid parameters","time":"2023-03-30T07:29:01Z","verdict":"invalid_parameters"}
+2023-03-30 14:29:01.122 [WRN] O2 => Số điện thoại không tồn tại invalid parameters
+2023-03-30 14:29:43.192 [WRN] ===> Get token from redis
+2023-03-30 14:29:43.216 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/lead/qualify
+2023-03-30 14:29:43.530 [WRN] result: {"data":{"invalid_parameters":["phone_number"]},"message":"invalid parameters","time":"2023-03-30T07:29:43Z","verdict":"invalid_parameters"}
+2023-03-30 14:29:43.535 [WRN] O2 => Số điện thoại không tồn tại invalid parameters
+2023-03-30 14:30:16.405 [WRN] ===> Get token from redis
+2023-03-30 14:30:16.430 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/lead/qualify
+2023-03-30 14:30:16.770 [WRN] result: {"data":{"invalid_parameters":["phone_number"]},"message":"invalid parameters","time":"2023-03-30T07:30:16Z","verdict":"invalid_parameters"}
+2023-03-30 14:30:16.775 [WRN] O2 => Số điện thoại không tồn tại invalid parameters
+2023-03-30 14:42:18.476 [WRN] ===> Get token from redis
+2023-03-30 14:42:18.510 [WRN] https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/lead/qualify
+2023-03-30 14:42:19.098 [WRN] result: {"data":{"invalid_parameters":["phone_number"]},"message":"invalid parameters","time":"2023-03-30T07:42:18Z","verdict":"invalid_parameters"}
+2023-03-30 14:42:19.105 [WRN] O2 => Số điện thoại không tồn tại invalid parameters

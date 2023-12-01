@@ -1,0 +1,4 @@
+2023-04-10 13:31:09.561 [WRN] No type was specified for the decimal column 'RefundAmount' on entity type 'SalesReturnWebOnline'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2023-04-10 13:31:14.864 [WRN] {"Message":"AppCode không hợp lệ","DeveloperMessage":null}
+2023-04-10 13:31:36.571 [WRN] {"Message":"AppCode không hợp lệ","DeveloperMessage":null}
+2023-04-10 13:31:55.448 [WRN] {"Message":"MerchantId không hợp lệ","DeveloperMessage":null}

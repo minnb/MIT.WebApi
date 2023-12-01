@@ -1,0 +1,2 @@
+2022-12-07 16:32:51.337 [WRN] ===> proxy: @[]
+2022-12-07 16:32:51.874 [WRN] {"reply":{"restaurants":[{"city":"TP. HCM","foody_service":"FOOD","name":" Phúc Long - Huỳnh Thúc Kháng","restaurant_id":29971,"address":"26 Huỳnh Thúc Kháng","partner_restaurant_id":"2001"}]},"result":"success"}

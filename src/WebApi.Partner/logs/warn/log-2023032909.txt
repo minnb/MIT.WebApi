@@ -1,0 +1,12 @@
+2023-03-29 09:00:11.513 [WRN] ===> Get token from redis
+2023-03-29 09:00:11.884 [WRN] result: {"data":{"phone_number":"84349748605","tier":"standard","potential_vip":false,"products":{"evo":"false","tpay":"false","wintel":"false"}},"message":"create user successfully","time":"2023-03-29T02:00:11Z","verdict":"success"}
+2023-03-29 09:01:13.071 [WRN] ===> Get token from redis
+2023-03-29 09:01:13.501 [WRN] result: {"data":{"phone_number":"84349748605","tier":"standard","potential_vip":false,"products":{"evo":"false","tpay":"false","wintel":"false"}},"message":"create user successfully","time":"2023-03-29T02:01:13Z","verdict":"success"}
+2023-03-29 09:01:52.278 [WRN] ===> Get token from redis
+2023-03-29 09:01:52.824 [WRN] result: {"data":{"phone_number":"84559111027","tier":"standard","potential_vip":false,"products":{"evo":"false","tpay":"false","wintel":"false"}},"message":"create user successfully","time":"2023-03-29T02:01:52Z","verdict":"success"}
+2023-03-29 09:04:16.983 [WRN] ===> Get token from redis
+2023-03-29 09:04:17.546 [WRN] result: {"data":{"phone_number":"84559111027","tier":"standard","potential_vip":false,"products":{"evo":"false","tpay":"false","wintel":"false"}},"message":"create user successfully","time":"2023-03-29T02:04:17Z","verdict":"success"}
+2023-03-29 09:04:19.167 [WRN] ===> Get token from redis
+2023-03-29 09:04:19.541 [WRN] result: {"data":{"phone_number":"84559111027","tier":"standard","potential_vip":false,"products":{"evo":"false","tpay":"false","wintel":"false"}},"message":"create user successfully","time":"2023-03-29T02:04:19Z","verdict":"success"}
+2023-03-29 09:04:20.699 [WRN] ===> Get token from redis
+2023-03-29 09:04:21.011 [WRN] result: {"data":{"phone_number":"84559111027","tier":"standard","potential_vip":false,"products":{"evo":"false","tpay":"false","wintel":"false"}},"message":"create user successfully","time":"2023-03-29T02:04:20Z","verdict":"success"}

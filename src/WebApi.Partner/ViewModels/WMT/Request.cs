@@ -5,12 +5,16 @@ using System.Threading.Tasks;
 
 namespace VCM.Partner.API.ViewModels.WMT
 {
-    public class RqListOrderWMT
+    public class RqListOrderWCM
     {
-        public string OrderNo { get; set; }
-        public string[] Status { get; set; }
+        public string OrderCode { get; set; }
         public string StoreId   { get; set; }
         public string ChannelId { get; set; }
+        public string ChainId { get; set; }
+        public int PageNumber { get; set; }
+        public int PageSize { get; set; }
+        public bool OrderByDesc { get; set; }
+        public string OrderBy { get; set; }
 
     }
     public class RqDetailOrderWMT
@@ -18,7 +22,6 @@ namespace VCM.Partner.API.ViewModels.WMT
         public string[] Status { get; set; }
         public string StoreId { get; set; }
         public string ChannelId { get; set; }
-
     }
 
     public class RqUpdateStatusOrderWMT

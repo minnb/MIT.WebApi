@@ -1,0 +1,424 @@
+2023-04-02 09:41:23.228 [WRN] {host_local}token
+2023-04-02 09:41:23.262 [WRN] Proxy: 
+2023-04-02 09:41:23.263 [WRN] byPass: 
+2023-04-02 09:41:23.323 [WRN] Login O2 response: 
+2023-04-02 09:41:25.375 [WRN] {host_local}token
+2023-04-02 09:41:25.377 [WRN] Proxy: 
+2023-04-02 09:41:25.379 [WRN] byPass: 
+2023-04-02 09:41:25.394 [WRN] Login O2 response: 
+2023-04-02 09:41:26.304 [WRN] {host_local}token
+2023-04-02 09:41:26.306 [WRN] Proxy: 
+2023-04-02 09:41:26.308 [WRN] byPass: 
+2023-04-02 09:41:26.321 [WRN] Login O2 response: 
+2023-04-02 09:41:27.405 [WRN] {host_local}token
+2023-04-02 09:41:27.406 [WRN] Proxy: 
+2023-04-02 09:41:27.409 [WRN] byPass: 
+2023-04-02 09:41:27.421 [WRN] Login O2 response: 
+2023-04-02 09:41:28.277 [WRN] {host_local}token
+2023-04-02 09:41:28.280 [WRN] Proxy: 
+2023-04-02 09:41:28.282 [WRN] byPass: 
+2023-04-02 09:41:28.293 [WRN] Login O2 response: 
+2023-04-02 09:42:02.176 [WRN] {host_local}/token
+2023-04-02 09:42:02.178 [WRN] Proxy: 
+2023-04-02 09:42:02.179 [WRN] byPass: 
+2023-04-02 09:42:02.190 [WRN] Login O2 response: 
+2023-04-02 09:42:03.218 [WRN] {host_local}/token
+2023-04-02 09:42:03.220 [WRN] Proxy: 
+2023-04-02 09:42:03.221 [WRN] byPass: 
+2023-04-02 09:42:03.232 [WRN] Login O2 response: 
+2023-04-02 09:42:03.961 [WRN] {host_local}/token
+2023-04-02 09:42:03.962 [WRN] Proxy: 
+2023-04-02 09:42:03.964 [WRN] byPass: 
+2023-04-02 09:42:03.974 [WRN] Login O2 response: 
+2023-04-02 09:42:04.395 [WRN] {host_local}/token
+2023-04-02 09:42:04.397 [WRN] Proxy: 
+2023-04-02 09:42:04.398 [WRN] byPass: 
+2023-04-02 09:42:04.409 [WRN] Login O2 response: 
+2023-04-02 09:42:16.178 [WRN] {host_local}/token
+2023-04-02 09:42:16.179 [WRN] Proxy: 
+2023-04-02 09:42:16.180 [WRN] byPass: 
+2023-04-02 09:42:16.190 [WRN] Login O2 response: 
+2023-04-02 09:42:17.149 [WRN] {host_local}/token
+2023-04-02 09:42:17.150 [WRN] Proxy: 
+2023-04-02 09:42:17.152 [WRN] byPass: 
+2023-04-02 09:42:17.161 [WRN] Login O2 response: 
+2023-04-02 09:43:10.018 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:43:10.020 [WRN] Proxy: 
+2023-04-02 09:43:10.021 [WRN] byPass: 
+2023-04-02 09:43:13.098 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:43:13.147 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:43:13.1213668+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:43:13.150 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDMzOTIsImV4cCI6MTY4MDQwNjk5MiwiaWF0IjoxNjgwNDAzMzkyfQ.eK0RLU8eyTWEi-claRkGMqT2ysgC6cpIxdlk6p4nZatGh1hiiaIteNU6syKnTvH7VRmXKw_bT7ei5fjjSIvcrw","TokenType":"Bearer"}}
+2023-04-02 09:43:13.157 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:43:13.272 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:43:13.287 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:43:15.450 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:43:15.451 [WRN] Proxy: 
+2023-04-02 09:43:15.452 [WRN] byPass: 
+2023-04-02 09:43:15.535 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:43:15.536 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:43:15.5355799+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:43:15.538 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDMzOTUsImV4cCI6MTY4MDQwNjk5NSwiaWF0IjoxNjgwNDAzMzk1fQ.Pf2wIWMa1YkVvCixawnOyUY-nLhxKgHYk6xPd5UNicbmIlfvCo7Od01chxPio_B7OoUx7oBVPV9cbb8TgBTqSg","TokenType":"Bearer"}}
+2023-04-02 09:43:15.543 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:43:15.628 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:43:15.637 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:43:16.591 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:43:16.592 [WRN] Proxy: 
+2023-04-02 09:43:16.594 [WRN] byPass: 
+2023-04-02 09:43:16.673 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:43:16.675 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:43:16.673761+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:43:16.677 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDMzOTYsImV4cCI6MTY4MDQwNjk5NiwiaWF0IjoxNjgwNDAzMzk2fQ.cu_0qWt_XRwDIBrN0iZE1oTW3D_1Hwi74nSsuYGYT5EtmPHy5_qN-1eSi7GohAurMbxsHMjMFRkbVrIY1Of8mA","TokenType":"Bearer"}}
+2023-04-02 09:43:16.679 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:43:16.772 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:43:16.782 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:43:17.734 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:43:17.737 [WRN] Proxy: 
+2023-04-02 09:43:17.738 [WRN] byPass: 
+2023-04-02 09:43:17.820 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:43:17.823 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:43:17.8215258+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:43:17.825 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDMzOTcsImV4cCI6MTY4MDQwNjk5NywiaWF0IjoxNjgwNDAzMzk3fQ.V2dnfM03he6kT9C5xdCDGKeKPj_NuJLi08nBLYqX_Pt1CT6pt9MDMtqyOKR-8YesEC777rxRHnP8J2ElrQKQOQ","TokenType":"Bearer"}}
+2023-04-02 09:43:17.826 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:43:17.912 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:43:17.922 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:43:18.660 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:43:18.661 [WRN] Proxy: 
+2023-04-02 09:43:18.661 [WRN] byPass: 
+2023-04-02 09:43:18.741 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:43:18.744 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:43:18.7419562+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:43:18.745 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDMzOTgsImV4cCI6MTY4MDQwNjk5OCwiaWF0IjoxNjgwNDAzMzk4fQ.Qg67Bixrvsobm9_U5QFH6cHirubpfPP6CnLLc9o6RX_-rAgXIancYWU883JcKQA9hpAVgotYS4ETAG8ggHRx7g","TokenType":"Bearer"}}
+2023-04-02 09:43:18.747 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:43:18.837 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:43:18.847 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:43:34.485 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:43:34.487 [WRN] Proxy: 
+2023-04-02 09:43:34.489 [WRN] byPass: 
+2023-04-02 09:43:34.567 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:43:34.569 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:43:34.5673484+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:43:34.570 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDM0MTQsImV4cCI6MTY4MDQwNzAxNCwiaWF0IjoxNjgwNDAzNDE0fQ.z7Q2ni1vgtY38T0sh2X5V4dnCcDbsHkdoEod3hmiZGyrb8nIwPtm6KMdbiPGSBWj_rej1n1aJUFyxrqDDdHLTA","TokenType":"Bearer"}}
+2023-04-02 09:43:48.240 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:44:04.509 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:44:04.521 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:44:10.802 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:44:10.804 [WRN] Proxy: 
+2023-04-02 09:44:10.805 [WRN] byPass: 
+2023-04-02 09:44:10.881 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:44:10.883 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:44:10.8822383+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:44:10.885 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDM0NTAsImV4cCI6MTY4MDQwNzA1MCwiaWF0IjoxNjgwNDAzNDUwfQ.oiZaCMftKCTJEy_Jn8kJTOEv4o_jzM5d4x5a6Rmspdgt4R3-pKpNNG2VhLOgEFrAulhK0aTV-KuwbOttaiQ4ng","TokenType":"Bearer"}}
+2023-04-02 09:44:10.886 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:44:10.971 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:44:10.981 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:44:12.024 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:44:12.026 [WRN] Proxy: 
+2023-04-02 09:44:12.027 [WRN] byPass: 
+2023-04-02 09:44:12.108 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:44:12.109 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:44:12.1083533+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:44:12.112 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDM0NTIsImV4cCI6MTY4MDQwNzA1MiwiaWF0IjoxNjgwNDAzNDUyfQ.9t3LeOgSExGQdhIN00JdvIqK9i_aw0SHgu-WIC1SB64fXJkLiLh6rUy9dczpXpMQz2Je4pbfxsFdqZmPbVdniQ","TokenType":"Bearer"}}
+2023-04-02 09:44:12.113 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:44:12.201 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:44:12.214 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:44:13.066 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:44:13.068 [WRN] Proxy: 
+2023-04-02 09:44:13.070 [WRN] byPass: 
+2023-04-02 09:44:13.150 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:44:13.152 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:44:13.1512256+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:44:13.154 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDM0NTMsImV4cCI6MTY4MDQwNzA1MywiaWF0IjoxNjgwNDAzNDUzfQ.kpzC15LtAzjcDubF2Vokm91fznkdfbn2DgcmEbZtBKDKuPDpd_oFP7Z8I3GRBjBlRl6nldBAKUr-jWAZWyTE6g","TokenType":"Bearer"}}
+2023-04-02 09:44:13.156 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:44:13.244 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:44:13.254 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2023-04-02 09:44:21.868 [WRN] https://wincustomer-test.winmart.vn/token
+2023-04-02 09:44:21.869 [WRN] Proxy: 
+2023-04-02 09:44:21.870 [WRN] byPass: 
+2023-04-02 09:44:21.950 [WRN] Login O2 response: System.Net.HttpWebResponse
+2023-04-02 09:44:21.952 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":379,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-04-02T09:44:21.9505912+07:00","Server":"","ProtocolVersion":"1.1","Headers":["Cache-Control","Pragma","X-Powered-By","Date","Content-Type","Expires","Content-Length"],"Method":"POST","ResponseUri":"https://wincustomer-test.winmart.vn/token","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-04-02 09:44:21.955 [WRN] CreateToken O2: {"Status":200,"Description":"Thành công","TotalItems":0,"TechMsg":null,"Message":null,"Data":{"Token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6InN1cGVyYWRtaW4iLCJuYmYiOjE2ODA0MDM0NjEsImV4cCI6MTY4MDQwNzA2MSwiaWF0IjoxNjgwNDAzNDYxfQ.2QILOWeU9ZPFr35mP1LVl2GQ_xjONNq9AaXdQFYUeTnjEPNOwIRx0jAX01FgBBPwS2VH3IzB0Zn_63p96BdXyA","TokenType":"Bearer"}}
+2023-04-02 09:44:54.668 [WRN] https://wincustomer-test.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-02 09:45:14.122 [WRN] result: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>404 - File or directory not found.</title>
+<style type="text/css">
+<!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+-->
+</style>
+</head>
+<body>
+<div id="header"><h1>Server Error</h1></div>
+<div id="content">
+ <div class="content-container"><fieldset>
+  <h2>404 - File or directory not found.</h2>
+  <h3>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h3>
+ </fieldset></div>
+</div>
+</body>
+</html>
+
+2023-04-02 09:45:14.133 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.

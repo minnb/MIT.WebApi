@@ -8,6 +8,7 @@ namespace VCM.Shared.Enums
     {
         ADMIN,
         POS,
-        CROWNX
+        CROWNX,
+        KOS
     }
 }

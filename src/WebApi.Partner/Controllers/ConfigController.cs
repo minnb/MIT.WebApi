@@ -11,6 +11,7 @@ using VCM.Partner.API.ViewModels.Partner;
 
 namespace VCM.Partner.API.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class ConfigController : BaseController
     {
         private readonly ILogger<TransactionController> _logger;
@@ -35,10 +36,8 @@ namespace VCM.Partner.API.Controllers
         [Route("/api/v1/config/phuclong/store-kios/list")]
         public async Task<ResponseClient> GetQuestionsPagingAsync([FromQuery] GetStoreKiosPaging query)
         {
-            
             return await _transService.GetStoreAndKiosAsync(query);
         }
-
 
         [HttpPost]
         [Route("/api/v1/config/phuclong/store-kios")]
@@ -51,9 +50,18 @@ namespace VCM.Partner.API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError("Exception MappingStoreAndKios: " +Kios+ "|" + StoreNo + " ===>" + ex.Message.ToString());
+                _logger.LogError("Exception MappingStoreAndKios: " + Kios + "|" + StoreNo + " ===>" + ex.Message.ToString());
                 return ResponseHelper.RspTryCatch(ex);
             }
         }
+
+        [HttpPost]
+        [Route("/api/v1/config/cache/delete")]
+        public async Task<ResponseClient> DeleteRedisCacheAsync([FromHeader] [Required] string KeyRedis)
+        {
+            await _memoryCacheService.RemoveRedisValueAsync(KeyRedis);
+            return ResponseHelper.RspOK(ResponseHelper.MetaOK(200, "OK"));
+        }
+
     }
 }

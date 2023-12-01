@@ -1,0 +1,6 @@
+2022-11-25 13:43:21.067 [WRN] ===> proxy: @[]
+2022-11-25 13:43:21.812 [WRN] {"reply":{"restaurants":[{"city":"Hà Nội","foody_service":"FOOD","name":"Phúc Long 17 Ngô Quyền Hoàn Kiếm HN","restaurant_id":1000007107,"address":"17 Ngô Quyền","partner_restaurant_id":"2001"}]},"result":"success"}
+2022-11-25 13:45:52.217 [WRN] ===> proxy: @[]
+2022-11-25 13:46:12.995 [WRN] {"reply":{"restaurants":[{"city":"Hà Nội","foody_service":"FOOD","name":"Phúc Long 17 Ngô Quyền Hoàn Kiếm HN","restaurant_id":1000007107,"address":"17 Ngô Quyền","partner_restaurant_id":"2001"}]},"result":"success"}
+2022-11-25 13:47:40.132 [WRN] ===> proxy: @[]
+2022-11-25 13:48:52.795 [WRN] ===> proxy: @[]

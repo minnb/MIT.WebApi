@@ -77,7 +77,12 @@ namespace PhucLong.Interface.Odoo.AppService
 	                        FROM public.product_template;";
                     break;
                 case 13: //product_taxes_rel
-                    query = @"SELECT prod_id, tax_id FROM public.product_taxes_rel;";
+                    query = @"SELECT p.sap_code item_no, p.name as item_name, p.sap_uom as uom, a.prod_id, a.tax_id, b.sap_code vat_group, b.amount as vat_percent, b.description
+                                FROM public.product_taxes_rel a
+                                INNER JOIN account_tax b on a.tax_id = b.id and b.type_tax_use = 'sale' and b.active = true
+                                INNER JOIN product_template p on p.id = a.prod_id and p.sap_code is not null and p.active = true
+                                INNER JOIN product_product pp on pp.product_tmpl_id = p.id
+                                WHERE b.sap_code is not null;";
                     break;
                 case 14: //uom_uom
                     query = @"SELECT id, name, category_id, factor, rounding, active, uom_type, measure_type, create_uid, create_date, write_uid, write_date 

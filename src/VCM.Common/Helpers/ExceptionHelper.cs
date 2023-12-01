@@ -16,5 +16,15 @@ namespace VCM.Common.Helpers
             messageError += " ====>>> " + ex.Message.ToString();
             FileHelper.WriteLogs(func + " Exception:" + messageError);
         }
+        public static string ExptionMessage(Exception ex)
+        {
+            string messageError = ex.Message.ToString();
+            if (ex.InnerException != null)
+            {
+                messageError = ex.InnerException.Message.ToString();
+            }
+            return messageError;
+            
+        }
     }
 }

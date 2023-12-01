@@ -1,0 +1,4 @@
+2023-04-01 20:30:38.819 [WRN] ===> Get token from redis
+2023-04-01 20:30:38.858 [WRN] https://wincustomer.winmart.vn/customer/phone-type?phone=09020889681
+2023-04-01 20:30:39.023 [WRN] result: {"Status":401,"Description":"Không được phép truy cập","TotalItems":0,"TechMsg":["Token expired"],"Message":null,"Data":null}
+2023-04-01 20:30:39.028 [WRN] O2 => objRsp = null || {"Status":401,"Description":"Không được phép truy cập","TotalItems":0,"TechMsg":["Token expired"],"Message":null,"Data":null}

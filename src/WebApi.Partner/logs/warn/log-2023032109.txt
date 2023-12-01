@@ -1,0 +1,2 @@
+2023-03-21 09:38:54.689 [WRN] ===> start requestId: 8c42736d97664e2d94512f0e7452037c ===> param: WCM_201801_1679301914705
+2023-03-21 09:38:54.774 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1679301914705"}

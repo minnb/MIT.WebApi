@@ -23,26 +23,48 @@ namespace PhucLong.Interface.Odoo.AppService
             _config = config;
             _dbOdoo = new ConndbNpgsql(_config);
         }
+        public void DeletePosRaw(IDbConnection conn)
+        {
+            try
+            {
+                using var transaction = conn.BeginTransaction();
+                try
+                {
+                    int rows = conn.Execute(@" DELETE FROM public.pos_raw WHERE  CAST(crt_date as DATE) < '" + DateTime.Now.AddDays(-10).ToString("yyyy-MM-dd") + "'; ");
+                    FileHelper.WriteLogs("===> public.pos_raw DELETED: " + rows.ToString() + " rows");
 
+                    int pos_staging = conn.Execute(@" DELETE FROM public.pos_staging WHERE  CAST(crt_date as DATE) < '" + DateTime.Now.AddDays(-35).ToString("yyyy-MM-dd") + "'; ");
+                    FileHelper.WriteLogs("===> public.pos_raw DELETED: " + pos_staging.ToString() + " rows");
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    FileHelper.WriteLogs("DeletePosRaw Rollback Exception: " + ex.Message.ToString());
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                FileHelper.WriteLogs("DeletePosRaw Exception: " + ex.Message);
+            }
+        }
         public void SavePosRawOdoo(IDbConnection conn, List<Pos_Raw> trans, string rawType, string pathLocal, bool isHistoric)
         {
-            int affecaffectedRows = 0;
-            int fileNumber = 0;
-
             using (var transaction = conn.BeginTransaction())
             {
+                int affecaffectedRows = 0;
                 if (isHistoric)
                 {
                     var queryIns = @"INSERT INTO public.pos_raw (order_id, location_id, is_sending, raw_data, crt_date) VALUES (@order_id, @location_id, @is_sending, CAST(@raw_data AS json), now());";
                     affecaffectedRows = conn.Execute(queryIns, trans, transaction);
                     transaction.Commit();
-
-                    FileHelper.WriteLogs("AffecaffectedRows: " + affecaffectedRows.ToString());
-                    FileHelper.WriteLogs("Saved: " + trans.Count.ToString() + " record");
+                    FileHelper.WriteLogs("===> Saved to public.pos_raw successfully: " + affecaffectedRows.ToString());
                 }
             }
 
-            FileHelper.WriteLogs("Strat create file");
+            FileHelper.WriteLogs("===> Strat create file");
+            int fileNumber = 0;
             foreach (var tran in trans)
             {
                 string fileName = tran.order_id.ToString();
@@ -54,9 +76,7 @@ namespace PhucLong.Interface.Odoo.AppService
                 Thread.Sleep(50);
                 Console.WriteLine("created: " + fileName);
             }
-
             FileHelper.WriteLogs("Created: " + fileNumber.ToString() + " file transaction");
-            FileHelper.WriteLogs("Saved to public.pos_raw successfully: " + affecaffectedRows.ToString());
         }
     }
 

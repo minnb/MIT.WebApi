@@ -1,0 +1,6 @@
+2023-02-09 09:25:59.624 [WRN] ===> start requestId: 9cdaf94334194889af21b14248e96002 ===> param: WCM_201801_1675850361657
+2023-02-09 09:25:59.752 [WRN] ===> GetOrderAsync start request: {"PartnerCode":"WCM","AppCode":"NOWFOOD","StoreNo":"2018","PosNo":"201801","OrderNo":"1675850361657"}
+2023-02-09 09:26:00.059 [WRN] WCM-OrderDetail Status: 9
+2023-02-09 09:26:00.066 [WRN] ===> GetOrderAsync end requestId: 9cdaf94334194889af21b14248e96002
+2023-02-09 09:26:02.512 [WRN] ===> GetListOrderAsync start requestId: cf4c8268cf1343d29fefb2aac4c54439 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-02-09 09:26:02.638 [WRN] ===> GetListOrderAsync end requestId: cf4c8268cf1343d29fefb2aac4c54439

@@ -1,0 +1,2 @@
+2023-02-17 09:55:24.660 [WRN] ===> DishMapping.ErrorMessage: The partner_dish_group_id field is required.
+2023-02-17 09:59:14.406 [WRN] ===> DishMapping.ErrorMessage: The JSON value could not be converted to System.Int32[]. Path: $.branch_ids | LineNumber: 12 | BytePositionInLine: 17.

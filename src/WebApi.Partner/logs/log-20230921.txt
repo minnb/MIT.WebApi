@@ -1,0 +1,5 @@
+2023-09-21 10:15:15.25: InteractWithApi.WebException: null
+2023-09-21 10:25:12.43: InteractWithApi.WebException: null
+2023-09-21 10:30:41.97: InteractWithApi.WebException: null
+2023-09-21 11:04:20.12: InteractWithApiResponse Exception: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2023-09-21 11:04:41.24: InteractWithApiResponse Exception: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.

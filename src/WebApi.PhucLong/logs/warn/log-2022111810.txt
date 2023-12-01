@@ -1,0 +1,12 @@
+2022-11-18 10:54:29.305 [WRN] ===> GetDishShopee.Exception: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2022-11-18 10:56:09.690 [WRN] ===> GetToppingGroupShopee.Exception: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+2022-11-18 10:59:52.641 [WRN] ===> proxy: @[]
+2022-11-18 10:59:52.858 [WRN] <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+
+2022-11-18 10:59:52.878 [WRN] ===> GetRestaurantInfo.Exception: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.

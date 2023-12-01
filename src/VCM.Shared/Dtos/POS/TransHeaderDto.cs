@@ -28,7 +28,18 @@ namespace VCM.Shared.Dtos.POS
         public string PromoName { get; set; }
         public MemberInfoDto MemberInfo { get; set; }
         public StoreInfoDto StoreInfo { get; set; }
+        public BillingInfo BillingInfo { get; set; }
         public List<TransLineDto> TransLine { get; set; }
         public List<TransPaymentEntryDto> TransPaymentEntry { get; set; }
+    }
+    public class BillingInfo
+    {
+        public string TaxID { get; set; }
+        public string CustName { get; set; }
+        public string CompanyName { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; } = String.Empty;
+        public string Note { get; set; } = String.Empty;
     }
 }

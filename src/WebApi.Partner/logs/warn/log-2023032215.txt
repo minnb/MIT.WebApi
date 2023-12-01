@@ -1,0 +1,8 @@
+2023-03-22 15:07:24.359 [WRN] ===> Get token from redis
+2023-03-22 15:07:25.023 [WRN] result: {"data":{"phone_number":"84559900185","tier":"standard","potential_vip":false},"message":"create user successfully","time":"2023-03-22T08:07:24Z","verdict":"success"}
+2023-03-22 15:07:26.331 [WRN] ===> Get token from redis
+2023-03-22 15:07:26.625 [WRN] result: {"data":{"phone_number":"84559900185","tier":"standard","potential_vip":false},"message":"create user successfully","time":"2023-03-22T08:07:26Z","verdict":"success"}
+2023-03-22 15:07:42.983 [WRN] ===> Get token from redis
+2023-03-22 15:07:43.310 [WRN] result: {"data":{"phone_number":"84349748605","tier":"standard","potential_vip":false},"message":"create user successfully","time":"2023-03-22T08:07:43Z","verdict":"success"}
+2023-03-22 15:07:53.795 [WRN] ===> Get token from redis
+2023-03-22 15:07:54.141 [WRN] result: {"data":{"phone_number":"84977906399","tier":"standard","potential_vip":false},"message":"create user successfully","time":"2023-03-22T08:07:54Z","verdict":"success"}

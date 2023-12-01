@@ -1,0 +1,101 @@
+2023-03-21 13:04:00.552 [WRN] ===> Get token from redis
+2023-03-21 13:04:27.148 [WRN] Lỗi call API O2:  null
+2023-03-21 13:04:33.371 [WRN] ===> Get token from redis
+2023-03-21 13:05:08.666 [WRN] ===> Get token from redis
+2023-03-21 13:06:23.374 [WRN] ===> Get token from redis
+2023-03-21 13:16:04.080 [WRN] ===> Get token from redis
+2023-03-21 13:16:06.090 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:16:38.118 [WRN] ===> Get token from redis
+2023-03-21 13:16:39.307 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:17:16.368 [WRN] Exception: Object reference not set to an instance of an object.
+2023-03-21 13:17:16.374 [WRN] Lỗi call API O2: Object reference not set to an instance of an object.
+2023-03-21 13:17:25.098 [WRN] ===> Get token from redis
+2023-03-21 13:17:26.028 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:19:47.023 [WRN] ===> Get token from redis
+2023-03-21 13:19:48.638 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:21:05.415 [WRN] ===> Get token from redis
+2023-03-21 13:21:05.463 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:21:08.525 [WRN] Exception: Object reference not set to an instance of an object.
+2023-03-21 13:21:08.527 [WRN] Lỗi call API O2: Object reference not set to an instance of an object.
+2023-03-21 13:23:57.656 [WRN] ===> Get token from redis
+2023-03-21 13:23:59.379 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:25:01.925 [WRN] O2_CHECK_MEMBER - response: 
+2023-03-21 13:27:15.595 [WRN] ===> Get token from redis
+2023-03-21 13:27:16.803 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:27:30.170 [WRN] ===> Get token from redis
+2023-03-21 13:27:37.677 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:29:58.214 [WRN] ===> Get token from redis
+2023-03-21 13:29:58.251 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:30:09.283 [WRN] ===> Get token from redis
+2023-03-21 13:30:10.649 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:32:28.437 [WRN] ===> Get token from redis
+2023-03-21 13:32:29.949 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:33:38.609 [WRN] ===> Get token from redis
+2023-03-21 13:33:38.648 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:35:31.977 [WRN] ===> Get token from redis
+2023-03-21 13:35:32.014 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:36:14.095 [WRN] ===> Get token from redis
+2023-03-21 13:36:14.133 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:37:24.415 [WRN] ===> Get token from redis
+2023-03-21 13:37:24.455 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:37:31.252 [WRN] ===> Get token from redis
+2023-03-21 13:37:31.256 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:37:40.660 [WRN] ===> Get token from redis
+2023-03-21 13:37:40.662 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:46:01.337 [WRN] ===> Get token from redis
+2023-03-21 13:46:01.379 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:46:01.989 [ERR] Connection id "0HMP9QVLICKBK", Request id "0HMP9QVLICKBK:00000001": An unhandled exception was thrown by the application.
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at WebApi.Partner.Application.Implementation.O2Service.CheckPhoneNumberAsync(WebApiViewModel webApiInfo, ValidateKitStatusRequest request) in D:\WCM\Projects\VCM.Partner\src\WebApi.Partner\Application\Implementation\O2Service.cs:line 44
+   at VCM.Partner.API.Controllers.PartnerController.ValidateKitStatus(ValidateKitStatusRequest request) in D:\WCM\Projects\VCM.Partner\src\WebApi.Partner\Controllers\PartnerController.cs:line 167
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-03-21 13:46:16.237 [WRN] ===> Get token from redis
+2023-03-21 13:46:16.238 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:46:21.348 [WRN] ===> Get token from redis
+2023-03-21 13:46:21.354 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:46:22.638 [WRN] ===> Get token from redis
+2023-03-21 13:46:22.640 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:46:23.841 [WRN] ===> Get token from redis
+2023-03-21 13:46:23.843 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:46:35.277 [WRN] ===> Get token from redis
+2023-03-21 13:46:36.956 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:47:09.576 [WRN] ===> Get token from redis
+2023-03-21 13:47:09.619 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:47:16.936 [WRN] ===> Get token from redis
+2023-03-21 13:47:17.591 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:47:47.475 [WRN] ===> Get token from redis
+2023-03-21 13:47:49.183 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:48:39.130 [WRN] ===> Get token from redis
+2023-03-21 13:48:40.318 [WRN] O2 O2_CHECK_MEMBER - request: null
+2023-03-21 13:48:44.962 [WRN] ===> Create token from MBC
+2023-03-21 13:48:44.980 [WRN] Login O2: {"password":"&^0fCt5gi9rt","user_name":"win_test"}
+2023-03-21 13:48:45.313 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":669,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-03-21T13:48:45.3022592+07:00","Server":"cloudflare","ProtocolVersion":"1.1","Headers":["Via","Date","CF-RAY","Server","Connection","X-Request-ID","feature-policy","CF-Cache-Status","referrer-policy","X-Frame-Options","x-xss-protection","x-download-options","X-Content-Type-Options","x-dns-prefetch-control","Content-Security-Policy","Access-Control-Allow-Origin","Access-Control-Expose-Headers","x-envoy-upstream-service-time","Access-Control-Allow-Credentials","Content-Type","Content-Length"],"Method":"POST","ResponseUri":"https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/users/login","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-03-21 13:48:45.315 [WRN] CreateToken O2: {"data":{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ3aW5fdGVzdCIsImV4cCI6MTY3OTQ2NzcyNSwianRpIjoiODAyNDY2YzctZmJhYy00MzNmLWIyYTYtMTZjOWQ4NTJmNTRlIiwiaXNzIjoidHJ1c3Rpbmdfc29jaWFsIiwidXNlcl9pZCI6NDQsInJvbGVzIjpbIm1hc2FuIl19.QKJApuzeGhMcS9MbvURifKGi9AAOxTqTbIa1P1iaFL9C057G3sQPinLy9NUKqMHyZ1PRwRWsotOrfZSF8r9dMgKCDfjZUtKr_JSi0pImWOlUcc6QlTEELJIM3zu3vDLbobYwfXKF-no8bM_fVY2OsCjLPXqDcog3AOdltH-JvuDr4WAtiWDzFXZOcEPNLZzfln2OcOcTwaHvlqs_adTQNE9kkVyG9JJ3iEF-PyWdC23csJaT1tuQuIJvkdC1QPbiOgfQ_ClPQJ3t01L8og63fTAOKWH16DdOTlcJrwGLjclm2UFUengdE3Z-jgD8XfYN8V_8hXgKFsaHzq-9E6jRYQ"},"message":"login successfully","time":"2023-03-21T06:48:45Z","verdict":"success"}
+2023-03-21 13:48:49.897 [WRN] O2 O2_CHECK_MEMBER - request: null

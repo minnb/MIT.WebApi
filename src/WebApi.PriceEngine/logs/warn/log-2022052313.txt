@@ -1,0 +1,4 @@
+2022-05-23 13:37:07.768 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","SKUs":[{"Barcode":"2050000311444","PluCode":"2050000311444"}]}
+2022-05-23 13:37:08.447 [WRN] [{"ItemNo":"10207953","Barcode":"2050000311444","ItemName":null,"Uom":"CHA","TaxGroupCode":"4","VATPercent":10,"UnitPrice":60215.0,"DiscountAmount":0.0,"OfferNo":"","OfferType":"","DiscountType":""}]
+2022-05-23 13:38:10.581 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","SKUs":[{"Barcode":"2050000311444","PluCode":"2050000311444"}]}
+2022-05-23 13:38:10.834 [WRN] [{"ItemNo":"10207953","Barcode":"2050000311444","ItemName":"Gel Rửa Tay Green Cross Gel Cam 100_T","Uom":"CHA","TaxGroupCode":"4","VATPercent":10,"UnitPrice":60215.0,"DiscountAmount":0.0,"OfferNo":"","OfferType":"","DiscountType":""}]

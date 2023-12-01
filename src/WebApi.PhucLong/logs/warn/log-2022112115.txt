@@ -1,0 +1,2 @@
+2022-11-21 15:54:48.777 [WRN] ===> proxy: @[]
+2022-11-21 15:54:49.280 [WRN] {"reply":{"restaurants":[{"city":"Hà Nội","foody_service":"FOOD","name":"Phúc Long Hà Đông 0622","restaurant_id":1000007107,"address":"8 Quang Trung","partner_restaurant_id":"2001"}]},"result":"success"}

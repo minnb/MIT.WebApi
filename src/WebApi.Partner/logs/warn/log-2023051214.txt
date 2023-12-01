@@ -1,0 +1,56 @@
+2023-05-12 14:00:26.400 [ERR] Connection id "0HMQIMQ7VGDFN", Request id "0HMQIMQ7VGDFN:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Incorrect Content-Type: 
+   at Microsoft.AspNetCore.Http.Features.FormFeature.InnerReadFormAsync(CancellationToken cancellationToken)
+   at WebApi.Core.Middlewares.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middlewares\LoggingMiddleware.cs:line 36
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.ExecuteWithFilterAsync(IHttpSocketAdapter injectScriptSocket, String requestId, HttpContext httpContext)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-12 14:00:52.318 [ERR] Connection id "0HMQIMQFOACT6", Request id "0HMQIMQFOACT6:00000001": An unhandled exception was thrown by the application.
+Newtonsoft.Json.JsonSerializationException: Error getting value from 'Length' on 'Microsoft.WebTools.BrowserLink.Net.ScriptInjectionFilterStream'.
+ ---> System.NotSupportedException: Specified method is not supported.
+   at Microsoft.WebTools.BrowserLink.Net.ScriptInjectionFilterStream.get_Length()
+   at lambda_method(Closure , Object )
+   at Newtonsoft.Json.Serialization.ExpressionValueProvider.GetValue(Object target)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.ExpressionValueProvider.GetValue(Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CalculatePropertyValues(JsonWriter writer, Object value, JsonContainerContract contract, JsonProperty member, JsonProperty property, JsonContract& memberContract, Object& memberValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonConvert.SerializeObjectInternal(Object value, Type type, JsonSerializer jsonSerializer)
+   at Newtonsoft.Json.JsonConvert.SerializeObject(Object value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.SerializeObject(Object value)
+   at WebApi.Core.Middlewares.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middlewares\LoggingMiddleware.cs:line 36
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.ExecuteWithFilterAsync(IHttpSocketAdapter injectScriptSocket, String requestId, HttpContext httpContext)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-12 14:03:35.974 [WRN] ===> GetListOrderAsync start requestId: c37801f292c240e1a2070d65c9310af5 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:03:37.156 [WRN] ===> GetListOrderAsync end requestId: c37801f292c240e1a2070d65c9310af5
+2023-05-12 14:09:56.834 [WRN] ===> GetListOrderAsync start requestId: 889113626a2b4393ab0abf86e9ddfae1 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:09:57.062 [WRN] ===> GetListOrderAsync end requestId: 889113626a2b4393ab0abf86e9ddfae1
+2023-05-12 14:11:00.027 [WRN] ===> GetListOrderAsync start requestId: 1bccca49b0cb4d7c8bc22349e46a0762 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:11:00.118 [WRN] ===> GetListOrderAsync end requestId: 1bccca49b0cb4d7c8bc22349e46a0762
+2023-05-12 14:11:41.697 [WRN] ===> GetListOrderAsync start requestId: a860d7e26d5d4c6381d16ec56683d5d4 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:11:41.780 [WRN] ===> GetListOrderAsync end requestId: a860d7e26d5d4c6381d16ec56683d5d4
+2023-05-12 14:11:48.323 [WRN] ===> GetListOrderAsync start requestId: ba087bfe42fe4347921b92ea7ef2de72 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:11:48.479 [WRN] ===> GetListOrderAsync end requestId: ba087bfe42fe4347921b92ea7ef2de72
+2023-05-12 14:14:09.678 [WRN] ===> GetListOrderAsync start requestId: 6bc4c1169a1a479f96823df4145abee7 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:14:09.982 [WRN] ===> GetListOrderAsync end requestId: 6bc4c1169a1a479f96823df4145abee7
+2023-05-12 14:38:26.722 [WRN] ===> GetListOrderAsync start requestId: 1579fcc2b1e246599aae23d76e1a6df9 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:38:26.951 [WRN] ===> GetListOrderAsync end requestId: 1579fcc2b1e246599aae23d76e1a6df9
+2023-05-12 14:39:17.601 [WRN] ===> GetListOrderAsync start requestId: ec6ef9e85fd54fa7a318310468f1cd30 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:39:17.645 [WRN] ===> GetListOrderAsync end requestId: ec6ef9e85fd54fa7a318310468f1cd30
+2023-05-12 14:41:14.340 [WRN] ===> GetListOrderAsync start requestId: a28c037c8aed457c8b00d9e7e3920211 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:41:14.587 [WRN] ===> GetListOrderAsync end requestId: a28c037c8aed457c8b00d9e7e3920211
+2023-05-12 14:41:29.948 [WRN] ===> GetListOrderAsync start requestId: b1ea33c380e24ef18cfcc85e1eadcff7 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:41:30.026 [WRN] ===> GetListOrderAsync end requestId: b1ea33c380e24ef18cfcc85e1eadcff7
+2023-05-12 14:57:47.071 [WRN] ===> GetListOrderAsync start requestId: c1a833c7a3e749bc8e6c8feab22dd901 ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:57:47.424 [WRN] ===> GetListOrderAsync end requestId: c1a833c7a3e749bc8e6c8feab22dd901
+2023-05-12 14:57:50.138 [WRN] ===> GetListOrderAsync start requestId: 2a891ffbc0cd4bd3b40a6e171a45bfbb ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:57:50.189 [WRN] ===> GetListOrderAsync end requestId: 2a891ffbc0cd4bd3b40a6e171a45bfbb
+2023-05-12 14:58:08.079 [WRN] ===> GetListOrderAsync start requestId: 05890153040d49a19abd2693ebb8d42e ===> body: {"PartnerCode":"WCM","AppCode":"WMT","PosNo":"201801","FromDate":"20220610","ToDate":"yyyyMMdd","CustomerKeyword":"Tên khách","ItemKeyword":"Tên sản phẩm","PageNumber":1,"PageSize":10}
+2023-05-12 14:58:08.181 [WRN] ===> GetListOrderAsync end requestId: 05890153040d49a19abd2693ebb8d42e

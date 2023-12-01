@@ -16,6 +16,7 @@ namespace VCM.Partner.API.Common.Const
                 { "3", 5 },
                 { "4", 10 },
                 { "5", 5 },
+                { "6", 8 },
                 { "9", 0 },
                 { "11", 10 }
             };

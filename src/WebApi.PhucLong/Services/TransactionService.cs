@@ -16,19 +16,20 @@ using System.Threading.Tasks;
 using VCM.Common.Helpers;
 using System.Globalization;
 using Microsoft.Extensions.Configuration;
+using WebApi.PhucLong.Models;
 
 namespace VCM.PhucLong.API.Services
 {
     public class TransactionService : ITransactionService
     {
         private readonly ILogger<TransactionService> _logger;
-        private readonly DapperContext _context;
+        private readonly DapperOdooContext _context;
         private readonly IRedisService _redisService;
         private readonly IConfiguration _configuration;
         public TransactionService
             (
                 ILogger<TransactionService> logger,
-                DapperContext context,
+                DapperOdooContext context,
                 IRedisService redisService,
                 IConfiguration configuration
             )
@@ -69,7 +70,7 @@ namespace VCM.PhucLong.API.Services
                 
                 if (result != null)
                 {
-                    var product_product = await _redisService.GetProductProductRedis();
+                    var product_product = await _redisService.GetProductProductRedis(set);
                     var dataRaw = JsonConvert.DeserializeObject<PosStagingDto>(result.raw_data);
                    
                     if (dataRaw != null)
@@ -115,17 +116,18 @@ namespace VCM.PhucLong.API.Services
                                     IsLoyalty = false,
                                     ItemType = (item.is_promotion_line == true && item.price_unit == 0) ? "reward_code".ToString().ToUpper() : "",
                                     Remark = GetRemark(conn, item, result.pos_reference),
-                                    TransDiscountEntry = GetDiscountEntry(conn, item, result.pos_reference)
+                                    TransDiscountEntry = GetDiscountEntry(set, conn, item, result.pos_reference)
                                 });
                             }
                             
                             List<TransPaymentEntryDto> transPaymentEntry = new List<TransPaymentEntryDto>();
                             if (dataRaw.Pos_Payment.Count > 0)
                             {
-                                var payment_method_vcm = _redisService.GetPayment_VCM_Redis(null, false).Result ? .ToList();
+                                var payment_method_vcm = _redisService.GetPayment_VCM_Detail_Redis( null, false).Result ? .ToList();
+
                                 foreach (var item in dataRaw.Pos_Payment)
                                 {
-                                    var paymentMethod = _redisService.GetPaymentMethodRedis(false).Result ? .Where(x=>x.id == item.payment_method_id).FirstOrDefault();
+                                    var paymentMethod = _redisService.GetPaymentMethodRedis(set, false).Result ? .Where(x=>x.id == item.payment_method_id).FirstOrDefault();
                                     if (!payment_method_vcm.Contains(item.payment_method_id))
                                     {
                                         transPaymentEntry.Add(new TransPaymentEntryDto()
@@ -142,8 +144,8 @@ namespace VCM.PhucLong.API.Services
                                 }
                             }
 
-                            var custInfo = GetMemberInfo(dataRaw.Pos_Order);
-                            var employee = _redisService.GetEmployeeRedis(false).Result ? .Where(x=>x.id == dataRaw.Pos_Order.cashier_id).FirstOrDefault();
+                            var custInfo = GetMemberInfo(set, dataRaw.Pos_Order);
+                            var employee = _redisService.GetEmployeeRedis(set, false).Result ? .Where(x=>x.id == dataRaw.Pos_Order.cashier_id).FirstOrDefault();
 
                             responseOrderDetail = new ResponseOrderDetail()
                             {
@@ -163,10 +165,10 @@ namespace VCM.PhucLong.API.Services
                                 RefNo = dataRaw.Pos_Order.id.ToString(),
                                 CashierId = employee != null ? employee.id.ToString() : "",
                                 PromoAmount = dataRaw.Pos_Order.discount_amount * (-1),
-                                PromoName = (dataRaw.Pos_Order.promotion_id > 0 && dataRaw.Pos_Order.discount_amount * (-1) > 0) ? (_redisService.GetPromoHeaderRedis(false).Result?.ToList().Where(x=>x.id == dataRaw.Pos_Order.promotion_id).FirstOrDefault().name) : "",
+                                PromoName = (dataRaw.Pos_Order.promotion_id > 0 && dataRaw.Pos_Order.discount_amount * (-1) > 0) ? (_redisService.GetPromoHeaderRedis(set, false).Result?.ToList().Where(x=>x.id == dataRaw.Pos_Order.promotion_id).FirstOrDefault().name) : "",
                                 CashierName = employee != null ? employee.name.ToString() : "",
                                 MemberInfo = custInfo,
-                                StoreInfo = GetStoreInfo(dataRaw.Pos_Order),
+                                StoreInfo = GetStoreInfo(set, dataRaw.Pos_Order),
                                 TransLine = transLines,
                                 TransPaymentEntry = transPaymentEntry
                             };
@@ -189,6 +191,7 @@ namespace VCM.PhucLong.API.Services
         }
         public async Task<List<ResponseOrderList>> GetOrderListAsync(RequestOrderList request)
         {
+            _logger.LogWarning(JsonConvert.SerializeObject(request));
             List<ResponseOrderList> responseOrderLists = new List<ResponseOrderList>();
             try
             {
@@ -218,7 +221,7 @@ namespace VCM.PhucLong.API.Services
                                 OrderNo = pos_order_data.pos_reference.ToString(),
                                 OrderDate = pos_order_data.date_order.ToString("yyyy-MM-dd HH:mm:ss"),
                                 CustName = pos_order_data.note_label ?? "",
-                                CustPhone = pos_order_data.phone_number_receiver ?? "",
+                                CustPhone = pos_order_data.mobile_receiver_info ?? "",
                                 CustAddress = pos_order_data.note,
                                 Status = GetStatus(item.state, item.is_payment),
                                 CashierId = pos_order_data.cashier_id.ToString(),
@@ -294,13 +297,13 @@ namespace VCM.PhucLong.API.Services
         {
             try
             {
-                string currentDate = DateTime.Now.AddDays(0).ToString("yyyy-MM-dd");
+                string currentDate = DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd");
 
                 List<Pos_Order> lstPosOrder = null;
                 List<Pos_Staging> lstPosOrderCancel = null;
                 if (string.IsNullOrEmpty(orderNo))
                 {
-                    lstPosOrder = conn.Query<Pos_Order>(PosOrderQuery.get_pos_order_all(request.location_id, currentDate)).ToList();
+                    lstPosOrder = conn.Query<Pos_Order>(PosOrderQuery.get_pos_order_all(request.location_id, currentDate), new { payment_method_id = request.payment_method }).ToList();
                     lstPosOrderCancel = conn.Query<Pos_Staging>(PosOrderQuery.get_pos_order_cancel(currentDate, request.location_id)).ToList();
                 }
                 else
@@ -390,10 +393,10 @@ namespace VCM.PhucLong.API.Services
                 return 0;
             }
         }
-        private MemberInfoDto GetMemberInfo(Pos_Order pos_Order)
+        private MemberInfoDto GetMemberInfo(int set, Pos_Order pos_Order)
         {
 
-            var result = _redisService.GetMemberRedis(false).Result?.Where(x => x.id == pos_Order.partner_id).FirstOrDefault();
+            var result = _redisService.GetMemberRedis(set,false).Result?.Where(x => x.id == pos_Order.partner_id).FirstOrDefault();
             if (result != null)
             {
                 return new MemberInfoDto()
@@ -412,9 +415,9 @@ namespace VCM.PhucLong.API.Services
                 return null;
             }
         }
-        private StoreInfoDto GetStoreInfo(Pos_Order pos_Order)
+        private StoreInfoDto GetStoreInfo(int set, Pos_Order pos_Order)
         {
-            var result = _redisService.GetPosConfigRedis(false).Result ? .Where(x=>x.pos_no == pos_Order.cashier).FirstOrDefault();
+            var result = _redisService.GetPosConfigRedis(set, false).Result ? .Where(x=>x.store_id == pos_Order.location_id).FirstOrDefault();
             //Regex.Match(item.receipt_footer, "<img.+?src=[\"'](.+?)[\"'].*?>", RegexOptions.IgnoreCase).Groups[1].Value;
             if (result != null)
             {
@@ -440,11 +443,11 @@ namespace VCM.PhucLong.API.Services
                 return null;
             }
         }
-        private List<TransDiscountEntryDto> GetDiscountEntry(IDbConnection conn, Pos_Order_Line pos_Order_Line, string order_name)
+        private List<TransDiscountEntryDto> GetDiscountEntry(int set, IDbConnection conn, Pos_Order_Line pos_Order_Line, string order_name)
         {
             string query = string.Empty;
             List<TransDiscountEntryDto> lstDiscountEntry = new List<TransDiscountEntryDto>();
-            var PromoHeader = _redisService.GetPromoHeaderRedis(false).Result ? .ToList();
+            var PromoHeader = _redisService.GetPromoHeaderRedis(set, false).Result ? .ToList();
             PromoHeaderOdooDto result = null;
             decimal discount = 0;
 
@@ -562,7 +565,6 @@ namespace VCM.PhucLong.API.Services
             }          
             return status;
         }
-
         public async Task<Pos_Staging> GetOrderByIdAsync(int set,string order_id, int location_id)
         {
             try
@@ -574,7 +576,7 @@ namespace VCM.PhucLong.API.Services
 
                 string jsData = await _redisService.GetRedisValueAsync(location_id + "." + order_id);
 
-                var product_product = await _redisService.GetProductProductRedis();
+                var product_product = await _redisService.GetProductProductRedis(set);
 
                 if (!string.IsNullOrEmpty(jsData))
                 {
@@ -586,6 +588,53 @@ namespace VCM.PhucLong.API.Services
             catch
             {
                 return null;
+            }
+        }
+        public ResponseCheckOrder CheckOrderDetail(string order_no)
+        {
+            string query = @"select 'PLH' AppCode, a.name OrderNo, CAST(a.date_order as date) OrderDate, s.code StoreNo, s.name StoreName,
+	                            t.sap_code SalesTypeId, t.name SalesTypeName, a.amount_total TotalAmount, 0 DiscountAmount, a.plh_partner_card_code MemberCardNumber,
+	                            a.plh_earn LoyaltyPointsEarn, a.plh_redeem LoyaltyPointsRedeem, a.state Status, CAST(a.write_date::timestamp AT TIME ZONE 'UTC' as timestamp) CrtDate
+                            from pos_order a
+                            left join stock_warehouse s on a.warehouse_id = s.id
+                            left join pos_sale_type t on t.id = a.sale_type_id
+                            where a.state = 'paid'  and replace(a.name, '-', '') = '" + order_no + "';";
+            try
+            {
+               
+                using IDbConnection conn = _context.CreateConnection(1);
+                conn.Open();
+                var result =  conn.Query<check_order_detail>(query).FirstOrDefault();
+
+                if(result != null)
+                {
+                    return new ResponseCheckOrder()
+                    {
+                        AppCode = result.appcode,
+                        OrderNo = result.orderno,
+                        OrderDate = result.orderdate,
+                        StoreNo = result.storeno,
+                        StoreName = result.storename,
+                        SalesTypeId = result.salestypeid,
+                        SalesTypeName = result.salestypename,
+                        TotalAmount = result.totalamount,
+                        DiscountAmount = result.discountamount,
+                        CrtDate = result.crtdate,
+                        MemberCardNumber = result.membercardnumber,
+                        LoyaltyPointsEarn = result.loyaltypointsearn,
+                        LoyaltyPointsRedeem = result.loyaltypointsredeem,
+                        Status = result.status
+                    };
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("UpdateStatusOrderAsync Exception " + ex.Message.ToString());
+                throw;
             }
         }
     }

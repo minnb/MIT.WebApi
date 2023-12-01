@@ -1,0 +1,18 @@
+2023-05-15 13:48:32.884 [ERR] Connection id "0HMQL21J11MIV", Request id "0HMQL21J11MIV:00000001": An unhandled exception was thrown by the application.
+System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object arg0, Object arg1)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 29
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-15 13:48:50.546 [ERR] Connection id "0HMQL21O9TJR5", Request id "0HMQL21O9TJR5:00000001": An unhandled exception was thrown by the application.
+System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object arg0, Object arg1)
+   at WebApi.Core.Middleware.LoggingMiddleware.InvokeAsync(HttpContext context) in D:\WCM\Projects\VCM.Partner\src\WebApi.Core\Middleware\LoggingMiddleware.cs:line 29
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)

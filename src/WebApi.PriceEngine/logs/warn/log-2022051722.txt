@@ -1,0 +1,164 @@
+2022-05-17 22:01:20.076 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","SKUs":[{"Barcode":"2050000311444","PluCode":"2050000311444"},{"Barcode":"2050000394645","PluCode":"2050000394645"}]}
+2022-05-17 22:01:24.194 [WRN] [{"ItemNo":"10207953","Barcode":"2050000311444","Uom":"CHA","TaxGroupCode":"4","VATPercent":10,"UnitPrice":60215.0,"DiscountAmount":0.0,"OfferNo":"","OfferType":"","DiscountType":""},{"ItemNo":"10218075","Barcode":"2050000394645","Uom":"CHA","TaxGroupCode":"4","VATPercent":10,"UnitPrice":58993.0,"DiscountAmount":0.0,"OfferNo":"","OfferType":"","DiscountType":""}]
+2022-05-17 22:01:32.002 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","SKUs":[{"Barcode":"2050000311444","PluCode":"2050000311444"}]}
+2022-05-17 22:01:32.178 [WRN] [{"ItemNo":"10207953","Barcode":"2050000311444","Uom":"CHA","TaxGroupCode":"4","VATPercent":10,"UnitPrice":60215.0,"DiscountAmount":0.0,"OfferNo":"","OfferType":"","DiscountType":""}]
+2022-05-17 22:26:10.857 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:26:10.909 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:26:10.912 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:26:10.915 [WRN] No type was specified for the decimal column 'LineAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:26:10.917 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:26:10.919 [WRN] No type was specified for the decimal column 'UnitPrice' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:26:12.030 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801171","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:26:12.376 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApiPriceEngine.Database.DatabaseContext'.
+System.InvalidOperationException: FromSqlRaw or FromSqlInterpolated was called with non-composable SQL and with a query composing over it. Consider calling `AsEnumerable` after the FromSqlRaw or FromSqlInterpolated method to perform the composition on the client side.
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitFromSql(FromSqlExpression fromSqlExpression)
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.<VisitSelect>b__18_1(TableExpressionBase e)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GenerateList[T](IReadOnlyList`1 items, Action`1 generationAction, Action`1 joinAction)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitSelect(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GetCommand(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalCommandCache.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: FromSqlRaw or FromSqlInterpolated was called with non-composable SQL and with a query composing over it. Consider calling `AsEnumerable` after the FromSqlRaw or FromSqlInterpolated method to perform the composition on the client side.
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitFromSql(FromSqlExpression fromSqlExpression)
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.<VisitSelect>b__18_1(TableExpressionBase e)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GenerateList[T](IReadOnlyList`1 items, Action`1 generationAction, Action`1 joinAction)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitSelect(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GetCommand(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalCommandCache.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2022-05-17 22:27:17.615 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:27:17.665 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:27:17.667 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:27:17.670 [WRN] No type was specified for the decimal column 'LineAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:27:17.673 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:27:17.675 [WRN] No type was specified for the decimal column 'UnitPrice' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:27:18.815 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801237","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:27:19.126 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApiPriceEngine.Database.DatabaseContext'.
+System.InvalidOperationException: FromSqlRaw or FromSqlInterpolated was called with non-composable SQL and with a query composing over it. Consider calling `AsEnumerable` after the FromSqlRaw or FromSqlInterpolated method to perform the composition on the client side.
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitFromSql(FromSqlExpression fromSqlExpression)
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.<VisitSelect>b__18_1(TableExpressionBase e)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GenerateList[T](IReadOnlyList`1 items, Action`1 generationAction, Action`1 joinAction)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitSelect(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GetCommand(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalCommandCache.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: FromSqlRaw or FromSqlInterpolated was called with non-composable SQL and with a query composing over it. Consider calling `AsEnumerable` after the FromSqlRaw or FromSqlInterpolated method to perform the composition on the client side.
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitFromSql(FromSqlExpression fromSqlExpression)
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.<VisitSelect>b__18_1(TableExpressionBase e)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GenerateList[T](IReadOnlyList`1 items, Action`1 generationAction, Action`1 joinAction)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitSelect(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GetCommand(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalCommandCache.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2022-05-17 22:28:08.004 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801288","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:28:16.146 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApiPriceEngine.Database.DatabaseContext'.
+System.InvalidOperationException: FromSqlRaw or FromSqlInterpolated was called with non-composable SQL and with a query composing over it. Consider calling `AsEnumerable` after the FromSqlRaw or FromSqlInterpolated method to perform the composition on the client side.
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitFromSql(FromSqlExpression fromSqlExpression)
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.<VisitSelect>b__18_1(TableExpressionBase e)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GenerateList[T](IReadOnlyList`1 items, Action`1 generationAction, Action`1 joinAction)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitSelect(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GetCommand(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalCommandCache.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: FromSqlRaw or FromSqlInterpolated was called with non-composable SQL and with a query composing over it. Consider calling `AsEnumerable` after the FromSqlRaw or FromSqlInterpolated method to perform the composition on the client side.
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitFromSql(FromSqlExpression fromSqlExpression)
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.<VisitSelect>b__18_1(TableExpressionBase e)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GenerateList[T](IReadOnlyList`1 items, Action`1 generationAction, Action`1 joinAction)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitSelect(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GetCommand(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalCommandCache.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2022-05-17 22:30:29.617 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:30:29.669 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:30:29.672 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:30:29.674 [WRN] No type was specified for the decimal column 'LineAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:30:29.676 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:30:29.678 [WRN] No type was specified for the decimal column 'UnitPrice' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:30:30.857 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801429","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:30:36.457 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApiPriceEngine.Database.DatabaseContext'.
+System.InvalidOperationException: FromSqlRaw or FromSqlInterpolated was called with non-composable SQL and with a query composing over it. Consider calling `AsEnumerable` after the FromSqlRaw or FromSqlInterpolated method to perform the composition on the client side.
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitFromSql(FromSqlExpression fromSqlExpression)
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.<VisitSelect>b__18_1(TableExpressionBase e)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GenerateList[T](IReadOnlyList`1 items, Action`1 generationAction, Action`1 joinAction)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitSelect(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GetCommand(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalCommandCache.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: FromSqlRaw or FromSqlInterpolated was called with non-composable SQL and with a query composing over it. Consider calling `AsEnumerable` after the FromSqlRaw or FromSqlInterpolated method to perform the composition on the client side.
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitFromSql(FromSqlExpression fromSqlExpression)
+   at Microsoft.EntityFrameworkCore.Query.SqlExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.<VisitSelect>b__18_1(TableExpressionBase e)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GenerateList[T](IReadOnlyList`1 items, Action`1 generationAction, Action`1 joinAction)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.VisitSelect(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.QuerySqlGenerator.GetCommand(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalCommandCache.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2022-05-17 22:34:52.967 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:34:53.020 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:34:53.022 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:34:53.024 [WRN] No type was specified for the decimal column 'LineAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:34:53.026 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:34:53.028 [WRN] No type was specified for the decimal column 'UnitPrice' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:34:54.154 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801693","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:35:17.039 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801717","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:36:20.714 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:36:20.764 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:36:20.766 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:36:20.769 [WRN] No type was specified for the decimal column 'LineAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:36:20.771 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:36:20.773 [WRN] No type was specified for the decimal column 'UnitPrice' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:36:21.909 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801781","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:37:58.851 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:37:58.901 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransDiscount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:37:58.903 [WRN] No type was specified for the decimal column 'DiscountAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:37:58.905 [WRN] No type was specified for the decimal column 'LineAmount' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:37:58.908 [WRN] No type was specified for the decimal column 'Quantity' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:37:58.911 [WRN] No type was specified for the decimal column 'UnitPrice' on entity type 'TmpTransLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2022-05-17 22:38:00.061 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801879","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:38:07.337 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801887","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}
+2022-05-17 22:38:08.843 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652801889","OrderDate":"20220517","ClientRequestTime":10000,"Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}

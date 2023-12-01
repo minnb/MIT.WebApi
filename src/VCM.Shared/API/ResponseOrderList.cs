@@ -7,6 +7,7 @@ namespace VCM.Shared.API
     public class ResponseOrderList
     {
         public string PartnerCode { get; set; }
+        public string AppCode { get; set; }
         public string StoreNo { get; set; }
         public string OrderNo { get; set; }
         public string OrderDate { get; set; }

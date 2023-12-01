@@ -1,0 +1,2 @@
+2023-03-22 17:14:32.194 [WRN] ===> Get token from redis
+2023-03-22 17:14:32.904 [WRN] result: {"data":{"phone_number":"84977906399","tier":"standard","potential_vip":false,"products":{}},"message":"create user successfully","time":"2023-03-22T10:14:32Z","verdict":"success"}

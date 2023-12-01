@@ -1,0 +1,187 @@
+2022-07-15 13:44:41.467 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210003311220522","Quantity":0.331,"PluCode":"2656210000000"}
+2022-07-15 13:44:42.697 [WRN] ===> get from db: [{"ItemNo":"15004060","Barcode":"2656210003311220522","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":0.331,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":4303.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":205.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}]
+2022-07-15 13:45:01.591 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210993311220522","Quantity":99.331,"PluCode":"2656210000000"}
+2022-07-15 13:45:04.144 [WRN] ===> get from db: [{"ItemNo":"15004060","Barcode":"2656210993311220522","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.331,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1291303.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61491.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}]
+2022-07-15 13:45:10.568 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656219993311220522","Quantity":99.331,"PluCode":"2656219000000"}
+2022-07-15 13:45:10.875 [WRN] ===> get from db: []
+2022-07-15 13:45:20.483 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210999311220522","Quantity":99.931,"PluCode":"2656210000000"}
+2022-07-15 13:45:20.708 [WRN] ===> get from db: [{"ItemNo":"15004060","Barcode":"2656210999311220522","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.931,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1299103.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61862.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}]
+2022-07-15 13:45:35.082 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210999991220522","Quantity":99.999,"PluCode":"2656210000000"}
+2022-07-15 13:45:35.259 [WRN] ===> get from db: [{"ItemNo":"15004060","Barcode":"2656210999991220522","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.999,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1299987.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61904.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}]
+2022-07-15 13:46:07.948 [ERR] Connection id "0HMJ65MNLL3KU", Request id "0HMJ65MNLL3KU:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Both ErrorMessageResourceType and ErrorMessageResourceName need to be set on this attribute.
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.SetupResourceAccessor()
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.get_ErrorMessageString()
+   at System.ComponentModel.DataAnnotations.RangeAttribute.FormatErrorMessage(String name)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(Object value, ValidationContext validationContext)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(Object value, ValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.DataAnnotations.DataAnnotationsModelValidator.Validate(ModelValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.ValidateNode()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitSimpleType()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-07-15 13:46:10.761 [ERR] Connection id "0HMJ65MNLL3KU", Request id "0HMJ65MNLL3KU:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Both ErrorMessageResourceType and ErrorMessageResourceName need to be set on this attribute.
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.SetupResourceAccessor()
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.get_ErrorMessageString()
+   at System.ComponentModel.DataAnnotations.RangeAttribute.FormatErrorMessage(String name)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(Object value, ValidationContext validationContext)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(Object value, ValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.DataAnnotations.DataAnnotationsModelValidator.Validate(ModelValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.ValidateNode()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitSimpleType()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-07-15 13:46:11.900 [ERR] Connection id "0HMJ65MNLL3KU", Request id "0HMJ65MNLL3KU:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Both ErrorMessageResourceType and ErrorMessageResourceName need to be set on this attribute.
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.SetupResourceAccessor()
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.get_ErrorMessageString()
+   at System.ComponentModel.DataAnnotations.RangeAttribute.FormatErrorMessage(String name)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(Object value, ValidationContext validationContext)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(Object value, ValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.DataAnnotations.DataAnnotationsModelValidator.Validate(ModelValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.ValidateNode()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitSimpleType()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-07-15 13:46:12.875 [ERR] Connection id "0HMJ65MNLL3KU", Request id "0HMJ65MNLL3KU:00000004": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Both ErrorMessageResourceType and ErrorMessageResourceName need to be set on this attribute.
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.SetupResourceAccessor()
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.get_ErrorMessageString()
+   at System.ComponentModel.DataAnnotations.RangeAttribute.FormatErrorMessage(String name)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(Object value, ValidationContext validationContext)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(Object value, ValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.DataAnnotations.DataAnnotationsModelValidator.Validate(ModelValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.ValidateNode()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitSimpleType()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-07-15 13:46:51.692 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210999991220522","Quantity":99.999,"PluCode":"2656210000000"}
+2022-07-15 13:46:52.377 [WRN] ===> get from db: [{"ItemNo":"15004060","Barcode":"2656210999991220522","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.999,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1299987.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61904.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}]
+2022-07-15 13:47:05.499 [ERR] Connection id "0HMJ65N3D8FCA", Request id "0HMJ65N3D8FCA:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Both ErrorMessageResourceType and ErrorMessageResourceName need to be set on this attribute.
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.SetupResourceAccessor()
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.get_ErrorMessageString()
+   at System.ComponentModel.DataAnnotations.RangeAttribute.FormatErrorMessage(String name)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(Object value, ValidationContext validationContext)
+   at System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(Object value, ValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.DataAnnotations.DataAnnotationsModelValidator.Validate(ModelValidationContext validationContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.ValidateNode()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitSimpleType()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2022-07-15 13:47:15.894 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210999991220522","Quantity":99.999,"PluCode":"2656210000000"}
+2022-07-15 13:47:15.901 [WRN] ===> get from cache: {"ItemNo":"15004060","Barcode":"2656210999991220522","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.999,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1299987.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61904.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}
+2022-07-15 13:47:53.686 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210999991220522","Quantity":99.999,"PluCode":"2656210000000"}
+2022-07-15 13:47:53.929 [WRN] ===> get from cache: {"ItemNo":"15004060","Barcode":"2656210999991220522","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.999,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1299987.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61904.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}
+2022-07-15 13:52:06.545 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210999991220522","Quantity":99.999,"PluCode":"2656210000000"}
+2022-07-15 13:52:07.213 [WRN] ===> get from db: [{"ItemNo":"15004060","Barcode":"2656210999991220522","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.999,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1299987.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61904.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}]
+2022-07-15 13:54:33.139 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210999991220523","Quantity":99.999,"PluCode":"2656210000000"}
+2022-07-15 13:54:33.806 [WRN] ===> get from db: [{"ItemNo":"15004060","Barcode":"2656210999991220523","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.999,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1299987.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61904.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}]
+2022-07-15 13:54:44.053 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","Barcode":"2656210999991220523","Quantity":99.999,"PluCode":"2656210000000"}
+2022-07-15 13:54:44.061 [WRN] ===> get from cache: {"ItemNo":"15004060","Barcode":"2656210999991220523","ItemName":"Ba rọi (S)","Uom":"KG","Quantity":99.999,"UnitPrice":13000.0,"DiscountAmount":0.0,"LineAmountInVAT":1299987.0,"TaxGroupCode":"5","VATPercent":5,"VATAmount":61904.0,"OfferNo":"","OfferType":"","DiscountType":"","PluCode":"2656210000000"}

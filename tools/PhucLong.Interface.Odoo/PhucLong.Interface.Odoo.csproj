@@ -14,13 +14,13 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
     <PackageReference Include="Npgsql" Version="5.0.7" />
-    <PackageReference Include="StackExchange.Redis" Version="2.2.50" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\VCM.Common\VCM.Common.csproj" />
     <ProjectReference Include="..\..\src\VCM.Shared\VCM.Shared.csproj" />
+    <ProjectReference Include="..\Tools.Common\Tools.Common.csproj" />
   </ItemGroup>
 
 </Project>

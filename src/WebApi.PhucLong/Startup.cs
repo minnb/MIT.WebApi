@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -10,8 +10,8 @@ using System;
 using System.Reflection;
 using VCM.PhucLong.API.Config;
 using VCM.PhucLong.API.Database;
-using VCM.PhucLong.API.Services;
-using WebApi.PhucLong.Services;
+using WCM.EntityFrameworkCore.EntityFrameworkCore.Partner;
+using WebApi.PhucLong;
 
 namespace VCM.PhucLong.API
 {
@@ -34,34 +34,45 @@ namespace VCM.PhucLong.API
         public void ConfigureServices(IServiceCollection services)
         {
             string migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
-            string connectionString = Configuration.GetConnectionString("Default");
+            string connectionString = Configuration.GetConnectionString("PartnerDB");
 
             services.AddStackExchangeRedisCache(option =>
-               option.Configuration = Configuration["RedisConfig:RedisConnectionString"]+":"+ Configuration["RedisConfig:Port"]
+               option.Configuration = Configuration["RedisConfig:RedisConnectionString"]+":"+ Configuration["RedisConfig:Port"] + "," + Configuration["RedisConfig:Database"]
             );
+
+            services.AddDbContext<PartnerMDDbContext>(options =>
+                options.UseSqlServer(connectionString,
+                sqlServerOptionsAction: sqlOptions =>
+                {
+                    sqlOptions.MigrationsAssembly(migrationsAssembly);
+                    sqlOptions.EnableRetryOnFailure(
+                        maxRetryCount: 3,
+                        maxRetryDelay: TimeSpan.FromSeconds(30),
+                        errorNumbersToAdd: null);
+                }));
 
             services.AddControllers();
 
-            services.AddSingleton<DapperContext>();
+            services.AddSingleton<DapperOdooContext>();
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "VCM.PhucLong.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SHOPEE FOOD", Version = "v1" });
                 c.SchemaFilter<SchemaFilter>();
             });
 
-
-            services.AddTransient<ITransactionService, TransactionService>();
-            services.AddTransient<IMasterService, MasterService>();
-            services.AddTransient<IRedisService, RedisService>();
-            services.AddTransient<ICrmService, CrmService>();
+            //setup DI
+            services.RegisterCustomServices(connectionString);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "VCM.PhucLong.API v1"));
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SHOPEE FOOD v1");
+                c.DefaultModelsExpandDepth(-1);
+            });
 
             loggerFactory.AddSerilog();
 

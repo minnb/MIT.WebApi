@@ -1,0 +1,1 @@
+2022-05-18 16:36:46.528 [WRN] ===> request: {"AppCode":"WCM","StoreNo":"2018","OrderNo":"1652866605","OrderDate":"20220518","RequestId":"1652866605","Items":[{"LineNo":1,"ItemNo":"10207953","Uom":"CHA","Quantity":1.0,"UnitPrice":12000.0}]}

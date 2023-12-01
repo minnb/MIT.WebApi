@@ -1,0 +1,16 @@
+2023-03-21 11:37:41.583 [WRN] ===> Create token from MBC
+2023-03-21 11:38:00.345 [WRN] Lỗi call API O2:  null
+2023-03-21 11:38:05.398 [WRN] ===> Create token from MBC
+2023-03-21 11:38:05.401 [WRN] Login O2: {"password":"&^0fCt5gi9rt","user_name":"win_test"}
+2023-03-21 11:38:05.774 [WRN] Lỗi call API O2:  null
+2023-03-21 11:38:05.908 [WRN] O2 error response:  {"IsMutuallyAuthenticated":false,"ContentLength":669,"ContentType":"application/json; charset=utf-8","ContentEncoding":null,"Cookies":[],"LastModified":"2023-03-21T11:38:05.9006604+07:00","Server":"cloudflare","ProtocolVersion":"1.1","Headers":["Via","Date","CF-RAY","Server","Connection","X-Request-ID","feature-policy","CF-Cache-Status","referrer-policy","X-Frame-Options","x-xss-protection","x-download-options","X-Content-Type-Options","x-dns-prefetch-control","Content-Security-Policy","Access-Control-Allow-Origin","Access-Control-Expose-Headers","x-envoy-upstream-service-time","Access-Control-Allow-Credentials","Content-Type","Content-Length"],"Method":"POST","ResponseUri":"https://partner-api-winlife-loyalty-vn-staging.tsengineering.io/users/login","StatusCode":200,"StatusDescription":"OK","CharacterSet":"utf-8","SupportsHeaders":true,"IsFromCache":false}
+2023-03-21 11:38:05.915 [WRN] CreateToken O2: {"data":{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ3aW5fdGVzdCIsImV4cCI6MTY3OTQ1OTg4NSwianRpIjoiMGU5ZmI1MzAtZGJlMC00MjAyLTgzNjMtNmRmMWUzNjNmMTIxIiwiaXNzIjoidHJ1c3Rpbmdfc29jaWFsIiwidXNlcl9pZCI6NDQsInJvbGVzIjpbIm1hc2FuIl19.cCIH71lwQJs5nzoMzlJsAX7YXGPHEhrbcdMTFp59NDYS1JnfEXZpK1OjiJVNuy62sSKH8NIGLIR96vULgTBGAqa7ZQoy7cNEv1bii0_QlnKDIBn5BVnHsLyJq71wPkwt51PBiE3tlCk3Rg071Zwo8kQLHRQNu9ZJX-nSScQQs9n1r7A-qSizeBUg0L1GXAyxvtrgU8XX1HRbR_lGsUhGw2ZUj89o8y_WV8IztBMbCT2T74Wnmc4krszWRRk3U12mAy__2Sk33CVo_3W4qqAIuWV8ncW67mBwOXPaVoleGfeY4YTcQBhh0JJp32nQQrJRaYC-WlXB6QcIBxw8OhUs3A"},"message":"login successfully","time":"2023-03-21T04:38:05Z","verdict":"success"}
+2023-03-21 11:39:07.153 [WRN] ===> Get token from redis
+2023-03-21 11:39:07.465 [WRN] Lỗi call API O2:  null
+2023-03-21 11:40:04.694 [WRN] ===> Get token from redis
+2023-03-21 11:40:04.969 [WRN] Lỗi call API O2:  null
+2023-03-21 11:40:31.100 [WRN] ===> Get token from redis
+2023-03-21 11:40:34.696 [WRN] Lỗi call API O2:  null
+2023-03-21 11:42:39.169 [WRN] ===> Get token from redis
+2023-03-21 11:44:03.748 [WRN] ===> Get token from redis
+2023-03-21 11:44:19.002 [WRN] Lỗi call API O2:  null

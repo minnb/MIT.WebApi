@@ -29,7 +29,7 @@ namespace PhucLong.Interface.Odoo.Database
         public List<InterfaceEntry> GetInterfaceEntry(IDbConnection conn, string jobType)
         {
             string query = @"SELECT [AppCode],[JobName],[JobType],[SortOrder],[LocalPath],[LocalPathArchived],[SftpPath],[SftpPathArchived],[SftpHost],[SftpUser],[SftpPass]
-                            ,[StoreProName],[MaxFile],[SfptPermissions],[FileExtension],[SftpOS],[SftpPort],[IsMoveFile],[Blocked],[CrtDate],[Prefix]  
+                            ,[StoreProName],[MaxFile],[SfptPermissions],[FileExtension],[SftpOS],[SftpPort],[IsMoveFile],[Blocked],[CrtDate],[Prefix], Scheduler
                             FROM [dbo].[InterfaceEntry] (NOLOCK) WHERE [Blocked] = 0 AND [JobType] = '" + jobType+ "' ORDER BY SortOrder;";
 
             return conn.Query<InterfaceEntry>(query).ToList();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace VCM.PhucLong.API.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     [ApiController]
     public class TransactionController: BaseController
     {
@@ -16,6 +17,21 @@ namespace VCM.PhucLong.API.Controllers
             )
         {
             _transactionService = transactionService;
+        }
+
+        [HttpGet]
+        [Route("api/v1/transaction/order/check")]
+        public ActionResult CheckOrderDetailById([Required] string order_no = "200101415220060001")
+        {
+            var result =  _transactionService.CheckOrderDetail(order_no);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet]

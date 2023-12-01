@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace VCM.Shared.Entity.Partner
 {
     [Table("M_TransRaw")]
-    public class TransRaw 
+    public class TransRaw
     {
         public string AppCode { get; set; }
         public string StoreNo { get; set; }

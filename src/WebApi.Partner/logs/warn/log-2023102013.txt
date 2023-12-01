@@ -1,0 +1,27 @@
+2023-10-20 13:06:35.594 [WRN] 638334039955911377123 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:06:36.180 [WRN] 638334039955911377123 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":400,"Message":"Không tìm thấy Đơn hàng 201825231000001"},"Data":null}
+2023-10-20 13:07:42.728 [WRN] 638334040627265709120 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:07:42.798 [WRN] 638334040627265709120 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":400,"Message":"Không tìm thấy Đơn hàng 201825231000001"},"Data":null}
+2023-10-20 13:07:43.623 [WRN] 638334040636227221119 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:07:43.721 [WRN] 638334040636227221119 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":400,"Message":"Không tìm thấy Đơn hàng 201825231000001"},"Data":null}
+2023-10-20 13:12:13.912 [WRN] 63833404333910780012 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:12:14.398 [WRN] 63833404333910780012 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":200,"Message":"OK"},"Data":{"Channel":"WMP","StoreNo":"2018","OrderNo":"201825231000001","OrderDate":"2023-10-05T00:00:00","Campaigns":[{"Campaign":"WCM202311"}]}
+2023-10-20 13:12:37.545 [WRN] 63833404357543482736 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:12:38.069 [WRN] 63833404357543482736 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":200,"Message":"OK"},"Data":{"Channel":"WMP","StoreNo":"2018","OrderNo":"201825231000001","OrderDate":"2023-10-05T00:00:00","Campaigns":[{"Campaign":"WCM202311"}]}
+2023-10-20 13:12:39.367 [WRN] 63833404359365474812 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:12:39.444 [WRN] 63833404359365474812 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":200,"Message":"OK"},"Data":{"Channel":"WMP","StoreNo":"2018","OrderNo":"201825231000001","OrderDate":"2023-10-05T00:00:00","Campaigns":[{"Campaign":"WCM202311"}]}
+2023-10-20 13:12:40.405 [WRN] 63833404360403256412 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:12:40.468 [WRN] 63833404360403256412 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":200,"Message":"OK"},"Data":{"Channel":"WMP","StoreNo":"2018","OrderNo":"201825231000001","OrderDate":"2023-10-05T00:00:00","Campaigns":[{"Campaign":"WCM202311"}]}
+2023-10-20 13:12:41.421 [WRN] 63833404361419954238 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:12:41.479 [WRN] 63833404361419954238 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":200,"Message":"OK"},"Data":{"Channel":"WMP","StoreNo":"2018","OrderNo":"201825231000001","OrderDate":"2023-10-05T00:00:00","Campaigns":[{"Campaign":"WCM202311"}]}
+2023-10-20 13:12:43.567 [WRN] 63833404363565368332 request GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001	
+
+2023-10-20 13:12:43.837 [WRN] 63833404363565368332 responseBody GET /api/v1/transaction/order/campaign?appCode=WCM&orderNo=201825231000001 {"Meta":{"Code":200,"Message":"OK"},"Data":{"Channel":"WMP","StoreNo":"2018","OrderNo":"201825231000001","OrderDate":"2023-10-05T00:00:00","Campaigns":[{"Campaign":"WCM202311"}]}

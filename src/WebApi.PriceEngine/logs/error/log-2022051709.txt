@@ -1,0 +1,4 @@
+2022-05-17 09:52:48.663 [ERR] GetItemMasterAsync Exception: Must declare the scalar variable "@Counter".
+2022-05-17 09:52:58.195 [ERR] GetItemMasterAsync Exception: Must declare the scalar variable "@Counter".
+2022-05-17 09:53:27.892 [ERR] GetItemMasterAsync Exception: Must declare the scalar variable "@Counter".
+2022-05-17 09:53:39.919 [ERR] GetItemMasterAsync Exception: Must declare the scalar variable "@Counter".

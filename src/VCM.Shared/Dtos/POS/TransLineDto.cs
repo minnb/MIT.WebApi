@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VCM.Shared.Dtos.POS
 {
@@ -14,13 +14,20 @@ namespace VCM.Shared.Dtos.POS
         public string ItemName2 { get; set; }
         public string Barcode { get; set; }
         public string Uom { get; set; }
+        [Column(TypeName = "decimal(18, 3)")]
         public decimal UnitPrice { get; set; }
+        [Column(TypeName = "decimal(18, 3)")]
         public decimal Qty { get; set; }
+        [Column(TypeName = "decimal(18, 3)")]
         public decimal DiscountAmount { get; set; }
         public string VatGroup { get; set; }
+        [Column(TypeName = "decimal(18, 3)")]
         public decimal VatPercent { get; set; }
+        [Column(TypeName = "decimal(18, 3)")]
         public decimal VatAmount { get; set; }
+        [Column(TypeName = "decimal(18, 3)")]
         public decimal LineAmountExcVAT { get; set; }
+        [Column(TypeName = "decimal(18, 3)")]
         public decimal LineAmountIncVAT { get; set; }
         public bool IsLoyalty { get; set; }
         public string ItemType { get; set; }

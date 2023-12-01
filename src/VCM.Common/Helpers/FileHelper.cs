@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
@@ -9,6 +10,46 @@ namespace VCM.Common.Helpers
 {
     public static class FileHelper
     {
+        public static string CreateZipFile(string content, string dirSource, string fileName, string extention)
+        {
+            string result = "";
+            CreateFolder(dirSource);
+            using (var memoryStream = new MemoryStream())
+            {
+                using (var archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
+                {
+                    var demoFile = archive.CreateEntry(fileName + extention);
+
+                    using (var entryStream = demoFile.Open())
+                    using (var streamWriter = new StreamWriter(entryStream))
+                    {
+                        streamWriter.Write(content);
+                    }
+                }
+
+                result = dirSource + fileName + @".zip";
+                using var fileStream = new FileStream(result, FileMode.Create);
+                memoryStream.Seek(0, SeekOrigin.Begin);
+                memoryStream.CopyTo(fileStream);
+            }
+            return result;
+        }
+
+        public static XmlDocument ReadXml(string fileName)
+        {
+            XmlDocument doc = new XmlDocument();
+            try
+            {
+                doc.LoadXml(File.ReadAllText(fileName));
+            }
+            catch (Exception ex)
+            {
+                FileHelper.WriteLogs("FileName: " + fileName.ToString());
+                FileHelper.WriteLogs("ReadXml Exception: " + ex.Message.ToString());
+            }
+
+            return doc;
+        }
         public static List<string> GetFileFromDir(string path, string extention)
         {
             var fileName = (new DirectoryInfo(path))
@@ -39,7 +80,8 @@ namespace VCM.Common.Helpers
                 return false;
             }
         }
-        public static string ReadFileTxt(string fileText)
+
+         public static string ReadFileTxt(string fileText)
         {
             string line;
             string result = "";
@@ -85,6 +127,34 @@ namespace VCM.Common.Helpers
 
             }
         }
+        public static void Write2Logs(string func, string message)
+        {
+            var path = Directory.GetCurrentDirectory() + @"\logs\" + func + @"\";
+            try
+            {
+                CreateFolder(path);
+                string fileName = path + @"log-" + DateTime.Now.ToString("yyyyMMdd") + ".txt";
+                string[] strLine = { DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ff") + ": " + message };
+                if (!File.Exists(fileName))
+                {
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(path, fileName)))
+                    {
+                        foreach (string line in strLine)
+                            outputFile.WriteLine(line);
+                    }
+                    DeleteFileHistory(path, 60);
+                }
+                else
+                {
+                    File.AppendAllLines(Path.Combine(path, fileName), strLine);
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
         public static bool MoveFileToFolder(string _destination, string _file)
         {
             try
@@ -154,6 +224,38 @@ namespace VCM.Common.Helpers
             }
             return fileNumber;
         }
+        public static int DeleteFileByDateHistory(string _path, int _numberFile)
+        {
+            int fileNumber = 0;
+            try
+            {
+                if (Directory.Exists(_path))
+                {
+                    var fileArray = (new DirectoryInfo(_path))
+                                    .GetFiles("*.*", SearchOption.AllDirectories).OrderBy(x => x.CreationTime)
+                                    .Select(a => a.Name)
+                                    .ToList();
+
+                    fileNumber = fileArray.Count;
+                    var numberFileDelete = fileNumber - _numberFile;
+                    if (numberFileDelete > 0)
+                    {
+                        int i = 0;
+                        foreach (var file in fileArray)
+                        {
+                            if (i == numberFileDelete) return numberFileDelete;
+                            if (File.Exists(_path + file)) File.Delete(_path + file);
+                            i++;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                FileHelper.WriteLogs("DeleteFileHistory: " + ex.Message.ToString());
+            }
+            return fileNumber;
+        }
         public static bool CreateFolder(string _folder)
         {
             try
@@ -193,6 +295,28 @@ namespace VCM.Common.Helpers
                 return lsFile;
             }
         }
-
+        public static bool WriteTxt(string path, string _fileName, string[] _lines)
+        {
+            try
+            {
+                if (!File.Exists(path + _fileName))
+                {
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(path, _fileName)))
+                    {
+                        foreach (string line in _lines)
+                            outputFile.WriteLine(line);
+                    }
+                }
+                else
+                {
+                    File.AppendAllLines(Path.Combine(path, _fileName), _lines);
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
