@@ -9,6 +9,19 @@ namespace MIT.Utils
 {
     public static class Md5Utils
     {
+        public static string CalculateMD5Hash(string input)
+        {
+            using var md5 = System.Security.Cryptography.MD5.Create();
+            byte[] hashBytes = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
+            StringBuilder stringBuilder = new StringBuilder();
+
+            foreach (byte b in hashBytes)
+            {
+                stringBuilder.Append(b.ToString("x2"));
+            }
+
+            return stringBuilder.ToString();
+        }
         public static string Md5(string sInput)
         {
             ASCIIEncoding enCoder = new ASCIIEncoding();

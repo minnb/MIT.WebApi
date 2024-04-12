@@ -16,7 +16,6 @@ using VCM.Partner.API.Application.Interfaces;
 using VCM.Partner.API.ViewModels.AirPay;
 using VCM.Partner.API.ViewModels.MBC;
 using VCM.Shared.API.O2;
-using VCM.Shared.API.Shopee.Dish;
 using VCM.Shared.Const;
 using VCM.Shared.Dtos.PhucLong;
 using VCM.Shared.Dtos.POS;
@@ -24,7 +23,6 @@ using VCM.Shared.Entity.Partner;
 using VCM.Shared.Entity.SalesPartner;
 using WCM.EntityFrameworkCore.EntityFrameworkCore.Dapper;
 using WCM.EntityFrameworkCore.EntityFrameworkCore.Partner;
-using WebApi.Core.AppServices.ShopeeService;
 
 namespace VCM.Partner.API.Application.Implementation
 {
@@ -79,6 +77,7 @@ namespace VCM.Partner.API.Application.Implementation
         private UserMBC CreateToken(WebApiViewModel webApiInfo, string proxyHttp, string[] byPass)
         {
             UserMBC userMBC = new UserMBC();
+            string errMsg = "";
             try
             {
                 var routeApi = webApiInfo.WebRoute.Where(x => x.Name == "Login").FirstOrDefault();
@@ -100,7 +99,7 @@ namespace VCM.Partner.API.Application.Implementation
                     proxyHttp,
                     byPass
                     );
-                var strResponse = api.InteractWithApiResponse();
+                var strResponse = api.InteractWithApiResponse(ref errMsg);
 
                 if (strResponse != null && strResponse.StatusCode == System.Net.HttpStatusCode.OK)
                 {
@@ -430,6 +429,7 @@ namespace VCM.Partner.API.Application.Implementation
         private TokenO2 CreateTokenO2(WebApiViewModel webApiInfo)
         {
             TokenO2 dataToken = new TokenO2();
+            string errMsg = "";
             try
             {
                 var routeApi = webApiInfo.WebRoute.Where(x => x.Name == "Login").FirstOrDefault();
@@ -455,7 +455,7 @@ namespace VCM.Partner.API.Application.Implementation
                     webApiInfo.HttpProxy,
                     byPass
                     );
-                var strResponse = api.InteractWithApiResponse();
+                var strResponse = api.InteractWithApiResponse(ref errMsg);
                 _logger.LogWarning("Login O2 response: " + strResponse);
                 if (strResponse != null && strResponse.StatusCode == System.Net.HttpStatusCode.OK)
                 {
@@ -556,6 +556,83 @@ namespace VCM.Partner.API.Application.Implementation
                     return null;
                 }
             }
+        }
+        public async Task<List<VAT>> GetVATCodeAsync(bool isDelete = false)
+        {
+            if (isDelete)
+            {
+                await _distributeCache.RemoveAsync(RedisConst.Redis_cache_webapi_m_vatcode);
+            }
+
+            var key_redis = await _distributeCache.GetAsync(RedisConst.Redis_cache_webapi_m_vatcode);
+            if (key_redis != null)
+            {
+                return JsonConvert.DeserializeObject<List<VAT>>(Encoding.UTF8.GetString(key_redis));
+            }
+            else
+            {
+                var data = _dbContext.VAT.Where(x => x.Blocked == false).ToList();
+                if (data.Count > 0)
+                {
+                    await SetCacheRedisAsync(RedisConst.Redis_cache_webapi_m_vatcode, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data)));
+                }
+                return data;
+            }
+        }
+        public async Task<List<User>> GetUsers()
+        {
+            try
+            {
+                var key_redis = await _distributeCache.GetAsync(RedisConst.Redis_cache_webapi_sys_user);
+                if (key_redis != null)
+                {
+                    var dataUser = JsonConvert.DeserializeObject<List<User>>(Encoding.UTF8.GetString(key_redis));
+                    return dataUser;
+                }
+                else
+                {
+                    var data = _dbContext.User.Where(x => x.Blocked == false).ToList();
+                    if (data.Count > 0)
+                    {
+                        await SetCacheRedisAsync(RedisConst.Redis_cache_webapi_sys_user, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data)));
+                    }
+                    return data;
+                }
+            }
+            catch
+            {
+                return new List<User>();
+            }
+        }
+        public async Task<List<NotifyConfig>> GetNotifyConfig()
+        {
+            try
+            {
+                var key_redis = await _distributeCache.GetAsync(RedisConst.Redis_cache_notify_config);
+                if (key_redis != null)
+                {
+                    return JsonConvert.DeserializeObject<List<NotifyConfig>>(Encoding.UTF8.GetString(key_redis));
+                }
+                else
+                {
+                    var data = _dbContext.NotifyConfig.Where(x => x.Blocked == false).ToList();
+                    if (data.Count > 0)
+                    {
+                        await SetCacheRedisAsync(RedisConst.Redis_cache_notify_config, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data)));
+                    }
+                    return data;
+                }
+            }
+            catch
+            {
+                return new List<NotifyConfig>();
+            }
+        }
+        public async Task SetRedisKeyByTimeAsync(string key, byte[] value, int minute)
+        {
+            var options = new DistributedCacheEntryOptions()
+                       .SetSlidingExpiration(TimeSpan.FromMinutes(minute));
+            await _distributeCache.SetAsync(key, value, options);
         }
     }
 }

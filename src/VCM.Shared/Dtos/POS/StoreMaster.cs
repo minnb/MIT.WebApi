@@ -13,5 +13,6 @@ namespace VCM.Shared.Dtos.POS
         public string Channel { get; set; }
         public string BranchNo { get; set; }
         public string BusinessAreaNo { get; set; }
+        public string ServerIP { get; set; }
     }
 }

@@ -9,6 +9,7 @@ using VCM.Partner.API.Application.Implementation;
 using VCM.Partner.API.Application.Interfaces;
 using VCM.Partner.API.Authentication;
 using WebApi.Core.AppServices;
+using WebApi.Core.AppServices.JWT;
 using WebApi.Core.AppServices.ShopeeService;
 using WebApi.Partner.Application.Implementation;
 using WebApi.Partner.Application.Interfaces;
@@ -41,9 +42,10 @@ namespace VCM.Partner.API
             services.AddTransient<IO2Service, O2Service>();
             services.AddTransient<IVoucherService, VoucherService>();
             services.AddTransient<IKibanaService, KibanaService>();
-
+            services.AddTransient<IWinMoneyService, WinMoneyService>();
             services.AddTransient<IVoucherRepository, VoucherRepository>();
-
+            services.AddTransient<IGenerateTokenService, GenerateTokenService>();
+            services.AddTransient<IHCMService, HCMService>();
         }
     }
 }

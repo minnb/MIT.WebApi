@@ -310,7 +310,7 @@ namespace PhucLong.Interface.Central.AppService
         {
             using var transaction = conn.BeginTransaction();
             string queryUpdate = @"UPDATE [dbo].[SalesTrainning] SET CrtDate = getdate(), UpdateFlg='" + update_flg + "', [Message] = '" + message + @"', ResNum = '" + resNum + "', RefNo = '" + refNo + @"', StatusSAP = '" + statusSAP + @"'
-                                 WHERE OrderNo = @OrderNo AND StoreNo = @StoreNo AND OrderDate = @OrderDate;";
+                                 WHERE OrderNo = @OrderNo AND StoreNo = @StoreNo AND OrderDate = @OrderDate AND [LineNo] = @LineNo;";
             conn.Execute(queryUpdate, salesTrainningTemp, transaction);
             transaction.Commit();
         }
@@ -454,7 +454,7 @@ namespace PhucLong.Interface.Central.AppService
                             }
                             else
                             {
-                                FileHelper.WriteLogs("Failed");
+                                FileHelper.WriteLogs("Failed:" + mess_error);
                                 //UpdateStatusVoucherSAP(conn, item, "E", mess_error);
                             }
                             lstItems.Clear();

@@ -56,7 +56,7 @@ namespace WebApi.Partner.Application.Implementation
 
             var routeApi = webApiInfo.WebRoute.Where(x => x.Name.ToLower() == function.ToLower()).FirstOrDefault();
             var url_request = webApiInfo.Host + routeApi.Route.ToString();
-
+            string errMsg = "";
             try
             {
                 ApiHelper api = new ApiHelper(
@@ -72,7 +72,7 @@ namespace WebApi.Partner.Application.Implementation
 
                 _logger.LogWarning(String.Format("{0} Request {1}\t\n{2}", requestId, url_request, bodyJson));
 
-                var rs = api.InteractWithApiResponse();
+                var rs = api.InteractWithApiResponse(ref errMsg);
 
                 using Stream stream = rs.GetResponseStream();
                 StreamReader streamReader = new StreamReader(stream, System.Text.Encoding.UTF8);

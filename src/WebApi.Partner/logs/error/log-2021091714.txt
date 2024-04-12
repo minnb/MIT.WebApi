@@ -1,7 +1,0 @@
-2021-09-17 14:49:20.820 [ERR] Connection id "0HMBPLUK25I1V", Request id "0HMBPLUK25I1V:00000003": An unhandled exception was thrown by the application.
-Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - VCM.Partner.API.Controllers.ConfigController.GetQuestionsPagingAsync (VCM.Partner.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
-   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
-   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
-   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)

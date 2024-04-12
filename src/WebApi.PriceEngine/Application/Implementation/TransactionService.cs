@@ -73,8 +73,8 @@ namespace WebApi.PriceEngine.Application.Implementation
                     List<QueryResults> resultOK = new List<QueryResults>();
                     if (transactionRequest.AppCode.ToUpper() == AppCodeEnum.WCM.ToString())
                     {
-                        resultOK = await _databaseContextWCM.QueryResults.FromSqlRaw("SP_API_ORDER_PROCESSING {0}, {1}, {2}, {3}",
-                                                    transactionRequest.AppCode, transactionRequest.StoreNo, transactionRequest.OrderNo, orderDate.ToString("yyyyMMdd")).ToListAsync();
+                        resultOK = _databaseContextWCM.QueryResults.FromSqlRaw("SP_API_ORDER_PROCESSING {0}, {1}, {2}, {3}",
+                                                    transactionRequest.AppCode, transactionRequest.StoreNo, transactionRequest.OrderNo, orderDate.ToString("yyyyMMdd")).ToList();
 
                     }
                     else if (transactionRequest.AppCode.ToUpper() == AppCodeEnum.PLH.ToString())
@@ -93,7 +93,6 @@ namespace WebApi.PriceEngine.Application.Implementation
                     if (resultOK.Count > 0 && !string.IsNullOrEmpty(resultOK.FirstOrDefault().Results)) 
                     { 
                         result = GetOrderDetailAsync(transactionRequest.AppCode.ToUpper(), resultOK.FirstOrDefault().Results);
-                        //responseClient = ResponseHelper.RspOK(result);
                         responseClient = ResponseHelper.RspMessageEnum(PriceEngineEnum.OrderSuccessfull, (int)PriceEngineEnum.OrderSuccessfull, result);
                     }
                     else

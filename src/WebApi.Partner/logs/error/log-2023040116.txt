@@ -1,2 +1,0 @@
-2023-04-01 16:07:54.110 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.
-2023-04-01 16:07:56.159 [ERR] O2 Exception CHECK_MEMBERUnexpected character encountered while parsing value: <. Path '', line 0, position 0.

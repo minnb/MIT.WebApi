@@ -9,6 +9,8 @@ namespace VCM.Shared.Const
         public const double PriceEngine_cache_minute_time = 1;
         public const int Redis_cache_time = 1;
 
+        public const string Redis_cache_notify_config = "Redis_cache_notify_config";
+        public const string Redis_cache_webapi_sys_user = "Redis_cache_webapi_sys_user";
         public const string Redis_cache_webapi_sys_user_roles = "Redis_cache_webapi_sys_user_roles";
         public const string Redis_cache_webapi_sys_config = "Redis_cache_webapi_sys_config";
         public const string Redis_cache_webapi_sys_webapi = "Redis_cache_webapi_sys_webapi";
@@ -16,6 +18,7 @@ namespace VCM.Shared.Const
         public const string Redis_cache_webapi_store_set = "Redis_cache_webapi_store_set";
         public const string Redis_cache_webapi_store_master = "Redis_cache_webapi_store_master";
 
+        public const string Redis_cache_webapi_m_vatcode = "Redis_cache_webapi_m_vatcode";
         public const string Redis_cache_webapi_m_tender_type_setup = "Redis_cache_webapi_m_tender_type_setup";
         public const string Redis_cache_webapi_m_item = "Redis_cache_webapi_m_item";
         public const string Redis_cache_webapi_m_partner_mapping = "Redis_cache_webapi_m_partner_mapping";

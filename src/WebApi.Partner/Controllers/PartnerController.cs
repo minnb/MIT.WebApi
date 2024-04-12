@@ -52,7 +52,7 @@ namespace VCM.Partner.API.Controllers
         //    _proxyHttp = _configuration["WebProxy:Http"];
         //    _bypassList = new string[] { _configuration["WebProxy:Bypasslist"] };
         //}
-    }
+        }
 
         [HttpPost]
         [Route("api/v1/partner/card")]

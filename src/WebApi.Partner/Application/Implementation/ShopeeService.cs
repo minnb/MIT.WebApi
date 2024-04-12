@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Org.BouncyCastle.Asn1.IsisMtt.X509;
+using Org.BouncyCastle.Asn1.Ocsp;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
@@ -226,7 +227,7 @@ namespace VCM.Partner.API.Application.Implementation
             await Task.Delay(1);
             return resultObj;
         }
-        public async Task<ResponseClient> UpdateStatusOrder(RequestUpdateOrderStatus request, WebApiViewModel webApi, string proxy, string[] bypass)
+        public ResponseClient UpdateStatusOrder(RequestUpdateOrderStatus request, WebApiViewModel webApi, string proxy, string[] bypass)
         {
             ResponseClient resultObj = new ResponseClient();
             try
@@ -258,8 +259,13 @@ namespace VCM.Partner.API.Application.Implementation
                     }
                     else if (lastUpdateData != null && lstStatusSuccess.Contains(lastUpdateData.status) && lastUpdateData.update_flg == "N")
                     {
-                        await Shopee_update_status_order(null, updateData);
-                        _logger.LogWarning("===> Shopee auto comfirm: " + JsonConvert.SerializeObject(updateData));
+                        var check = Shopee_update_status_order(null, updateData);
+                        if (!check)
+                        {
+                            return ResponseHelper.RspNotWarning(201, @"Đơn hàng " + request.OrderNo + " đã được thanh toán");
+                        }
+
+                        _logger.LogWarning("===> Shopee auto comfirm successfully " + updateData.FirstOrDefault().order_code.ToString());
                         return new ResponseClient()
                         {
                             Meta = ResponseHelper.MetaOK(200, "Successfully"),
@@ -307,9 +313,13 @@ namespace VCM.Partner.API.Application.Implementation
                     if (resultRsp.result == ResultCodeShopee.success.ToString())
                     {
                         updateData.ForEach(x => { if (x.status == 3) x.crt_user = "API"; });
-                        await Shopee_update_status_order(resultRsp, updateData);
+                        var check = Shopee_update_status_order(resultRsp, updateData);
                         message = resultRsp.result.ToString();
-                        
+                        if (!check)
+                        {
+                            return ResponseHelper.RspNotWarning(201, @"Đơn hàng " + request.OrderNo + " đã được thanh toán");
+                        }
+
                         resultObj = new ResponseClient()
                         {
                             Meta = ResponseHelper.MetaOK(200, message),
@@ -325,7 +335,11 @@ namespace VCM.Partner.API.Application.Implementation
                         {
                             updateData.ForEach(x => { if (x.status == 5 || x.status == 3) x.crt_user = request.PosNo; });
                             updateData.ForEach(x => { if (x.status == 5 || x.status == 3) x.message = resultShopee.result; });
-                            await Shopee_update_status_order(resultRsp, updateData);
+                            var check = Shopee_update_status_order(resultRsp, updateData);
+                            if (!check)
+                            {
+                                return ResponseHelper.RspNotWarning(201, resultShopee.result);
+                            }
                             resultObj = new ResponseClient()
                             {
                                 Meta = ResponseHelper.MetaOK(200, message),
@@ -465,10 +479,9 @@ namespace VCM.Partner.API.Application.Implementation
 
                             if (items_topping.Count > 0)
                             {
-                                //GetComboNo(gtopping.partner_topping_group_id.ToUpper())
                                 foreach (var top in items_topping)
                                 {
-                                    if (top.ComboNo.Contains("GIFT"))
+                                    if (top.DiscountType.Contains("GIFT"))
                                     {
                                         top.DiscountAmount = top.LineAmount;
                                         top.LineAmount = 0;
@@ -583,7 +596,7 @@ namespace VCM.Partner.API.Application.Implementation
                                                 var itemMappingTopping = itemMaster.Where(x => x.ItemNo == topping.partner_topping_id).FirstOrDefault();
                                                 if (itemMappingTopping == null)
                                                 {
-                                                    message_error = @"Sản phẩm " + topping.topping_name + " chưa được mapping với ItemNo SAP - Phúc Long";
+                                                    message_error =string.Format(@"Sản phẩm {0}-{1} chưa được mapping với ItemNo SAP - Phúc Long", topping.partner_topping_id, topping.topping_name);
                                                     _logger.LogWarning(data.code + ":" + message_error);
                                                     return null;
                                                 }
@@ -619,8 +632,8 @@ namespace VCM.Partner.API.Application.Implementation
                                                         new OrderDiscount()
                                                         {
                                                             LineId = topping.topping_id,
-                                                            OfferNo = GetOfferNo(topping.partner_topping_id),
-                                                            OfferType = "NOW",
+                                                            OfferNo = GetOfferNo(item.partner_dish_id),
+                                                            OfferType = "NOW_ZB05",
                                                             Quantity = item.quantity,
                                                             DiscountAmount = topping.original_price.value - topping.price.value,
                                                             Note = "Topping khuyến mãi gạch giá"
@@ -639,7 +652,7 @@ namespace VCM.Partner.API.Application.Implementation
                                                 var getParentCode = list_dish_nowfood.Where(x => x.ItemNo == item.partner_dish_id).FirstOrDefault();
                                                 if(getParentCode!= null)
                                                 {
-                                                    var bigSize = list_dish_nowfood.Where(x => x.ParentCode == getParentCode.ParentCode && x.ItemNo != item.partner_dish_id).FirstOrDefault();
+                                                    var bigSize = list_dish_nowfood.Where(x =>x.Size == "L" && x.ParentCode == getParentCode.ParentCode && x.ItemNo != item.partner_dish_id).FirstOrDefault();
                                                     if(bigSize!= null)
                                                     {
                                                         item.partner_dish_id = bigSize.ItemNo;
@@ -948,13 +961,19 @@ namespace VCM.Partner.API.Application.Implementation
                 return null;
             }
         }
-        private async Task<bool> Shopee_update_status_order(ResultShopeeRsp result, List<Shopee_update_order> updateData)
+        private bool Shopee_update_status_order(ResultShopeeRsp result, List<Shopee_update_order> updateData)
         {
             try
             {
-                if(result != null)
+                var checkData = _dbConext.Shopee_update_order.FirstOrDefault(x => x.order_code == updateData.FirstOrDefault().order_code && x.update_flg == "Y");
+                if(checkData != null)
                 {
-                    updateData.ForEach(x => x.message = x.message + "|API confirm success");
+                    return false;
+                }
+
+                if (result != null)
+                {
+                    updateData.ForEach(x => x.message += "|API confirm success");
                 }
                 else
                 {
@@ -963,13 +982,13 @@ namespace VCM.Partner.API.Application.Implementation
 
                 updateData.ForEach(x => x.update_flg = "Y");
                 updateData.ForEach(x => _dbConext.Update(x));
-                await _dbConext.SaveChangesAsync();
+                 _dbConext.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-                _logger.LogWarning("===> Shopee_update_status_order Exception: " + JsonConvert.SerializeObject(result));
-                _logger.LogWarning("===> Shopee_update_status_order Exception: " + ex.Message.ToString());
+                _logger.LogError("===> Shopee_update_status_order Exception: " + JsonConvert.SerializeObject(result));
+                _logger.LogError("===> Shopee_update_status_order Exception: " + JsonConvert.SerializeObject(ex));
                 return false;
             }
         }
@@ -1172,8 +1191,10 @@ namespace VCM.Partner.API.Application.Implementation
                     }
                     else
                     {
-                        List<RspOrderLineOptionDto> options = new List<RspOrderLineOptionDto>();
-                        options.Add(cup);
+                        List<RspOrderLineOptionDto> options = new List<RspOrderLineOptionDto>
+                        {
+                            cup
+                        };
                         item.OptionEntry = options;
                     }
                     
@@ -1184,7 +1205,7 @@ namespace VCM.Partner.API.Application.Implementation
         {
             decimal total_amount_on_pos = items.Where(x => x.LineAmount > 0).Sum(x => x.LineAmount);
             decimal chenh_lech = total_amount_on_now - total_amount_on_pos;
-            _logger.LogWarning("@chenh_lech: " + chenh_lech.ToString());
+            //_logger.LogWarning("@chenh_lech: " + chenh_lech.ToString());
             
             if (chenh_lech < 0)
             {

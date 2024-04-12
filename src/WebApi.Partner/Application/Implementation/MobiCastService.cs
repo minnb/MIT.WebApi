@@ -65,7 +65,7 @@ namespace VCM.Partner.API.Application.Implementation
 
             var routeApi = webApiInfo.WebRoute.Where(x => x.Name == "Routing").FirstOrDefault();
             var url_request = webApiInfo.Host + routeApi.Route.ToString();
-
+            string errMsg = "";
             try
             {
                 string encData = TripleUtils.Encrypt(webApiInfo.PrivateKey, JsonConvert.SerializeObject(wsRequest).ToString());
@@ -97,7 +97,7 @@ namespace VCM.Partner.API.Application.Implementation
                 var st1 = new Stopwatch();
                 st1.Start();
 
-                var rs = api.InteractWithApiResponse();
+                var rs = api.InteractWithApiResponse(ref errMsg);
 
                 using Stream stream = rs.GetResponseStream();
                 StreamReader streamReader = new StreamReader(stream, System.Text.Encoding.UTF8);
@@ -106,7 +106,7 @@ namespace VCM.Partner.API.Application.Implementation
                 milliseconds = st1.ElapsedMilliseconds;
                 st1.Stop();
 
-                _kibanaService.LogResponse(url_request, NetwordHelper.GetHostName(), result, milliseconds);
+                _kibanaService.LogResponse(url_request, NetwordHelper.GetHostName(), errMsg + "@" + result, milliseconds);
             }
             catch (Exception ex)
             {

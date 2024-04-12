@@ -109,7 +109,7 @@ namespace VCM.Common.Helpers
             }
             return result;
         }
-        public HttpWebResponse InteractWithApiResponse()
+        public HttpWebResponse InteractWithApiResponse(ref string errMsg)
         {
             //HttpWebResponse result = new HttpWebResponse();
             try
@@ -148,10 +148,13 @@ namespace VCM.Common.Helpers
                     streamWriter.Close();
                 }
 
-                return (HttpWebResponse)request.GetResponse();
+                var result =  (HttpWebResponse)request.GetResponse();
+                errMsg = result.StatusCode.ToString();
+                return result;
             }
             catch(Exception ex) 
             {
+                errMsg = ex.Message;
                 FileHelper.WriteLogs("InteractWithApiResponse Exception: " + ex.Message.ToString());
                 return null;
             }

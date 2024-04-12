@@ -109,14 +109,13 @@ namespace VCM.Common.Helpers
             }
             catch (WebException ex)
             {
-                using (WebResponse response = ex.Response)
+                FileHelper.WriteLogs("WebException: " + JsonConvert.SerializeObject(ex));
+                using WebResponse response = ex.Response;
+                HttpWebResponse httpResponse = (HttpWebResponse)response;
+                using (Stream data = response.GetResponseStream())
+                using (var reader = new StreamReader(data))
                 {
-                    HttpWebResponse httpResponse = (HttpWebResponse)response;
-                    using (Stream data = response.GetResponseStream())
-                    using (var reader = new StreamReader(data))
-                    {
-                        result = reader.ReadToEnd();
-                    }
+                    result = reader.ReadToEnd();
                 }
             }
             return result;

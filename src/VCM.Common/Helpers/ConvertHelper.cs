@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,31 @@ namespace VCM.Common.Helpers
 {
     public static class ConvertHelper
     {
+        public static string ObjectToStringLowercase(object obj)
+        {
+            var serializerSettings = new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            };
+            return JsonConvert.SerializeObject(obj, serializerSettings);
+        }
+
+        public static string[] ConvertStrToArray(string str, char c)
+        {
+            string[] array = new string[] {};    
+            try
+            {
+                if (!string.IsNullOrEmpty(str))
+                {
+                    array = str.Split(c);
+                }
+                return array;
+            }
+            catch
+            {
+                return array;
+            }
+        }
         public static DateTime ConvertStringDateTimeToDate(string strDateTime, string conversion)
         {
             DateTime dtFinaldate; 
@@ -64,7 +91,6 @@ namespace VCM.Common.Helpers
                 return oType;
             }
         }
-
         public static DataTable EnumToDataTable<T>(IEnumerable<T> l_oItems)
         {
             var firstItem = l_oItems.FirstOrDefault();
@@ -104,8 +130,6 @@ namespace VCM.Common.Helpers
             //#### Return the above determined oReturn value to the caller
             return oReturn;
         }
-     
-
         public static string SerializeXmlNoHeader<T>(this T value)
         {
             if (value == null) return string.Empty;

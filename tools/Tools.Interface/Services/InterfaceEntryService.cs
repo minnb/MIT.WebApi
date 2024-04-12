@@ -55,6 +55,13 @@ namespace Tools.Interface.Services
                                 Run_Job_GCP(items);
                             }
                             break;
+                        case "DATALAKE":
+                            var lstRun1 = lstInterface.Where(x => x.JobType == jobName).OrderBy(x => x.SortOrder).ToList();
+                            foreach (var items in lstRun1)
+                            {
+                                Run_Job_DATALAKE(items);
+                            }
+                            break;
                         case "KIOS":
                             var lstRunKios = lstInterface.Where(x => x.JobType == jobName).OrderBy(x => x.SortOrder).ToList();
                             foreach (var items in lstRunKios)
@@ -74,6 +81,13 @@ namespace Tools.Interface.Services
                             foreach (var items in lstRunJobDrW)
                             {
                                 Run_Job_DRWIN(items);
+                            }
+                            break;
+                        case "WMC":
+                            var lstRunJobWMC = lstInterface.Where(x => x.JobType == jobName).OrderBy(x => x.SortOrder).ToList();
+                            foreach (var items in lstRunJobWMC)
+                            {
+                                Run_Job_WMC(items);
                             }
                             break;
                     }                   
@@ -282,8 +296,78 @@ namespace Tools.Interface.Services
                     service.ProcessInboundStock(interfaceEntry.JobName.ToString(), interfaceEntry.LocalPath, interfaceEntry.LocalPathArchived, interfaceEntry.MaxFile, interfaceEntry.StoreProName);
                     break;
             }
+        }
+        private void Run_Job_WMC(InterfaceEntry interfaceEntry)
+        {
+            if (!string.IsNullOrEmpty(interfaceEntry.Scheduler.ToString()))
+            {
+                string[] scheduler = StringHelper.SliptString(interfaceEntry.Scheduler.ToString(), ";");
+            }
 
+            Console.WriteLine("Run: {0}", interfaceEntry.JobName);
+            FileHelper.WriteLogs("===> RUN: " + interfaceEntry.JobName);
+            WMCService service = new WMCService(interfaceEntry);
+            switch (interfaceEntry.JobName)
+            {
+                case "IMPORT-TRANS":
+                    if (!string.IsNullOrEmpty(interfaceEntry.SftpHost))
+                    {
+                        InterfaceHelper.DownloadFileToSftpSetup(interfaceEntry);
+                    }
+                    service.ImportWinMoneyTrans(interfaceEntry);
+                    break;
 
+            }
+        }
+
+        private void Run_Job_DATALAKE(InterfaceEntry interfaceEntry)
+        {
+            if (!string.IsNullOrEmpty(interfaceEntry.Scheduler.ToString()))
+            {
+                string[] scheduler = StringHelper.SliptString(interfaceEntry.Scheduler.ToString(), ";");
+            }
+
+            Console.WriteLine("Run: {0}", interfaceEntry.JobName);
+            FileHelper.WriteLogs("===> RUN: " + interfaceEntry.JobName);
+            GCP_MD_Service service = new GCP_MD_Service();
+            switch (interfaceEntry.JobName)
+            {
+                case "GCP_PRODUCT_UNIT":
+                    if (!string.IsNullOrEmpty(interfaceEntry.SftpHost))
+                    {
+                        InterfaceHelper.DownloadFileToSftpSetup(interfaceEntry);
+                    }
+                    service.GCP_PRODUCT_UNIT(interfaceEntry);
+                    break;
+                case "GCP_PRODUCT":
+                    if (!string.IsNullOrEmpty(interfaceEntry.SftpHost))
+                    {
+                        InterfaceHelper.DownloadFileToSftpSetup(interfaceEntry);
+                    }
+                    service.GCP_PRODUCT(interfaceEntry);
+                    break;
+                case "GCP_MCH_INFO":
+                    if (!string.IsNullOrEmpty(interfaceEntry.SftpHost))
+                    {
+                        InterfaceHelper.DownloadFileToSftpSetup(interfaceEntry);
+                    }
+                    service.GCP_MCH_INFO(interfaceEntry);
+                    break;
+                case "GCP_STORE":
+                    if (!string.IsNullOrEmpty(interfaceEntry.SftpHost))
+                    {
+                        InterfaceHelper.DownloadFileToSftpSetup(interfaceEntry);
+                    }
+                    service.GCP_STORE(interfaceEntry);
+                    break;
+                case "GCP_SALE_BY_BU_REGION":
+                    if (!string.IsNullOrEmpty(interfaceEntry.SftpHost))
+                    {
+                        InterfaceHelper.DownloadFileToSftpSetup(interfaceEntry);
+                    }
+                    service.GCP_SALE_BY_BU_REGION(interfaceEntry);
+                    break;
+            }
         }
     }
 }

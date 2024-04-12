@@ -26,6 +26,8 @@ namespace VCM.Partner.API.Application.Interfaces
         public DataTest UpdateDataTestAsync(string AppCode, string ItemNo, string DataUpdate, int TestField);
         public Task<bool> SaveSalesReturnWebOnline(SalesReturnWebOnline salesReturn);
         Task<ResponseClient> CheckOrderDetail(string appCode, string orderNo);
+        ResponseClient GetOrderDetail(string appCode, string orderNo);
         Task<ResponseClient> CheckCampaign(string appCode, string orderNo);
+        Task<ResponseClient> TotalSalesByDate(string orderDate);
     }
 }

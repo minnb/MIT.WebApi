@@ -5,17 +5,14 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using Tools.Interface.Models.GCP;
 using Tools.Interface.Services.GCP;
 using VCM.Common.Database;
-using VCM.Common.Extensions;
 using VCM.Common.Helpers;
 using VCM.Shared.API.PhucLongV2;
 

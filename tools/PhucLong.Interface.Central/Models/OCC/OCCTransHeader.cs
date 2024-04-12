@@ -29,5 +29,6 @@ namespace PhucLong.Interface.Central.Models.OCC
         public string UpdateFlg { get; set; }
         public bool IsEOD { get; set; }
         public DateTime CrtDate { get; set; }
+        public DateTime EndingTime { get; set; }
     }
 }

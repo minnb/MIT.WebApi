@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Serilog.Sinks.Elasticsearch;
 using System;
 using System.Linq;
 using System.Net.Mime;
@@ -32,6 +33,15 @@ namespace WebApiPriceEngine
             //.Enrich.FromLogContext()
             .WriteTo.File("logs/warn/log-.txt", Serilog.Events.LogEventLevel.Warning, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message:lj}{NewLine}{Exception}", null, 1073741824, null, false, false, null, RollingInterval.Hour, false, 200, null)
             .WriteTo.File("logs/error/log-.txt", Serilog.Events.LogEventLevel.Error, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message:lj}{NewLine}{Exception}", null, 1073741824, null, false, false, null, RollingInterval.Hour, false, 200, null)
+                            .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(Configuration.GetConnectionString("ElasticConfiguration"))) // for the docker-compose implementation
+                            {
+                                AutoRegisterTemplate = true,
+                                OverwriteTemplate = true,
+                                DetectElasticsearchVersion = true,
+                                AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv7,
+                                IndexFormat = Configuration["AppSetting:AppCode"] + $"_api_{DateTime.UtcNow:yyyy-MM-dd}",
+                                ModifyConnectionSettings = x => x.BasicAuthentication("elastic", "elastic")
+                            })
             .CreateLogger();
         }
 

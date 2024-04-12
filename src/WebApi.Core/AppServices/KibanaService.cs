@@ -19,7 +19,7 @@ namespace WebApi.Core.AppServices
         }
         public void LogRequest(string clientName, string bodyJson)
         {
-            _logger.LogWarning(string.Format("request: {0} ", bodyJson?? "") + "{HttpContext} {PosNo}", "Request", clientName);
+            _logger.LogWarning("{HttpContext} {PosNo} {Message}", "Request", clientName, bodyJson??"");
         }
 
         public void LogResponse(string webApi, string clientName, string message, long timeResponse)

@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using VCM.Partner.API.Application.Interfaces;
 using WCM.EntityFrameworkCore.EntityFrameworkCore.Partner;
 
 namespace VCM.Partner.API.Authentication
@@ -16,19 +17,19 @@ namespace VCM.Partner.API.Authentication
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
         private readonly IMemoryCache _cache;
-        private readonly PartnerDbContext _dbContext;
+        private readonly IMemoryCacheService _memoryCacheService;
         public BasicAuthenticationHandler(
             IOptionsMonitor<AuthenticationSchemeOptions> options,
             ILoggerFactory logger,
             UrlEncoder encoder,
             ISystemClock clock,
             IMemoryCache cache,
-            PartnerDbContext dbContext
+            IMemoryCacheService memoryCacheService
             )
             : base(options, logger, encoder, clock)
         {
             _cache = cache;
-            _dbContext = dbContext;
+            _memoryCacheService = memoryCacheService;
         }
 
         protected override Task<AuthenticateResult> HandleAuthenticateAsync()
@@ -47,7 +48,8 @@ namespace VCM.Partner.API.Authentication
 
                 if (!_cache.TryGetValue(key_Authorization, out string cacheEntry))
                 {
-                    var app_user = _dbContext.User.Where(x => x.UserName == client_code && x.Password == hash_key).SingleOrDefault();
+                    var app_user = _memoryCacheService.GetUsers().Result.Where(x => x.UserName == client_code && x.Password == hash_key).SingleOrDefault();
+                    
                     if (app_user != null)
                     {
                         cacheEntry = app_user.UserName.Trim() + ":" + app_user.Password.Trim();
@@ -56,6 +58,7 @@ namespace VCM.Partner.API.Authentication
                     {
                         return Task.FromResult(AuthenticateResult.Fail("Wrong authentication code"));
                     }
+
                     var cacheEntryOptions = new MemoryCacheEntryOptions()
                         .SetSize(1)
                         .SetSlidingExpiration(TimeSpan.FromHours(24));

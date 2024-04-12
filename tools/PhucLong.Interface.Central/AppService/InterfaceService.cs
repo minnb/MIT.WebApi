@@ -18,10 +18,10 @@ namespace PhucLong.Interface.Central.AppService
 {
     public class InterfaceService
     {
-        private IConfiguration _config;
-        private List<InterfaceEntry> _interfaceEntry;
-        private CentralDbContext _dbContext;
-        private LoggingService _loggingService;
+        private readonly IConfiguration _config;
+        private readonly List<InterfaceEntry> _interfaceEntry;
+        private readonly CentralDbContext _dbContext;
+        private readonly LoggingService _loggingService;
         public InterfaceService
             (
                 IConfiguration config,

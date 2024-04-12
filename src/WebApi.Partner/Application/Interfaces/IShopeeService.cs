@@ -14,7 +14,7 @@ namespace VCM.Partner.API.Application.Interfaces
     {
         Task<ResponseClient> GetOrderList(RequestListOrderPOS request, WebApiViewModel webApi, string proxy, string[] bypass);
         Task<ResponseClient> GetOrderDetail(RequestTransaction request, WebApiViewModel webApi, List<Item> itemDto, string proxy, string[] bypass);
-        Task<ResponseClient> UpdateStatusOrder(RequestUpdateOrderStatus request, WebApiViewModel webApi, string proxy, string[] bypass);
+        ResponseClient UpdateStatusOrder(RequestUpdateOrderStatus request, WebApiViewModel webApi, string proxy, string[] bypass);
         List<ItemSalesOnApp> GetShopeeDishesCache(bool isDelete = false);
         Task<bool> Shopee_update_order(Partner_api_url_callback_update_order request);
         Task<bool> Shopee_export_error_menu(export_error_menu request);

@@ -259,7 +259,15 @@ namespace VCM.Partner.API.Application.Implementation
         {
             string[] cupType = new string[] { "PLASTIC", "PAPER" };
             var data = JsonConvert.DeserializeObject<OrderResponseBody>(jsonData);
-            if(data.Status == 1)
+            string memberCard = data.MembershipCard.FirstOrDefault().PhoneNumber;
+            if(string.IsNullOrEmpty(memberCard))
+            {
+                memberCard = data.CustPhone;
+            }
+            
+            data.MembershipCard.FirstOrDefault().MemberCardNumber = memberCard;
+
+            if (data.Status == 1)
             {
                 data.Status = 0;
             }

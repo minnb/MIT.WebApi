@@ -102,7 +102,7 @@ namespace PhucLong.Interface.Central.Database
 
             modelBuilder.Entity<MappingChannel>(entity =>
             {
-                entity.HasKey(e => new { e.AppCode, e.SaleTypeId });
+                entity.HasKey(e => new { e.AppCode, e.OrderChannel });
             });
             modelBuilder.Entity<TransHeader>(entity =>
             {

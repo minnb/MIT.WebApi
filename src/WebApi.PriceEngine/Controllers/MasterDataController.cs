@@ -19,8 +19,8 @@ namespace WebApi.PriceEngine.Controllers
         private readonly IConfiguration _configuration;
         private readonly IMasterDataService _masterDataService;
         
-        private string _proxyHttp = "";
-        private string[] _bypassList;
+        private readonly string _proxyHttp = "";
+        private readonly string[] _bypassList;
 
         
         public MasterDataController

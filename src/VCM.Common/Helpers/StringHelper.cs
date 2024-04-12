@@ -10,7 +10,10 @@ namespace VCM.Common.Helpers
     public static class StringHelper
     {
         private static Random random = new Random();
-
+        public static string GetMonth(int backMonth, string format)
+        {
+            return DateTime.Now.AddMonths(backMonth).ToString(format);
+        }
         public static string GetTimeStampString(bool isRandom = false)
         {
             string ramdom = string.Empty;
@@ -31,7 +34,6 @@ namespace VCM.Common.Helpers
 
             return System.Text.Json.JsonSerializer.Serialize(jsonElement, options);
         }
-
         public static string NumberPadLeft(long number, char c, int numberChar)
         {
             return number.ToString().PadLeft(numberChar, c);
@@ -76,18 +78,6 @@ namespace VCM.Common.Helpers
                    : value.Substring(0, maxLength)
                    );
         }
-        //public static string Left(string input, int count)
-        //{
-        //    if (!string.IsNullOrEmpty(input))
-        //    {
-        //        return input[..Math.Min(input.Length, count)];
-        //    }
-        //    else
-        //    {
-        //        return "";
-        //    }
-            
-        //}
         public static string Right(string input, int count)
         {
             if (!string.IsNullOrEmpty(input))
@@ -99,7 +89,6 @@ namespace VCM.Common.Helpers
                 return input;
             }
         }
-
         public static string DateToString(DateTime date)
         {
             if (date != null)
@@ -144,7 +133,6 @@ namespace VCM.Common.Helpers
 
             return str;
         }
-
         public static string CompleteCategoryAdayroi(string str)
         {
             str = RemoveSign4VietnameseString(str);
@@ -361,7 +349,6 @@ namespace VCM.Common.Helpers
                 return "";
             }
         }
-
         public static string MakeVNtoEN(string str)
 
         {

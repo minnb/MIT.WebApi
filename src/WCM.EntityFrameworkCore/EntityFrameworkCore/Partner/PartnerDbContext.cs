@@ -17,6 +17,8 @@ namespace WCM.EntityFrameworkCore.EntityFrameworkCore.Partner
         public DbSet<TransRaw> TransRaw { get; set; }
         public DbSet<RawData> RawData { get; set; }
         public DbSet<Item> Item { get; set; }
+        public DbSet<VAT> VAT { get; set; }
+        public DbSet<NotifyConfig> NotifyConfig { get; set; }
         public DbSet<DataTest> DataTest { get; set; }
         public DbSet<TenderTypeSetup> TenderTypeSetup { get; set; }
         public DbSet<SalesReturnWebOnline> SalesReturnWebOnline { get; set; }
@@ -32,6 +34,15 @@ namespace WCM.EntityFrameworkCore.EntityFrameworkCore.Partner
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<NotifyConfig>(entity =>
+            {
+                entity.HasKey(e => new { e.AppCode, e.Status });
+            });
+
+            modelBuilder.Entity<VAT>(entity =>
+            {
+                entity.HasKey(e => new { e.AppCode, e.TaxGroupCode });
+            });
             modelBuilder.Entity<VoucherIssueDetail>(entity =>
             {
                 entity.HasKey(e => new { e.Id });

@@ -8,6 +8,7 @@ namespace VCM.Shared.Dtos.PhucLong
     {
         public int LineId { get; set; }
         public string MemberCardNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string ClubCode { get; set; }
         public decimal LoyaltyPointsEarn { get; set; }
         public decimal LoyaltyPointsRedeem { get; set; }

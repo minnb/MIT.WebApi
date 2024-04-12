@@ -127,7 +127,7 @@ namespace VCM.Partner.API.Application.Implementation
                                     rspListOrders.Add(new ResponseListOrderPOS()
                                     {
                                         PartnerCode = request.PartnerCode,
-                                        StoreNo = request.PosNo.Substring(0, 4),
+                                        StoreNo = request.PosNo[..4],
                                         OrderNo = item.OrderCode,
                                         OrderDate = item.OrderTime,
                                         CustName = item.ReceiverName,
@@ -338,7 +338,7 @@ namespace VCM.Partner.API.Application.Implementation
             }
             return resultObj;
         }
-        public async Task<ResponseClient> GetBillDetail_WCM_Async(RequestTransaction request, WebApiViewModel webApiInfo, string proxyHttp, string[] byPass, string requestId = "")
+        public async Task<ResponseClient> GetBillDetail_WCM_Async(RequestTransaction request, WebApiViewModel webApiInfo, List<VAT> vATs, string proxyHttp, string[] byPass, string requestId = "")
         {
             ResponseClient resultObj = new ResponseClient();
             string function = "OrderDetail";
@@ -348,10 +348,10 @@ namespace VCM.Partner.API.Application.Implementation
             {
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    //_logger.LogWarning(webApiInfo.AppCode + "-" + function + " OrderNo: " + request.OrderNo + " response: " + response.Content.ToString());
+                    _logger.LogWarning(webApiInfo.AppCode + "-" + function + " OrderNo: " + request.OrderNo + " response: " + response.Content.ToString());
                     var rpData = JsonConvert.DeserializeObject<RspOrderDetail_WCM>(response.Content);
                     string error_message = string.Empty;
-
+                    _logger.LogWarning(JsonConvert.SerializeObject(rpData));
                     if (!OrderValidation.OrderResponse(rpData.Data, ref error_message))
                     {
                         return ResponseHelper.RspNotWarning(201, error_message);
@@ -369,12 +369,21 @@ namespace VCM.Partner.API.Application.Implementation
                             {
                                 i++;
                                 decimal netAmount = MathHelper.CalcNetAmount(item.LineAmount, item.VatPercent);
-                                string barcode = "AAAAAAAA";
-                                if (!string.IsNullOrEmpty(item.Barcode))
+                                
+                                //Không có barcode thì báo lỗi
+                                if (string.IsNullOrEmpty(item.Barcode))
                                 {
-                                    barcode = item.Barcode;
+                                    return new ResponseClient()
+                                    {
+                                        Meta = new Meta()
+                                        {
+                                            Code = 201,
+                                            Message = string.Format("Mã sản phẩm {0} - đơn vị tính {1} không có Barcode", item.ItemNo, item.Uom)
+                                        },
+                                        Data = null
+                                    };
                                 }
-
+                                string barcode = item.Barcode;
                                 List<TransDiscountEntryDto> discountEntry = new List<TransDiscountEntryDto>();
                                 if (item.DiscountEntry != null && item.DiscountEntry.Count > 0)
                                 {
@@ -399,6 +408,19 @@ namespace VCM.Partner.API.Application.Implementation
                                     isLoyalty = true;
                                 }
 
+                                if (!vATs.Select(x => x.TaxGroupCode).ToArray().Contains(item.TaxGroupCode))
+                                {
+                                    return new ResponseClient()
+                                    {
+                                        Meta = new Meta()
+                                        {
+                                            Code = 201,
+                                            Message = string.Format("TaxGroupCode = {0} của sản phẩm không đúng", item.TaxGroupCode)
+                                        },
+                                        Data = null
+                                    };
+                                }
+
                                 transLines.Add(new TransLineDto()
                                 {
                                     LineNo = i,
@@ -412,7 +434,7 @@ namespace VCM.Partner.API.Application.Implementation
                                     Qty = item.Quantity,
                                     DiscountAmount = item.DiscountAmount,
                                     VatGroup = item.TaxGroupCode,
-                                    VatPercent = item.VatPercent,
+                                    VatPercent = vATs.FirstOrDefault(x=>x.TaxGroupCode == item.TaxGroupCode).VatPercent,
                                     VatAmount = item.LineAmount - netAmount,
                                     LineAmountExcVAT = netAmount,
                                     LineAmountIncVAT = item.LineAmount,
@@ -443,12 +465,6 @@ namespace VCM.Partner.API.Application.Implementation
                                 }
                             }
 
-                            resultObj.Meta = new Meta()
-                            {
-                                Code = 200,
-                                Message = "Successfully"
-                            };
-
                             BillingInfo billingInfo = new BillingInfo();
                             if (rpData.Data.HasVatInvoice && rpData.Data.BillingInfo != null)
                             {
@@ -460,6 +476,13 @@ namespace VCM.Partner.API.Application.Implementation
                                 billingInfo.Email = rpData.Data.BillingInfo.Email ?? "";
                                 billingInfo.Note = rpData.Data.BillingInfo.Note ?? "";
                             }
+
+                            var cardMember = "";
+                            if(rpData.Data.MembershipCard != null && rpData.Data.MembershipCard.FirstOrDefault() != null)
+                            {
+                                cardMember = rpData.Data.MembershipCard.FirstOrDefault().PhoneNumber;
+                            }
+
                             resultObj.Data = new TransHeaderDto()
                             {
                                 AppCode = request.AppCode,
@@ -471,7 +494,7 @@ namespace VCM.Partner.API.Application.Implementation
                                 CustAddress = rpData.Data.ShippingInfo != null ? (rpData.Data.ShippingInfo.ReceiverAddress ?? "") : "",
                                 CustNote = rpData.Data.Note ?? "",
                                 DeliveryType = rpData.Data.SaleTypeId == 10 ? 0 : 1,
-                                CardMember = rpData.Data.CustPhone ?? "",
+                                CardMember = cardMember,
                                 TotalAmount = rpData.Data.TotalAmount,
                                 PaymentAmount = rpData.Data.PaymentAmount,
                                 IsPromotion = false,
@@ -485,6 +508,23 @@ namespace VCM.Partner.API.Application.Implementation
                                 TransLine = transLines,
                                 TransPaymentEntry = payments
                             };
+
+                            if(resultObj.Data != null)
+                            {
+                                resultObj.Meta = new Meta()
+                                {
+                                    Code = 200,
+                                    Message = "Successfully"
+                                };
+                            }
+                            else
+                            {
+                                resultObj.Meta = new Meta()
+                                {
+                                    Code = 400,
+                                    Message = "Lỗi dữ liệu " + request.OrderNo.ToString()
+                                };
+                            }
                         }
                         else
                         {
@@ -494,20 +534,18 @@ namespace VCM.Partner.API.Application.Implementation
                                 Message = "Không tìm thấy đơn hàng " + request.OrderNo.ToString()
                             };
                         }
-                        //_transService.LoggingApi(request.PartnerCode, request.PosNo, function, request.OrderNo, request.OrderNo, JsonConvert.SerializeObject(resultObj), resultObj.Meta.Code == 200 ? OrderStatusEnum.OK.ToString() : OrderStatusEnum.Failed.ToString());
                     }
                 }
                 else
                 {
                     resultObj = RestResponseNotOK(response, requestId);
                     _logger.LogWarning("GetBillDetail_WCM_Async ERROR requestId: " + requestId + " |ErrorMessage: " + response.ErrorMessage);
-                    //_transService.LoggingApi(request.PartnerCode, request.PosNo, function, request.OrderNo, request.OrderNo, response.StatusDescription.ToString(), OrderStatusEnum.Failed.ToString());
                 }
             }
             catch (Exception ex)
             {
                 _logger.LogWarning("GetBillDetail_WCM_Async Exception: " + ex.Message.ToString());
-                return RestResponseNotOK(response, requestId);
+                resultObj = ResponseHelper.RspNotFoundData(ex.Message.ToString());
             }
             return resultObj;
         }

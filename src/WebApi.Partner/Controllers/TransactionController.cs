@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -13,7 +11,7 @@ using VCM.Shared.Enums;
 using WebApi.Partner.Authentication;
 using VCM.Shared.API.PhucLongV2;
 using WebApi.Partner.ViewModels.Partner;
-using WebApi.Partner.ViewModels.Campaigns;
+using Microsoft.AspNetCore.Authorization;
 
 namespace VCM.Partner.API.Controllers
 {
@@ -142,21 +140,21 @@ namespace VCM.Partner.API.Controllers
                         break;
                     case "WCM":
                         request.AppCode = "VMP";
-                        switch (request.AppCode.ToUpper())
+                        var vatCode = _memoryCacheService.GetVATCodeAsync().Result?.Where(x => x.AppCode == PartnerCode.ToUpper()).ToList();
+                        if(vatCode == null)
+                        {
+                            responseObject = ResponseHelper.RspNotWarning(9998, "Chưa khai báo TaxGroupCode, vui lòng liên hệ IT");
+                        }
+
+                        responseObject = request.AppCode.ToUpper() switch
                         {
                             //case "WMP":
                             //    responseObject = await _shoppingCartService.GetBillDetail_WCM_Async(request, _webApiAirPayInfo, _proxyHttp, _bypassList);
                             //    break;
-                            case "VMP":
-                                responseObject = await _shoppingCartService.GetBillDetail_WCM_Async(request, _webApiAirPayInfo, _proxyHttp, _bypassList, requestId);
-                                break;
-                            case "WMT":
-                                responseObject = ResponseHelper.RspNotWarning(9998, "WMT - Winmart không có đơn hàng online");
-                                break;
-                            default:
-                                responseObject = ResponseHelper.RspNotWarning(9998, "AppCode: " + request.AppCode + " không đúng");
-                                break;
-                        }
+                            "VMP" => await _shoppingCartService.GetBillDetail_WCM_Async(request, _webApiAirPayInfo, vatCode, _proxyHttp, _bypassList, requestId),
+                            "WMT" => ResponseHelper.RspNotWarning(9998, "WMT - Winmart không có đơn hàng online"),
+                            _ => ResponseHelper.RspNotWarning(9998, "AppCode: " + request.AppCode + " không đúng"),
+                        };
                         break;
                     default:
                         responseObject = ResponseHelper.RspNotWarning(9998, PartnerCode + " input data is incorrect");
@@ -348,7 +346,7 @@ namespace VCM.Partner.API.Controllers
                                     break;
                                 case "NOWFOOD":
                                     _webApiAirPayInfo = _memoryCacheService.GetDataWebApiAsync().Result?.Where(x => x.AppCode == request.AppCode.ToUpper()).FirstOrDefault();
-                                    responseObject = await _shopeeService.UpdateStatusOrder(request, _webApiAirPayInfo, _webApiAirPayInfo.HttpProxy, new string[] { _webApiAirPayInfo.Bypasslist });
+                                    responseObject = _shopeeService.UpdateStatusOrder(request, _webApiAirPayInfo, _webApiAirPayInfo.HttpProxy, new string[] { _webApiAirPayInfo.Bypasslist });
                                     break;
                                 default:
                                     responseObject = ResponseHelper.RspNotWarning(9998, "AppCode: " + request.AppCode + " không đúng");
@@ -452,20 +450,6 @@ namespace VCM.Partner.API.Controllers
         }
 
         [HttpGet]
-        [Route("api/v1/transaction/order/check")]
-        [PermissionAttribute(new[] { PermissionEnum.ADMIN, PermissionEnum.ALL, PermissionEnum.POS })]
-        public async Task<ResponseClient> CheckOrderDetail ([Required] string appCode,[Required] string orderNo)
-        {
-            if (ModelState.IsValid)
-            {
-                return await _transService.CheckOrderDetail(appCode,orderNo);
-            }
-            else
-            {
-                return ResponseHelper.RspNotWarning(9998, ModelState.Values.First().Errors[0].ErrorMessage.ToString());
-            }
-        }
-        [HttpGet]
         [Route("api/v1/transaction/order/campaign")]
         [PermissionAttribute(new[] { PermissionEnum.ADMIN, PermissionEnum.ALL, PermissionEnum.POS })]
         public async Task<ResponseClient> CheckCampaigns([Required] string appCode, [Required] string orderNo)
@@ -479,5 +463,36 @@ namespace VCM.Partner.API.Controllers
                 return ResponseHelper.RspNotWarning(9998, ModelState.Values.First().Errors[0].ErrorMessage.ToString());
             }
         }
+
+        [HttpGet]
+        [Route("api/v1/transaction/check-sum")]
+        [PermissionAttribute(new[] { PermissionEnum.ADMIN, PermissionEnum.ALL, PermissionEnum.POS })]
+        public async Task<ResponseClient> TotalSalesWCM()
+        {
+            if (ModelState.IsValid)
+            {
+                return await _transService.TotalSalesByDate("");
+            }
+            else
+            {
+                return ResponseHelper.RspNotWarning(9998, ModelState.Values.First().Errors[0].ErrorMessage.ToString());
+            }
+        }
+
+        [HttpGet]
+        [Route("api/v2/transaction/order")]
+        [Authorize(AuthenticationSchemes = "Bearer")]
+        public ResponseClient CheckOrderDetail([Required] string appCode, [Required] string orderNo)
+        {
+            if (ModelState.IsValid)
+            {
+                return _transService.GetOrderDetail(appCode, orderNo);
+            }
+            else
+            {
+                return ResponseHelper.RspNotWarning(9998, ModelState.Values.First().Errors[0].ErrorMessage.ToString());
+            }
+        }
+
     }
 }

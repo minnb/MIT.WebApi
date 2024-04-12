@@ -44,7 +44,7 @@ namespace VCM.Partner.API.Application.Implementation
             if (await _distributeCache.GetAsync(orderNo) == null)
             {
                 var options = new DistributedCacheEntryOptions()
-                                  .SetSlidingExpiration(TimeSpan.FromHours(48));
+                                  .SetSlidingExpiration(TimeSpan.FromHours(12));
                 await _distributeCache.SetAsync(orderNo, Encoding.UTF8.GetBytes(value), options);
             }
         }

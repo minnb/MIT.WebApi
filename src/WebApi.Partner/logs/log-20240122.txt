@@ -1,0 +1,15 @@
+2024-01-22 09:56:00.62: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 09:57:26.34: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 10:01:56.36: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 10:05:33.52: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 10:07:58.04: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 10:09:09.87: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 10:19:57.74: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 10:52:11.53: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 10:56:20.43: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 11:00:34.02: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 11:01:02.12: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 11:01:28.53: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 11:01:34.13: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 11:02:04.00: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.
+2024-01-22 11:02:05.50: InteractWithApiResponse Exception: The remote server returned an error: (400) Bad Request.

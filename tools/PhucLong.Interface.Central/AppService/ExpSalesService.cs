@@ -179,10 +179,9 @@ namespace PhucLong.Interface.Central.AppService
                                 int count = 0;
                                 Task t = Task.Run(async () =>
                                 {
-                                    var lst_inbDetail = conn.Query<INB_SALE_DETAIL>(InbQuery.INB_DETAIL_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }).ToList();
-                                    var lst_inbTender = conn.Query<INB_SALE_TENDER>(InbQuery.INB_TENDER_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }).ToList();
-                                    var lst_inbDiscount = conn.Query<INB_SALE_DISCOUNT>(InbQuery.INB_DISCOUNT_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }).ToList();
-
+                                    var lst_inbDetail = conn.Query<INB_SALE_DETAIL>(InbQuery.INB_DETAIL_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }, commandTimeout: 36000).ToList();
+                                    var lst_inbTender = conn.Query<INB_SALE_TENDER>(InbQuery.INB_TENDER_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }, commandTimeout: 36000).ToList();
+                                    var lst_inbDiscount = conn.Query<INB_SALE_DISCOUNT>(InbQuery.INB_DISCOUNT_QUERY(), new { TRANSACTIONSEQUENCENUMBER = dataPage.ToArray() }, commandTimeout: 36000).ToList();
                                     foreach (var item in dataPage)
                                     {
                                         var inbHeader = inb_Header.Where(x => x.TRANSACTIONSEQUENCENUMBER == item).FirstOrDefault();

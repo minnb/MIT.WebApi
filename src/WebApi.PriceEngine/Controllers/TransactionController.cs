@@ -3,7 +3,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,7 +10,6 @@ using VCM.Common.Helpers;
 using VCM.Common.Validation;
 using VCM.Shared.API;
 using VCM.Shared.API.PhucLongV2;
-using VCM.Shared.Dtos.PhucLong;
 using VCM.Shared.Enums;
 using WebApi.PriceEngine.Application.Interfaces;
 using WebApi.PriceEngine.Enums;
@@ -95,6 +93,38 @@ namespace WebApi.PriceEngine.Controllers
             catch (Exception ex)
             {
                 _logger.LogWarning("===> TransactionController.UpdatePaymentKIOS.Exception: " + ex.Message.ToString());
+                return ResponseHelper.RspMessageEnum(PriceEngineEnum.OrderInsDatabase, (int)PriceEngineEnum.OrderInsDatabase, null);
+            }
+        }
+        
+        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.Route("api/v1/transaction/order")]
+        [PermissionAttribute(new[] { PermissionEnum.ADMIN, PermissionEnum.ALL, PermissionEnum.POS, PermissionEnum.KOS })]
+        public async Task<ResponseClient> PostOrderData([FromBody] OrderRequestBody rawDataRequest)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _logger.LogWarning("===> request: " + JsonConvert.SerializeObject(rawDataRequest));
+                    string error_message = string.Empty;
+                    if (!OrderValidation.OrderRequest(rawDataRequest, ref error_message))
+                    {
+                        return ResponseHelper.RspNotWarning((int)PriceEngineEnum.OrderException, error_message);
+                    }
+                    else
+                    {
+                        return await _transactionService.PutOrderDataAsync(GetUserNameAPI(), rawDataRequest);
+                    }
+                }
+                else
+                {
+                    return ResponseHelper.RspNotWarning((int)PriceEngineEnum.OrderException, ModelState.Values.First().Errors[0].ErrorMessage.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning("===> TransactionController.PutOrderData.Exception: " + ex.Message.ToString());
                 return ResponseHelper.RspMessageEnum(PriceEngineEnum.OrderInsDatabase, (int)PriceEngineEnum.OrderInsDatabase, null);
             }
         }

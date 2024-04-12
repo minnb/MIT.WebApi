@@ -10,7 +10,7 @@ namespace Tools.Kafka.Service
 {
     class Program
     {
-        static void Main(string[] args)
+        static async void Main(string[] args)
         {
             var isService = !(Debugger.IsAttached || args.Contains("--console"));
             var builder = CreateHostBuilder(args.Where(arg => arg != "--console").ToArray());
@@ -21,9 +21,9 @@ namespace Tools.Kafka.Service
                 var pathToContentRoot = Path.GetDirectoryName(pathToExe);
                 builder.UseWindowsService();
             }
-
+            
             var host = builder.Build();
-            host.RunAsync();
+            await host.RunAsync();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -32,5 +32,7 @@ namespace Tools.Kafka.Service
             {
                 services.AddHostedService<KafkaConsumerService>();
             });
+
+        
     }
 }

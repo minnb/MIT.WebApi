@@ -241,6 +241,7 @@ namespace WebApi.Partner.Application.Implementation
         private TokenO2 CreateTokenO2A(WebApiViewModel webApiInfo)
         {
             TokenO2 dataToken = new TokenO2();
+            string errMsg = "";
             try
             {
                 var routeApi = webApiInfo.WebRoute.Where(x => x.Name == "Login").FirstOrDefault();
@@ -266,7 +267,7 @@ namespace WebApi.Partner.Application.Implementation
                     webApiInfo.HttpProxy,
                     byPass
                     );
-                var strResponse = api.InteractWithApiResponse();
+                var strResponse = api.InteractWithApiResponse(ref errMsg);
                 _logger.LogWarning("Login O2 response: " + strResponse);
                 if (strResponse != null && strResponse.StatusCode == System.Net.HttpStatusCode.OK)
                 {

@@ -17,5 +17,4 @@ namespace VCM.Shared.API.PhucLongV2
         public List<OrderPaymentDto> Payments { get; set; }
         public List<MembershipCard> MembershipCard { get; set; }
     }
-
 }

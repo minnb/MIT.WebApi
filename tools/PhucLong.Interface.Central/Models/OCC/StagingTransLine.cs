@@ -39,6 +39,6 @@ namespace PhucLong.Interface.Central.Models.OCC
         public string RefNo { get; set; }
         public string UpdateFlg { get; set; }
         public DateTime CrtDate { get; set; }
-
+        public DateTime EndingTime { get; set; }
     }
 }

@@ -21,10 +21,10 @@ namespace PhucLong.Interface.Central.AppService
         private string _connectString;
         private CentralDbContext _dbContext;
         private List<MasterItem> _lstItem;
-        private LoggingService _loggingDb;
-        private List<MappingChannel> _lstChannel;
-        private List<MappingStore> _mappingStore;
-        private List<MappingTender> _mappingTender;
+        private  LoggingService _loggingDb;
+        private  List<MappingChannel> _lstChannel;
+        private  List<MappingStore> _mappingStore;
+        private  List<MappingTender> _mappingTender;
         public TransOCCService
         (
               IConfiguration config,
@@ -68,6 +68,7 @@ namespace PhucLong.Interface.Central.AppService
                     _lstChannel = _dbContext.MappingChannel.Where(x => x.Blocked == false && x.AppCode == PartnerEnum.PLH.ToString()).ToList();
                     _mappingStore = _dbContext.MappingStore.Where(x => x.Blocked == false && x.AppCode == PartnerEnum.PLH.ToString()).ToList();
                     _mappingTender = _dbContext.MappingTender.Where(x => x.Blocked == false && x.AppCode == PartnerEnum.PLH.ToString()).ToList();
+                    FileHelper.WriteLogs(JsonConvert.SerializeObject(_lstChannel));
                     foreach (string file in lstFile)
                     {
                         if (file.ToString().Substring(0, 3).ToUpper() == appCode)
@@ -93,8 +94,8 @@ namespace PhucLong.Interface.Central.AppService
                                                 var saleType = _lstChannel.Where(x => x.OrderChannel == firstOrderData.OrderType.ToString()).FirstOrDefault();
                                                 var saleModel = _mappingStore.Where(x => x.StoreNo2 == firstOrderData.StoreNo2).FirstOrDefault();
                                                 
-                                                FileHelper.WriteLogs("===> procssing: " + orderNo + " channel: " + saleModel.Type.ToString() + " discount: " + saleModel.Discount.ToString());
-
+                                                FileHelper.WriteLogs(string.Format("orderNo: {0} channel: {1} SaleTypeId: {2} discount: {3}", orderNo, saleModel.Type.ToString(),saleType.SaleTypeId.ToString(), saleModel.Discount.ToString()));
+                                                
                                                 if (saleType == null || saleModel == null || _mappingTender == null)
                                                 {
                                                     _loggingDb.LoggingToDB("INB-OCC", orderNo, firstOrderData.OrderType.ToString() + " - SalesType or StoreNo or TenderType chưa khai báo");
@@ -175,7 +176,8 @@ namespace PhucLong.Interface.Central.AppService
                 UpdateFlg = "N",
                 IssuedVATInvoice = false,
                 IsEOD = false,
-                CrtDate = DateTime.Now
+                CrtDate = DateTime.Now,
+                EndingTime = fistStagingTransLine.EndingTime
             };
             //FileHelper.WriteLogs(JsonConvert.SerializeObject(transHeader));
             _dbContext.OCCTransHeader.Add(transHeader);
@@ -190,9 +192,9 @@ namespace PhucLong.Interface.Central.AppService
                 var stagingTransLines = lstTransLines.Where(x => x.LineType < 9999).ToList();
                 if (stagingTransLines.Count > 0)
                 {
+
                     decimal discountPercentPartner = 0;
-                    //decimal LineAmountInclVAT = item
-                    if (saleModel.Discount > 0 && saleModel.Discount <= 100 && channel.OrderChannel == "10" && saleModel.Type == "CV_LIFE")
+                    if (saleModel.Discount > 0 && saleModel.Discount <= 100 && channel.SaleTypeId == 10 && saleModel.Type == "CV_LIFE")
                     {
                         discountPercentPartner = saleModel.Discount;
                     }
@@ -235,7 +237,7 @@ namespace PhucLong.Interface.Central.AppService
                         decimal netPrice = Math.Round((LineAmountIncVAT / (1 + vatPercent / 100)) / item.Quantity, 0);
                         decimal VATAmount = LineAmountIncVAT - netPrice * item.Quantity;
 
-                        if (channel.IsDiscount && channel.OrderChannel != "10")
+                        if (channel.IsDiscount && channel.SaleTypeId != 10)
                         {
                             if (saleModel.Type == "WIN_LIFE")
                             {
@@ -301,7 +303,7 @@ namespace PhucLong.Interface.Central.AppService
             decimal paymentAmount = transLines.Where(x => x.LineAmountIncVAT > 0).Sum(x => x.LineAmountIncVAT);
             if (saleModel.Type.ToUpper() == SalesModelEnum.CV_LIFE.ToString())
             {
-                if (channel.OrderChannel == "10" && listPayment.Count > 0)
+                if (channel.SaleTypeId == 10 && listPayment.Count > 0)
                 {
                     transPaymentEntries.Add(new OCCTransPaymentEntry()
                     {
@@ -401,7 +403,7 @@ namespace PhucLong.Interface.Central.AppService
             else if(saleModel.Type.ToUpper() == SalesModelEnum.WIN_LIFE.ToString())
             {
 
-                if (channel.OrderChannel == "10" && listPayment.Count > 0)
+                if (channel.SaleTypeId == 10 && listPayment.Count > 0)
                 {
                     string[] tenderNotSum = _mappingTender.Select(x => x.WCM).ToArray();
 

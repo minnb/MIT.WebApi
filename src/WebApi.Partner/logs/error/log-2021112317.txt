@@ -1,1 +1,0 @@
-2021-11-23 17:01:18.561 [ERR] CancelOrderMBC_TripleAsync Exception: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.

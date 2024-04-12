@@ -5,7 +5,7 @@ namespace WCM.EntityFrameworkCore.EntityFrameworkCore.Dapper
 {
     public class DapperContext
     {
-        private string _connectionStrings;
+        private readonly string _connectionStrings;
         public DapperContext(string connectionStrings)
         {
             _connectionStrings = connectionStrings;
